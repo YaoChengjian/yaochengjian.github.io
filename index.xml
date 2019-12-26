@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>姚成健的博客</title>
+    <link>http://yaochengjian/</link>
+    <description>Recent content on 姚成健的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-hans</language>
+    <lastBuildDate>Thu, 26 Dec 2019 21:51:11 +0800</lastBuildDate>
+    
+	<atom:link href="http://yaochengjian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>开博大吉</title>
+      <link>http://yaochengjian/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <pubDate>Thu, 26 Dec 2019 21:51:11 +0800</pubDate>
+      
+      <guid>http://yaochengjian/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <description>这是我前端学习之路，记录着本人点点滴滴笔记or文章 </description>
+    </item>
+    
+    <item>
+      <title>One - Node &amp; yarn</title>
+      <link>http://yaochengjian/posts/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 25 Dec 2019 21:55:11 +0800</pubDate>
+      
+      <guid>http://yaochengjian/posts/%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>安装node.js   安装双数版本
+1.node8 node10 node12 是稳定版
+2.尽量选择官网安装
+3.下载慢就加入FQ插件的代理
+  安装之后
+1.自然就有了node命令(因为PATH)
+2.自然就有了npm命令
+3.自然就有了npx命令
+  配置Node.js(因为node.js服务器默认在国外，我们需要用淘宝镜像服务器)
+1.npm install -global nrm 缩写 npm i -g nrm
+npm 是这个命令的开始
+install 是载入意思
+global 是全局意思
+nrm 是一个npm源管理器，允许你快速地在npm源间切换
+2.nrm ls 执行命令查看可选的源
+其中带*号的是当前使用的源，如果要切换到taobao源，执行命令nrm use taobao
+3.npm config list 查看nrm所有配置
+  </description>
+    </item>
+    
+  </channel>
+</rss>
