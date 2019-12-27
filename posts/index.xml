@@ -81,5 +81,62 @@ D.移动文件/目录 &amp;amp;&amp;amp; 重命名文件/目录 都是同一个�
 把1.txt移动到demo目录上面</description>
     </item>
     
+    <item>
+      <title>3 - [Git入门]本地仓库</title>
+      <link>http://yaochengjian.com/posts/4/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/4/</guid>
+      <description>A.git就是开启GitHub的钥匙 B.git的6行配置(必须存在，否则git无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
+git config &amp;ndash;global user.email 你的邮箱(915248459@qq.com)
+git config &amp;ndash;global push.default simple
+git config &amp;ndash;global core.quotepath false
+git config &amp;ndash;global core.eaitor &amp;ldquo;code &amp;ndash;wait&amp;rdquo;
+git config &amp;ndash;global core.autocrlf input
+注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
+C.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
+会创建.git目录/仓库，用来容纳你的代码快照
+2.git add 路径
+选择哪些变动是需要提交的，相对路径/绝对路径
+3..gitignore
+描述哪些变动是不需要提交的
+4.git status
+通过这个命令可以查看哪些文件需要提交的
+5.git commit -m 字符串
+把上面提交的代码复制一份到.git目录里面
+git commit -v
+个人更喜欢&amp;ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些
+6.git log
+可以显示所有提交过的版本信息
+7.git reflog
+可以查看所有分支操作记录以及提交过的版本
+git reset &amp;ndash;hard 0aa5218(版本号)
+版本回退，可以选择之前提交过的版本
+8.查看分支 创建分支 切换分支 合并分支 删除分支</description>
+    </item>
+    
+    <item>
+      <title>4 - [Git入门]git远程仓库GitHub</title>
+      <link>http://yaochengjian.com/posts/5/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/5/</guid>
+      <description>操控远程仓库GitHub 1.如何生成ssh key(需要在github上面填写公钥)
+a. 运行ssh-keygen -t rsa -b 4096 -C 你的邮箱
+b. 一直回车，直至到没有提示
+2.如何测试配对成功
+a. ssh -T git@github.com
+b. 如果问你yes/no，请回答yes并回车
+3.上传代码
+a. 新建GitHub Repo，赋值其ssh地址
+b. git remote add origin git@xxxxxxxx
+c. 在本地仓库添加远程仓库地址
+d. origin是远程仓库的默认名字，可以换，建议不要换
+e. 不要使用https://地址，因为每次都需要密码
+f. git push -u origin master 推送本地master分支到远程origin的master分支
+4.如何下载代码
+a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的ssh key[一机一key]</description>
+    </item>
+    
   </channel>
 </rss>
