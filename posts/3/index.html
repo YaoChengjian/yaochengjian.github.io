@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>姚成健的博客  | 2 - [Git入门]bash命令行入门</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="2 - [Git入门]bash命令行入门" />
+<meta property="og:description" content="A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+2.查：查看文件或目录
+ 查看当前目录绝对路径
+pwd
+ 查看当前目录内容 ls
+查看指定目录内容
+ls 目录名称  查看文件内容
+cat 文件名称(会显示全部内容)
+head 文件名称(可以控制想看多少行，从开头开始显示)
+tail 文件名称(可以控制想看多少行，从底部开始)
+  B.文件的增加删除操作 1.touch 1.txt
+确定你路径在哪里，创建一个文件
+C.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
+向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
+2.echo mmp &raquo; 1.txt
+向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
+3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt
+向1.txt里面追加两行内容 4.mkdir demo-1
+创建一个文件名字为demo-1的目录
+mkdir -p a/b/c/d
+创建多层目录
+5.cp 1.txt 2.txt
+复制1.txt内容为2.txt
+cp -r demo demo1
+复制demo目录内容为demo1
+D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
+把1.txt移动到demo目录上面" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yaochengjian.com/posts/3/" />
+<meta property="article:published_time" content="2019-12-24T11:28:30+08:00" />
+<meta property="article:modified_time" content="2019-12-24T11:28:30+08:00" />
+<meta itemprop="name" content="2 - [Git入门]bash命令行入门">
+<meta itemprop="description" content="A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+2.查：查看文件或目录
+ 查看当前目录绝对路径
+pwd
+ 查看当前目录内容 ls
+查看指定目录内容
+ls 目录名称  查看文件内容
+cat 文件名称(会显示全部内容)
+head 文件名称(可以控制想看多少行，从开头开始显示)
+tail 文件名称(可以控制想看多少行，从底部开始)
+  B.文件的增加删除操作 1.touch 1.txt
+确定你路径在哪里，创建一个文件
+C.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
+向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
+2.echo mmp &raquo; 1.txt
+向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
+3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt
+向1.txt里面追加两行内容 4.mkdir demo-1
+创建一个文件名字为demo-1的目录
+mkdir -p a/b/c/d
+创建多层目录
+5.cp 1.txt 2.txt
+复制1.txt内容为2.txt
+cp -r demo demo1
+复制demo目录内容为demo1
+D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
+把1.txt移动到demo目录上面">
+<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="wordCount" content="71">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="2 - [Git入门]bash命令行入门"/>
+<meta name="twitter:description" content="A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+2.查：查看文件或目录
+ 查看当前目录绝对路径
+pwd
+ 查看当前目录内容 ls
+查看指定目录内容
+ls 目录名称  查看文件内容
+cat 文件名称(会显示全部内容)
+head 文件名称(可以控制想看多少行，从开头开始显示)
+tail 文件名称(可以控制想看多少行，从底部开始)
+  B.文件的增加删除操作 1.touch 1.txt
+确定你路径在哪里，创建一个文件
+C.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
+向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
+2.echo mmp &raquo; 1.txt
+向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
+3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt
+向1.txt里面追加两行内容 4.mkdir demo-1
+创建一个文件名字为demo-1的目录
+mkdir -p a/b/c/d
+创建多层目录
+5.cp 1.txt 2.txt
+复制1.txt内容为2.txt
+cp -r demo demo1
+复制demo目录内容为demo1
+D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
+把1.txt移动到demo目录上面"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://yaochengjian.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      姚成健的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">2 - [Git入门]bash命令行入门</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:00">December 24, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="a">A.文件查看操作</h2>
+<p>1.命令缩写，程序员把动词缩写，就变成了命令<br>
+<img src="../../images/mingl.png" alt="">
+ </p>
+<p>2.查：查看文件或目录</p>
+<ul>
+<li>查看当前目录绝对路径<br>
+pwd<br>
+ </li>
+<li>查看当前目录内容 <br>
+ls<br>
+查看指定目录内容<br>
+ls 目录名称 <br>
+<img src="../../images/lsdemo.png" alt="">
+ </li>
+<li>查看文件内容<br>
+cat 文件名称(会显示全部内容)<br>
+head 文件名称(可以控制想看多少行，从开头开始显示)<br>
+tail 文件名称(可以控制想看多少行，从底部开始)<br>
+<img src="../../images/show.png" alt=""></li>
+</ul>
+<h2 id="b">B.文件的增加删除操作</h2>
+<p>1.touch 1.txt<br>
+确定你路径在哪里，创建一个文件</p>
+<h2 id="c---">C.文件(创建 追加 复制 删除)内容</h2>
+<p>1.echo mmp &gt; 1.txt<br>
+向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息</p>
+<p>2.echo mmp &raquo; 1.txt<br>
+向1.txt里面追加内容，最新的命令行会叠加以前追加的信息</p>
+<p>3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt<br>
+向1.txt里面追加两行内容
+<img src="../../images/echo.png" alt=""></p>
+<p>4.mkdir demo-1<br>
+创建一个文件名字为demo-1的目录<br>
+<img src="../../images/mkdir.png" alt=""></p>
+<p>mkdir -p a/b/c/d<br>
+创建多层目录<br>
+<img src="../../images/mkdir-1.png" alt=""></p>
+<p>5.cp 1.txt 2.txt<br>
+复制1.txt内容为2.txt<br>
+<img src="../../images/cp.png" alt=""></p>
+<p>cp -r demo demo1<br>
+复制demo目录内容为demo1<br>
+<img src="../../images/cp1.png" alt=""></p>
+<h2 id="d---">D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令</h2>
+<p>1.mv 1.txt demo<br>
+把1.txt移动到demo目录上面<br>
+<img src="../../images/mv.png" alt=""></p>
+<h2 id="e">E.补充</h2>
+<p>code .<br>
+用编辑器打开当前目录( . 代表当前目录)</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yaochengjian.com/" >
+    &copy; 2019 姚成健的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
