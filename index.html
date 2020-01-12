@@ -144,6 +144,41 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="http://yaochengjian.com/posts/1/" class="color-inherit dim link">
+            0 如何使用hugo搭建个人博客
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          1.如何使用hugo搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你hugo的路径地址
+c:hugo version查看自己的版本,可以看到就代表自己hugo安装没问题
+d:在hugo官网点击Quick Start根据步骤一步步实现 1)hugo new site demo(demo可以更改为自己想要的名字) 2)cd demo 进入demo
+3)git init 4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+5)echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/my-first-post.md(my-first-post可以更改为自己想要的内容)
+6)hugo server -D 可以得到一个预览地址
+7)打开config.toml配置
+baseURL = &quot;yaochengjian.com&quot; //更改为自己购买的域名languageCode = &quot;zh-CN&quot;title = &quot;姚成健的博客&quot;theme = &quot;ananke&quot;8)hugo -D
+9)上面的完成之后，我们会看到demo里面有一个public文件名,我们也要在里面git init每次只需要提交这个文件里面的内容到github仓库即可！！！. 10)在github上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到settings,设置自己购买的域名
+11)完成购买域名后，我们需要解析4条记录
+12)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在content\posts里面添加自己的内容,添加完成后都需要hugo -D,在上传到仓库上面去。
+        </div>
+          <a href="http://yaochengjian.com/posts/1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://yaochengjian.com/posts/2/" class="color-inherit dim link">
             1 - Node &amp; yarn
             </a>
@@ -177,62 +212,18 @@ nrm 是一个npm源管理器，允许你快速地在npm源间切换
 
           </div>
         
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://yaochengjian.com/posts/3/" class="color-inherit dim link">
-            2 - [Git入门]bash命令行入门
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
-2.查：查看文件或目录
- 查看当前目录绝对路径
-pwd
- 查看当前目录内容 ls
-查看指定目录内容
-ls 目录名称  查看文件内容
-cat 文件名称(会显示全部内容)
-head 文件名称(可以控制想看多少行，从开头开始显示)
-tail 文件名称(可以控制想看多少行，从底部开始)
-  B.文件的增加删除操作 1.touch 1.txt
-确定你路径在哪里，创建一个文件
-C.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
-向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
-2.echo mmp &raquo; 1.txt
-向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
-3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt
-向1.txt里面追加两行内容 4.mkdir demo-1
-创建一个文件名字为demo-1的目录
-mkdir -p a/b/c/d
-创建多层目录
-5.cp 1.txt 2.txt
-复制1.txt内容为2.txt
-cp -r demo demo1
-复制demo目录内容为demo1
-D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
-把1.txt移动到demo目录上面
-        </div>
-          <a href="http://yaochengjian.com/posts/3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-          </div>
-        
       </section>
 
       
       <section class="w-100">
         <h1 class="f3">More</h1>
         
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yaochengjian.com/posts/3/" class="link black dim">
+              2 - [Git入门]bash命令行入门
+            </a>
+          </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://yaochengjian.com/posts/4/" class="link black dim">
@@ -249,12 +240,6 @@ D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://yaochengjian.com/posts/6/" class="link black dim">
               5 - HTML入门笔记1
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://yaochengjian.com/posts/7/" class="link black dim">
-              6 - [HTML全解]HTML重难点
             </a>
           </h2>
         

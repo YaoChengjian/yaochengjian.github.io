@@ -21,6 +21,26 @@
     </item>
     
     <item>
+      <title>0 如何使用hugo搭建个人博客</title>
+      <link>http://yaochengjian.com/posts/1/</link>
+      <pubDate>Wed, 25 Dec 2019 21:55:11 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/1/</guid>
+      <description>1.如何使用hugo搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path-&amp;gt;添加你hugo的路径地址
+c:hugo version查看自己的版本,可以看到就代表自己hugo安装没问题
+d:在hugo官网点击Quick Start根据步骤一步步实现 1)hugo new site demo(demo可以更改为自己想要的名字) 2)cd demo 进入demo
+3)git init 4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+5)echo &amp;lsquo;theme = &amp;ldquo;ananke&amp;rdquo;&amp;rsquo; &amp;raquo; config.toml hugo new posts/my-first-post.md(my-first-post可以更改为自己想要的内容)
+6)hugo server -D 可以得到一个预览地址
+7)打开config.toml配置
+baseURL = &amp;quot;yaochengjian.com&amp;quot; //更改为自己购买的域名languageCode = &amp;quot;zh-CN&amp;quot;title = &amp;quot;姚成健的博客&amp;quot;theme = &amp;quot;ananke&amp;quot;8)hugo -D
+9)上面的完成之后，我们会看到demo里面有一个public文件名,我们也要在里面git init每次只需要提交这个文件里面的内容到github仓库即可！！！. 10)在github上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到settings,设置自己购买的域名
+11)完成购买域名后，我们需要解析4条记录
+12)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在content\posts里面添加自己的内容,添加完成后都需要hugo -D,在上传到仓库上面去。</description>
+    </item>
+    
+    <item>
       <title>1 - Node &amp; yarn</title>
       <link>http://yaochengjian.com/posts/2/</link>
       <pubDate>Wed, 25 Dec 2019 21:55:11 +0800</pubDate>

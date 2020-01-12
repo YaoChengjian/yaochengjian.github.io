@@ -109,6 +109,32 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/1/" class="link black dim">
+        0 如何使用hugo搭建个人博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1.如何使用hugo搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你hugo的路径地址
+c:hugo version查看自己的版本,可以看到就代表自己hugo安装没问题
+d:在hugo官网点击Quick Start根据步骤一步步实现 1)hugo new site demo(demo可以更改为自己想要的名字) 2)cd demo 进入demo
+3)git init 4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+5)echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml hugo new posts/my-first-post.md(my-first-post可以更改为自己想要的内容)
+6)hugo server -D 可以得到一个预览地址
+7)打开config.toml配置
+baseURL = &quot;yaochengjian.com&quot; //更改为自己购买的域名languageCode = &quot;zh-CN&quot;title = &quot;姚成健的博客&quot;theme = &quot;ananke&quot;8)hugo -D
+9)上面的完成之后，我们会看到demo里面有一个public文件名,我们也要在里面git init每次只需要提交这个文件里面的内容到github仓库即可！！！. 10)在github上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到settings,设置自己购买的域名
+11)完成购买域名后，我们需要解析4条记录
+12)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在content\posts里面添加自己的内容,添加完成后都需要hugo -D,在上传到仓库上面去。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/2/" class="link black dim">
         1 - Node &amp; yarn
       </a>
