@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>姚成健的博客  | 6 - [HTML全解]HTML重难点</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="6 - [HTML全解]HTML重难点" />
+<meta property="og:description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
+2)parcel 1.a.html(文件名字)
+2.a标签(属性) (1)href取值
+a:网址[https://google.com、http://google.com、//google.com]
+b:路径[/a/b/c或者a/b/c]
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx标签]
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt; 路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt; &lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt; 伪协议 &lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target属性值
+a:_balck 浏览器总在一个新窗口打开
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
+d:_self 浏览器在当前窗口打开
+(3)作用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yaochengjian.com/posts/7/" />
+<meta property="article:published_time" content="2019-12-24T11:28:30+08:00" />
+<meta property="article:modified_time" content="2019-12-24T11:28:30+08:00" />
+<meta itemprop="name" content="6 - [HTML全解]HTML重难点">
+<meta itemprop="description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
+2)parcel 1.a.html(文件名字)
+2.a标签(属性) (1)href取值
+a:网址[https://google.com、http://google.com、//google.com]
+b:路径[/a/b/c或者a/b/c]
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx标签]
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt; 路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt; &lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt; 伪协议 &lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target属性值
+a:_balck 浏览器总在一个新窗口打开
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
+d:_self 浏览器在当前窗口打开
+(3)作用">
+<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="wordCount" content="270">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="6 - [HTML全解]HTML重难点"/>
+<meta name="twitter:description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
+2)parcel 1.a.html(文件名字)
+2.a标签(属性) (1)href取值
+a:网址[https://google.com、http://google.com、//google.com]
+b:路径[/a/b/c或者a/b/c]
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx标签]
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt; 路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt; &lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt; 伪协议 &lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target属性值
+a:_balck 浏览器总在一个新窗口打开
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
+d:_self 浏览器在当前窗口打开
+(3)作用"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://yaochengjian.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      姚成健的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">6 - [HTML全解]HTML重难点</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:00">December 24, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="1">1.像用户一样利用网址来打开网页</h2>
+<p>1)yarn global add parcel<br>
+2)parcel 1.a.html(文件名字)</p>
+<h2 id="2a">2.a标签(属性)</h2>
+<p>(1)href取值<br>
+a:网址[https://google.com、http://google.com、//google.com]<br>
+b:路径[/a/b/c或者a/b/c]<br>
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]<br>
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx标签]</p>
+<pre><code>网址
+&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;  
+&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;  
+&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;    
+路径
+&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;  
+&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;  
+伪协议  
+&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;
+&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;
+&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;
+</code></pre><pre><code>锚文本定位
+&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;p&gt;4&lt;/p&gt;
+&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;
+</code></pre><p>(2)target属性值<br>
+a:_balck 浏览器总在一个新窗口打开<br>
+b:_top  浏览器在当前窗口最顶层打开
+c:parent 浏览器在超链接父元素(iframe)上面打开<br>
+d:_self  浏览器在当前窗口打开</p>
+<p>(3)作用<br>
+a:跳转外部页面<br>
+b:跳转内部锚点<br>
+c:跳转到邮箱或电话等</p>
+<h2 id="3table">3.table</h2>
+<p>(1)相关标签<br>
+a:table
+b:thead<br>
+c:tbody<br>
+d:tfoot<br>
+e:tr<br>
+f:td<br>
+g:th</p>
+<pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;th&gt;表头1&lt;/th&gt;
+        &lt;th&gt;表头2&lt;/th&gt;
+        &lt;th&gt;表头3&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;表格底部1&lt;/td&gt;
+            &lt;td&gt;表格底部2&lt;/td&gt;
+            &lt;td&gt;表格底部3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre><p>(2)相关的样式<br>
+a:table-layout<br>
+b:border-collapse 控制table表格是否合并，默认是不合并<br>
+c:border-spacing 控制表格和表格之间的距离</p>
+<pre><code>table{
+    border-collapse:collapse;
+    border-spacing:10px;
+}
+</code></pre><h2 id="4img">4.img标签</h2>
+<p>(1)作用<br>
+a:发出get请求，展示一张图片</p>
+<p>(2)属性<br>
+a:alt 图片请求错误时候，会显示alt的文字<br>
+b:height 只写高度值，宽度会自适应<br>
+c:width 只写宽度值，高度会自适应<br>
+d:src 图片地址</p>
+<p>(3)js事件<br>
+a:onload 图片加载成功执行的事件<br>
+b:onerror 图片加载失败执行的事件</p>
+<pre><code>&lt;img src=&quot;1.jpg&quot; id=&quot;img&quot;&gt;&lt;/img&gt;
+&lt;script&gt;
+    var img = document.getElementById('img');
+    img.onload = function(){
+        alert('这代表图片加载出来了');
+    }
+    img.onerror = function(){
+        alert('图片加载出错了')
+    }
+&lt;/script&gt;
+</code></pre><p>(4)响应式<br>
+a:max-width:100% 加上最大宽度为100%，那这个图片就是响应式了，就不会固定大小</p>
+<h2 id="5fromtypesubmit">5.from标签(必须要含有一个属性type=&quot;submit&rdquo;，这个表单才能被提交)</h2>
+<p>(1)作用<br>
+a:发get或post请求，然后刷新页面</p>
+<p>(2)属性<br>
+a:action 后台提交地址<br>
+b:autocomplete 输入框提示信息，输入框必须要有name属性<br>
+c:method 提交的方式，有get和post两个值<br>
+d:target 告诉浏览器我要提交到哪个页面，和a标签target用法雷同</p>
+<p>(3)事件<br>
+a:onsubmit  在表单确认提交发生的事件</p>
+<pre><code>&lt;from action=&quot;1.php&quot; method=&quot;post&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;提交&quot; id=&quot;submit&quot;&gt;
+&lt;/from&gt;
+&lt;script&gt;
+    var submit = document.getElementById('submit');
+    submit.onsubmit=function(){
+        alert('点击提交按钮触发的事件');
+    }
+&lt;/script&gt;
+</code></pre><h2 id="6forminput">6.form标签的input标签</h2>
+<p>a:文本输入框</p>
+<pre><code>&lt;input type = &quot;text&quot;&gt;&lt;/input&gt;
+</code></pre><p>b:颜色输入框</p>
+<pre><code>&lt;input type = &quot;color&quot;&gt;&lt;/input&gt;
+</code></pre><p>c:单项选择框(name必须要一致才能实现单项)</p>
+<pre><code>&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;男&lt;/input&gt;
+&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;女&lt;/input&gt;
+</code></pre><p>d:密码框</p>
+<pre><code>&lt;input type=&quot;password&quot;&gt;&lt;/input&gt;
+</code></pre><p>e:多选框</p>
+<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;LOL&lt;/input&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;王者荣耀&lt;/input&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;绝地求生&lt;/input&gt;
+</code></pre><p>f:上传文件</p>
+<pre><code>&lt;!--只能提交单个文件--&gt;
+&lt;input type=&quot;file&quot;&gt;
+&lt;!--加了multiple能提交多个文件&gt;
+&lt;input type=&quot;file&quot; multiple&gt;
+</code></pre><p>g:文本输入控件(resize:none用户无法调整元素属性)</p>
+<pre><code>&lt;textarea style=&quot;resize:none&quot;&gt;&lt;/textarea&gt;
+</code></pre><p>h:select下拉选择</p>
+<pre><code>&lt;select&gt;
+    &lt;option&gt;-请选择-&lt;/option&gt;
+    &lt;option&gt;星期一&lt;/option&gt;
+    &lt;option&gt;星期二&lt;/option&gt;
+&lt;/select&gt;
+</code></pre><h2 id="7js">7.js事件</h2>
+<p>a:onchange 改变时候触发这个事件<br>
+b:onfocus 光标在身上触发这个事件<br>
+c:onblur 失去光标触发这个事件</p>
+<pre><code>&lt;input type=&quot;text&quot; id=&quot;text&quot;&gt;&lt;/input&gt;
+&lt;script&gt;
+    var text = document.getElementById('text');
+    text.onchange = function(){
+        console.log('文本框内容发生了改变，触发了这个事件');
+    }
+    text.onfocus = function(){
+        console.log('当文本框失去光标时候就会触发这个事件');  
+    }
+    text.onblur = function(){
+        console.log('失去光标触发这个事件'); 
+    }
+&lt;/script&gt;
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yaochengjian.com/" >
+    &copy; 2020 姚成健的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

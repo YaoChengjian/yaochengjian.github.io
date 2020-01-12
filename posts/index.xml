@@ -163,5 +163,25 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
 -br 换行</description>
     </item>
     
+    <item>
+      <title>6 - [HTML全解]HTML重难点</title>
+      <link>http://yaochengjian.com/posts/7/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/7/</guid>
+      <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
+2)parcel 1.a.html(文件名字)
+2.a标签(属性) (1)href取值
+a:网址[https://google.com、http://google.com、//google.com]
+b:路径[/a/b/c或者a/b/c]
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
+d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx标签]
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; 路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt; 伪协议 &amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target属性值
+a:_balck 浏览器总在一个新窗口打开
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
+d:_self 浏览器在当前窗口打开
+(3)作用</description>
+    </item>
+    
   </channel>
 </rss>
