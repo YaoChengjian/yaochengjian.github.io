@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>姚成健的博客  | 7 - [css全解]css基础</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.62.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="7 - [css全解]css基础" />
+<meta property="og:description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用caniuse.com
+2.语法超级简单 语法1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项
+a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a和A是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法2：@语法
+@charset &ldquo;utf-8&rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项
+a：@charset必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset是字符集的意思，但是utf-8是字符编码
+3.border调试法 a：怀疑某个元素有问题就给这个元素加border
+b：border没出现?说明选择器错了或者语法错了
+c：bug解决了才可以把border删掉
+4.文档流 -流动方向
+a：inline元素从左到右，到达最右边才会换行
+b：block元素从上到下，每一个都另起一行
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
+a：inline宽度靠内部内容宽度撑开，不能用width指定
+b：blcok默认自动计算宽度，可用width 指定
+c：inline-block结合前两者特点，可用width
+-高度
+a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
+c：inline-block跟block类似，可以设置height
+5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
+b：可用overflow来设置是否显示滚动条
+c：auto是灵活设置
+d：scroll是永远显示
+e：hidden是直接隐藏溢出部分
+f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
+①块级元素如果没有设置width，那么它默认的宽度就是auto
+②永远不要写width=100%，非常特殊的可以写
+6.脱离文档流 -哪些元素脱离文档流
+a：float
+b：position:absolute / fixed
+-怎么让元素不脱离文档流
+a：不要使用上面属性就不会脱离文档流了
+①只要脱离了文档流，就算你清除了，永远都是脱离的了
+7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yaochengjian.com/posts/8/" />
+<meta property="article:published_time" content="2019-12-24T11:28:30+08:00" />
+<meta property="article:modified_time" content="2019-12-24T11:28:30+08:00" />
+<meta itemprop="name" content="7 - [css全解]css基础">
+<meta itemprop="description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用caniuse.com
+2.语法超级简单 语法1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项
+a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a和A是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法2：@语法
+@charset &ldquo;utf-8&rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项
+a：@charset必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset是字符集的意思，但是utf-8是字符编码
+3.border调试法 a：怀疑某个元素有问题就给这个元素加border
+b：border没出现?说明选择器错了或者语法错了
+c：bug解决了才可以把border删掉
+4.文档流 -流动方向
+a：inline元素从左到右，到达最右边才会换行
+b：block元素从上到下，每一个都另起一行
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
+a：inline宽度靠内部内容宽度撑开，不能用width指定
+b：blcok默认自动计算宽度，可用width 指定
+c：inline-block结合前两者特点，可用width
+-高度
+a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
+c：inline-block跟block类似，可以设置height
+5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
+b：可用overflow来设置是否显示滚动条
+c：auto是灵活设置
+d：scroll是永远显示
+e：hidden是直接隐藏溢出部分
+f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
+①块级元素如果没有设置width，那么它默认的宽度就是auto
+②永远不要写width=100%，非常特殊的可以写
+6.脱离文档流 -哪些元素脱离文档流
+a：float
+b：position:absolute / fixed
+-怎么让元素不脱离文档流
+a：不要使用上面属性就不会脱离文档流了
+①只要脱离了文档流，就算你清除了，永远都是脱离的了
+7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种">
+<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
+<meta itemprop="wordCount" content="122">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="7 - [css全解]css基础"/>
+<meta name="twitter:description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用caniuse.com
+2.语法超级简单 语法1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项
+a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a和A是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法2：@语法
+@charset &ldquo;utf-8&rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项
+a：@charset必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset是字符集的意思，但是utf-8是字符编码
+3.border调试法 a：怀疑某个元素有问题就给这个元素加border
+b：border没出现?说明选择器错了或者语法错了
+c：bug解决了才可以把border删掉
+4.文档流 -流动方向
+a：inline元素从左到右，到达最右边才会换行
+b：block元素从上到下，每一个都另起一行
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
+a：inline宽度靠内部内容宽度撑开，不能用width指定
+b：blcok默认自动计算宽度，可用width 指定
+c：inline-block结合前两者特点，可用width
+-高度
+a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
+c：inline-block跟block类似，可以设置height
+5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
+b：可用overflow来设置是否显示滚动条
+c：auto是灵活设置
+d：scroll是永远显示
+e：hidden是直接隐藏溢出部分
+f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
+①块级元素如果没有设置width，那么它默认的宽度就是auto
+②永远不要写width=100%，非常特殊的可以写
+6.脱离文档流 -哪些元素脱离文档流
+a：float
+b：position:absolute / fixed
+-怎么让元素不脱离文档流
+a：不要使用上面属性就不会脱离文档流了
+①只要脱离了文档流，就算你清除了，永远都是脱离的了
+7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://yaochengjian.com/" class="f3 fw2 hover-white no-underline white-90 dib">
+      姚成健的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">7 - [css全解]css基础</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:00">December 24, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred1font-我怎么知道哪些浏览器兼容哪些特性呢"><font color=red>1.</font> 我怎么知道哪些浏览器兼容哪些特性呢？</h3>
+<p>a：几十种浏览器全部跑一遍<br>
+b：使用caniuse.com</p>
+<h3 id="font-colorred2font语法超级简单"><font color=red>2.</font>语法超级简单</h3>
+<p>语法1<br>
+<font color=red>选择器</font>{<br>
+    <font color=blue>属性名</font>:<font color=green>属性值</font><br>
+    /*这是一个注释*/<br>
+}</p>
+<pre><code>p{
+    color:blue;
+    background:red;
+}
+</code></pre><p><font color=red><strong>!注意事项</strong></font><br>
+a：所有符号都是英文符号，如果写错了，浏览器会警告<br>
+b：区分大小写，a和A是不同东西<br>
+c：最后一个分号可以省略，但建议不要省略<br>
+d：任何地方写错了，都不会报错，浏览器会直接忽略</p>
+<p>语法2：@语法<br>
+@charset &ldquo;utf-8&rdquo;;<br>
+@import url(2.css);<br>
+@media(min-width:100px) and (max-width:200px){        }</p>
+<p><font color=red><strong>!注意事项</strong></font><br>
+a：@charset必须放在第一行<br>
+b：前面两个@语法必须以分号;结尾<br>
+c：charset是字符集的意思，但是utf-8是字符编码</p>
+<h3 id="font-colorred3fontborder调试法"><font color=red>3.</font>border调试法</h3>
+<p>a：怀疑某个元素有问题就给这个元素加border<br>
+b：border没出现?说明选择器错了或者语法错了<br>
+c：bug解决了才可以把border删掉</p>
+<h3 id="font-colorred4font文档流"><font color=red>4.</font>文档流</h3>
+<p><font color=#CC3300><strong>-流动方向</strong></font><br>
+a：inline元素从左到右，到达最右边才会换行<br>
+b：block元素从上到下，每一个都另起一行<br>
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 <br>
+<img src="../../images/display.png" alt=""></p>
+<p><font color=#CC3300><strong>-宽度</strong></font><br>
+a：inline宽度靠内部内容宽度撑开，不能用width指定<br>
+b：blcok默认自动计算宽度，可用width
+指定<br>
+c：inline-block结合前两者特点，可用width</p>
+<p><font color=#CC3300><strong>-高度</strong></font><br>
+a：inline高度由line-height间接确定，跟height无关，跟padding无关    <br>
+b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height<br>
+c：inline-block跟block类似，可以设置height</p>
+<h3 id="font-colorred5overflow溢出当内容大于容器font"><font color=red>5.overflow溢出(当内容大于容器)</font></h3>
+<p>a：等内容的宽度或高度大于容器，会溢出<br>
+b：可用overflow来设置是否显示滚动条<br>
+c：auto是灵活设置<br>
+d：scroll是永远显示<br>
+e：hidden是直接隐藏溢出部分<br>
+f：visible是直接显示溢出部分
+g：overflow可以分为overflow-x和overflow-y</p>
+<p>①块级元素如果没有设置width，那么它默认的宽度就是auto<br>
+②永远不要写width=100%，非常特殊的可以写</p>
+<h3 id="font-colorred6脱离文档流font"><font color=red>6.脱离文档流</font></h3>
+<p><font color=#CC3300><strong>-哪些元素脱离文档流</strong></font><br>
+a：float<br>
+b：position:absolute / fixed</p>
+<p><font color=#CC3300><strong>-怎么让元素不脱离文档流</strong></font><br>
+a：不要使用上面属性就不会脱离文档流了</p>
+<p>①只要脱离了文档流，就算你清除了，永远都是脱离的了</p>
+<h3 id="font-colorred7盒模型font"><font color=red>7.盒模型</font></h3>
+<p>①如果面试官问你！请说一下css盒模型 <font color=red>标准回答：</font>css盒模型分两种<br>
+content-box 宽度或高度 只包含content<br>
+border-box 宽度或高度 由border+padding+content(尽量使用border-box)<br>
+<img src="../../images/border-sizing.png" alt=""></p>
+<p>②margin合并(只会上下合并，左右不会合并)<br>
+<font color=red>哪些情况会合并</font><br>
+a：父子margin合并<br>
+b：兄弟margin合并</p>
+<p><font color=red>如何阻止合并(不需要知道为什么)</font><br>
+a：父子合并用 padding或border 挡住<br>
+b：父子合并用 overflow:hidden 挡住<br>
+c：父子合并用 display:flex<br>
+d：兄弟合并是符合预期的<br>
+e：兄弟合并可以用 inline-block 消除<br>
+f：总之要一条条死记</p>
+<p>③基本单位<br>
+<font color=red>长度单位</font><br>
+a：px像素<br>
+b：em相当于自身font-size的倍数<br>
+c: 百分数<br>
+d: 整数</p>
+<p><font color=red>颜色</font><br>
+a：十六进制#FF6600 或者 #F60<br>
+b: RGBA颜色 rgb(255,0,0) 或者 rgba(255,0,0,1) - a是透明意思(取值0~1)</p>
+<pre><code>  div{
+      width:100px;
+      height:100px;
+      background:#FF6600;
+      background:rgb(255,0,0);
+      background:rgba(255,0,0,0.5);
+  }
+</code></pre><ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yaochengjian.com/" >
+    &copy; 2020 姚成健的博客
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

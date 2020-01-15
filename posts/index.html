@@ -6,7 +6,7 @@
     
     <title>姚成健的博客 </title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.0" />
+    <meta name="generator" content="Hugo 0.62.2" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -175,7 +175,7 @@ nrm 是一个npm源管理器，允许你快速地在npm源间切换
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+      1.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
 2.查：查看文件或目录
  查看当前目录绝对路径
 pwd
@@ -185,9 +185,9 @@ ls 目录名称  查看文件内容
 cat 文件名称(会显示全部内容)
 head 文件名称(可以控制想看多少行，从开头开始显示)
 tail 文件名称(可以控制想看多少行，从底部开始)
-  B.文件的增加删除操作 1.touch 1.txt
+  2.文件的增加删除操作 1.touch 1.txt
 确定你路径在哪里，创建一个文件
-C.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
+3.文件(创建 追加 复制 删除)内容 1.echo mmp &gt; 1.txt
 向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
 2.echo mmp &raquo; 1.txt
 向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
@@ -200,7 +200,7 @@ mkdir -p a/b/c/d
 复制1.txt内容为2.txt
 cp -r demo demo1
 复制demo目录内容为demo1
-D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
+4.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
 把1.txt移动到demo目录上面
     </div>
   </div>
@@ -216,14 +216,14 @@ D.移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令 1.
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      A.git就是开启GitHub的钥匙 B.git的6行配置(必须存在，否则git无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
+      1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
 git config &ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &ndash;global push.default simple
 git config &ndash;global core.quotepath false
 git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;
 git config &ndash;global core.autocrlf input
 注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-C.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
+3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
 会创建.git目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
@@ -299,7 +299,7 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
 5.内容标签 -ol+li 有序列表ol子集不能含有任何子元素或者中文
 -ul+li 无序列表ul子集不能含有任何子元素或者中文
 -dl+dt+dd 描述列表，dt是描述的对象，dd描述对象的内容
--pre 被包围在 标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
+-pre 被包围在  标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
 -hr 水平分割线
 -br 换行
     </div>
@@ -318,16 +318,76 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
-2.a标签(属性) (1)href取值
+2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
-b:路径[/a/b/c或者a/b/c]
+b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
-d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx标签]
-网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt; &lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt; 路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt; &lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt; 伪协议 &lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target属性值
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx 标签]
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;伪协议&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target 属性值
 a:_balck 浏览器总在一个新窗口打开
 b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
-d:_self 浏览器在当前窗口打开
-(3)作用
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/8/" class="link black dim">
+        7 - [css全解]css基础
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用caniuse.com
+2.语法超级简单 语法1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项
+a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a和A是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法2：@语法
+@charset &ldquo;utf-8&rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项
+a：@charset必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset是字符集的意思，但是utf-8是字符编码
+3.border调试法 a：怀疑某个元素有问题就给这个元素加border
+b：border没出现?说明选择器错了或者语法错了
+c：bug解决了才可以把border删掉
+4.文档流 -流动方向
+a：inline元素从左到右，到达最右边才会换行
+b：block元素从上到下，每一个都另起一行
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
+a：inline宽度靠内部内容宽度撑开，不能用width指定
+b：blcok默认自动计算宽度，可用width 指定
+c：inline-block结合前两者特点，可用width
+-高度
+a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
+c：inline-block跟block类似，可以设置height
+5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
+b：可用overflow来设置是否显示滚动条
+c：auto是灵活设置
+d：scroll是永远显示
+e：hidden是直接隐藏溢出部分
+f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
+①块级元素如果没有设置width，那么它默认的宽度就是auto
+②永远不要写width=100%，非常特殊的可以写
+6.脱离文档流 -哪些元素脱离文档流
+a：float
+b：position:absolute / fixed
+-怎么让元素不脱离文档流
+a：不要使用上面属性就不会脱离文档流了
+①只要脱离了文档流，就算你清除了，永远都是脱离的了
+7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种
     </div>
   </div>
 </div>

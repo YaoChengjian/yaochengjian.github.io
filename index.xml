@@ -75,7 +75,7 @@ nrm 是一个npm源管理器，允许你快速地在npm源间切换
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/3/</guid>
-      <description>A.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+      <description>1.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
 2.查：查看文件或目录
  查看当前目录绝对路径
 pwd
@@ -85,9 +85,9 @@ ls 目录名称  查看文件内容
 cat 文件名称(会显示全部内容)
 head 文件名称(可以控制想看多少行，从开头开始显示)
 tail 文件名称(可以控制想看多少行，从底部开始)
-  B.文件的增加删除操作 1.touch 1.txt
+  2.文件的增加删除操作 1.touch 1.txt
 确定你路径在哪里，创建一个文件
-C.文件(创建 追加 复制 删除)内容 1.echo mmp &amp;gt; 1.txt
+3.文件(创建 追加 复制 删除)内容 1.echo mmp &amp;gt; 1.txt
 向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
 2.echo mmp &amp;raquo; 1.txt
 向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
@@ -100,7 +100,7 @@ mkdir -p a/b/c/d
 复制1.txt内容为2.txt
 cp -r demo demo1
 复制demo目录内容为demo1
-D.移动文件/目录 &amp;amp;&amp;amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
+4.移动文件/目录 &amp;amp;&amp;amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
 把1.txt移动到demo目录上面</description>
     </item>
     
@@ -110,14 +110,14 @@ D.移动文件/目录 &amp;amp;&amp;amp; 重命名文件/目录 都是同一个�
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/4/</guid>
-      <description>A.git就是开启GitHub的钥匙 B.git的6行配置(必须存在，否则git无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
+      <description>1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
 git config &amp;ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &amp;ndash;global push.default simple
 git config &amp;ndash;global core.quotepath false
 git config &amp;ndash;global core.eaitor &amp;ldquo;code &amp;ndash;wait&amp;rdquo;
 git config &amp;ndash;global core.autocrlf input
 注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-C.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
+3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
 会创建.git目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
@@ -181,7 +181,7 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
 5.内容标签 -ol+li 有序列表ol子集不能含有任何子元素或者中文
 -ul+li 无序列表ul子集不能含有任何子元素或者中文
 -dl+dt+dd 描述列表，dt是描述的对象，dd描述对象的内容
--pre 被包围在 标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
+-pre 被包围在  标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
 -hr 水平分割线
 -br 换行</description>
     </item>
@@ -194,16 +194,70 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
       <guid>http://yaochengjian.com/posts/7/</guid>
       <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
-2.a标签(属性) (1)href取值
+2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
-b:路径[/a/b/c或者a/b/c]
+b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
-d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx标签]
-网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt; 路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt; &amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt; 伪协议 &amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target属性值
+d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
 a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开
-d:_self 浏览器在当前窗口打开
-(3)作用</description>
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开</description>
+    </item>
+    
+    <item>
+      <title>7 - [css全解]css基础</title>
+      <link>http://yaochengjian.com/posts/8/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/8/</guid>
+      <description>1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用caniuse.com
+2.语法超级简单 语法1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项
+a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a和A是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法2：@语法
+@charset &amp;ldquo;utf-8&amp;rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项
+a：@charset必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset是字符集的意思，但是utf-8是字符编码
+3.border调试法 a：怀疑某个元素有问题就给这个元素加border
+b：border没出现?说明选择器错了或者语法错了
+c：bug解决了才可以把border删掉
+4.文档流 -流动方向
+a：inline元素从左到右，到达最右边才会换行
+b：block元素从上到下，每一个都另起一行
+c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
+a：inline宽度靠内部内容宽度撑开，不能用width指定
+b：blcok默认自动计算宽度，可用width 指定
+c：inline-block结合前两者特点，可用width
+-高度
+a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
+c：inline-block跟block类似，可以设置height
+5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
+b：可用overflow来设置是否显示滚动条
+c：auto是灵活设置
+d：scroll是永远显示
+e：hidden是直接隐藏溢出部分
+f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
+①块级元素如果没有设置width，那么它默认的宽度就是auto
+②永远不要写width=100%，非常特殊的可以写
+6.脱离文档流 -哪些元素脱离文档流
+a：float
+b：position:absolute / fixed
+-怎么让元素不脱离文档流
+a：不要使用上面属性就不会脱离文档流了
+①只要脱离了文档流，就算你清除了，永远都是脱离的了
+7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种</description>
     </item>
     
     <item>
