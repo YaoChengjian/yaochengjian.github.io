@@ -397,30 +397,85 @@ a：不要使用上面属性就不会脱离文档流了
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/1000/" class="link black dim">
-        1000 - 变量提升、闭包
+      <a href="http://yaochengjian.com/posts/9/" class="link black dim">
+        7 - [css全解]布局
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.一般都把js放到body的末尾 a:为什么？
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!-- 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
-var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
-=&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
-B:堆内存:引用值对应的空间
-1.存储引用类型值(对象:键值对 函数:代码字符串)
-=&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
-=&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它
+      1.布局分类 两种
+a:固定宽度布局，一般宽度为 960 、 1000 、 1024px
+b:不固定宽度布局，主要靠文档流的原理来布局
+2.还记得吗? a:文档流本来就是自适应的，不需要加额外的样式
+&lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a:响应式布局
+b:意思就是 pc 上固定宽度，手机上不固定宽度
+c:也就是一种混合布局
+4.布局的两种思路 ① 从大到小
+先定下大局
+然后完善每个部分的小布局
+② 从小到大
+先完成小布局
+然后组合成大布局
+③ 两种均可
+新人推荐用第二种，因为小的简单
+老手一般用第一种，因为熟练有大局观
+4.用什么 css 布局 5.float 布局 a:步骤
+-子元素上加 float:left/right 和 width
+-在父元素上加.clearfix(必须要加上)
+实践 不同布局
+-用 float 做两栏布局(如顶部条)
+-用 float 做三栏布局(内容区)
+-用 float 做四栏布局(如导航)
+-用 float 做平均布局(如产品展示区)
     </div>
   </div>
 </div>
 </div>
       
     </section>
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
 
 </article>
 
