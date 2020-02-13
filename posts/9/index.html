@@ -77,7 +77,7 @@ c: 也就是一种混合布局
 -用 float 做三栏布局(内容区)">
 <meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
-<meta itemprop="wordCount" content="153">
+<meta itemprop="wordCount" content="205">
 
 
 
@@ -229,7 +229,7 @@ flex-direction:cloumn-reverse 道理和上面一样<br>
 <p>c:控制它是否折行<br>
 flex-warp:nowrap 默认<br>
 flex-warp:wrap 折行<br>
-flex-warp:wrap-reverse</p>
+flex-warp:wrap-reverse 折行反转</p>
 <p>d:主轴的对齐方式-默认主轴是横轴-除非改变了 flex-direction 方向<br>
 justify-content:flex-start 大家都往前靠<br>
 justify-content:flex-end 大家都往后靠<br>
@@ -243,17 +243,36 @@ algin-items:flex-end<br>
 algin-items:center<br>
 algin-items:stretch
 <img src="../../images/algin-items.png" alt=""></p>
-<p>d:次轴的对齐方式<br>
+<p>d:次轴内容对齐方式<br>
 align-content:flex-start 大家都往前靠<br>
 align-content:flex-end 大家都往后靠<br>
-align-content:center 大家都往中间靠<br>
+align-content:center 大家都往中间靠(对单行是没有效果的)<br>
 align-content:space-between 把空间都放在中间<br>
 align-content:space-around 均匀分布两则空间</p>
 <h3 id="font-colorredflex-item-有哪些属性容器里面的子元素font"><font color=red>flex item 有哪些属性(容器里面的子元素)</font></h3>
 <p>a: order 属性(设置弹性盒子模型对象子元素的顺序)<br>
-b：flex-grow 属性(控制自己如何长胖)<br>
+b：flex-grow 属性(控制自己如何长胖,默认值是 0)<br>
 c：flex-shrink 属性(控制如何变瘦)一般写 flex-shrink:0 防止变瘦，默认是 1<br>
 d：align-self 属性 (algin-self:flex-start algin-self:flex-end)</p>
+<p><font color=red>flex 布局实践(不同布局)</font><br>
+-用 flex 做两栏布局<br>
+-用 flex 做三栏布局<br>
+-用 flex 做四栏布局<br>
+-用 flex 做平均布局<br>
+-用 flex 组合使用，做更复杂的布局</p>
+<p><font color=red>经验</font><br>
+-永远不要把 width 和 height 写死，除非特殊说明<br>
+-用 min-width / max-width / min-height / max-height<br>
+-flex 可以基本满足所有需求<br>
+-flex 和 margin-xxx:auto 配合有意外效果</p>
+<p><font color=red>什么叫写死</font><br>
+-写死 width:100px;<br>
+不写死<br>
+-width:50%<br>
+-max-width:100px<br>
+-width:30vw<br>
+-min-width:80%<br>
+-特点：不使用 px，或者加 min max 前缀</p>
 <ul class="pa0">
   
 </ul>
