@@ -77,7 +77,7 @@ c: 也就是一种混合布局
 -用 float 做三栏布局(内容区)">
 <meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
-<meta itemprop="wordCount" content="205">
+<meta itemprop="wordCount" content="303">
 
 
 
@@ -211,7 +211,7 @@ c: 也就是一种混合布局</p>
 -用 float 做三栏布局(内容区)<br>
 -用 float 做四栏布局(如导航)<br>
 -用 float 做平均布局(如产品展示区)<br>
-<a href="http://yaochengjian.com/idnex1-float/1.html" target="_balck">案例展示</a></p>
+<a href="http://yaochengjian.com/Different-layout/1.float" target="_balck">案例展示</a></p>
 <h3 id="font-colorred6flex-布局font"><font color=red>6.Flex 布局</font></h3>
 <p>a: 让一个元素变成 flex 容器(下面是容器的属性)</p>
 <pre><code>&lt;style&gt;
@@ -253,13 +253,14 @@ align-content:space-around 均匀分布两则空间</p>
 <p>a: order 属性(设置弹性盒子模型对象子元素的顺序)<br>
 b：flex-grow 属性(控制自己如何长胖,默认值是 0)<br>
 c：flex-shrink 属性(控制如何变瘦)一般写 flex-shrink:0 防止变瘦，默认是 1<br>
-d：align-self 属性 (algin-self:flex-start algin-self:flex-end)</p>
+d：align-self 属性 (algin-self:flex-start algin-self:flex-end 根据次轴来决定的)</p>
 <p><font color=red>flex 布局实践(不同布局)</font><br>
 -用 flex 做两栏布局<br>
 -用 flex 做三栏布局<br>
 -用 flex 做四栏布局<br>
 -用 flex 做平均布局<br>
 -用 flex 组合使用，做更复杂的布局</p>
+<p><a href="http://yaochengjian.com/Different-layout/2.flex" target="_balck">案例展示</a></p>
 <p><font color=red>经验</font><br>
 -永远不要把 width 和 height 写死，除非特殊说明<br>
 -用 min-width / max-width / min-height / max-height<br>
@@ -273,6 +274,50 @@ d：align-self 属性 (algin-self:flex-start algin-self:flex-end)</p>
 -width:30vw<br>
 -min-width:80%<br>
 -特点：不使用 px，或者加 min max 前缀</p>
+<h3 id="font-colorred7grid-布局font"><font color=red>7.Grid 布局</font></h3>
+<p>a: 让一个元素变成 gird 容器(下面是容器的属性)</p>
+<pre><code>.container{
+    display:gird | inline-grid;
+}
+</code></pre><p><font color=red>设置行和列</font><br>
+grid-template-columns:40px 50px auto 50px 40px;<br>
+grid-template-rows:25% 100px auto;
+<img src="../../images/gird.png" alt=""></p>
+<p><font color=red>平均布局可以这样子</font><br>
+grid-template-columns:1fr 1fr 1fr;<br>
+grid-template-rows:1fr 1fr 1fr;</p>
+<p><font color=red>grid-template-areas</font></p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;asdie&gt;&lt;/asdie&gt;
+    &lt;main&gt;&lt;/main&gt;
+    &lt;div class=&quot;ad&quot;&gt;&lt;/div&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+&lt;/div&gt;
+.container{
+    grid-template-areas{
+        &quot;header header header&quot; /*三行三列*/
+        &quot;asdie main ad&quot;
+        &quot;footer footer footer&quot;
+    }
+}
+.ad{
+        grid-areas:ad
+    }
+</code></pre><p><font color=red>grid-gap(基本算替换了 margin 外边距)</font><br>
+a：grid-gap:10px 则行和列都会生效<br>
+b：grid-row-gap:10px 则行生效<br>
+c：grid-column-gap:10px 则列生效</p>
+<h3 id="font-colorredgrid-有哪些属性容器里面的子元素font"><font color=red>grid 有哪些属性(容器里面的子元素)</font></h3>
+<p>a：grid-rows-start:1<br>
+b：grid-rows-end:3<br>
+c：grid-column-start:1<br>
+d：grid-column-end:3</p>
+<p><font color=red>复合样式：</font><br>
+a：grid-row : 2 / 4 就会设置从第二行开始，到第四行结束<br>
+b: grid-column : 2 / 4 就会设置从第二列开始，到第四列结束<br>
+c：grid-area : 1 / 1 / 3 / 6 第一行开始，第一列开始，第三行结束，第 6 列结束<br>
+<a href="http://yaochengjian.com/Different-layout/3.gird" target="_balck">案例展示</a></p>
 <ul class="pa0">
   
 </ul>
