@@ -261,7 +261,7 @@ a：不要使用上面属性就不会脱离文档流了
     </item>
     
     <item>
-      <title>7 - [css全解]布局</title>
+      <title>8 - [css全解]布局</title>
       <link>http://yaochengjian.com/posts/9/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
@@ -288,6 +288,42 @@ c: 也就是一种混合布局
 实践 不同布局
 -用 float 做两栏布局(如顶部条)
 -用 float 做三栏布局(内容区)</description>
+    </item>
+    
+    <item>
+      <title>9 - [css全解]定位</title>
+      <link>http://yaochengjian.com/posts/10/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/10/</guid>
+      <description>问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
+A.border 内边沿围成的区域
+B.border 外边沿围成的区域
+-如何验证自己的猜想?border 半透明化
+-从左边看一个 div,是什么样子?
+新属性-position a：position
+1.static 默认值，待在文档流里
+2.relative 相对定位，升起来，但不脱离文档流
+3.absolute 绝对定位，定位基准是祖先里的非 static
+4.fixed 固定定位，定位基准是 viewport(有诈)
+5.sticky 粘滞定位，不好描述直接举例
+经验
+1.如果你写了 absolute，一般都得补一个 relative
+2.如果你写了 absolute 或 fixed，一定要补 top 和 left
+3.sticky 兼容性很差，主要用于面试装逼
+position:relative
+a：使用场景
+1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
+2.用于给 absolute 元素做爸爸
+b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
+1.z-index:auto 默认值，不创建新层叠上下文
+2.z-index：0 | 1 | 2
+3.z-index:-1 | -2
+经验
+1.写 z-index:9999 的都是彩笔
+2.学会管理 z-index
+position:absolute a：使用场景
+1.脱离原来的位置，另起一层，比如对话框的关闭按钮</description>
     </item>
     
     <item>
