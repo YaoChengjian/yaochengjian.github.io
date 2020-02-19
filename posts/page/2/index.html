@@ -125,8 +125,68 @@ b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
 经验
 1.写 z-index:9999 的都是彩笔
 2.学会管理 z-index
-position:absolute a：使用场景
+position:absolute
+a：使用场景
 1.脱离原来的位置，另起一层，比如对话框的关闭按钮
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/11/" class="link black dim">
+        10 - [css动画]
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      transform 完整介绍 a: translate(平移)
+ translateX(长度 | 百分比) translateY(长度 | 百分比) translate(x 轴,y 轴) translateX(50%) 往右边偏移自身宽度的一半  translate(-50%,-50%) 可做绝对定位元素居中
+b: scale(缩放)
+ scaleX(number) scaleY(number) scale(X-number,Y-number)  用得较少，因为容易出现模糊
+c: rotate(旋转)
+d: transform-origin 设置旋转点
+ rotate(度数) 沿 Z 轴转动 rotateX(度数) rotateY(度数)  e: skew(倾斜)
+ skewX(度数) skewY(度数) skew(X,Y)  用得较少
+案例 爱心
+transition 过渡 a: 语法
+ transition-property 状态发生变化的属性(可以用 all 代表所有属性) transition-timing-function 过渡变化的速度 transition-delay 延迟多长时间开始 transition:width 3s , background 3s(这样我们可以采用多种属性一起过渡) 过渡方式有: ease : 速度逐渐变慢，这是默认值
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/12/" class="link black dim">
+        11 - [HTTP全解]URL是什么
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1.域名是什么 a: 域名实际上是 ip 的别称 知识点
+  一个域名可以对应不同 IP
+这个叫做均衡负载，防止一台机器扛不住
+  一个 IP 可以对应不同域名
+这个叫做共享主机，穷开发者会这么做
+  域名和 IP 是怎么对应起来的？
+通过 DNS
+  当你输入 xiedaimala.com
+  过程
+-你的 Chrom 浏览器会向电信|联通提供的 DNS 服务器询问 xiedaimala.com 对应 IP
+-电信|联通会回答一个 IP(具体过程很复杂，不研究)
+-然后 Chrome 才会想对应 IP 的 80/443 端口发送请求
+-请求内容是查看 xiedaimala.com 的首要
+为什么事 80 或 443 端口
+-服务器默认用 80 提供 http 服务
+-服务器默认用 443 提供 https 服务
+-你可以在开发者工具里看到具体的端口
+如何请求不同的页面
+-路径可以做到(不同的路径可以请求不同的页面)
+同一个页面，不同内容
     </div>
   </div>
 </div>
@@ -141,19 +201,20 @@ position:absolute a：使用场景
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.一般都把js放到body的末尾 a:为什么？
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!-- 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
+      1.一般都把 js 放到 body 的末尾 a:为什么？
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
+2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
+&lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
 var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
 =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
 B:堆内存:引用值对应的空间
 1.存储引用类型值(对象:键值对 函数:代码字符串)
 =&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
 =&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它
     </div>
   </div>
 </div>

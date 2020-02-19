@@ -26,58 +26,59 @@
     
     
     <meta property="og:title" content="1000 - 变量提升、闭包" />
-<meta property="og:description" content="1.一般都把js放到body的末尾 a:为什么？
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!-- 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
+<meta property="og:description" content="1.一般都把 js 放到 body 的末尾 a:为什么？
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
+2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
+&lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
 var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
 =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
 B:堆内存:引用值对应的空间
 1.存储引用类型值(对象:键值对 函数:代码字符串)
 =&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
 =&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它" />
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yaochengjian.com/posts/1000/" />
-<meta property="article:published_time" content="2019-12-24T11:27:31+08:00" />
-<meta property="article:modified_time" content="2019-12-24T11:27:31+08:00" />
+
 <meta itemprop="name" content="1000 - 变量提升、闭包">
-<meta itemprop="description" content="1.一般都把js放到body的末尾 a:为什么？
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!-- 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
+<meta itemprop="description" content="1.一般都把 js 放到 body 的末尾 a:为什么？
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
+2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
+&lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
 var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
 =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
 B:堆内存:引用值对应的空间
 1.存储引用类型值(对象:键值对 函数:代码字符串)
 =&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
 =&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它">
-<meta itemprop="datePublished" content="2019-12-24T11:27:31&#43;08:00" />
-<meta itemprop="dateModified" content="2019-12-24T11:27:31&#43;08:00" />
-<meta itemprop="wordCount" content="47">
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它">
+
+<meta itemprop="wordCount" content="63">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="1000 - 变量提升、闭包"/>
-<meta name="twitter:description" content="1.一般都把js放到body的末尾 a:为什么？
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!-- 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
+<meta name="twitter:description" content="1.一般都把 js 放到 body 的末尾 a:为什么？
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
+2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
+&lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
 var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
 =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
 B:堆内存:引用值对应的空间
 1.存储引用类型值(对象:键值对 函数:代码字符串)
 =&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
 =&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它"/>
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它"/>
 
   </head>
 
@@ -133,18 +134,18 @@ B:堆内存:引用值对应的空间
       <h1 class="f1 athelas mb1">1000 - 变量提升、闭包</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:27:31&#43;08:00">December 24, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="0001-01-01T00:00:00Z">January 1, 0001</time>
       
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="1一般都把js放到body的末尾">1.一般都把js放到body的末尾</h3>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="1一般都把-js-放到-body-的末尾">1.一般都把 js 放到 body 的末尾</h3>
 <p>a:为什么？<br>
-b:放在head中可以不可以？如何放到head中也可以实现出放到body末尾的效果？<br>
-c:script标签中有两个属性：defer / async,这两个属性是做什么的？</p>
-<h3 id="2js数据渲染机制及堆栈内存">2.js数据渲染机制及堆栈内存</h3>
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？<br>
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？</p>
+<h3 id="2js-数据渲染机制及堆栈内存">2.js 数据渲染机制及堆栈内存</h3>
 <p>a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)</p>
-<pre><code>&lt;!-- 
+<pre><code>&lt;!--
 1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))
 --&gt;
 var a = 12;
@@ -159,14 +160,14 @@ ary2.push(100);
 console.log(ary1);
 </code></pre><p><img src="../../images/js2.png" alt=""></p>
 <p>A:栈内存:作用域<br>
-1.提供一个供js代码自上而下执行的环境(代码都是在栈内存中执行的) <br>
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)<br>
 2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的<br>
     =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了</p>
 <p>B:堆内存:引用值对应的空间<br>
 1.存储引用类型值(对象:键值对 函数:代码字符串)<br>
 =&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了<br>
 =&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉<br>
-=&gt;xxx = null 通过空对象指针null可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</p>
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</p>
 <ul class="pa0">
   
 </ul>
