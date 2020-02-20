@@ -375,6 +375,34 @@ transition 过渡 a: 语法
     </item>
     
     <item>
+      <title>11 - [HTTP全解]请求和响应 &amp; Node.js server</title>
+      <link>http://yaochengjian.com/posts/13/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0803</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/13/</guid>
+      <description>演示 Node.js Server   前置条件
+-安装 Node.js 8 +
+-理解 IP 和端口
+-理解 URL 路径和查询参数
+  如何发请求
+-用 Chrome 地址栏
+-用 curl 命令
+  模拟客户端向服务器端请求内容
+-在 github.com/FrankFang/nodejs-test/blob/master/server.js 下载
+-一般这个文件是放在服务器上面，而不是自己的机器上
+  response.setHeader(&amp;ldquo;Content-Type&amp;rdquo;,&amp;ldquo;text/css;charset=utf-8&amp;rdquo;) 让服务器告诉浏览器它发送的数据属于什么文件类型
+response.write() 写入响应内容发送回给浏览器
+response.end() 响应结束
+  HTTP 基础概念   请求(Request Headers)[get 是获取内容，post 是上传内容]
+-请求动词 路径 + 查询参数 协议名/版本 [请求行]
+-Host: 域名或 IP [这三行是请求头]
+Accept: text/html
+Content-Type: 请求体的格式
+-请求体[也就是上传的内容]
+curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localhost:8888/</description>
+    </item>
+    
+    <item>
       <title>1000 - 变量提升、闭包</title>
       <link>http://yaochengjian.com/posts/1000/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
