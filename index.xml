@@ -365,7 +365,7 @@ transition 过渡 a: 语法
 -电信|联通会回答一个 IP(具体过程很复杂，不研究)
 -然后 Chrome 才会想对应 IP 的 80/443 端口发送请求
 -请求内容是查看 xiedaimala.com 的首要
-为什么事 80 或 443 端口
+为什么是 80 或 443 端口
 -服务器默认用 80 提供 http 服务
 -服务器默认用 443 提供 https 服务
 -你可以在开发者工具里看到具体的端口
@@ -375,7 +375,7 @@ transition 过渡 a: 语法
     </item>
     
     <item>
-      <title>11 - [HTTP全解]请求和响应 &amp; Node.js server</title>
+      <title>12 - [HTTP全解]请求和响应 &amp; Node.js server</title>
       <link>http://yaochengjian.com/posts/13/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0803</pubDate>
       
@@ -400,6 +400,24 @@ Accept: text/html
 Content-Type: 请求体的格式
 -请求体[也就是上传的内容]
 curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localhost:8888/</description>
+    </item>
+    
+    <item>
+      <title>13 - [JS全解]内存图与JS世界</title>
+      <link>http://yaochengjian.com/posts/14/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0804</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/14/</guid>
+      <description>浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
+2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
+JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
+Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+2.找到了，则结束查找，使用自己私有的即可
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 </description>
     </item>
     
     <item>
