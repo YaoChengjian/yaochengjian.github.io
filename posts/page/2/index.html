@@ -254,6 +254,70 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/15/" class="link black dim">
+        14 - [JS全解]canvas实践
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
+2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色
+3.ctx.fillRect(x,y,width,height)
+4.ctx.fill() 填充路径的内容区域生成实心图形
+绘制三角形
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
+2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色
+2.ctx.beginPath() 绘制一个新的形状路径开始
+3.ctx.moveTo(x,y)
+4.ctx.lineTo(x,y)
+5.ctx.stroke() 填充描边路径颜色 6.ctx.lineWidth 定义线的粗心状态 7.ctx.lineCap 每个点与点连接是圆的
+绘制圆形
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
+2.ctx.fillStyle = &lsquo;red&rsquo;
+3.ctx.beiginPath() 绘制一个新的形状路径开始
+3.ctx.arc(x,y,半径，圆开始，弧度)
+4.ctx.fill()
+需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
+2.document.body.clientHeigh : 获取 body 的高度
+3.document.documentElement.clientWidth : 获取 HTML 的宽度
+4.document.documentElement.clientHeight : 获取 HTML 的高度
+var ctx = canvas.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/16/" class="link black dim">
+        15 - [JS全解]JS语法
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1+2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/1000/" class="link black dim">
         1000 - 变量提升、闭包
       </a>

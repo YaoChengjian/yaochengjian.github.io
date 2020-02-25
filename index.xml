@@ -377,7 +377,7 @@ transition 过渡 a: 语法
     <item>
       <title>12 - [HTTP全解]请求和响应 &amp; Node.js server</title>
       <link>http://yaochengjian.com/posts/13/</link>
-      <pubDate>Tue, 24 Dec 2019 11:28:30 +0803</pubDate>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0804</pubDate>
       
       <guid>http://yaochengjian.com/posts/13/</guid>
       <description>演示 Node.js Server   前置条件
@@ -405,7 +405,7 @@ curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localh
     <item>
       <title>13 - [JS全解]内存图与JS世界</title>
       <link>http://yaochengjian.com/posts/14/</link>
-      <pubDate>Tue, 24 Dec 2019 11:28:30 +0804</pubDate>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0805</pubDate>
       
       <guid>http://yaochengjian.com/posts/14/</guid>
       <description>浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
@@ -418,6 +418,58 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
 1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
 2.找到了，则结束查找，使用自己私有的即可
 3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 </description>
+    </item>
+    
+    <item>
+      <title>14 - [JS全解]canvas实践</title>
+      <link>http://yaochengjian.com/posts/15/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0806</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/15/</guid>
+      <description>Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.fillStyle = &amp;ldquo;black&amp;rdquo; 定义路径内容区域颜色
+3.ctx.fillRect(x,y,width,height)
+4.ctx.fill() 填充路径的内容区域生成实心图形
+绘制三角形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.strokeStyle = &amp;lsquo;red&amp;rsquo; 定义描边内容区域颜色
+2.ctx.beginPath() 绘制一个新的形状路径开始
+3.ctx.moveTo(x,y)
+4.ctx.lineTo(x,y)
+5.ctx.stroke() 填充描边路径颜色 6.ctx.lineWidth 定义线的粗心状态 7.ctx.lineCap 每个点与点连接是圆的
+绘制圆形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.fillStyle = &amp;lsquo;red&amp;rsquo;
+3.ctx.beiginPath() 绘制一个新的形状路径开始
+3.ctx.arc(x,y,半径，圆开始，弧度)
+4.ctx.fill()
+需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
+2.document.body.clientHeigh : 获取 body 的高度
+3.document.documentElement.clientWidth : 获取 HTML 的宽度
+4.document.documentElement.clientHeight : 获取 HTML 的高度
+var ctx = canvas.</description>
+    </item>
+    
+    <item>
+      <title>15 - [JS全解]JS语法</title>
+      <link>http://yaochengjian.com/posts/16/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0807</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/16/</guid>
+      <description>1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1+2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用</description>
     </item>
     
     <item>
