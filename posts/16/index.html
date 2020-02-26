@@ -59,7 +59,7 @@ ES2019 与 ES6 差别不大
  表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用">
 <meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:07" />
 <meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:07" />
-<meta itemprop="wordCount" content="180">
+<meta itemprop="wordCount" content="200">
 
 
 
@@ -227,6 +227,22 @@ a &gt; b ? console.log(a) ? console.log(b);
 <ol>
 <li>A &amp;&amp; B 如果 A 是是假，就取 A! 如果 A 是真，就会取 B</li>
 <li>A || B 如果 A 是真，就直接取 A(始终会取一个真值)，全部是假就会取最后一个</li>
+</ol>
+<h3 id="font-colorredfor-循环font"><font color=red>for 循环</font></h3>
+<p><font color=red>语法</font></p>
+<pre><code>for(语句1;表达式2;语句3){
+    循环体
+}
+</code></pre><ol>
+<li>先执行语句 1</li>
+<li>然后判断表达式 2</li>
+<li>如果为真，执行循环体，然后执行语句 3</li>
+<li>如果为假，直接退出循环，执行后面的语句</li>
+</ol>
+<p><font color=red>break 和 coontinue</font></p>
+<ol>
+<li>break 退出当前循环</li>
+<li>continent 退出当前一次循环</li>
 </ol>
 <ul class="pa0">
   
