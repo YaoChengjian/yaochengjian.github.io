@@ -473,6 +473,29 @@ ES2019 与 ES6 差别不大
     </item>
     
     <item>
+      <title>16 - [JS全解]JS数据类型</title>
+      <link>http://yaochengjian.com/posts/17/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0808</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/17/</guid>
+      <description>1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
+  字符串 string
+1.写法&#39;你好&#39; 单引号&amp;quot;你好&amp;quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
+ 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
+  未定义 undefined
+  空 null</description>
+    </item>
+    
+    <item>
+      <title>17 - [JS全解]JS的诞生</title>
+      <link>http://yaochengjian.com/posts/18/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0809</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/18/</guid>
+      <description>1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&amp;quot;1&amp;quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.</description>
+    </item>
+    
+    <item>
       <title>1000 - 变量提升、闭包</title>
       <link>http://yaochengjian.com/posts/1000/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
