@@ -94,40 +94,33 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/10/" class="link black dim">
-        9 - [css全解]定位
+      <a href="http://yaochengjian.com/posts/9/" class="link black dim">
+        9 - [css全解]布局
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
-A.border 内边沿围成的区域
-B.border 外边沿围成的区域
--如何验证自己的猜想?border 半透明化
--从左边看一个 div,是什么样子?
-新属性-position a：position
-1.static 默认值，待在文档流里
-2.relative 相对定位，升起来，但不脱离文档流
-3.absolute 绝对定位，定位基准是祖先里的非 static
-4.fixed 固定定位，定位基准是 viewport(有诈)
-5.sticky 粘滞定位，不好描述直接举例
-经验
-1.如果你写了 absolute，一般都得补一个 relative
-2.如果你写了 absolute 或 fixed，一定要补 top 和 left
-3.sticky 兼容性很差，主要用于面试装逼
-position:relative
-a：使用场景
-1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
-2.用于给 absolute 元素做爸爸
-b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
-1.z-index:auto 默认值，不创建新层叠上下文
-2.z-index：0 | 1 | 2
-3.z-index:-1 | -2
-经验
-1.写 z-index:9999 的都是彩笔
-2.学会管理 z-index
-position:absolute
-a：使用场景
-1.脱离原来的位置，另起一层，比如对话框的关闭按钮
+      1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+b: 不固定宽度布局，主要靠文档流的原理来布局
+2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
+&lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a: 响应式布局
+b: 意思就是 pc 上固定宽度，手机上不固定宽度
+c: 也就是一种混合布局
+4.布局的两种思路 ① 从大到小
+先定下大局
+然后完善每个部分的小布局
+② 从小到大
+先完成小布局
+然后组合成大布局
+③ 两种均可
+新人推荐用第二种，因为小的简单
+老手一般用第一种，因为熟练有大局观
+4.用什么 css 布局 5.float 布局 a: 步骤
+-子元素上加 float:left/right 和 width
+-在父元素上加.clearfix(必须要加上)
+实践 不同布局
+-用 float 做两栏布局(如顶部条)
+-用 float 做三栏布局(内容区)
     </div>
   </div>
 </div>
@@ -138,7 +131,7 @@ a：使用场景
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/11/" class="link black dim">
-        10 - [css动画]
+        11 - [css动画]
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -163,7 +156,7 @@ transition 过渡 a: 语法
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/12/" class="link black dim">
-        11 - [HTTP全解]URL是什么
+        12 - [HTTP全解]URL是什么
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -197,7 +190,7 @@ transition 过渡 a: 语法
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/13/" class="link black dim">
-        12 - [HTTP全解]请求和响应 &amp; Node.js server
+        13 - [HTTP全解]请求和响应 &amp; Node.js server
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -231,7 +224,22 @@ curl -v -X POST &ndash;data &lsquo;上传内容&rsquo; http://localhost:8888/
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/14/" class="link black dim">
-        13 - [JS全解]内存图与JS世界
+        14 - [JS全解]JS的诞生
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&quot;1&quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/15/" class="link black dim">
+        14 - [JS全解]内存图与JS世界
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -254,8 +262,8 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/15/" class="link black dim">
-        14 - [JS全解]canvas实践
+      <a href="http://yaochengjian.com/posts/16/" class="link black dim">
+        15 - [JS全解]canvas实践
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -291,8 +299,8 @@ var ctx = canvas.
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/16/" class="link black dim">
-        15 - [JS全解]JS语法
+      <a href="http://yaochengjian.com/posts/17/" class="link black dim">
+        16 - [JS全解]JS语法
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -318,8 +326,8 @@ ES2019 与 ES6 差别不大
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/17/" class="link black dim">
-        16 - [JS全解]JS数据类型
+      <a href="http://yaochengjian.com/posts/18/" class="link black dim">
+        17 - [JS全解]JS数据类型
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -329,21 +337,6 @@ ES2019 与 ES6 差别不大
  1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、'']  符号 symbol
   未定义 undefined
   空 null
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/18/" class="link black dim">
-        17 - [JS全解]JS的诞生
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&quot;1&quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.
     </div>
   </div>
 </div>

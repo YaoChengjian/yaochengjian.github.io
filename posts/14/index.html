@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>姚成健的博客  | 13 - [JS全解]内存图与JS世界</title>
+    <title>姚成健的博客  | 14 - [JS全解]JS的诞生</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.62.2" />
     
@@ -25,50 +25,23 @@
 
     
     
-    <meta property="og:title" content="13 - [JS全解]内存图与JS世界" />
-<meta property="og:description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
-2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
-JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
-Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__
-1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
-2.找到了，则结束查找，使用自己私有的即可
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 " />
+    <meta property="og:title" content="14 - [JS全解]JS的诞生" />
+<meta property="og:description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yaochengjian.com/posts/14/" />
 <meta property="article:published_time" content="2019-12-24T11:28:30+08:05" />
 <meta property="article:modified_time" content="2019-12-24T11:28:30+08:05" />
-<meta itemprop="name" content="13 - [JS全解]内存图与JS世界">
-<meta itemprop="description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
-2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
-JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
-Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__
-1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
-2.找到了，则结束查找，使用自己私有的即可
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 ">
+<meta itemprop="name" content="14 - [JS全解]JS的诞生">
+<meta itemprop="description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.">
 <meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:05" />
 <meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:05" />
-<meta itemprop="wordCount" content="37">
+<meta itemprop="wordCount" content="73">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="13 - [JS全解]内存图与JS世界"/>
-<meta name="twitter:description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
-2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
-JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
-Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__
-1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
-2.找到了，则结束查找，使用自己私有的即可
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 "/>
+<meta name="twitter:title" content="14 - [JS全解]JS的诞生"/>
+<meta name="twitter:description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2."/>
 
   </head>
 
@@ -121,7 +94,7 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
           
         POSTS
       </p>
-      <h1 class="f1 athelas mb1">13 - [JS全解]内存图与JS世界</h1>
+      <h1 class="f1 athelas mb1">14 - [JS全解]JS的诞生</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:05">December 24, 2019</time>
@@ -129,20 +102,50 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred浏览器功能font"><font color=red>浏览器功能</font></h3>
-<p>1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等</p>
-<p>2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程</p>
-<h3 id="font-colorredjs-原型font"><font color=red>JS 原型</font></h3>
-<p>1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象<br>
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身</p>
-<pre><code>Array.prototype.constructor === Array
-</code></pre><p>3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)<br>
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)</p>
-<p><font color=red>原型链__proto__</font><br>
-1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性<br>
-2.找到了，则结束查找，使用自己私有的即可<br>
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在
-<img src="../../images/%E5%8E%9F%E5%9E%8B.png" alt=""></p>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred1javascript-的-10-个设计缺陷font"><font color=red>1.Javascript 的 10 个设计缺陷</font></h3>
+<ol>
+<li>不适合开发大型程序</li>
+<li>非常小的标准库</li>
+<li>null 和 undefined</li>
+</ol>
+<pre><code>null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)
+typeof null // object
+typeof undefined // undefined
+</code></pre><ol start="4">
+<li>全局变量难以控制</li>
+<li>自动插入行尾分号</li>
+<li>加号运算符</li>
+</ol>
+<pre><code>+ 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接
+console.log(1 + 10)
+console.log(&quot;1&quot; + 10)
+</code></pre><ol start="7">
+<li>NaN(NaN 自己也不等于自己)</li>
+</ol>
+<pre><code>NaN === NaN  //false
+NaN !== NaN  //true
+</code></pre><ol start="8">
+<li>数据和对象区分(数组也属于对象)</li>
+<li>== 和 ===</li>
+</ol>
+<pre><code>  == 只是判断两个值是否相等
+  === 不单单判断值是否相等，还判断两边类型是否相等
+</code></pre><ol start="10">
+<li>基本类型的包装对象</li>
+</ol>
+<pre><code>Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。
+　　new Boolean(false);
+
+　　new Number(1234);
+
+　　new String(&quot;Hello World&quot;);
+
+与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。
+　　alert( typeof 1234); // number
+
+　　alert( typeof new Number(1234)); // object
+</code></pre><h3 id="font-colorred2a-href--httpswwwjianshucomp33c1d8505975js-的历史afont"><font color=red>2.<a href = "https://www.jianshu.com/p/33c1d8505975">JS 的历史</a></font></h3>
+<h3 id="font-colorred3a-href--httpwwwruanyifengcomblog201106birth_of_javascripthtmljs-的诞生afont"><font color=red>3.<a href = "http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">JS 的诞生</a></font></h3>
 <ul class="pa0">
   
 </ul>

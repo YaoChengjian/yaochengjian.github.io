@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>姚成健的博客  | 14 - [JS全解]canvas实践</title>
+    <title>姚成健的博客  | 14 - [JS全解]内存图与JS世界</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.62.2" />
     
@@ -25,89 +25,50 @@
 
     
     
-    <meta property="og:title" content="14 - [JS全解]canvas实践" />
-<meta property="og:description" content="Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色
-3.ctx.fillRect(x,y,width,height)
-4.ctx.fill() 填充路径的内容区域生成实心图形
-绘制三角形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色
-2.ctx.beginPath() 绘制一个新的形状路径开始
-3.ctx.moveTo(x,y)
-4.ctx.lineTo(x,y)
-5.ctx.stroke() 填充描边路径颜色 6.ctx.lineWidth 定义线的粗心状态 7.ctx.lineCap 每个点与点连接是圆的
-绘制圆形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &lsquo;red&rsquo;
-3.ctx.beiginPath() 绘制一个新的形状路径开始
-3.ctx.arc(x,y,半径，圆开始，弧度)
-4.ctx.fill()
-需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
-2.document.body.clientHeigh : 获取 body 的高度
-3.document.documentElement.clientWidth : 获取 HTML 的宽度
-4.document.documentElement.clientHeight : 获取 HTML 的高度
-var ctx = canvas." />
+    <meta property="og:title" content="14 - [JS全解]内存图与JS世界" />
+<meta property="og:description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
+2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
+JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
+Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+2.找到了，则结束查找，使用自己私有的即可
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yaochengjian.com/posts/15/" />
-<meta property="article:published_time" content="2019-12-24T11:28:30+08:06" />
-<meta property="article:modified_time" content="2019-12-24T11:28:30+08:06" />
-<meta itemprop="name" content="14 - [JS全解]canvas实践">
-<meta itemprop="description" content="Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色
-3.ctx.fillRect(x,y,width,height)
-4.ctx.fill() 填充路径的内容区域生成实心图形
-绘制三角形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色
-2.ctx.beginPath() 绘制一个新的形状路径开始
-3.ctx.moveTo(x,y)
-4.ctx.lineTo(x,y)
-5.ctx.stroke() 填充描边路径颜色 6.ctx.lineWidth 定义线的粗心状态 7.ctx.lineCap 每个点与点连接是圆的
-绘制圆形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &lsquo;red&rsquo;
-3.ctx.beiginPath() 绘制一个新的形状路径开始
-3.ctx.arc(x,y,半径，圆开始，弧度)
-4.ctx.fill()
-需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
-2.document.body.clientHeigh : 获取 body 的高度
-3.document.documentElement.clientWidth : 获取 HTML 的宽度
-4.document.documentElement.clientHeight : 获取 HTML 的高度
-var ctx = canvas.">
-<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:06" />
-<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:06" />
-<meta itemprop="wordCount" content="76">
+<meta property="article:published_time" content="2019-12-24T11:28:30+08:05" />
+<meta property="article:modified_time" content="2019-12-24T11:28:30+08:05" />
+<meta itemprop="name" content="14 - [JS全解]内存图与JS世界">
+<meta itemprop="description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
+2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
+JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
+Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+2.找到了，则结束查找，使用自己私有的即可
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 ">
+<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:05" />
+<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:05" />
+<meta itemprop="wordCount" content="37">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="14 - [JS全解]canvas实践"/>
-<meta name="twitter:description" content="Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色
-3.ctx.fillRect(x,y,width,height)
-4.ctx.fill() 填充路径的内容区域生成实心图形
-绘制三角形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色
-2.ctx.beginPath() 绘制一个新的形状路径开始
-3.ctx.moveTo(x,y)
-4.ctx.lineTo(x,y)
-5.ctx.stroke() 填充描边路径颜色 6.ctx.lineWidth 定义线的粗心状态 7.ctx.lineCap 每个点与点连接是圆的
-绘制圆形
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)
-2.ctx.fillStyle = &lsquo;red&rsquo;
-3.ctx.beiginPath() 绘制一个新的形状路径开始
-3.ctx.arc(x,y,半径，圆开始，弧度)
-4.ctx.fill()
-需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
-2.document.body.clientHeigh : 获取 body 的高度
-3.document.documentElement.clientWidth : 获取 HTML 的宽度
-4.document.documentElement.clientHeight : 获取 HTML 的高度
-var ctx = canvas."/>
+<meta name="twitter:title" content="14 - [JS全解]内存图与JS世界"/>
+<meta name="twitter:description" content="浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
+2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
+JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
+Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+2.找到了，则结束查找，使用自己私有的即可
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 "/>
 
   </head>
 
@@ -160,44 +121,29 @@ var ctx = canvas."/>
           
         POSTS
       </p>
-      <h1 class="f1 athelas mb1">14 - [JS全解]canvas实践</h1>
+      <h1 class="f1 athelas mb1">14 - [JS全解]内存图与JS世界</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:06">December 24, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:05">December 24, 2019</time>
       
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorredcanvas不能在-css-设置宽高不支持font"><font color=red>Canvas(不能在 css 设置宽高[不支持])</font></h3>
-<p><font color=red>绘制矩形</font><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色<br>
-3.ctx.fillRect(x,y,width,height)<br>
-4.ctx.fill() 填充路径的内容区域生成实心图形</p>
-<p><font color=red>绘制三角形</font><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色<br>
-2.ctx.beginPath() 绘制一个新的形状路径开始<br>
-3.ctx.moveTo(x,y)<br>
-4.ctx.lineTo(x,y)<br>
-5.ctx.stroke() 填充描边路径颜色
-6.ctx.lineWidth 定义线的粗心状态
-7.ctx.lineCap 每个点与点连接是圆的</p>
-<p><font color=red>绘制圆形</font><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.fillStyle = &lsquo;red&rsquo;<br>
-3.ctx.beiginPath() 绘制一个新的形状路径开始<br>
-3.ctx.arc(x,y,半径，圆开始，弧度)<br>
-4.ctx.fill()</p>
-<p><font color=red>需要注意的细节</font>
-1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)<br>
-2.document.body.clientHeigh : 获取 body 的高度<br>
-3.document.documentElement.clientWidth : 获取 HTML 的宽度<br>
-4.document.documentElement.clientHeight : 获取 HTML 的高度</p>
-<pre><code>var ctx = canvas.getContext(&quot;2d&quot;);
-ctx.fillStyle = &quot;rgb(200,0,0)&quot;;
-ctx.fillRect(10,10,55,50);
-</code></pre><ul class="pa0">
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred浏览器功能font"><font color=red>浏览器功能</font></h3>
+<p>1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等</p>
+<p>2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程</p>
+<h3 id="font-colorredjs-原型font"><font color=red>JS 原型</font></h3>
+<p>1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象<br>
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身</p>
+<pre><code>Array.prototype.constructor === Array
+</code></pre><p>3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)<br>
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)</p>
+<p><font color=red>原型链__proto__</font><br>
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性<br>
+2.找到了，则结束查找，使用自己私有的即可<br>
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在
+<img src="../../images/%E5%8E%9F%E5%9E%8B.png" alt=""></p>
+<ul class="pa0">
   
 </ul>
 <div class="mt6">

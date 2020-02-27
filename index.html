@@ -125,7 +125,7 @@
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          这是我前端学习之路，记录着本人点点滴滴笔记or文章 
+          姚成健 
         </div>
           <a href="http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -145,25 +145,24 @@
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://yaochengjian.com/posts/1/" class="color-inherit dim link">
-            0 - 如何使用hugo搭建个人博客
+            1 - 如何使用hugo搭建个人博客
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          1.如何使用hugo搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
-b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你hugo的路径地址
-c:hugo version查看自己的版本,可以看到就代表自己hugo安装没问题
-d:在hugo官网点击Quick Start根据步骤一步步实现(下面都是用命令行操作)
-1)hugo new site demo(demo可以更改为自己想要的名字)
-2)cd demo 进入demo
+          1.如何使用 hugo 搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你 hugo 的路径地址
+c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题
+d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)
+1)hugo new site demo(demo 可以更改为自己想要的名字)
+2)cd demo 进入 demo
 3)git init
 4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 5)echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml
-6)hugo new posts/my-first-post.md(my-first-post可以更改为自己想要的内容)
+6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)
 7)hugo server -D 可以得到一个预览地址
-8)打开config.toml配置
+8)打开 config.toml 配置
 baseURL = &quot;yaochengjian.com&quot; //更改为自己购买的域名languageCode = &quot;zh-CN&quot;title = &quot;姚成健的博客&quot;theme = &quot;ananke&quot;9)hugo -D
-10)上面的完成之后，我们会看到demo里面有一个public文件名,我们也要在里面git init每次只需要提交这个文件里面的内容到github仓库即可！！！
-11)在github上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到settings,设置自己购买的域名 12)完成购买域名后，我们需要解析4条记录 13)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在content\posts里面添加自己的内容,添加完成后都需要hugo -D,在上传到仓库上面去。
+10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！
         </div>
           <a href="http://yaochengjian.com/posts/1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
@@ -183,27 +182,27 @@ baseURL = &quot;yaochengjian.com&quot; //更改为自己购买的域名language
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://yaochengjian.com/posts/2/" class="color-inherit dim link">
-            1 - Node &amp; yarn
+            2 - Node &amp; yarn
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          安装node.js   安装双数版本
+          安装 node.js   安装双数版本
 1.node8 node10 node12 是稳定版
 2.尽量选择官网安装
-3.下载慢就加入FQ插件的代理
+3.下载慢就加入 FQ 插件的代理
   安装之后
-1.自然就有了node命令(因为PATH)
-2.自然就有了npm命令
-3.自然就有了npx命令
-  配置Node.js(因为node.js服务器默认在国外，我们需要用淘宝镜像服务器)
+1.自然就有了 node 命令(因为 PATH)
+2.自然就有了 npm 命令
+3.自然就有了 npx 命令
+  配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)
 1.npm install -global nrm 缩写 npm i -g nrm
 npm 是这个命令的开始
 install 是载入意思
 global 是全局意思
-nrm 是一个npm源管理器，允许你快速地在npm源间切换
+nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换
 2.nrm ls 执行命令查看可选的源
-其中带*号的是当前使用的源，如果要切换到taobao源，执行命令nrm use taobao
-3.npm config list 查看nrm所有配置
+其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao
+3.npm config list 查看 nrm 所有配置
   
         </div>
           <a href="http://yaochengjian.com/posts/2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
@@ -223,26 +222,26 @@ nrm 是一个npm源管理器，允许你快速地在npm源间切换
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://yaochengjian.com/posts/10/" class="link black dim">
+              10 - [css全解]定位
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://yaochengjian.com/posts/3/" class="link black dim">
-              2 - [Git入门]bash命令行入门
+              3 - [Git入门]bash命令行入门
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://yaochengjian.com/posts/4/" class="link black dim">
-              3 - [Git入门]本地仓库
+              4 - [Git入门]本地仓库
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
             <a href="http://yaochengjian.com/posts/5/" class="link black dim">
-              4 - [Git入门]git远程仓库GitHub
-            </a>
-          </h2>
-        
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://yaochengjian.com/posts/6/" class="link black dim">
-              5 - HTML入门笔记1
+              5 - [Git入门]git远程仓库GitHub
             </a>
           </h2>
         

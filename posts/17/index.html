@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>姚成健的博客  | 16 - [JS全解]JS数据类型</title>
+    <title>姚成健的博客  | 16 - [JS全解]JS语法</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.62.2" />
     
@@ -25,38 +25,59 @@
 
     
     
-    <meta property="og:title" content="16 - [JS全解]JS数据类型" />
-<meta property="og:description" content="1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
-  字符串 string
-1.写法&#39;你好&#39; 单引号&quot;你好&quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
- 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
-  未定义 undefined
-  空 null" />
+    <meta property="og:title" content="16 - [JS全解]JS语法" />
+<meta property="og:description" content="1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1&#43;2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yaochengjian.com/posts/17/" />
-<meta property="article:published_time" content="2019-12-24T11:28:30+08:08" />
-<meta property="article:modified_time" content="2019-12-24T11:28:30+08:08" />
-<meta itemprop="name" content="16 - [JS全解]JS数据类型">
-<meta itemprop="description" content="1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
-  字符串 string
-1.写法&#39;你好&#39; 单引号&quot;你好&quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
- 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
-  未定义 undefined
-  空 null">
-<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:08" />
-<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:08" />
-<meta itemprop="wordCount" content="147">
+<meta property="article:published_time" content="2019-12-24T11:28:30+08:07" />
+<meta property="article:modified_time" content="2019-12-24T11:28:30+08:07" />
+<meta itemprop="name" content="16 - [JS全解]JS语法">
+<meta itemprop="description" content="1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1&#43;2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用">
+<meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:07" />
+<meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:07" />
+<meta itemprop="wordCount" content="218">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="16 - [JS全解]JS数据类型"/>
-<meta name="twitter:description" content="1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
-  字符串 string
-1.写法&#39;你好&#39; 单引号&quot;你好&quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
- 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
-  未定义 undefined
-  空 null"/>
+<meta name="twitter:title" content="16 - [JS全解]JS语法"/>
+<meta name="twitter:description" content="1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1&#43;2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用"/>
 
   </head>
 
@@ -109,116 +130,127 @@
           
         POSTS
       </p>
-      <h1 class="f1 athelas mb1">16 - [JS全解]JS数据类型</h1>
+      <h1 class="f1 athelas mb1">16 - [JS全解]JS语法</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:08">December 24, 2019</time>
+      <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:07">December 24, 2019</time>
       
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font1用-0127-表示所有符号font"><font>1.用 0~127 表示所有符号</font></h3>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred1js-版本font"><font color=red>1.JS 版本</font></h3>
+<p><font color=red>历史版本</font><br>
+ES3，IE6 支持，总体评价 : 垃圾<br>
+ES5，总体评价 : 还是垃圾<br>
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好<br>
+ES2019 与 ES6 差别不大</p>
+<p><font color=red>为什么说 ES6 一半垃圾</font><br>
+因为 ES 不能删除以前的特性，要兼容旧的网站<br>
+也就是说以前能运行的网站，以后都要能运行<br>
+对比 Python3 你就知道兼容的好处 : 稳定</p>
+<h3 id="font-colorred2表达式与语句font"><font color=red>2.表达式与语句</font></h3>
+<p><font color=red>表达式</font></p>
 <ol>
-<li>48~57 表示数字符号</li>
-<li>65~90 表示大写字母</li>
-<li>97~122 表示小写字母</li>
+<li>1+2 表达式的值为 3</li>
+<li>add(1,2)表达式的值为函数的返回值</li>
+<li>console.log 表达式的值为函数本身</li>
+<li>console.log(3) 表达式的值为多少? undefined</li>
 </ol>
-<h3 id="font-colorred2js-中的数据类型7-种font"><font color=red>2.JS 中的数据类型(7 种)</font></h3>
+<p><font color=red>语句</font></p>
 <ol>
-<li>
-<p>数字 number</p>
-</li>
-<li>
-<p>字符串 string</p>
-<pre><code>1.写法
- '你好'  单引号
- &quot;你好&quot;  双引号
- `你好`  反引号
-
-2.转义
- 'it's ok' js引擎会认为'it'就结束了，后面的看不懂
- 'it \'s ok' 这就是转义
-
-3.如果你想要在字符串里回车可以使用反引号``
-  let s = `这样是
-  可以的
-  用反引号很容易做到`
-
-4.通过下标读取字符(下标是从0开始)
-  let s = 'hello';
-  s[0]; //'h'
-</code></pre></li>
-<li>
-<p>布尔 bool</p>
-<pre><code> 1.五个falsy值(falsy就是相当于false但又不是false的值)
-   分别是[undefined 、null、0、NaN、'']
-</code></pre></li>
-<li>
-<p>符号 symbol</p>
-</li>
-<li>
-<p>未定义 undefined</p>
-</li>
-<li>
-<p>空 null</p>
-<pre><code>区别
- 1.如果一个变量声明了，但没有赋值，那么默认值就是undefined，而不是null
- 2.如果一个函数，没有写return，那么默认return undefined，而不是null
- 3.undefined更多是默认的空，null是主动的空
-</code></pre></li>
-<li>
-<p>对象 object</p>
-</li>
+<li>var a = 1 是一个语句</li>
 </ol>
-<h3 id="font-colorred3特殊值font"><font color=red>3.特殊值</font></h3>
+<p><font color=red>二者的区别</font></p>
 <ol>
-<li>正 0 和 负 0</li>
-<li>无穷大 (Infinity 、+Infinity 、-Infinity)</li>
-<li>无法表示的数字 (NaN)</li>
+<li>表达式一般都有值，语句可能有也可能没有</li>
+<li>语句一般会改变环境(声明、赋值)</li>
+<li>上面两句话并不是绝对的</li>
 </ol>
-<h3 id="font-colorred4变量声明font"><font color=red>4.变量声明</font></h3>
+<h3 id="font-colorred3空格font"><font color=red>3.空格</font></h3>
 <ol>
-<li>三种声明方式</li>
+<li>大部分空格没有实际意义</li>
+<li>只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined</li>
+<li>SYntaxError : 语法错误</li>
 </ol>
-<pre><code>   var a = 1;
-   let a = 1;
-   const a = 1
-
-   区别
-   1.var是过时的、不好用的方式
-   2.let是新的，更合理的方式
-   3.const是声明是必须赋值，且不能再改的方式
-
-   let 声明[规则]
-   1.遵循块作用域，即使用范围不能超出{}
-   2.不能重复声明
-   3.可以赋值，也可以不赋值
-   4.必须先声明再使用，否则报错
-   5.全局声明的let变量，不会变成window的属性
-   6.for循环配合let有奇效
-
-   const 声明[规则]
-   1.跟let几乎一样
-   2.只有一条不一样 : 声明时就要赋值，赋值后不能改
-</code></pre><h3 id="font-colorred5类型转换font"><font color=red>5.类型转换</font></h3>
-<pre><code>1. number =&gt; string  数字转字符串
-   String(n)
-   n + ''
-
-2. string =&gt; number  字符串转数字
-   Number(s)
-   parseInt(s) / parseFloat(s)
-   s - 0
-   +s
-
-3. x =&gt; boll  转为布尔型
-   Boolean(x)
-   !!x
-
-4. x =&gt; string  把任何东西转为字符串
-   String(x)
-   x.toString()
-</code></pre><p>秘密花园是讲 JavaScript 各种奇葩之处</p>
+<h3 id="font-colorred4区块-blockfont"><font color=red>4.区块 block</font></h3>
+<pre><code>{
+    把代码包在一起
+    let a = 1;
+    let b = 2;
+}
+</code></pre><p>常常与 if / for / while 合用</p>
+<h3 id="font-colorred5if-语句font"><font color=red>5.if 语句</font></h3>
+<p><font color=red>语句</font></p>
+<ol>
+<li>if(表达式){语句 1}else{语句 2}</li>
+<li>{}在语句只有一句的时候可以省略，不建议这样做</li>
+</ol>
+<p><font color=red>变态情况</font></p>
+<ol>
+<li>表达式里可以非常变态，如 a = 1</li>
+<li>语句 1 里可以非常变态，如嵌套的 if else</li>
+<li>语句 2 里可以非常变态，如嵌套的 if else</li>
+</ol>
+<pre><code>
+a = 1
+if(a === 2)   这里其实有一个无形的{}，条件成立了依然会执行，只会管第一句话
+  console.log('a');
+  console.log('b');
+</code></pre><h3 id="font-colorred6switch-语句font"><font color=red>6.switch 语句</font></h3>
+<p><font color=red>语法</font></p>
+<pre><code>switch(a){
+    case 1:
+    console.log(1);
+        break;
+    case 2:
+    console.log(2);
+        break;
+    case 3:
+    case 4:
+    console.log(3,4);
+        break;
+    default:
+    console.log(&quot;hi&quot;);
+}
+</code></pre><ol>
+<li>大部分时候，省略 break 你就完了</li>
+<li>少部分时候，可以利用 break</li>
+</ol>
+<h3 id="font-colorred7问好冒号表达式font"><font color=red>7.问好冒号表达式</font></h3>
+<ol>
+<li>表达式 1 ? 表达式 2 : 表达式 3</li>
+</ol>
+<pre><code>var a = 10;
+var b = 20;
+a &gt; b ? console.log(a) ? console.log(b);
+</code></pre><h3 id="font-colorred8-短路逻辑font"><font color=red>8.&amp;&amp; ||短路逻辑</font></h3>
+<ol>
+<li>A &amp;&amp; B 如果 A 是是假，就取 A! 如果 A 是真，就会取 B</li>
+<li>A || B 如果 A 是真，就直接取 A(始终会取一个真值)，全部是假就会取最后一个</li>
+</ol>
+<h3 id="font-colorred9for-循环font"><font color=red>9.for 循环</font></h3>
+<p><font color=red>语法</font></p>
+<pre><code>for(语句1;表达式2;语句3){
+    循环体
+}
+</code></pre><ol>
+<li>先执行语句 1</li>
+<li>然后判断表达式 2</li>
+<li>如果为真，执行循环体，然后执行语句 3</li>
+<li>如果为假，直接退出循环，执行后面的语句</li>
+</ol>
+<p><font color=red>10.break 和 coontinue</font></p>
+<ol>
+<li>break 退出当前循环</li>
+<li>continent 退出当前一次循环</li>
+</ol>
+<p><font color=red>11.label 语句</font><br>
+一般不会使用，面试中会遇到 : 举例</p>
+<pre><code>{
+    foo : 1
+}
+</code></pre><p>面试中会被问 : 上述是什么东西?<br>
+我们的回答就是 : 这就是一个 label，它的内容为 1</p>
 <ul class="pa0">
   
 </ul>

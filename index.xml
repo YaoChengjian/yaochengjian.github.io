@@ -17,60 +17,96 @@
       <pubDate>Thu, 26 Dec 2019 21:51:11 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
-      <description>这是我前端学习之路，记录着本人点点滴滴笔记or文章 </description>
+      <description>姚成健 </description>
     </item>
     
     <item>
-      <title>0 - 如何使用hugo搭建个人博客</title>
+      <title>1 - 如何使用hugo搭建个人博客</title>
       <link>http://yaochengjian.com/posts/1/</link>
       <pubDate>Wed, 25 Dec 2019 21:55:11 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/1/</guid>
-      <description>1.如何使用hugo搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
-b:我的电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path-&amp;gt;添加你hugo的路径地址
-c:hugo version查看自己的版本,可以看到就代表自己hugo安装没问题
-d:在hugo官网点击Quick Start根据步骤一步步实现(下面都是用命令行操作)
-1)hugo new site demo(demo可以更改为自己想要的名字)
-2)cd demo 进入demo
+      <description>1.如何使用 hugo 搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path-&amp;gt;添加你 hugo 的路径地址
+c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题
+d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)
+1)hugo new site demo(demo 可以更改为自己想要的名字)
+2)cd demo 进入 demo
 3)git init
 4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 5)echo &amp;lsquo;theme = &amp;ldquo;ananke&amp;rdquo;&amp;rsquo; &amp;raquo; config.toml
-6)hugo new posts/my-first-post.md(my-first-post可以更改为自己想要的内容)
+6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)
 7)hugo server -D 可以得到一个预览地址
-8)打开config.toml配置
+8)打开 config.toml 配置
 baseURL = &amp;quot;yaochengjian.com&amp;quot; //更改为自己购买的域名languageCode = &amp;quot;zh-CN&amp;quot;title = &amp;quot;姚成健的博客&amp;quot;theme = &amp;quot;ananke&amp;quot;9)hugo -D
-10)上面的完成之后，我们会看到demo里面有一个public文件名,我们也要在里面git init每次只需要提交这个文件里面的内容到github仓库即可！！！
-11)在github上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到settings,设置自己购买的域名 12)完成购买域名后，我们需要解析4条记录 13)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在content\posts里面添加自己的内容,添加完成后都需要hugo -D,在上传到仓库上面去。</description>
+10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！</description>
     </item>
     
     <item>
-      <title>1 - Node &amp; yarn</title>
+      <title>2 - Node &amp; yarn</title>
       <link>http://yaochengjian.com/posts/2/</link>
       <pubDate>Wed, 25 Dec 2019 21:55:11 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/2/</guid>
-      <description>安装node.js   安装双数版本
+      <description>安装 node.js   安装双数版本
 1.node8 node10 node12 是稳定版
 2.尽量选择官网安装
-3.下载慢就加入FQ插件的代理
+3.下载慢就加入 FQ 插件的代理
   安装之后
-1.自然就有了node命令(因为PATH)
-2.自然就有了npm命令
-3.自然就有了npx命令
-  配置Node.js(因为node.js服务器默认在国外，我们需要用淘宝镜像服务器)
+1.自然就有了 node 命令(因为 PATH)
+2.自然就有了 npm 命令
+3.自然就有了 npx 命令
+  配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)
 1.npm install -global nrm 缩写 npm i -g nrm
 npm 是这个命令的开始
 install 是载入意思
 global 是全局意思
-nrm 是一个npm源管理器，允许你快速地在npm源间切换
+nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换
 2.nrm ls 执行命令查看可选的源
-其中带*号的是当前使用的源，如果要切换到taobao源，执行命令nrm use taobao
-3.npm config list 查看nrm所有配置
+其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao
+3.npm config list 查看 nrm 所有配置
   </description>
     </item>
     
     <item>
-      <title>2 - [Git入门]bash命令行入门</title>
+      <title>10 - [css全解]定位</title>
+      <link>http://yaochengjian.com/posts/10/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/10/</guid>
+      <description>问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
+A.border 内边沿围成的区域
+B.border 外边沿围成的区域
+-如何验证自己的猜想?border 半透明化
+-从左边看一个 div,是什么样子?
+新属性-position a：position
+1.static 默认值，待在文档流里
+2.relative 相对定位，升起来，但不脱离文档流
+3.absolute 绝对定位，定位基准是祖先里的非 static
+4.fixed 固定定位，定位基准是 viewport(有诈)
+5.sticky 粘滞定位，不好描述直接举例
+经验
+1.如果你写了 absolute，一般都得补一个 relative
+2.如果你写了 absolute 或 fixed，一定要补 top 和 left
+3.sticky 兼容性很差，主要用于面试装逼
+position:relative
+a：使用场景
+1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
+2.用于给 absolute 元素做爸爸
+b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
+1.z-index:auto 默认值，不创建新层叠上下文
+2.z-index：0 | 1 | 2
+3.z-index:-1 | -2
+经验
+1.写 z-index:9999 的都是彩笔
+2.学会管理 z-index
+position:absolute
+a：使用场景
+1.脱离原来的位置，另起一层，比如对话框的关闭按钮</description>
+    </item>
+    
+    <item>
+      <title>3 - [Git入门]bash命令行入门</title>
       <link>http://yaochengjian.com/posts/3/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
@@ -79,46 +115,45 @@ nrm 是一个npm源管理器，允许你快速地在npm源间切换
 2.查：查看文件或目录
  查看当前目录绝对路径
 pwd
- 查看当前目录内容 ls
+ 查看当前目录内容
+ls
 查看指定目录内容
-ls 目录名称  查看文件内容
+ls 目录名称
+ 查看文件内容
 cat 文件名称(会显示全部内容)
 head 文件名称(可以控制想看多少行，从开头开始显示)
 tail 文件名称(可以控制想看多少行，从底部开始)
   2.文件的增加删除操作 1.touch 1.txt
 确定你路径在哪里，创建一个文件
 3.文件(创建 追加 复制 删除)内容 1.echo mmp &amp;gt; 1.txt
-向1.txt里面追加内容，最新的命令行会覆盖以前追加的信息
+向 1.txt 里面追加内容，最新的命令行会覆盖以前追加的信息
 2.echo mmp &amp;raquo; 1.txt
-向1.txt里面追加内容，最新的命令行会叠加以前追加的信息
+向 1.txt 里面追加内容，最新的命令行会叠加以前追加的信息
 3.echo -e &amp;ldquo;1/n2&amp;rdquo; &amp;gt; 1.txt
-向1.txt里面追加两行内容 4.mkdir demo-1
-创建一个文件名字为demo-1的目录
+向 1.txt 里面追加两行内容 4.mkdir demo-1
+创建一个文件名字为 demo-1 的目录
 mkdir -p a/b/c/d
 创建多层目录
 5.cp 1.txt 2.txt
-复制1.txt内容为2.txt
-cp -r demo demo1
-复制demo目录内容为demo1
-4.移动文件/目录 &amp;amp;&amp;amp; 重命名文件/目录 都是同一个命令 1.mv 1.txt demo
-把1.txt移动到demo目录上面</description>
+复制 1.txt 内容为 2.txt
+cp -r demo demo1</description>
     </item>
     
     <item>
-      <title>3 - [Git入门]本地仓库</title>
+      <title>4 - [Git入门]本地仓库</title>
       <link>http://yaochengjian.com/posts/4/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/4/</guid>
-      <description>1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
+      <description>1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
 git config &amp;ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &amp;ndash;global push.default simple
 git config &amp;ndash;global core.quotepath false
 git config &amp;ndash;global core.eaitor &amp;ldquo;code &amp;ndash;wait&amp;rdquo;
 git config &amp;ndash;global core.autocrlf input
-注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
-会创建.git目录/仓库，用来容纳你的代码快照
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
+3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
+会创建.git 目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
 3..gitignore
@@ -126,68 +161,61 @@ git config &amp;ndash;global core.autocrlf input
 4.git status
 通过这个命令可以查看哪些文件需要提交的
 5.git commit -m 字符串
-把上面提交的代码复制一份到.git目录里面
-git commit -v
-个人更喜欢&amp;ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些
-6.git log
-可以显示所有提交过的版本信息
-7.git reflog
-可以查看所有分支操作记录以及提交过的版本
-git reset &amp;ndash;hard 0aa5218(版本号)
-版本回退，可以选择之前提交过的版本
-8.查看分支 创建分支 切换分支 合并分支 删除分支</description>
+把上面提交的代码复制一份到.git 目录里面
+git commit -v</description>
     </item>
     
     <item>
-      <title>4 - [Git入门]git远程仓库GitHub</title>
+      <title>5 - [Git入门]git远程仓库GitHub</title>
       <link>http://yaochengjian.com/posts/5/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/5/</guid>
-      <description>操控远程仓库GitHub 1.如何生成ssh key(需要在github上面填写公钥)
-a. 运行ssh-keygen -t rsa -b 4096 -C 你的邮箱
+      <description>操控远程仓库 GitHub 1.如何生成 ssh key(需要在 github 上面填写公钥)
+a. 运行 ssh-keygen -t rsa -b 4096 -C 你的邮箱
 b. 一直回车，直至到没有提示
 2.如何测试配对成功
 a. ssh -T git@github.com
-b. 如果问你yes/no，请回答yes并回车
+b. 如果问你 yes/no，请回答 yes 并回车
 3.上传代码
-a. 新建GitHub Repo，赋值其ssh地址
+a. 新建 GitHub Repo，赋值其 ssh 地址
 b. git remote add origin git@xxxxxxxx
 c. 在本地仓库添加远程仓库地址
-d. origin是远程仓库的默认名字，可以换，建议不要换
+d. origin 是远程仓库的默认名字，可以换，建议不要换
 e. 不要使用https://地址，因为每次都需要密码
-f. git push -u origin master 推送本地master分支到远程origin的master分支
+f. git push -u origin master 推送本地 master 分支到远程 origin 的 master 分支
 4.如何下载代码
-a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的ssh key[一机一key]</description>
+a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的 ssh key[一机一 key]</description>
     </item>
     
     <item>
-      <title>5 - HTML入门笔记1</title>
+      <title>6 - HTML入门笔记1</title>
       <link>http://yaochengjian.com/posts/6/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
       <guid>http://yaochengjian.com/posts/6/</guid>
-      <description>1.HTML是谁发明的 蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于1990发明了首个网页浏览器&amp;ndash;WorldWideWeb的人
-2.HTML起手式应该写什么 &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;/&amp;gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie-edge&amp;quot;/&amp;gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;3.章节标签(表示文章/书的层级) -标题 h1~h6 -章节 section -文章 article
--段落 p -头部 header -脚部 footer
--主要内容 main -旁支分支 aside -划分 div
+      <description>1.HTML 是谁发明的 蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于 1990 发明了首个网页浏览器&amp;ndash;WorldWideWeb 的人
+2.HTML 起手式应该写什么 &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;/&amp;gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie-edge&amp;quot;/&amp;gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;3.章节标签(表示文章/书的层级) -标题 h1~h6
+-章节 section
+-文章 article
+-段落 p
+-头部 header
+-脚部 footer
+-主要内容 main
+-旁支分支 aside
+-划分 div
 4.全局属性(所有标签都有的属性) -class 类选择器
 -contenteditable 页面实时编辑
 -hidden 隐藏
--id 选择器ID
+-id 选择器 ID
 -style 样式，行内样式
--tabindex 用来控制键盘tab顺序，从序号1开始，0代表最后一个
+-tabindex 用来控制键盘 tab 顺序，从序号 1 开始，0 代表最后一个
 -title 标题
-5.内容标签 -ol+li 有序列表ol子集不能含有任何子元素或者中文
--ul+li 无序列表ul子集不能含有任何子元素或者中文
--dl+dt+dd 描述列表，dt是描述的对象，dd描述对象的内容
--pre 被包围在  标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体
--hr 水平分割线
--br 换行</description>
+5.内容标签 -ol+li 有序列表 ol 子集不能含有任何子元素或者中文</description>
     </item>
     
     <item>
-      <title>6 - [HTML全解]HTML重难点</title>
+      <title>7 - [HTML全解]HTML重难点</title>
       <link>http://yaochengjian.com/posts/7/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
@@ -205,7 +233,7 @@ b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父
     </item>
     
     <item>
-      <title>7 - [css全解]css基础</title>
+      <title>8 - [css全解]css基础</title>
       <link>http://yaochengjian.com/posts/8/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
@@ -261,7 +289,7 @@ a：不要使用上面属性就不会脱离文档流了
     </item>
     
     <item>
-      <title>8 - [css全解]布局</title>
+      <title>9 - [css全解]布局</title>
       <link>http://yaochengjian.com/posts/9/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
       
@@ -291,44 +319,7 @@ c: 也就是一种混合布局
     </item>
     
     <item>
-      <title>9 - [css全解]定位</title>
-      <link>http://yaochengjian.com/posts/10/</link>
-      <pubDate>Tue, 24 Dec 2019 11:28:30 +0800</pubDate>
-      
-      <guid>http://yaochengjian.com/posts/10/</guid>
-      <description>问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
-A.border 内边沿围成的区域
-B.border 外边沿围成的区域
--如何验证自己的猜想?border 半透明化
--从左边看一个 div,是什么样子?
-新属性-position a：position
-1.static 默认值，待在文档流里
-2.relative 相对定位，升起来，但不脱离文档流
-3.absolute 绝对定位，定位基准是祖先里的非 static
-4.fixed 固定定位，定位基准是 viewport(有诈)
-5.sticky 粘滞定位，不好描述直接举例
-经验
-1.如果你写了 absolute，一般都得补一个 relative
-2.如果你写了 absolute 或 fixed，一定要补 top 和 left
-3.sticky 兼容性很差，主要用于面试装逼
-position:relative
-a：使用场景
-1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
-2.用于给 absolute 元素做爸爸
-b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
-1.z-index:auto 默认值，不创建新层叠上下文
-2.z-index：0 | 1 | 2
-3.z-index:-1 | -2
-经验
-1.写 z-index:9999 的都是彩笔
-2.学会管理 z-index
-position:absolute
-a：使用场景
-1.脱离原来的位置，另起一层，比如对话框的关闭按钮</description>
-    </item>
-    
-    <item>
-      <title>10 - [css动画]</title>
+      <title>11 - [css动画]</title>
       <link>http://yaochengjian.com/posts/11/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0801</pubDate>
       
@@ -347,7 +338,7 @@ transition 过渡 a: 语法
     </item>
     
     <item>
-      <title>11 - [HTTP全解]URL是什么</title>
+      <title>12 - [HTTP全解]URL是什么</title>
       <link>http://yaochengjian.com/posts/12/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0802</pubDate>
       
@@ -375,7 +366,7 @@ transition 过渡 a: 语法
     </item>
     
     <item>
-      <title>12 - [HTTP全解]请求和响应 &amp; Node.js server</title>
+      <title>13 - [HTTP全解]请求和响应 &amp; Node.js server</title>
       <link>http://yaochengjian.com/posts/13/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0804</pubDate>
       
@@ -403,11 +394,20 @@ curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localh
     </item>
     
     <item>
-      <title>13 - [JS全解]内存图与JS世界</title>
+      <title>14 - [JS全解]JS的诞生</title>
       <link>http://yaochengjian.com/posts/14/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0805</pubDate>
       
       <guid>http://yaochengjian.com/posts/14/</guid>
+      <description>1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&amp;quot;1&amp;quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.</description>
+    </item>
+    
+    <item>
+      <title>14 - [JS全解]内存图与JS世界</title>
+      <link>http://yaochengjian.com/posts/15/</link>
+      <pubDate>Tue, 24 Dec 2019 11:28:30 +0805</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/15/</guid>
       <description>浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
 2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
 JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
@@ -421,11 +421,11 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
     </item>
     
     <item>
-      <title>14 - [JS全解]canvas实践</title>
-      <link>http://yaochengjian.com/posts/15/</link>
+      <title>15 - [JS全解]canvas实践</title>
+      <link>http://yaochengjian.com/posts/16/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0806</pubDate>
       
-      <guid>http://yaochengjian.com/posts/15/</guid>
+      <guid>http://yaochengjian.com/posts/16/</guid>
       <description>Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
 1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
 2.ctx.fillStyle = &amp;ldquo;black&amp;rdquo; 定义路径内容区域颜色
@@ -452,11 +452,11 @@ var ctx = canvas.</description>
     </item>
     
     <item>
-      <title>15 - [JS全解]JS语法</title>
-      <link>http://yaochengjian.com/posts/16/</link>
+      <title>16 - [JS全解]JS语法</title>
+      <link>http://yaochengjian.com/posts/17/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0807</pubDate>
       
-      <guid>http://yaochengjian.com/posts/16/</guid>
+      <guid>http://yaochengjian.com/posts/17/</guid>
       <description>1.JS 版本 历史版本
 ES3，IE6 支持，总体评价 : 垃圾
 ES5，总体评价 : 还是垃圾
@@ -473,26 +473,17 @@ ES2019 与 ES6 差别不大
     </item>
     
     <item>
-      <title>16 - [JS全解]JS数据类型</title>
-      <link>http://yaochengjian.com/posts/17/</link>
+      <title>17 - [JS全解]JS数据类型</title>
+      <link>http://yaochengjian.com/posts/18/</link>
       <pubDate>Tue, 24 Dec 2019 11:28:30 +0808</pubDate>
       
-      <guid>http://yaochengjian.com/posts/17/</guid>
+      <guid>http://yaochengjian.com/posts/18/</guid>
       <description>1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
   字符串 string
 1.写法&#39;你好&#39; 单引号&amp;quot;你好&amp;quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
  1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
   未定义 undefined
   空 null</description>
-    </item>
-    
-    <item>
-      <title>17 - [JS全解]JS的诞生</title>
-      <link>http://yaochengjian.com/posts/18/</link>
-      <pubDate>Tue, 24 Dec 2019 11:28:30 +0809</pubDate>
-      
-      <guid>http://yaochengjian.com/posts/18/</guid>
-      <description>1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&amp;quot;1&amp;quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>姚成健的博客  | 3 - [Git入门]本地仓库</title>
+    <title>姚成健的博客  | 4 - [Git入门]本地仓库</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.62.2" />
     
@@ -25,16 +25,16 @@
 
     
     
-    <meta property="og:title" content="3 - [Git入门]本地仓库" />
-<meta property="og:description" content="1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
+    <meta property="og:title" content="4 - [Git入门]本地仓库" />
+<meta property="og:description" content="1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
 git config &ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &ndash;global push.default simple
 git config &ndash;global core.quotepath false
 git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;
 git config &ndash;global core.autocrlf input
-注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
-会创建.git目录/仓库，用来容纳你的代码快照
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
+3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
+会创建.git 目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
 3..gitignore
@@ -42,30 +42,22 @@ git config &ndash;global core.autocrlf input
 4.git status
 通过这个命令可以查看哪些文件需要提交的
 5.git commit -m 字符串
-把上面提交的代码复制一份到.git目录里面
-git commit -v
-个人更喜欢&ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些
-6.git log
-可以显示所有提交过的版本信息
-7.git reflog
-可以查看所有分支操作记录以及提交过的版本
-git reset &ndash;hard 0aa5218(版本号)
-版本回退，可以选择之前提交过的版本
-8.查看分支 创建分支 切换分支 合并分支 删除分支" />
+把上面提交的代码复制一份到.git 目录里面
+git commit -v" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yaochengjian.com/posts/4/" />
 <meta property="article:published_time" content="2019-12-24T11:28:30+08:00" />
 <meta property="article:modified_time" content="2019-12-24T11:28:30+08:00" />
-<meta itemprop="name" content="3 - [Git入门]本地仓库">
-<meta itemprop="description" content="1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
+<meta itemprop="name" content="4 - [Git入门]本地仓库">
+<meta itemprop="description" content="1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
 git config &ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &ndash;global push.default simple
 git config &ndash;global core.quotepath false
 git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;
 git config &ndash;global core.autocrlf input
-注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
-会创建.git目录/仓库，用来容纳你的代码快照
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
+3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
+会创建.git 目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
 3..gitignore
@@ -73,33 +65,25 @@ git config &ndash;global core.autocrlf input
 4.git status
 通过这个命令可以查看哪些文件需要提交的
 5.git commit -m 字符串
-把上面提交的代码复制一份到.git目录里面
-git commit -v
-个人更喜欢&ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些
-6.git log
-可以显示所有提交过的版本信息
-7.git reflog
-可以查看所有分支操作记录以及提交过的版本
-git reset &ndash;hard 0aa5218(版本号)
-版本回退，可以选择之前提交过的版本
-8.查看分支 创建分支 切换分支 合并分支 删除分支">
+把上面提交的代码复制一份到.git 目录里面
+git commit -v">
 <meta itemprop="datePublished" content="2019-12-24T11:28:30&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-24T11:28:30&#43;08:00" />
-<meta itemprop="wordCount" content="89">
+<meta itemprop="wordCount" content="110">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="3 - [Git入门]本地仓库"/>
-<meta name="twitter:description" content="1.git就是开启GitHub的钥匙 2.git的6行配置(必须存在，否则git无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
+<meta name="twitter:title" content="4 - [Git入门]本地仓库"/>
+<meta name="twitter:description" content="1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &ndash;global user.name 你的英文名(yaochengjian)
 git config &ndash;global user.email 你的邮箱(915248459@qq.com)
 git config &ndash;global push.default simple
 git config &ndash;global core.quotepath false
 git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;
 git config &ndash;global core.autocrlf input
-注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致
-3.git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能) 1.git init
-会创建.git目录/仓库，用来容纳你的代码快照
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
+3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
+会创建.git 目录/仓库，用来容纳你的代码快照
 2.git add 路径
 选择哪些变动是需要提交的，相对路径/绝对路径
 3..gitignore
@@ -107,16 +91,8 @@ git config &ndash;global core.autocrlf input
 4.git status
 通过这个命令可以查看哪些文件需要提交的
 5.git commit -m 字符串
-把上面提交的代码复制一份到.git目录里面
-git commit -v
-个人更喜欢&ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些
-6.git log
-可以显示所有提交过的版本信息
-7.git reflog
-可以查看所有分支操作记录以及提交过的版本
-git reset &ndash;hard 0aa5218(版本号)
-版本回退，可以选择之前提交过的版本
-8.查看分支 创建分支 切换分支 合并分支 删除分支"/>
+把上面提交的代码复制一份到.git 目录里面
+git commit -v"/>
 
   </head>
 
@@ -169,7 +145,7 @@ git reset &ndash;hard 0aa5218(版本号)
           
         POSTS
       </p>
-      <h1 class="f1 athelas mb1">3 - [Git入门]本地仓库</h1>
+      <h1 class="f1 athelas mb1">4 - [Git入门]本地仓库</h1>
       
       
       <time class="f6 mv4 dib tracked" datetime="2019-12-24T11:28:30&#43;08:00">December 24, 2019</time>
@@ -177,18 +153,18 @@ git reset &ndash;hard 0aa5218(版本号)
       
     </header>
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="font-colorred1fontgit就是开启github的钥匙"><font color=red>1.</font>git就是开启GitHub的钥匙</h2>
-<h2 id="font-colorred2fontgit的6行配置必须存在否则git无法使用"><font color=red>2.</font>git的6行配置(必须存在，否则git无法使用)</h2>
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="font-colorred1fontgit-就是开启-github-的钥匙"><font color=red>1.</font>git 就是开启 GitHub 的钥匙</h2>
+<h2 id="font-colorred2fontgit-的-6-行配置必须存在否则-git-无法使用"><font color=red>2.</font>git 的 6 行配置(必须存在，否则 git 无法使用)</h2>
 <p>git config &ndash;global user.name 你的英文名(yaochengjian)<br>
 git config &ndash;global user.email 你的邮箱(<a href="mailto:915248459@qq.com">915248459@qq.com</a>)<br>
 git config &ndash;global push.default simple<br>
 git config &ndash;global core.quotepath false<br>
 git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;<br>
 git config &ndash;global core.autocrlf input<br>
-注意：上面的英文名和邮箱跟Github没有关系，可以跟GitHub的用户名和邮箱保持一致，也可以不一致</p>
-<h2 id="font-colorred3fontgit可以让你的代码有版本可以随时回退到某个版本当然git还有其它更强大的功能"><font color=red>3.</font>git可以让你的代码有版本(可以随时回退到某个版本，当然git还有其它更强大的功能)</h2>
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致</p>
+<h2 id="font-colorred3fontgit-可以让你的代码有版本可以随时回退到某个版本当然-git-还有其它更强大的功能"><font color=red>3.</font>git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能)</h2>
 <p>1.git init<br>
-会创建.git目录/仓库，用来容纳你的代码快照<br>
+会创建.git 目录/仓库，用来容纳你的代码快照<br>
 <img src="../../images/gitinit.png" alt=""></p>
 <p>2.git add 路径<br>
 选择哪些变动是需要提交的，相对路径/绝对路径<br>
@@ -200,10 +176,10 @@ git config &ndash;global core.autocrlf input<br>
 通过这个命令可以查看哪些文件需要提交的<br>
 <img src="../../images/status.png" alt=""></p>
 <p>5.git commit -m 字符串<br>
-把上面提交的代码复制一份到.git目录里面<br>
+把上面提交的代码复制一份到.git 目录里面<br>
 <img src="../../images/commit.png" alt=""><br>
 git commit -v<br>
-个人更喜欢&ndash;verbose选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些</p>
+个人更喜欢&ndash;verbose 选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些</p>
 <p>6.git log<br>
 可以显示所有提交过的版本信息<br>
 <img src="../../images/gitlog.png" alt=""></p>
@@ -213,10 +189,10 @@ git commit -v<br>
 版本回退，可以选择之前提交过的版本<br>
 <img src="../../images/gitreflog.png" alt=""></p>
 <p>8.查看分支 创建分支 切换分支 合并分支 删除分支<br>
-git branck  基于当前commit创建一个新的分支，也可以查看分支<br>
-git checkout  用户切换分支<br>
-git merge master  进入保留分支，运行git merge master<br>
-git branch -d x   合并完成后删除无用分支<br>
+git branck 基于当前 commit 创建一个新的分支，也可以查看分支<br>
+git checkout 用户切换分支<br>
+git merge master 进入保留分支，运行 git merge master<br>
+git branch -d x 合并完成后删除无用分支<br>
 <img src="../../images/branch.png" alt=""><br>
 <img src="../../images/branch1.png" alt=""></p>
 <ul class="pa0">
