@@ -169,49 +169,6 @@ nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/10/" class="link black dim">
-        10 - [css全解]定位
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
-A.border 内边沿围成的区域
-B.border 外边沿围成的区域
--如何验证自己的猜想?border 半透明化
--从左边看一个 div,是什么样子?
-新属性-position a：position
-1.static 默认值，待在文档流里
-2.relative 相对定位，升起来，但不脱离文档流
-3.absolute 绝对定位，定位基准是祖先里的非 static
-4.fixed 固定定位，定位基准是 viewport(有诈)
-5.sticky 粘滞定位，不好描述直接举例
-经验
-1.如果你写了 absolute，一般都得补一个 relative
-2.如果你写了 absolute 或 fixed，一定要补 top 和 left
-3.sticky 兼容性很差，主要用于面试装逼
-position:relative
-a：使用场景
-1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
-2.用于给 absolute 元素做爸爸
-b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
-1.z-index:auto 默认值，不创建新层叠上下文
-2.z-index：0 | 1 | 2
-3.z-index:-1 | -2
-经验
-1.写 z-index:9999 的都是彩笔
-2.学会管理 z-index
-position:absolute
-a：使用场景
-1.脱离原来的位置，另起一层，比如对话框的关闭按钮
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/3/" class="link black dim">
         3 - [Git入门]bash命令行入门
       </a>
@@ -375,53 +332,72 @@ b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
-b：使用caniuse.com
-2.语法超级简单 语法1
+b：使用 caniuse.com
+2.语法超级简单 语法 1
 选择器{
 属性名:属性值
 /*这是一个注释*/
 }
 p{color:blue;background:red;}!注意事项
 a：所有符号都是英文符号，如果写错了，浏览器会警告
-b：区分大小写，a和A是不同东西
+b：区分大小写，a 和 A 是不同东西
 c：最后一个分号可以省略，但建议不要省略
 d：任何地方写错了，都不会报错，浏览器会直接忽略
-语法2：@语法
+语法 2：@语法
 @charset &ldquo;utf-8&rdquo;;
 @import url(2.css);
 @media(min-width:100px) and (max-width:200px){ }
 !注意事项
-a：@charset必须放在第一行
+a：@charset 必须放在第一行
 b：前面两个@语法必须以分号;结尾
-c：charset是字符集的意思，但是utf-8是字符编码
-3.border调试法 a：怀疑某个元素有问题就给这个元素加border
-b：border没出现?说明选择器错了或者语法错了
-c：bug解决了才可以把border删掉
+c：charset 是字符集的意思，但是 utf-8 是字符编码
+3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
+b：border 没出现?说明选择器错了或者语法错了
+c：bug 解决了才可以把 border 删掉
 4.文档流 -流动方向
-a：inline元素从左到右，到达最右边才会换行
-b：block元素从上到下，每一个都另起一行
-c：inline-block也是从左到右，但是到达最后的时候不会把自己分为两块 -宽度
-a：inline宽度靠内部内容宽度撑开，不能用width指定
-b：blcok默认自动计算宽度，可用width 指定
-c：inline-block结合前两者特点，可用width
--高度
-a：inline高度由line-height间接确定，跟height无关，跟padding无关 b：block高度由内部文档流元素决定(脱离文档流元素除外)，可以设height
-c：inline-block跟block类似，可以设置height
-5.overflow溢出(当内容大于容器) a：等内容的宽度或高度大于容器，会溢出
-b：可用overflow来设置是否显示滚动条
-c：auto是灵活设置
-d：scroll是永远显示
-e：hidden是直接隐藏溢出部分
-f：visible是直接显示溢出部分 g：overflow可以分为overflow-x和overflow-y
-①块级元素如果没有设置width，那么它默认的宽度就是auto
-②永远不要写width=100%，非常特殊的可以写
-6.脱离文档流 -哪些元素脱离文档流
-a：float
-b：position:absolute / fixed
--怎么让元素不脱离文档流
-a：不要使用上面属性就不会脱离文档流了
-①只要脱离了文档流，就算你清除了，永远都是脱离的了
-7.盒模型 ①如果面试官问你！请说一下css盒模型 标准回答：css盒模型分两种
+a：inline 元素从左到右，到达最右边才会换行
+b：block 元素从上到下，每一个都另起一行
+c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
+-宽度
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
+b：blcok 默认自动计算宽度，可用 width 指定
+c：inline-block 结合前两者特点，可用 width
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://yaochengjian.com/posts/9/" class="link black dim">
+        9 - [css全解]布局
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+b: 不固定宽度布局，主要靠文档流的原理来布局
+2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
+&lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a: 响应式布局
+b: 意思就是 pc 上固定宽度，手机上不固定宽度
+c: 也就是一种混合布局
+4.布局的两种思路 ① 从大到小
+先定下大局
+然后完善每个部分的小布局
+② 从小到大
+先完成小布局
+然后组合成大布局
+③ 两种均可
+新人推荐用第二种，因为小的简单
+老手一般用第一种，因为熟练有大局观
+4.用什么 css 布局 5.float 布局 a: 步骤
+-子元素上加 float:left/right 和 width
+-在父元素上加.clearfix(必须要加上)
+实践 不同布局
+-用 float 做两栏布局(如顶部条)
+-用 float 做三栏布局(内容区)
     </div>
   </div>
 </div>
@@ -463,12 +439,23 @@ a：不要使用上面属性就不会脱离文档流了
     <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
     
     
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
     <li class="page-item">
     <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>

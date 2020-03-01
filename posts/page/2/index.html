@@ -94,33 +94,40 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/9/" class="link black dim">
-        9 - [css全解]布局
+      <a href="http://yaochengjian.com/posts/10/" class="link black dim">
+        10 - [css全解]定位
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.布局分类 两种
-a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
-b: 不固定宽度布局，主要靠文档流的原理来布局
-2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
-&lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a: 响应式布局
-b: 意思就是 pc 上固定宽度，手机上不固定宽度
-c: 也就是一种混合布局
-4.布局的两种思路 ① 从大到小
-先定下大局
-然后完善每个部分的小布局
-② 从小到大
-先完成小布局
-然后组合成大布局
-③ 两种均可
-新人推荐用第二种，因为小的简单
-老手一般用第一种，因为熟练有大局观
-4.用什么 css 布局 5.float 布局 a: 步骤
--子元素上加 float:left/right 和 width
--在父元素上加.clearfix(必须要加上)
-实践 不同布局
--用 float 做两栏布局(如顶部条)
--用 float 做三栏布局(内容区)
+      问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
+A.border 内边沿围成的区域
+B.border 外边沿围成的区域
+-如何验证自己的猜想?border 半透明化
+-从左边看一个 div,是什么样子?
+新属性-position a：position
+1.static 默认值，待在文档流里
+2.relative 相对定位，升起来，但不脱离文档流
+3.absolute 绝对定位，定位基准是祖先里的非 static
+4.fixed 固定定位，定位基准是 viewport(有诈)
+5.sticky 粘滞定位，不好描述直接举例
+经验
+1.如果你写了 absolute，一般都得补一个 relative
+2.如果你写了 absolute 或 fixed，一定要补 top 和 left
+3.sticky 兼容性很差，主要用于面试装逼
+position:relative
+a：使用场景
+1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
+2.用于给 absolute 元素做爸爸
+b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
+1.z-index:auto 默认值，不创建新层叠上下文
+2.z-index：0 | 1 | 2
+3.z-index:-1 | -2
+经验
+1.写 z-index:9999 的都是彩笔
+2.学会管理 z-index
+position:absolute
+a：使用场景
+1.脱离原来的位置，另起一层，比如对话框的关闭按钮
     </div>
   </div>
 </div>
@@ -239,13 +246,13 @@ curl -v -X POST &ndash;data &lsquo;上传内容&rsquo; http://localhost:8888/
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/15/" class="link black dim">
-        14 - [JS全解]内存图与JS世界
+        15 - [JS全解]内存图与JS世界
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
 2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
-JS 原型 1.所有的函数(函数也是对象)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
 2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
 Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
 4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
@@ -263,7 +270,7 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/16/" class="link black dim">
-        15 - [JS全解]canvas实践
+        16 - [JS全解]canvas实践
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -300,7 +307,7 @@ var ctx = canvas.
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/17/" class="link black dim">
-        16 - [JS全解]JS语法
+        17 - [JS全解]JS语法
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -327,7 +334,7 @@ ES2019 与 ES6 差别不大
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
       <a href="http://yaochengjian.com/posts/18/" class="link black dim">
-        17 - [JS全解]JS数据类型
+        18 - [JS全解]JS数据类型
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
@@ -346,25 +353,15 @@ ES2019 与 ES6 差别不大
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
-      <a href="http://yaochengjian.com/posts/1000/" class="link black dim">
-        1000 - 变量提升、闭包
+      <a href="http://yaochengjian.com/posts/19/" class="link black dim">
+        19 - [JS全解]JS对象
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      1.一般都把 js 放到 body 的末尾 a:为什么？
-b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
-c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
-var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
-2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
-=&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
-B:堆内存:引用值对应的空间
-1.存储引用类型值(对象:键值对 函数:代码字符串)
-=&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
-=&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它
+      1.对象 object 对象定义
+无序的数据集合键值对的集合let obj = {'name' : 'chengjian','age' : 18}let obj = new Object({'name' : 'chengjian'})细节1.键名是字符串，不是标识符，可以包含任意字符2.引号可省略3.就算引号省略了，键名也还是字符串(重要)4.Object.keys(obj)可以得到obj的所有key变量作属性名
+let p1 = &quot;name&quot;;let obj = {p1 : 'chengjian'} 这样写，属性名为'p1'let obj = {[p1] : 'chengjian'} 这样写，属性名为'name'1.不加[]的属性名会自动变成字符串2.加了[]则会当做变量求值3.值如果不是字符串，则会自动变成字符串2.对象增删改查 删除
+ let obj = {a : chengjian}console.log('xxx' in obj)1.不含属性名'a' in obj2.含有属性名，但是值为undefined'a' in obj &amp;&amp; obj.
     </div>
   </div>
 </div>
@@ -406,12 +403,23 @@ B:堆内存:引用值对应的空间
     <li class="page-item active"><a class="page-link" href="/posts/page/2/">2</a></li>
     
     
-    <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/3/">3</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
-        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
     </li>
     
 </ul>
