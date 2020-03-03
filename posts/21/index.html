@@ -35,7 +35,7 @@
 <meta itemprop="description" content="1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:21" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:21" />
-<meta itemprop="wordCount" content="142">
+<meta itemprop="wordCount" content="253">
 
 
 
@@ -127,7 +127,7 @@
     let arr1 = [1,2,3,4,5,6];
     let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组
     let arr3 = arr.slice(0); =&gt; 截取真个数组
-</code></pre><h3 id="font-colorred2数组的增删改查font"><font color=red>2.数组的增删改查</font></h3>
+</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><font color=red>2.数组的增删改查(修改原数组)</font></h3>
 <pre><code>1.删除头部元素
     arr.shift() arr被修改，并返回被删元素
 
@@ -167,7 +167,73 @@
         arr.findIndex(function(x){  findIndex元素找到满足条件的即停止，返回索引
             return x % 2 === 0
         })
-</code></pre><ul class="pa0">
+</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><font color=red>4.增加数组中的元素(修改原数组)</font></h3>
+<pre><code>    let arr = [1,2,3,4,5];
+1.在尾部加元素
+    arr.push(newItem) 修改arr,返回新长度
+    arr.push(item1,item2)
+
+2.在头部加元素
+    arr.unshift(newItem) 修改arr,返回新长度
+    arr.unshift(item1,item2)
+</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><font color=red>5.数组中排序(修改原数组)</font></h3>
+<pre><code>    let arr = [{name:'发条魔灵',score:98},
+               {name:'疾风亚索',score:94},
+               {name:'寒冰射手',score:91}];
+
+        1.a减b的值是正数则是从小到大排序，负数则从大到小排序
+        2.a和b是arr里面随机一项，一直会比较完
+
+        arr.sort(function(a,b){
+            return a.score - b.score;
+        });
+</code></pre><h3 id="font-colorred6font"><font color=red>6.</font></h3>
+<pre><code>    let arr = [1,2,3,4,5,6];
+
+1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
+        arr.map(function(item){
+            return item * item
+        });
+
+2.filter()方法，是true就返回，否则就筛选掉
+        arr.filter(function(item){
+            return item % 2 === 0;
+        });
+
+3.reduce()方法
+        1.initial代表初始值(可以设置任意自己想要的数据类型)
+        2.item是数组中的值，从下标0开始
+        arr.reduce(function(initial,item){
+                return  &quot;自己想要的东西&quot;
+        },initial);
+
+        案例1
+        arr.reduce(function(sum,item){
+                return sum+item
+        },0)
+
+        案例2
+        arr.reduce(function(result,item){
+                return result.concat(item*item);
+        },[]);
+</code></pre><pre><code>  面试题
+  let arr = [
+    { 名称: &quot;动物&quot;, id: 1, parent: null },
+    { 名称: &quot;狗&quot;, id: 2, parent: 1 },
+    { 名称: &quot;猫&quot;, id: 3, parent: 1 }
+  ];
+
+  变成
+    {
+    id : 1,
+    名称 : '动物',
+    children : [
+    {id:2,名称:'狗',children:null},
+    {id:3,名称:'猫',children:null}
+    ]
+    }
+</code></pre>
+<ul class="pa0">
   
 </ul>
 <div class="mt6">
