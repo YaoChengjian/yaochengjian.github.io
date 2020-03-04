@@ -1,68 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-hans">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>姚成健的博客  | 14 - [JS全解]JS的诞生</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.62.2" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&amp;quot;1&amp;quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://yaochengjian.com/posts/14/" />
 
-    
-    
-      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
-    
 
-    
+    <title>
+        
+            14 - [JS全解]JS的诞生 :: 姚 成 健  — A simple theme for Hugo
+        
+    </title>
 
-    
-      
-    
 
-    
-    
-    <meta property="og:title" content="14 - [JS全解]JS的诞生" />
-<meta property="og:description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://yaochengjian.com/posts/14/" />
-<meta property="article:published_time" content="2019-12-25T21:55:11+08:14" />
-<meta property="article:modified_time" content="2019-12-25T21:55:11+08:14" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
 <meta itemprop="name" content="14 - [JS全解]JS的诞生">
 <meta itemprop="description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:14" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:14" />
 <meta itemprop="wordCount" content="73">
+<meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
 
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://yaochengjian.com/"/>
+
 <meta name="twitter:title" content="14 - [JS全解]JS的诞生"/>
 <meta name="twitter:description" content="1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  &#43; 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 &#43; 10)console.log(&quot;1&quot; &#43; 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&quot;Hello World&quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2."/>
 
-  </head>
 
-  <body class="ma0 avenir bg-near-white">
 
-    
-   
-  
 
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="http://yaochengjian.com/" class="f3 fw2 hover-white no-underline white-90 dib">
-      姚成健的博客
-    </a>
-    <div class="flex-l items-center">
-      
 
-      
-      
+    <meta property="article:published_time" content="2019-12-25 21:55:11 &#43;0814 &#43;0814" />
 
 
 
@@ -71,38 +58,74 @@
 
 
 
+    </head>
 
-
-
-
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Yao Chengjian</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
     </div>
-  </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://yaochengjian.com/posts">博客</a></li>
+    </ul>
 </nav>
 
-    </div>
-  </header>
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
 
 
+            <div class="content">
+                
+    <main class="post">
 
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
 
-    <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
-          
-        POSTS
-      </p>
-      <h1 class="f1 athelas mb1">14 - [JS全解]JS的诞生</h1>
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2019-12-25T21:55:11&#43;08:14">December 25, 2019</time>
-      
-      
-    </header>
+            
 
-    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="font-colorred1javascript-的-10-个设计缺陷font"><font color=red>1.Javascript 的 10 个设计缺陷</font></h3>
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="http://yaochengjian.com/posts/14/">14 - [JS全解]JS的诞生</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h3 id="font-colorred1javascript-的-10-个设计缺陷font"><!-- raw HTML omitted -->1.Javascript 的 10 个设计缺陷<!-- raw HTML omitted --></h3>
 <ol>
 <li>不适合开发大型程序</li>
 <li>非常小的标准库</li>
@@ -144,52 +167,84 @@ NaN !== NaN  //true
 　　alert( typeof 1234); // number
 
 　　alert( typeof new Number(1234)); // object
-</code></pre><h3 id="font-colorred2a-href--httpswwwjianshucomp33c1d8505975js-的历史afont"><font color=red>2.<a href = "https://www.jianshu.com/p/33c1d8505975">JS 的历史</a></font></h3>
-<h3 id="font-colorred3a-href--httpwwwruanyifengcomblog201106birth_of_javascripthtmljs-的诞生afont"><font color=red>3.<a href = "http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">JS 的诞生</a></font></h3>
-<ul class="pa0">
-  
-</ul>
-<div class="mt6">
-      
-      
-      </div>
-    </section>
+</code></pre><h3 id="font-colorred2a-href--httpswwwjianshucomp33c1d8505975js-的历史afont"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->JS 的历史<!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
+<h3 id="font-colorred3a-href--httpwwwruanyifengcomblog201106birth_of_javascripthtmljs-的诞生afont"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->JS 的诞生<!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
 
-    <aside class="w-30-l mt6-l">
+            </div>
+        </article>
 
+        <hr />
 
+        <div class="post-info">
 
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>73 Words</p>
 
-</aside>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:41 &#43;0800</p>
+        </div>
 
-  </article>
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
 
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="http://yaochengjian.com/posts/13/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">13 - [HTTP全解]请求和响应 &amp; Node.js server</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="http://yaochengjian.com/posts/15/">
+                                <span class="button__text">15 - [JS全解]内存图与JS世界</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
     </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://yaochengjian.com/" >
-    &copy; 2020 姚成健的博客
-  </a>
-    <div>
 
+            </div>
 
-
-
-
-
-
-
-
-
-
-</div>
-  </div>
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="http://yaochengjian.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
 </footer>
 
-    
+            
+        </div>
 
-  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+        
 
 
-  </body>
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
 </html>
