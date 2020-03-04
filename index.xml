@@ -483,15 +483,6 @@ ES2019 与 ES6 差别不大
     </item>
     
     <item>
-      <title>22 - [JS全解]JS函数</title>
-      <link>http://yaochengjian.com/posts/22/</link>
-      <pubDate>Wed, 25 Dec 2019 21:55:11 +0821</pubDate>
-      
-      <guid>http://yaochengjian.com/posts/22/</guid>
-      <description>1.四种方式定义函数 </description>
-    </item>
-    
-    <item>
       <title>1000 - 变量提升、闭包</title>
       <link>http://yaochengjian.com/posts/1000/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -511,6 +502,16 @@ B:堆内存:引用值对应的空间
 =&amp;gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
 =&amp;gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
 =&amp;gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</description>
+    </item>
+    
+    <item>
+      <title>22 - [JS全解]JS函数</title>
+      <link>http://yaochengjian.com/posts/22/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/22/</guid>
+      <description>1.四种方式定义函数 1.定义一个函数
+具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x + x)fn = x =&amp;gt; x+x;否则fn = (x+y) =&amp;gt; {console.log(1),return x+y;}()起来js会认为是一个整体fn = name =&amp;gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x+y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是</description>
     </item>
     
   </channel>

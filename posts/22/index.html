@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.四种方式定义函数 " />
+<meta name="description" content="1.四种方式定义函数 1.定义一个函数
+具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x &#43; x)fn = x =&amp;gt; x&#43;x;否则fn = (x&#43;y) =&amp;gt; {console.log(1),return x&#43;y;}()起来js会认为是一个整体fn = name =&amp;gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x&#43;y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -14,7 +15,7 @@
 
     <title>
         
-            22 - [JS全解]JS函数 :: 姚 成 健  — A simple theme for Hugo
+            22 - [JS全解]JS函数 :: 姚 成 健 
         
     </title>
 
@@ -31,10 +32,10 @@
 
 
 <meta itemprop="name" content="22 - [JS全解]JS函数">
-<meta itemprop="description" content="1.四种方式定义函数 ">
-<meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:21" />
-<meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:21" />
-<meta itemprop="wordCount" content="1">
+<meta itemprop="description" content="1.四种方式定义函数 1.定义一个函数
+具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x &#43; x)fn = x =&gt; x&#43;x;否则fn = (x&#43;y) =&gt; {console.log(1),return x&#43;y;}()起来js会认为是一个整体fn = name =&gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x&#43;y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是">
+
+<meta itemprop="wordCount" content="44">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -43,13 +44,12 @@
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
 <meta name="twitter:title" content="22 - [JS全解]JS函数"/>
-<meta name="twitter:description" content="1.四种方式定义函数 "/>
+<meta name="twitter:description" content="1.四种方式定义函数 1.定义一个函数
+具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x &#43; x)fn = x =&gt; x&#43;x;否则fn = (x&#43;y) =&gt; {console.log(1),return x&#43;y;}()起来js会认为是一个整体fn = name =&gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x&#43;y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是"/>
 
 
 
 
-
-    <meta property="article:published_time" content="2019-12-25 21:55:11 &#43;0821 &#43;0821" />
 
 
 
@@ -126,7 +126,32 @@
 
             <div class="post-content">
                 <h3 id="font-colorred1四种方式定义函数font"><!-- raw HTML omitted -->1.四种方式定义函数<!-- raw HTML omitted --></h3>
+<p>1.定义一个函数</p>
+<pre><code>具名函数(具有名字的函数)
+    function 函数名(形式参数1,形式参数2){
+        语句
+        return 返回值
+    }
 
+匿名函数
+    上面的具名函数,去掉函数就是匿名函数
+
+箭头函数
+    如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x + x)
+        fn = x =&gt; x+x;
+
+    否则
+        fn = (x+y) =&gt; {console.log(1),return x+y;}
+
+    ()起来js会认为是一个整体
+        fn = name =&gt; ({name:'chengjian'})
+
+用构造函数
+    let f = new Function('x','y','return x+y')
+    基本没人用，但是能让你知道函数是谁构造的
+    所有的函数都是Function构造出来的
+    包括Object、Array、Function也是
+</code></pre>
             </div>
         </article>
 
@@ -134,9 +159,9 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>One Word</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>44 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:34 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>0001-01-01 08:00 &#43;0800</p>
         </div>
 
         
@@ -149,20 +174,13 @@
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="http://yaochengjian.com/posts/21/">
+                            <a href="http://yaochengjian.com/posts/1000/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">21 - [JS全解]JS数组</span>
+                                <span class="button__text">1000 - 变量提升、闭包</span>
                             </a>
                         </span>
                     
 
-                    
-                        <span class="button next">
-                            <a href="http://yaochengjian.com/posts/1000/">
-                                <span class="button__text">1000 - 变量提升、闭包</span>
-                                <span class="button__icon">→</span>
-                            </a>
-                        </span>
                     
                 </div>
             </div>
