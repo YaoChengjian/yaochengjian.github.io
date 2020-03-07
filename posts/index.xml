@@ -5,2136 +5,18 @@
         <description>Recent content in Posts on 姚 成 健</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-hans</language>
-        <lastBuildDate>Thu, 26 Dec 2019 21:51:11 +0800</lastBuildDate>
+        <lastBuildDate>Fri, 06 Mar 2020 00:00:00 +0000</lastBuildDate>
         <atom:link href="http://yaochengjian.com/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>开博大吉</title>
-            <link>http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
-            <pubDate>Thu, 26 Dec 2019 21:51:11 +0800</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
-            <description>姚成健 </description>
-            <content type="html"><![CDATA[<h1 id="姚成健">姚成健</h1>
-]]></content>
-        </item>
-        
-        <item>
-            <title>1 - 如何使用hugo搭建个人博客</title>
-            <link>http://yaochengjian.com/posts/1/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0801</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/1/</guid>
-            <description>1.如何使用 hugo 搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
-b:我的电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path-&amp;gt;添加你 hugo 的路径地址
-c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题
-d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)
-1)hugo new site demo(demo 可以更改为自己想要的名字)
-2)cd demo 进入 demo
-3)git init
-4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-5)echo &amp;lsquo;theme = &amp;ldquo;ananke&amp;rdquo;&amp;rsquo; &amp;raquo; config.toml
-6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)
-7)hugo server -D 可以得到一个预览地址
-8)打开 config.toml 配置
-baseURL = &amp;quot;yaochengjian.com&amp;quot; //更改为自己购买的域名languageCode = &amp;quot;zh-CN&amp;quot;title = &amp;quot;姚成健的博客&amp;quot;theme = &amp;quot;ananke&amp;quot;9)hugo -D
-10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！</description>
-            <content type="html"><![CDATA[<h2 id="font-colorred1font如何使用-hugo-搭建个人博客"><!-- raw HTML omitted -->1.<!-- raw HTML omitted -->如何使用 hugo 搭建个人博客</h2>
-<p>a:进入https://gohugo.io/官网，下载并安装hugo<br>
-b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你 hugo 的路径地址<br>
-c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题<br>
-d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)</p>
-<p>1)hugo new site demo(demo 可以更改为自己想要的名字)</p>
-<p>2)cd demo 进入 demo</p>
-<p>3)git init</p>
-<p>4)git submodule add <a href="https://github.com/budparr/gohugo-theme-ananke.git">https://github.com/budparr/gohugo-theme-ananke.git</a> themes/ananke</p>
-<p>5)echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml</p>
-<p>6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)</p>
-<p>7)hugo server -D 可以得到一个预览地址</p>
-<p>8)打开 config.toml 配置</p>
-<pre><code>baseURL = &quot;yaochengjian.com&quot;  //更改为自己购买的域名
-languageCode = &quot;zh-CN&quot;
-title = &quot;姚成健的博客&quot;
-theme = &quot;ananke&quot;
-</code></pre><p>9)hugo -D</p>
-<p>10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！</p>
-<p>11)在 github 上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到 settings,设置自己购买的域名<br>
-<img src="../../images/two.png" alt=""></p>
-<p>12)完成购买域名后，我们需要解析 4 条记录<br>
-<img src="../../images/one.png" alt=""></p>
-<p>13)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在 content\posts 里面添加自己的内容,添加完成后都需要 hugo -D,在上传到仓库上面去。</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>2 - Node &amp; yarn</title>
-            <link>http://yaochengjian.com/posts/2/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0802</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/2/</guid>
-            <description>安装 node.js   安装双数版本
-1.node8 node10 node12 是稳定版
-2.尽量选择官网安装
-3.下载慢就加入 FQ 插件的代理
-  安装之后
-1.自然就有了 node 命令(因为 PATH)
-2.自然就有了 npm 命令
-3.自然就有了 npx 命令
-  配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)
-1.npm install -global nrm 缩写 npm i -g nrm
-npm 是这个命令的开始
-install 是载入意思
-global 是全局意思
-nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换
-2.nrm ls 执行命令查看可选的源
-其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao
-3.npm config list 查看 nrm 所有配置
-  </description>
-            <content type="html"><![CDATA[<h2 id="安装-nodejs">安装 node.js</h2>
-<ul>
-<li>
-<p>安装双数版本<br>
-1.node8 node10 node12 是稳定版<br>
-2.尽量选择官网安装<br>
-3.下载慢就加入 FQ 插件的代理</p>
-</li>
-<li>
-<p>安装之后<br>
-1.自然就有了 node 命令(因为 PATH)<br>
-2.自然就有了 npm 命令<br>
-3.自然就有了 npx 命令</p>
-</li>
-<li>
-<p>配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)<br>
-1.npm install -global nrm 缩写 npm i -g nrm<br>
-   npm 是这个命令的开始<br>
-   install 是载入意思<br>
-   global 是全局意思<br>
-   nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换<br>
- <br>
-2.nrm ls 执行命令查看可选的源<br>
-<img src="../../images/nrmls.png" alt=""><br>
-其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao<br>
- 
-3.npm config list 查看 nrm 所有配置<br>
-<img src="../../images/npmconfiglist.png" alt=""></p>
-</li>
-</ul>
-]]></content>
-        </item>
-        
-        <item>
-            <title>3 - [Git入门]bash命令行入门</title>
-            <link>http://yaochengjian.com/posts/3/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0803</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/3/</guid>
-            <description>1.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
-2.查：查看文件或目录
- 查看当前目录绝对路径
-pwd
- 查看当前目录内容
-ls
-查看指定目录内容
-ls 目录名称
- 查看文件内容
-cat 文件名称(会显示全部内容)
-head 文件名称(可以控制想看多少行，从开头开始显示)
-tail 文件名称(可以控制想看多少行，从底部开始)
-  2.文件的增加删除操作 1.touch 1.txt
-确定你路径在哪里，创建一个文件
-3.文件(创建 追加 复制 删除)内容 1.echo mmp &amp;gt; 1.txt
-向 1.txt 里面追加内容，最新的命令行会覆盖以前追加的信息
-2.echo mmp &amp;raquo; 1.txt
-向 1.txt 里面追加内容，最新的命令行会叠加以前追加的信息
-3.echo -e &amp;ldquo;1/n2&amp;rdquo; &amp;gt; 1.txt
-向 1.txt 里面追加两行内容 4.mkdir demo-1
-创建一个文件名字为 demo-1 的目录
-mkdir -p a/b/c/d
-创建多层目录
-5.cp 1.txt 2.txt
-复制 1.txt 内容为 2.txt
-cp -r demo demo1</description>
-            <content type="html"><![CDATA[<h2 id="font-colorred1font文件查看操作"><!-- raw HTML omitted -->1.<!-- raw HTML omitted -->文件查看操作</h2>
-<p>1.命令缩写，程序员把动词缩写，就变成了命令<br>
-<img src="../../images/mingl.png" alt="">
- </p>
-<p>2.查：查看文件或目录</p>
-<ul>
-<li>查看当前目录绝对路径<br>
-pwd<br>
- </li>
-<li>查看当前目录内容<br>
-ls<br>
-查看指定目录内容<br>
-ls 目录名称<br>
-<img src="../../images/lsdemo.png" alt="">
- </li>
-<li>查看文件内容<br>
-cat 文件名称(会显示全部内容)<br>
-head 文件名称(可以控制想看多少行，从开头开始显示)<br>
-tail 文件名称(可以控制想看多少行，从底部开始)<br>
-<img src="../../images/show.png" alt=""></li>
-</ul>
-<h2 id="font-colorred2font文件的增加删除操作"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->文件的增加删除操作</h2>
-<p>1.touch 1.txt<br>
-确定你路径在哪里，创建一个文件</p>
-<h2 id="font-colorred3font文件创建-追加-复制-删除内容"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->文件(创建 追加 复制 删除)内容</h2>
-<p>1.echo mmp &gt; 1.txt<br>
-向 1.txt 里面追加内容，最新的命令行会覆盖以前追加的信息</p>
-<p>2.echo mmp &raquo; 1.txt<br>
-向 1.txt 里面追加内容，最新的命令行会叠加以前追加的信息</p>
-<p>3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt<br>
-向 1.txt 里面追加两行内容
-<img src="../../images/echo.png" alt=""></p>
-<p>4.mkdir demo-1<br>
-创建一个文件名字为 demo-1 的目录<br>
-<img src="../../images/mkdir.png" alt=""></p>
-<p>mkdir -p a/b/c/d<br>
-创建多层目录<br>
-<img src="../../images/mkdir-1.png" alt=""></p>
-<p>5.cp 1.txt 2.txt<br>
-复制 1.txt 内容为 2.txt<br>
-<img src="../../images/cp.png" alt=""></p>
-<p>cp -r demo demo1<br>
-复制 demo 目录内容为 demo1<br>
-<img src="../../images/cp1.png" alt=""></p>
-<h2 id="font-colorred4font移动文件目录--重命名文件目录-都是同一个命令"><!-- raw HTML omitted -->4.<!-- raw HTML omitted -->移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令</h2>
-<p>1.mv 1.txt demo<br>
-把 1.txt 移动到 demo 目录上面<br>
-<img src="../../images/mv.png" alt=""></p>
-<h2 id="font-colorred5font补充"><!-- raw HTML omitted -->5.<!-- raw HTML omitted -->补充</h2>
-<p>code .<br>
-用编辑器打开当前目录( . 代表当前目录)</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>4 - [Git入门]本地仓库</title>
-            <link>http://yaochengjian.com/posts/4/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0804</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/4/</guid>
-            <description>1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
-git config &amp;ndash;global user.email 你的邮箱(915248459@qq.com)
-git config &amp;ndash;global push.default simple
-git config &amp;ndash;global core.quotepath false
-git config &amp;ndash;global core.eaitor &amp;ldquo;code &amp;ndash;wait&amp;rdquo;
-git config &amp;ndash;global core.autocrlf input
-注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
-3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
-会创建.git 目录/仓库，用来容纳你的代码快照
-2.git add 路径
-选择哪些变动是需要提交的，相对路径/绝对路径
-3..gitignore
-描述哪些变动是不需要提交的
-4.git status
-通过这个命令可以查看哪些文件需要提交的
-5.git commit -m 字符串
-把上面提交的代码复制一份到.git 目录里面
-git commit -v</description>
-            <content type="html"><![CDATA[<h2 id="font-colorred1fontgit-就是开启-github-的钥匙"><!-- raw HTML omitted -->1.<!-- raw HTML omitted -->git 就是开启 GitHub 的钥匙</h2>
-<h2 id="font-colorred2fontgit-的-6-行配置必须存在否则-git-无法使用"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->git 的 6 行配置(必须存在，否则 git 无法使用)</h2>
-<p>git config &ndash;global user.name 你的英文名(yaochengjian)<br>
-git config &ndash;global user.email 你的邮箱(<a href="mailto:915248459@qq.com">915248459@qq.com</a>)<br>
-git config &ndash;global push.default simple<br>
-git config &ndash;global core.quotepath false<br>
-git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;<br>
-git config &ndash;global core.autocrlf input<br>
-注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致</p>
-<h2 id="font-colorred3fontgit-可以让你的代码有版本可以随时回退到某个版本当然-git-还有其它更强大的功能"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能)</h2>
-<p>1.git init<br>
-会创建.git 目录/仓库，用来容纳你的代码快照<br>
-<img src="../../images/gitinit.png" alt=""></p>
-<p>2.git add 路径<br>
-选择哪些变动是需要提交的，相对路径/绝对路径<br>
-<img src="../../images/gitadd.png" alt=""></p>
-<p>3..gitignore<br>
-描述哪些变动是不需要提交的<br>
-<img src="../../images/gitignore.png" alt=""></p>
-<p>4.git status<br>
-通过这个命令可以查看哪些文件需要提交的<br>
-<img src="../../images/status.png" alt=""></p>
-<p>5.git commit -m 字符串<br>
-把上面提交的代码复制一份到.git 目录里面<br>
-<img src="../../images/commit.png" alt=""><br>
-git commit -v<br>
-个人更喜欢&ndash;verbose 选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些</p>
-<p>6.git log<br>
-可以显示所有提交过的版本信息<br>
-<img src="../../images/gitlog.png" alt=""></p>
-<p>7.git reflog<br>
-可以查看所有分支操作记录以及提交过的版本<br>
-   git reset &ndash;hard 0aa5218(版本号)<br>
-版本回退，可以选择之前提交过的版本<br>
-<img src="../../images/gitreflog.png" alt=""></p>
-<p>8.查看分支 创建分支 切换分支 合并分支 删除分支<br>
-git branck 基于当前 commit 创建一个新的分支，也可以查看分支<br>
-git checkout 用户切换分支<br>
-git merge master 进入保留分支，运行 git merge master<br>
-git branch -d x 合并完成后删除无用分支<br>
-<img src="../../images/branch.png" alt=""><br>
-<img src="../../images/branch1.png" alt=""></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>5 - [Git入门]git远程仓库GitHub</title>
-            <link>http://yaochengjian.com/posts/5/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0805</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/5/</guid>
-            <description>操控远程仓库 GitHub 1.如何生成 ssh key(需要在 github 上面填写公钥)
-a. 运行 ssh-keygen -t rsa -b 4096 -C 你的邮箱
-b. 一直回车，直至到没有提示
-2.如何测试配对成功
-a. ssh -T git@github.com
-b. 如果问你 yes/no，请回答 yes 并回车
-3.上传代码
-a. 新建 GitHub Repo，赋值其 ssh 地址
-b. git remote add origin git@xxxxxxxx
-c. 在本地仓库添加远程仓库地址
-d. origin 是远程仓库的默认名字，可以换，建议不要换
-e. 不要使用https://地址，因为每次都需要密码
-f. git push -u origin master 推送本地 master 分支到远程 origin 的 master 分支
-4.如何下载代码
-a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的 ssh key[一机一 key]</description>
-            <content type="html"><![CDATA[<h2 id="操控远程仓库-github">操控远程仓库 GitHub</h2>
-<p>1.如何生成 ssh key(需要在 github 上面填写公钥)<br>
-   a. 运行 ssh-keygen -t rsa -b 4096 -C 你的邮箱<br>
-   b. 一直回车，直至到没有提示<br>
-<img src="../../images/sshkey.png" alt=""></p>
-<p>2.如何测试配对成功<br>
-   a. ssh -T <a href="mailto:git@github.com">git@github.com</a><br>
-   b. 如果问你 yes/no，请回答 yes 并回车</p>
-<p>3.上传代码<br>
-   a. 新建 GitHub Repo，赋值其 ssh 地址<br>
-   b. git remote add origin git@xxxxxxxx<br>
-   c. 在本地仓库添加远程仓库地址<br>
-   d. origin 是远程仓库的默认名字，可以换，建议不要换<br>
-   e. 不要使用https://地址，因为每次都需要密码<br>
-   f. git push -u origin master 推送本地 master 分支到远程 origin 的 master 分支<br>
-<img src="../../images/gitpush.png" alt=""></p>
-<p>4.如何下载代码<br>
-   a. gitclone git@xxxx[目标路径]
-   b. 如果是不同机器，要写上传新的 ssh key[一机一 key]<br>
-<img src="../../images/clone.png" alt=""></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>6 - HTML入门笔记1</title>
-            <link>http://yaochengjian.com/posts/6/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0806</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/6/</guid>
-            <description>1.HTML 是谁发明的 蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于 1990 发明了首个网页浏览器&amp;ndash;WorldWideWeb 的人
-2.HTML 起手式应该写什么 &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;/&amp;gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie-edge&amp;quot;/&amp;gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;3.章节标签(表示文章/书的层级) -标题 h1~h6
--章节 section
--文章 article
--段落 p
--头部 header
--脚部 footer
--主要内容 main
--旁支分支 aside
--划分 div
-4.全局属性(所有标签都有的属性) -class 类选择器
--contenteditable 页面实时编辑
--hidden 隐藏
--id 选择器 ID
--style 样式，行内样式
--tabindex 用来控制键盘 tab 顺序，从序号 1 开始，0 代表最后一个
--title 标题
-5.内容标签 -ol+li 有序列表 ol 子集不能含有任何子元素或者中文</description>
-            <content type="html"><![CDATA[<h2 id="font-colorred1fonthtml-是谁发明的"><!-- raw HTML omitted -->1.<!-- raw HTML omitted -->HTML 是谁发明的</h2>
-<p>蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于 1990 发明了首个网页浏览器&ndash;WorldWideWeb 的人</p>
-<h2 id="font-colorred2fonthtml-起手式应该写什么"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->HTML 起手式应该写什么</h2>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;/&gt;
-        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie-edge&quot;/&gt;
-        &lt;title&gt;&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h2 id="font-colorred3font章节标签表示文章书的层级"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->章节标签(表示文章/书的层级)</h2>
-<p>-标题 h1~h6<br>
--章节 section<br>
--文章 article<br>
--段落 p<br>
--头部 header<br>
--脚部 footer<br>
--主要内容 main<br>
--旁支分支 aside<br>
--划分 div</p>
-<h2 id="font-colorred4font全局属性所有标签都有的属性"><!-- raw HTML omitted -->4.<!-- raw HTML omitted -->全局属性(所有标签都有的属性)</h2>
-<p>-class 类选择器<br>
--contenteditable 页面实时编辑<br>
--hidden 隐藏<br>
--id 选择器 ID<br>
--style 样式，行内样式<br>
--tabindex 用来控制键盘 tab 顺序，从序号 1 开始，0 代表最后一个<br>
--title 标题</p>
-<h2 id="font-colorred5font内容标签"><!-- raw HTML omitted -->5.<!-- raw HTML omitted -->内容标签</h2>
-<p>-ol+li 有序列表 ol 子集不能含有任何子元素或者中文<br>
--ul+li 无序列表 ul 子集不能含有任何子元素或者中文<br>
--dl+dt+dd 描述列表，dt 是描述的对象，dd 描述对象的内容<br>
--pre 被包围在 <!-- raw HTML omitted --> 标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体<br>
--hr 水平分割线<br>
--br 换行<br>
--a 跳转链接<br>
--em 强调标签，有斜体的默认样式<br>
--strong 强调加粗字体标签<br>
--code 标签内的文本将用等宽字体显示出来<br>
--quote 是引用的意思，没有任何效果，是一个内联样式<br>
--blockquote 也是引用意思，是一个块级样式引用</p>
-<h2 id="font-colorred6fontvscode-插件推荐prettier-更好地格式化工具代码格式乱可以自动格式化"><!-- raw HTML omitted -->6.<!-- raw HTML omitted -->VScode 插件推荐(Prettier 更好地格式化工具，代码格式乱可以自动格式化)</h2>
-<p>a:下载 Prettier<br>
-b:文件-&gt;首选项-&gt;设置-&gt;搜索 auto save-&gt;Files Auto Save 选择 onFocusChange<br>
-c:文件-&gt;首选项-&gt;设置-&gt;搜索 format on save-&gt;Editor:Format On Save 勾上</p>
-<h2 id="font-colorred7font推荐几个比较好用的线上代码工具"><!-- raw HTML omitted -->7.<!-- raw HTML omitted -->推荐几个比较好用的线上代码工具</h2>
-<p>a:代码沙盒 codesandbox.io<br>
-b:js.jirengu.com</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>7 - [HTML全解]HTML重难点</title>
-            <link>http://yaochengjian.com/posts/7/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0807</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/7/</guid>
-            <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
-2)parcel 1.a.html(文件名字)
-2.a 标签(属性) (1)href 取值
-a:网址[https://google.com、http://google.com、//google.com]
-b:路径[/a/b/c 或者 a/b/c]
-c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
-d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
-网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开</description>
-            <content type="html"><![CDATA[<h2 id="font-colorred1font像用户一样利用网址来打开网页"><!-- raw HTML omitted -->1.<!-- raw HTML omitted -->像用户一样利用网址来打开网页</h2>
-<p>1)yarn global add parcel<br>
-2)parcel 1.a.html(文件名字)</p>
-<h2 id="font-colorred2fonta-标签属性"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->a 标签(属性)</h2>
-<p>(1)href 取值<br>
-a:网址[https://google.com、http://google.com、//google.com]<br>
-b:路径[/a/b/c 或者 a/b/c]<br>
-c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]<br>
-d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx 标签]</p>
-<pre><code>网址
-&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;
-&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;
-&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;
-路径
-&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;
-&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;
-伪协议
-&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;
-&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;
-&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;
-</code></pre><pre><code>锚文本定位
-&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;
-&lt;p&gt;2&lt;/p&gt;
-&lt;p&gt;3&lt;/p&gt;
-&lt;p&gt;4&lt;/p&gt;
-&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;
-</code></pre><p>(2)target 属性值<br>
-a:_balck 浏览器总在一个新窗口打开<br>
-b:_top 浏览器在当前窗口最顶层打开
-c:parent 浏览器在超链接父元素(iframe)上面打开<br>
-d:_self 浏览器在当前窗口打开</p>
-<p>(3)作用<br>
-a:跳转外部页面<br>
-b:跳转内部锚点<br>
-c:跳转到邮箱或电话等</p>
-<h2 id="font-colorred3fonttable"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->table</h2>
-<p>(1)相关标签<br>
-a:table
-b:thead<br>
-c:tbody<br>
-d:tfoot<br>
-e:tr<br>
-f:td<br>
-g:th</p>
-<pre><code>&lt;table&gt;
-    &lt;thead&gt;
-        &lt;th&gt;表头1&lt;/th&gt;
-        &lt;th&gt;表头2&lt;/th&gt;
-        &lt;th&gt;表头3&lt;/th&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;2&lt;/td&gt;
-            &lt;td&gt;3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-    &lt;tfoot&gt;
-        &lt;tr&gt;
-            &lt;td&gt;表格底部1&lt;/td&gt;
-            &lt;td&gt;表格底部2&lt;/td&gt;
-            &lt;td&gt;表格底部3&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tfoot&gt;
-&lt;/table&gt;
-</code></pre><p>(2)相关的样式<br>
-a:table-layout<br>
-b:border-collapse 控制 table 表格是否合并，默认是不合并<br>
-c:border-spacing 控制表格和表格之间的距离</p>
-<pre><code>table{
-    border-collapse:collapse;
-    border-spacing:10px;
-}
-</code></pre><h2 id="font-colorred4fontimg-标签"><!-- raw HTML omitted -->4.<!-- raw HTML omitted -->img 标签</h2>
-<p>(1)作用<br>
-a:发出 get 请求，展示一张图片</p>
-<p>(2)属性<br>
-a:alt 图片请求错误时候，会显示 alt 的文字<br>
-b:height 只写高度值，宽度会自适应<br>
-c:width 只写宽度值，高度会自适应<br>
-d:src 图片地址</p>
-<p>(3)js 事件<br>
-a:onload 图片加载成功执行的事件<br>
-b:onerror 图片加载失败执行的事件</p>
-<pre><code>&lt;img src=&quot;1.jpg&quot; id=&quot;img&quot;&gt;&lt;/img&gt;
-&lt;script&gt;
-    var img = document.getElementById('img');
-    img.onload = function(){
-        alert('这代表图片加载出来了');
-    }
-    img.onerror = function(){
-        alert('图片加载出错了')
-    }
-&lt;/script&gt;
-</code></pre><p>(4)响应式<br>
-a:max-width:100% 加上最大宽度为 100%，那这个图片就是响应式了，就不会固定大小</p>
-<h2 id="font-colorred5fontfrom-标签必须要含有一个属性-typesubmit这个表单才能被提交"><!-- raw HTML omitted -->5.<!-- raw HTML omitted -->from 标签(必须要含有一个属性 type=&quot;submit&rdquo;，这个表单才能被提交)</h2>
-<p>(1)作用<br>
-a:发 get 或 post 请求，然后刷新页面</p>
-<p>(2)属性<br>
-a:action 后台提交地址<br>
-b:autocomplete 输入框提示信息，输入框必须要有 name 属性<br>
-c:method 提交的方式，有 get 和 post 两个值<br>
-d:target 告诉浏览器我要提交到哪个页面，和 a 标签 target 用法雷同</p>
-<p>(3)事件<br>
-a:onsubmit 在表单确认提交发生的事件</p>
-<pre><code>&lt;from action=&quot;1.php&quot; method=&quot;post&quot;&gt;
-    &lt;input type=&quot;text&quot;&gt;
-    &lt;input type=&quot;submit&quot; value=&quot;提交&quot; id=&quot;submit&quot;&gt;
-&lt;/from&gt;
-&lt;script&gt;
-    var submit = document.getElementById('submit');
-    submit.onsubmit=function(){
-        alert('点击提交按钮触发的事件');
-    }
-&lt;/script&gt;
-</code></pre><h2 id="font-colorred6fontform-标签的-input-标签"><!-- raw HTML omitted -->6.<!-- raw HTML omitted -->form 标签的 input 标签</h2>
-<p>a:文本输入框</p>
-<pre><code>&lt;input type = &quot;text&quot;&gt;&lt;/input&gt;
-</code></pre><p>b:颜色输入框</p>
-<pre><code>&lt;input type = &quot;color&quot;&gt;&lt;/input&gt;
-</code></pre><p>c:单项选择框(name 必须要一致才能实现单项)</p>
-<pre><code>&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;男&lt;/input&gt;
-&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;女&lt;/input&gt;
-</code></pre><p>d:密码框</p>
-<pre><code>&lt;input type=&quot;password&quot;&gt;&lt;/input&gt;
-</code></pre><p>e:多选框</p>
-<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;LOL&lt;/input&gt;
-&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;王者荣耀&lt;/input&gt;
-&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;绝地求生&lt;/input&gt;
-</code></pre><p>f:上传文件</p>
-<pre><code>&lt;!--只能提交单个文件--&gt;
-&lt;input type=&quot;file&quot;&gt;
-&lt;!--加了multiple能提交多个文件&gt;
-&lt;input type=&quot;file&quot; multiple&gt;
-</code></pre><p>g:文本输入控件(resize:none 用户无法调整元素属性)</p>
-<pre><code>&lt;textarea style=&quot;resize:none&quot;&gt;&lt;/textarea&gt;
-</code></pre><p>h:select 下拉选择</p>
-<pre><code>&lt;select&gt;
-    &lt;option&gt;-请选择-&lt;/option&gt;
-    &lt;option&gt;星期一&lt;/option&gt;
-    &lt;option&gt;星期二&lt;/option&gt;
-&lt;/select&gt;
-</code></pre><h2 id="font-colorred7fontjs-事件"><!-- raw HTML omitted -->7.<!-- raw HTML omitted -->js 事件</h2>
-<p>a:onchange 改变时候触发这个事件<br>
-b:onfocus 光标在身上触发这个事件<br>
-c:onblur 失去光标触发这个事件</p>
-<pre><code>&lt;input type=&quot;text&quot; id=&quot;text&quot;&gt;&lt;/input&gt;
-&lt;script&gt;
-    var text = document.getElementById('text');
-    text.onchange = function(){
-        console.log('文本框内容发生了改变，触发了这个事件');
-    }
-    text.onfocus = function(){
-        console.log('当文本框失去光标时候就会触发这个事件');
-    }
-    text.onblur = function(){
-        console.log('失去光标触发这个事件');
-    }
-&lt;/script&gt;
-</code></pre>]]></content>
-        </item>
-        
-        <item>
-            <title>8 - [css全解]css基础</title>
-            <link>http://yaochengjian.com/posts/8/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0808</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/8/</guid>
-            <description>1.我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
-b：使用 caniuse.com
-2.语法超级简单 语法 1
-选择器{
-属性名:属性值/*这是一个注释*/
-}
-p{color:blue;background:red;}!注意事项a：所有符号都是英文符号，如果写错了，浏览器会警告
-b：区分大小写，a 和 A 是不同东西
-c：最后一个分号可以省略，但建议不要省略
-d：任何地方写错了，都不会报错，浏览器会直接忽略
-语法 2：@语法
-@charset &amp;ldquo;utf-8&amp;rdquo;;
-@import url(2.css);
-@media(min-width:100px) and (max-width:200px){ }
-!注意事项a：@charset 必须放在第一行
-b：前面两个@语法必须以分号;结尾
-c：charset 是字符集的意思，但是 utf-8 是字符编码
-3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
-b：border 没出现?说明选择器错了或者语法错了
-c：bug 解决了才可以把 border 删掉
-4.文档流 -流动方向a：inline 元素从左到右，到达最右边才会换行
-b：block 元素从上到下，每一个都另起一行
-c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
--宽度a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
-b：blcok 默认自动计算宽度，可用 width 指定
-c：inline-block 结合前两者特点，可用 width
--高度a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1font-我怎么知道哪些浏览器兼容哪些特性呢"><!-- raw HTML omitted -->1.<!-- raw HTML omitted --> 我怎么知道哪些浏览器兼容哪些特性呢？</h3>
-<p>a：几十种浏览器全部跑一遍<br>
-b：使用 caniuse.com</p>
-<h3 id="font-colorred2font语法超级简单"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->语法超级简单</h3>
-<p>语法 1<br>
-<!-- raw HTML omitted -->选择器<!-- raw HTML omitted -->{<br>
-    <!-- raw HTML omitted -->属性名<!-- raw HTML omitted -->:<!-- raw HTML omitted -->属性值<!-- raw HTML omitted --><br>
-    /*这是一个注释*/<br>
-}</p>
-<pre><code>p{
-    color:blue;
-    background:red;
-}
-</code></pre><p><!-- raw HTML omitted --><!-- raw HTML omitted -->!注意事项<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：所有符号都是英文符号，如果写错了，浏览器会警告<br>
-b：区分大小写，a 和 A 是不同东西<br>
-c：最后一个分号可以省略，但建议不要省略<br>
-d：任何地方写错了，都不会报错，浏览器会直接忽略</p>
-<p>语法 2：@语法<br>
-@charset &ldquo;utf-8&rdquo;;<br>
-@import url(2.css);<br>
-@media(min-width:100px) and (max-width:200px){        }</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->!注意事项<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：@charset 必须放在第一行<br>
-b：前面两个@语法必须以分号;结尾<br>
-c：charset 是字符集的意思，但是 utf-8 是字符编码</p>
-<h3 id="font-colorred3fontborder-调试法"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->border 调试法</h3>
-<p>a：怀疑某个元素有问题就给这个元素加 border<br>
-b：border 没出现?说明选择器错了或者语法错了<br>
-c：bug 解决了才可以把 border 删掉</p>
-<h3 id="font-colorred4font文档流"><!-- raw HTML omitted -->4.<!-- raw HTML omitted -->文档流</h3>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-流动方向<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：inline 元素从左到右，到达最右边才会换行<br>
-b：block 元素从上到下，每一个都另起一行<br>
-c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块<br>
-<img src="../../images/display.png" alt=""></p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-宽度<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：inline 宽度靠内部内容宽度撑开，不能用 width 指定<br>
-b：blcok 默认自动计算宽度，可用 width
-指定<br>
-c：inline-block 结合前两者特点，可用 width</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-高度<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关<br>
-b：block 高度由内部文档流元素决定(脱离文档流元素除外)，可以设 height<br>
-c：inline-block 跟 block 类似，可以设置 height</p>
-<h3 id="font-colorred5overflow-溢出当内容大于容器font"><!-- raw HTML omitted -->5.overflow 溢出(当内容大于容器)<!-- raw HTML omitted --></h3>
-<p>a：等内容的宽度或高度大于容器，会溢出<br>
-b：可用 overflow 来设置是否显示滚动条<br>
-c：auto 是灵活设置<br>
-d：scroll 是永远显示<br>
-e：hidden 是直接隐藏溢出部分<br>
-f：visible 是直接显示溢出部分
-g：overflow 可以分为 overflow-x 和 overflow-y</p>
-<p>① 块级元素如果没有设置 width，那么它默认的宽度就是 auto<br>
-② 永远不要写 width=100%，非常特殊的可以写</p>
-<h3 id="font-colorred6脱离文档流font"><!-- raw HTML omitted -->6.脱离文档流<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-哪些元素脱离文档流<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：float<br>
-b：position:absolute / fixed</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-怎么让元素不脱离文档流<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
-a：不要使用上面属性就不会脱离文档流了</p>
-<p>① 只要脱离了文档流，就算你清除了，永远都是脱离的了</p>
-<h3 id="font-colorred7盒模型font"><!-- raw HTML omitted -->7.盒模型<!-- raw HTML omitted --></h3>
-<p>① 如果面试官问你！请说一下 css 盒模型 <!-- raw HTML omitted -->标准回答：<!-- raw HTML omitted -->css 盒模型分两种<br>
-content-box 宽度或高度 只包含 content<br>
-border-box 宽度或高度 由 border+padding+content(尽量使用 border-box)<br>
-<img src="../../images/border-sizing.png" alt=""></p>
-<p>②margin 合并(只会上下合并，左右不会合并)<br>
-<!-- raw HTML omitted -->哪些情况会合并<!-- raw HTML omitted --><br>
-a：父子 margin 合并<br>
-b：兄弟 margin 合并</p>
-<p><!-- raw HTML omitted -->如何阻止合并(不需要知道为什么)<!-- raw HTML omitted --><br>
-a：父子合并用 padding 或 border 挡住<br>
-b：父子合并用 overflow:hidden 挡住<br>
-c：父子合并用 display:flex<br>
-d：兄弟合并是符合预期的<br>
-e：兄弟合并可以用 inline-block 消除<br>
-f：总之要一条条死记</p>
-<p>③ 基本单位<br>
-<!-- raw HTML omitted -->长度单位<!-- raw HTML omitted --><br>
-a：px 像素<br>
-b：em 相当于自身 font-size 的倍数<br>
-c: 百分数<br>
-d: 整数</p>
-<p><!-- raw HTML omitted -->颜色<!-- raw HTML omitted --><br>
-a：十六进制#FF6600 或者 #F60<br>
-b: RGBA 颜色 rgb(255,0,0) 或者 rgba(255,0,0,1) - a 是透明意思(取值 0~1)</p>
-<pre><code>  div{
-      width:100px;
-      height:100px;
-      background:#FF6600;
-      background:rgb(255,0,0);
-      background:rgba(255,0,0,0.5);
-  }
-</code></pre>]]></content>
-        </item>
-        
-        <item>
-            <title>9 - [css全解]布局</title>
-            <link>http://yaochengjian.com/posts/9/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0809</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/9/</guid>
-            <description>1.布局分类 两种a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
-b: 不固定宽度布局，主要靠文档流的原理来布局
-2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
-&amp;lt;style&amp;gt;span{border:1px solid red;}&amp;lt;/style&amp;gt;//它本来就会根据你页面的宽度大小来自适应&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;3.第三种布局 a: 响应式布局
-b: 意思就是 pc 上固定宽度，手机上不固定宽度
-c: 也就是一种混合布局
-4.布局的两种思路 ① 从大到小先定下大局
-然后完善每个部分的小布局
-② 从小到大先完成小布局
-然后组合成大布局
-③ 两种均可新人推荐用第二种，因为小的简单
-老手一般用第一种，因为熟练有大局观
-4.用什么 css 布局 5.float 布局 a: 步骤
--子元素上加 float:left/right 和 width
--在父元素上加.clearfix(必须要加上)
-实践 不同布局
--用 float 做两栏布局(如顶部条)
--用 float 做三栏布局(内容区)
--用 float 做四栏布局(如导航)</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1布局分类font"><!-- raw HTML omitted -->1.布局分类<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->两种<!-- raw HTML omitted --><br>
-a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px<br>
-b: 不固定宽度布局，主要靠文档流的原理来布局</p>
-<h3 id="font-colorred2还记得吗font"><!-- raw HTML omitted -->2.还记得吗?<!-- raw HTML omitted --></h3>
-<p>a: 文档流本来就是自适应的，不需要加额外的样式</p>
-<pre><code>&lt;style&gt;
-    span{
-        border:1px solid red;
-    }
-&lt;/style&gt;
-//它本来就会根据你页面的宽度大小来自适应
-&lt;span&gt;1&lt;/span&gt;
-&lt;span&gt;2&lt;/span&gt;
-&lt;span&gt;3&lt;/span&gt;
-&lt;span&gt;5&lt;/span&gt;
-&lt;span&gt;1&lt;/span&gt;
-&lt;span&gt;2&lt;/span&gt;
-&lt;span&gt;3&lt;/span&gt;
-&lt;span&gt;5&lt;/span&gt;
-</code></pre><h3 id="font-colorred3第三种布局font"><!-- raw HTML omitted -->3.第三种布局<!-- raw HTML omitted --></h3>
-<p>a: 响应式布局<br>
-b: 意思就是 pc 上固定宽度，手机上不固定宽度<br>
-c: 也就是一种混合布局</p>
-<h3 id="font-colorred4布局的两种思路font"><!-- raw HTML omitted -->4.布局的两种思路<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->① 从大到小<!-- raw HTML omitted --><br>
-先定下大局<br>
-然后完善每个部分的小布局</p>
-<p><!-- raw HTML omitted -->② 从小到大<!-- raw HTML omitted --><br>
-先完成小布局<br>
-然后组合成大布局</p>
-<p><!-- raw HTML omitted -->③ 两种均可<!-- raw HTML omitted --><br>
-新人推荐用第二种，因为小的简单<br>
-老手一般用第一种，因为熟练有大局观</p>
-<h3 id="font-colorred4用什么-css-布局font"><!-- raw HTML omitted -->4.用什么 css 布局<!-- raw HTML omitted --></h3>
-<p><img src="../../images/css%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F.PNG" alt=""></p>
-<h3 id="font-colorred5float-布局font"><!-- raw HTML omitted -->5.float 布局<!-- raw HTML omitted --></h3>
-<p>a: 步骤<br>
--子元素上加 float:left/right 和 width<br>
--在父元素上加.clearfix(<!-- raw HTML omitted -->必须要加上<!-- raw HTML omitted -->)</p>
-<h3 id="font-colorred实践font"><!-- raw HTML omitted -->实践<!-- raw HTML omitted --></h3>
-<p>不同布局<br>
--用 float 做两栏布局(如顶部条)<br>
--用 float 做三栏布局(内容区)<br>
--用 float 做四栏布局(如导航)<br>
--用 float 做平均布局(如产品展示区)<br>
-<!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
-<h3 id="font-colorred6flex-布局font"><!-- raw HTML omitted -->6.Flex 布局<!-- raw HTML omitted --></h3>
-<p>a: 让一个元素变成 flex 容器(下面是容器的属性)</p>
-<pre><code>&lt;style&gt;
-    .container{
-        display:flex; /*或者inline-flex*/
-    }
-    &lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
-&lt;/style&gt;
-</code></pre><p>b:控制它的流动方向(控制什么方向主轴就是什么方向)<br>
-flex-direction:row 默认<br>
-flex-direction:row-reverse 从右到左排<br>
-flex-direction:cloumn<br>
-flex-direction:cloumn-reverse 道理和上面一样<br>
-<img src="../../images/flex-direction.png" alt=""></p>
-<p>c:控制它是否折行<br>
-flex-warp:nowrap 默认<br>
-flex-warp:wrap 折行<br>
-flex-warp:wrap-reverse 折行反转</p>
-<p>d:主轴的对齐方式-默认主轴是横轴-除非改变了 flex-direction 方向<br>
-justify-content:flex-start 大家都往前靠<br>
-justify-content:flex-end 大家都往后靠<br>
-justify-content:center 大家都往中间靠<br>
-justify-content:space-between 把空间都放在中间<br>
-justify-content:space-around 均匀分布两则空间<br>
-<img src="../../images/justify-content.png" alt=""></p>
-<p>c:次轴对齐(它会根据你主轴方向来决定自己次轴方向)<br>
-align-items:flex-start<br>
-algin-items:flex-end<br>
-algin-items:center<br>
-algin-items:stretch
-<img src="../../images/algin-items.png" alt=""></p>
-<p>d:次轴内容对齐方式<br>
-align-content:flex-start 大家都往前靠<br>
-align-content:flex-end 大家都往后靠<br>
-align-content:center 大家都往中间靠(对单行是没有效果的)<br>
-align-content:space-between 把空间都放在中间<br>
-align-content:space-around 均匀分布两则空间</p>
-<h3 id="font-colorredflex-item-有哪些属性容器里面的子元素font"><!-- raw HTML omitted -->flex item 有哪些属性(容器里面的子元素)<!-- raw HTML omitted --></h3>
-<p>a: order 属性(设置弹性盒子模型对象子元素的顺序)<br>
-b：flex-grow 属性(控制自己如何长胖,默认值是 0)<br>
-c：flex-shrink 属性(控制如何变瘦)一般写 flex-shrink:0 防止变瘦，默认是 1<br>
-d：align-self 属性 (algin-self:flex-start algin-self:flex-end 根据次轴来决定的)</p>
-<p><!-- raw HTML omitted -->flex 布局实践(不同布局)<!-- raw HTML omitted --><br>
--用 flex 做两栏布局<br>
--用 flex 做三栏布局<br>
--用 flex 做四栏布局<br>
--用 flex 做平均布局<br>
--用 flex 组合使用，做更复杂的布局</p>
-<p><!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted -->经验<!-- raw HTML omitted --><br>
--永远不要把 width 和 height 写死，除非特殊说明<br>
--用 min-width / max-width / min-height / max-height<br>
--flex 可以基本满足所有需求<br>
--flex 和 margin-xxx:auto 配合有意外效果</p>
-<p><!-- raw HTML omitted -->什么叫写死<!-- raw HTML omitted --><br>
--写死 width:100px;<br>
-不写死<br>
--width:50%<br>
--max-width:100px<br>
--width:30vw<br>
--min-width:80%<br>
--特点：不使用 px，或者加 min max 前缀</p>
-<h3 id="font-colorred7grid-布局font"><!-- raw HTML omitted -->7.Grid 布局<!-- raw HTML omitted --></h3>
-<p>a: 让一个元素变成 gird 容器(下面是容器的属性)</p>
-<pre><code>.container{
-    display:gird | inline-grid;
-}
-</code></pre><p><!-- raw HTML omitted -->设置行和列<!-- raw HTML omitted --><br>
-grid-template-columns:40px 50px auto 50px 40px;<br>
-grid-template-rows:25% 100px auto;
-<img src="../../images/gird.png" alt=""></p>
-<p><!-- raw HTML omitted -->平均布局可以这样子<!-- raw HTML omitted --><br>
-grid-template-columns:1fr 1fr 1fr;<br>
-grid-template-rows:1fr 1fr 1fr;</p>
-<p><!-- raw HTML omitted -->grid-template-areas<!-- raw HTML omitted --></p>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;header&gt;&lt;/header&gt;
-    &lt;asdie&gt;&lt;/asdie&gt;
-    &lt;main&gt;&lt;/main&gt;
-    &lt;div class=&quot;ad&quot;&gt;&lt;/div&gt;
-    &lt;footer&gt;&lt;/footer&gt;
-&lt;/div&gt;
-.container{
-    grid-template-areas{
-        &quot;header header header&quot; /*三行三列*/
-        &quot;asdie main ad&quot;
-        &quot;footer footer footer&quot;
-    }
-}
-.ad{
-        grid-areas:ad
-    }
-</code></pre><p><!-- raw HTML omitted -->grid-gap(基本算替换了 margin 外边距)<!-- raw HTML omitted --><br>
-a：grid-gap:10px 则行和列都会生效<br>
-b：grid-row-gap:10px 则行生效<br>
-c：grid-column-gap:10px 则列生效</p>
-<h3 id="font-colorredgrid-有哪些属性容器里面的子元素font"><!-- raw HTML omitted -->grid 有哪些属性(容器里面的子元素)<!-- raw HTML omitted --></h3>
-<p>a：grid-rows-start:1<br>
-b：grid-rows-end:3<br>
-c：grid-column-start:1<br>
-d：grid-column-end:3</p>
-<p><!-- raw HTML omitted -->复合样式：<!-- raw HTML omitted --><br>
-a：grid-row : 2 / 4 就会设置从第二行开始，到第四行结束<br>
-b: grid-column : 2 / 4 就会设置从第二列开始，到第四列结束<br>
-c：grid-area : 1 / 1 / 3 / 6 第一行开始，第一列开始，第三行结束，第 6 列结束<br>
-<!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>10 - [css全解]定位</title>
-            <link>http://yaochengjian.com/posts/10/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0810</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/10/</guid>
-            <description>问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
-A.border 内边沿围成的区域
-B.border 外边沿围成的区域
--如何验证自己的猜想?border 半透明化
--从左边看一个 div,是什么样子?
-新属性-position a：position1.static 默认值，待在文档流里
-2.relative 相对定位，升起来，但不脱离文档流
-3.absolute 绝对定位，定位基准是祖先里的非 static
-4.fixed 固定定位，定位基准是 viewport(有诈)
-5.sticky 粘滞定位，不好描述直接举例
-经验
-1.如果你写了 absolute，一般都得补一个 relative
-2.如果你写了 absolute 或 fixed，一定要补 top 和 left
-3.sticky 兼容性很差，主要用于面试装逼
-position:relativea：使用场景
-1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
-2.用于给 absolute 元素做爸爸
-b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
-1.z-index:auto 默认值，不创建新层叠上下文
-2.z-index：0 | 1 | 2
-3.z-index:-1 | -2
-经验
-1.写 z-index:9999 的都是彩笔
-2.学会管理 z-index
-position:absolutea：使用场景
-1.脱离原来的位置，另起一层，比如对话框的关闭按钮
-2.鼠标提示
-案例b：配合 z-index</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred问两个问题font"><!-- raw HTML omitted -->问两个问题<!-- raw HTML omitted --></h3>
-<p>-背景的范围是从哪到哪?(正确答案是 B)<br>
-A.border 内边沿围成的区域<br>
-B.border 外边沿围成的区域<br>
--如何验证自己的猜想?border 半透明化</p>
-<p>-从左边看一个 div,是什么样子?<br>
-<img src="../../images/div.png" alt=""></p>
-<h3 id="font-colorred新属性-positionfont"><!-- raw HTML omitted -->新属性-position<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->a：position<!-- raw HTML omitted --><br>
-1.static 默认值，待在文档流里<br>
-2.relative 相对定位，升起来，但不脱离文档流<br>
-3.absolute 绝对定位，定位基准是祖先里的非 static<br>
-4.fixed 固定定位，定位基准是 viewport(有诈)<br>
-5.sticky 粘滞定位，不好描述直接举例</p>
-<p>经验<br>
-1.如果你写了 absolute，一般都得补一个 relative<br>
-2.如果你写了 absolute 或 fixed，一定要补 top 和 left<br>
-3.sticky 兼容性很差，主要用于面试装逼</p>
-<p><!-- raw HTML omitted -->position:relative<!-- raw HTML omitted --><br>
-a：使用场景<br>
-1.用于做位移对齐(很少用，现在都直接用 display:flex 了)<br>
-2.用于给 absolute 元素做爸爸</p>
-<p>b：配合 z-index(z-index 必须配合 position 使用，否则不生效)<br>
-1.z-index:auto 默认值，不创建新层叠上下文<br>
-2.z-index：0 | 1 | 2<br>
-3.z-index:-1 | -2</p>
-<p>经验<br>
-1.写 z-index:9999 的都是彩笔<br>
-2.学会管理 z-index</p>
-<p><!-- raw HTML omitted -->position:absolute<!-- raw HTML omitted --><br>
-a：使用场景<br>
-1.脱离原来的位置，另起一层，比如对话框的关闭按钮<br>
-2.鼠标提示<br>
-<!-- raw HTML omitted -->案例<!-- raw HTML omitted --></p>
-<p>b：配合 z-index</p>
-<p>经验<br>
-1.absolute 相对于祖先元素中最近的的定位元素<br>
-2.某些浏览器如果不写 top | left 会位置错乱<br>
-3.善用 left:100%<br>
-4.善用 left:50%;加负 margin</p>
-<p><!-- raw HTML omitted -->position:fixed 相对于视口定位<!-- raw HTML omitted --><br>
-a：使用场景<br>
-1.烦人的广告<br>
-2.回到顶部按钮</p>
-<p>b：配合 z-index<br>
-经验<br>
-1.手机上尽量不要用这个属性，坑很多</p>
-<p><!-- raw HTML omitted -->层叠上下文<!-- raw HTML omitted --><br>
-a：什么会创建层叠上下文[z-index / opacity]<br>
-1.每个层叠上下文就是一个作用域<br>
-3.要处于同一个作用域的 z-index 才能够比较<br>
-2.这一层层叠上下文会找到自己共同父级的层叠上下文作用域来进行比较(如果没有就默认是 html)</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>11 - [css动画]</title>
-            <link>http://yaochengjian.com/posts/11/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0811</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/11/</guid>
-            <description>transform 完整介绍 a: translate(平移)
- translateX(长度 | 百分比) translateY(长度 | 百分比) translate(x 轴,y 轴) translateX(50%) 往右边偏移自身宽度的一半  translate(-50%,-50%) 可做绝对定位元素居中
-b: scale(缩放)
- scaleX(number) scaleY(number) scale(X-number,Y-number)  用得较少，因为容易出现模糊
-c: rotate(旋转)
-d: transform-origin 设置旋转点
- rotate(度数) 沿 Z 轴转动 rotateX(度数) rotateY(度数)  e: skew(倾斜)
- skewX(度数) skewY(度数) skew(X,Y)  用得较少
-案例 爱心transition 过渡 a: 语法
- transition-property 状态发生变化的属性(可以用 all 代表所有属性) transition-timing-function 过渡变化的速度 transition-delay 延迟多长时间开始 transition:width 3s , background 3s(这样我们可以采用多种属性一起过渡) 过渡方式有: ease : 速度逐渐变慢，这是默认值</description>
-            <content type="html"><![CDATA[<h3 id="font-colorredtransform-完整介绍font"><!-- raw HTML omitted -->transform 完整介绍<!-- raw HTML omitted --></h3>
-<p>a: translate(平移)</p>
-<ol>
-<li>translateX(长度 | 百分比)</li>
-<li>translateY(长度 | 百分比)</li>
-<li>translate(x 轴,y 轴)</li>
-<li>translateX(50%) <!-- raw HTML omitted -->往右边偏移自身宽度的一半<!-- raw HTML omitted --></li>
-</ol>
-<p>translate(-50%,-50%) 可做绝对定位元素居中</p>
-<p>b: scale(缩放)</p>
-<ol>
-<li>scaleX(number)</li>
-<li>scaleY(number)</li>
-<li>scale(X-number,Y-number)</li>
-</ol>
-<p>用得较少，因为容易出现模糊</p>
-<p>c: rotate(旋转)<br>
-d: transform-origin 设置旋转点</p>
-<ol>
-<li>rotate(度数) 沿 Z 轴转动</li>
-<li>rotateX(度数)</li>
-<li>rotateY(度数)</li>
-</ol>
-<p>e: skew(倾斜)</p>
-<ol>
-<li>skewX(度数)</li>
-<li>skewY(度数)</li>
-<li>skew(X,Y)</li>
-</ol>
-<p>用得较少<br>
-案例 <!-- raw HTML omitted -->爱心<!-- raw HTML omitted --></p>
-<h3 id="font-colorredtransition-过渡font"><!-- raw HTML omitted -->transition 过渡<!-- raw HTML omitted --></h3>
-<p>a: 语法</p>
-<ol>
-<li>transition-property 状态发生变化的属性(可以用 all 代表所有属性)</li>
-<li>transition-timing-function 过渡变化的速度</li>
-<li>transition-delay 延迟多长时间开始</li>
-<li>transition:width 3s , background 3s(这样我们可以采用多种属性一起过渡)</li>
-<li>过渡方式有:
-ease : 速度逐渐变慢，这是默认值<br>
-linear : 均速<br>
-ease-in : 以慢速开始<br>
-ease-in-out : 慢速开始 -&gt; 再快速 -&gt; 再慢速</li>
-</ol>
-<p>b: <!-- raw HTML omitted -->注意:并不是所有属性都能过渡<!-- raw HTML omitted --></p>
-<ol>
-<li>display:none =&gt; block 没法过渡</li>
-<li>一般改成 visibility:hidden =&gt; visible</li>
-<li>transition 是一次性的，不能重复发生，触发多次</li>
-<li>transition 只能定义开始和结束状态，不能定义中间状态，也就是说只有两个状态</li>
-</ol>
-<h3 id="font-colorredanimation-动画font"><!-- raw HTML omitted -->animation 动画<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->a: 语法<!-- raw HTML omitted --></p>
-<pre><code>第一种
-@keyframs name{
-    form{}
-    to{}
-}
-第二种
-@keyframs name{
-    0%{}
-    20%{}
-    100%{}
-}
-</code></pre><p><!-- raw HTML omitted -->b:缩写语法<!-- raw HTML omitted --><br>
-animation: 时长 | 过渡方式 | 延迟 | 次数 | 方向 | 填充模式 | 是否暂停 | 动画名</p>
-<ol>
-<li>过渡方式 : 跟 transition 取值一样</li>
-<li>次数 : 自定义次数或者 infinite(无数次)</li>
-<li>方向 : reverse | alternate(原路返回) | alternate-reverse</li>
-</ol>
-]]></content>
-        </item>
-        
-        <item>
-            <title>12 - [HTTP全解]URL是什么</title>
-            <link>http://yaochengjian.com/posts/12/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0812</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/12/</guid>
-            <description>1.域名是什么 a: 域名实际上是 ip 的别称 知识点
-  一个域名可以对应不同 IP
-这个叫做均衡负载，防止一台机器扛不住
-  一个 IP 可以对应不同域名
-这个叫做共享主机，穷开发者会这么做
-  域名和 IP 是怎么对应起来的？
-通过 DNS
-  当你输入 xiedaimala.com
-  过程-你的 Chrom 浏览器会向电信|联通提供的 DNS 服务器询问 xiedaimala.com 对应 IP
--电信|联通会回答一个 IP(具体过程很复杂，不研究)
--然后 Chrome 才会想对应 IP 的 80/443 端口发送请求
--请求内容是查看 xiedaimala.com 的首要
-为什么是 80 或 443 端口-服务器默认用 80 提供 http 服务
--服务器默认用 443 提供 https 服务
--你可以在开发者工具里看到具体的端口
-如何请求不同的页面-路径可以做到(不同的路径可以请求不同的页面)
-同一个页面，不同内容查询参数可以做到
--www.baidu.com/s?wd=hi
--www.baidu.com/s?wd=hello
-URL 组成https://www.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1域名是什么font"><!-- raw HTML omitted -->1.域名是什么<!-- raw HTML omitted --></h3>
-<p>a: 域名实际上是 ip 的别称
-知识点</p>
-<ol>
-<li>
-<p>一个域名可以对应不同 IP<br>
-这个叫做均衡负载，防止一台机器扛不住</p>
-</li>
-<li>
-<p>一个 IP 可以对应不同域名<br>
-这个叫做共享主机，穷开发者会这么做</p>
-</li>
-<li>
-<p>域名和 IP 是怎么对应起来的？<br>
-通过 DNS</p>
-</li>
-<li>
-<p>当你输入 xiedaimala.com</p>
-</li>
-</ol>
-<p><!-- raw HTML omitted -->过程<!-- raw HTML omitted --><br>
--你的 Chrom 浏览器会向电信|联通提供的 DNS 服务器询问 xiedaimala.com 对应 IP<br>
--电信|联通会回答一个 IP(具体过程很复杂，不研究)<br>
--然后 Chrome 才会想对应 IP 的 80/443 端口发送请求<br>
--请求内容是查看 xiedaimala.com 的首要</p>
-<p><!-- raw HTML omitted -->为什么是 80 或 443 端口<!-- raw HTML omitted --><br>
--服务器默认用 80 提供 http 服务<br>
--服务器默认用 443 提供 https 服务<br>
--你可以在开发者工具里看到具体的端口</p>
-<p><!-- raw HTML omitted -->如何请求不同的页面<!-- raw HTML omitted --><br>
--路径可以做到(不同的路径可以请求不同的页面)</p>
-<p><!-- raw HTML omitted -->同一个页面，不同内容<!-- raw HTML omitted --><br>
-查询参数可以做到<br>
--www.baidu.com/s?wd=hi<br>
--www.baidu.com/s?wd=hello</p>
-<p><!-- raw HTML omitted -->URL 组成<!-- raw HTML omitted --><br>
-<a href="https://www.baidu.com/s?wd=hello#5">https://www.baidu.com/s?wd=hello#5</a><br>
-协议+域名或 IP+端口号+路径+查询字符串+锚点</p>
-<p><!-- raw HTML omitted -->DNS 作用是什么<!-- raw HTML omitted --></p>
-<ol>
-<li>DNS 就是把域名和 IP 地址联系在一起，有了 DNS 服务，你就不用输入 IP 地址来访问一个网站了，就可以通过输入网址来访问(解析 IP)</li>
-<li>nslookup 用法 : nslookup + 查询对应的域名 [可以得到对应的域名 IP 地址]</li>
-</ol>
-<p><!-- raw HTML omitted -->域名是什么?分别哪几类域名<!-- raw HTML omitted --></p>
-<ol>
-<li>.com 商业性的机构或公司</li>
-<li>.cn 中国域名</li>
-<li>.top 机构公司个人</li>
-<li>.org 非盈利的组织、团体 &hellip;&hellip;</li>
-</ol>
-<p><!-- raw HTML omitted -->curl 命令<!-- raw HTML omitted --></p>
-<ol>
-<li>用 curl 可以发 HTTP 请求
--curl <a href="http://baidu.com">http://baidu.com</a><br>
--curl -v <a href="http://baidu.com">http://baidu.com</a> (加-v 可以看到更详细的内容)</li>
-<li>理解一下概念<br>
--url 会被 curl 工具重写，先请求 DNS 获得 IP<br>
--先进行 TCP 连接，TCP 连接成功后，开始发送 HTTP 请求<br>
--请求内容看一眼<br>
--响应内容看一眼</li>
-</ol>
-]]></content>
-        </item>
-        
-        <item>
-            <title>13 - [HTTP全解]请求和响应 &amp; Node.js server</title>
-            <link>http://yaochengjian.com/posts/13/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0813</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/13/</guid>
-            <description>演示 Node.js Server   前置条件
--安装 Node.js 8 +
--理解 IP 和端口
--理解 URL 路径和查询参数
-  如何发请求
--用 Chrome 地址栏
--用 curl 命令
-  模拟客户端向服务器端请求内容
--在 github.com/FrankFang/nodejs-test/blob/master/server.js 下载
--一般这个文件是放在服务器上面，而不是自己的机器上
-  response.setHeader(&amp;ldquo;Content-Type&amp;rdquo;,&amp;ldquo;text/css;charset=utf-8&amp;rdquo;) 让服务器告诉浏览器它发送的数据属于什么文件类型
-response.write() 写入响应内容发送回给浏览器
-response.end() 响应结束
-  HTTP 基础概念   请求(Request Headers)[get 是获取内容，post 是上传内容]
--请求动词 路径 + 查询参数 协议名/版本 [请求行]
--Host: 域名或 IP [这三行是请求头]
-Accept: text/html
-Content-Type: 请求体的格式
--请求体[也就是上传的内容]
-curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localhost:8888/</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred演示-nodejs-serverfont"><!-- raw HTML omitted -->演示 Node.js Server<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>前置条件<br>
--安装 Node.js 8 +<br>
--理解 IP 和端口<br>
--理解 URL 路径和查询参数</p>
-</li>
-<li>
-<p>如何发请求<br>
--用 Chrome 地址栏<br>
--用 curl 命令</p>
-</li>
-<li>
-<p>模拟客户端向服务器端请求内容<br>
--在 github.com/FrankFang/nodejs-test/blob/master/server.js 下载<br>
--一般这个文件是放在服务器上面，而不是自己的机器上</p>
-</li>
-<li>
-<p>response.setHeader(&ldquo;Content-Type&rdquo;,&ldquo;text/css;charset=utf-8&rdquo;) 让服务器告诉浏览器它发送的数据属于什么文件类型<br>
-response.write() 写入响应内容发送回给浏览器<br>
-response.end() 响应结束</p>
-</li>
-</ol>
-<h3 id="font-colorredhttp-基础概念font"><!-- raw HTML omitted -->HTTP 基础概念<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>请求(Request Headers)[get 是获取内容，post 是上传内容]<br>
--请求动词 路径 + 查询参数 协议名/版本 [请求行]</p>
-<p>-Host: 域名或 IP [这三行是请求头]<br>
-Accept: text/html<br>
-Content-Type: 请求体的格式</p>
-<p>-请求体[也就是上传的内容]<br>
-curl -v -X POST &ndash;data &lsquo;上传内容&rsquo; http://localhost:8888/</p>
-</li>
-<li>
-<p>响应(Response Headers)<br>
--协议名/版本 状态码 状态字符串 [状态行]</p>
-<p>-Content-Type: 响应体的格式 [响应头]</p>
-<p>-响应体 Response[也就是下载内容]</p>
-</li>
-</ol>
-<h3 id="font-colorred用-curl-构造请求font"><!-- raw HTML omitted -->用 curl 构造请求<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>设置请求动词(加上-X)<br>
-curl -v -X POST http://localhost:8888</p>
-</li>
-<li>
-<p>设置路径和查询参数<br>
-curl -v -X POST http://localhost:8888/xxx?wd=hello#nihao<br>
-直接在 url 后面加(锚点是不会发送到服务器上面的)</p>
-</li>
-<li>
-<p>设置 请求头(加上-H,可以任意设置)<br>
-curl -v -H &ldquo;Accept:text/html&rdquo; http://localhost:8888<br>
-curl -v -H &ldquo;Content-type:text/html&rdquo; http://localhost:8888</p>
-</li>
-<li>
-<p>设置请求体(加上-d)<br>
-curl -v -d &ldquo;你好吗?&rdquo; http://localhost:8888</p>
-</li>
-<li>
-<p>用 Node.js 读取请求<br>
--设置响应状态码<br>
-response.statusCode = 200</p>
-<p>-设置响应头<br>
-response.setHeader(&lsquo;Content-Type&rsquo;,&lsquo;text/html&rsquo;)</p>
-<p>-设置响应体<br>
-response.write(&lsquo;内容&rsquo;)</p>
-</li>
-</ol>
-<h3 id="font-colorredssh-远程登录-阿里云-ubuntufont"><!-- raw HTML omitted -->ssh 远程登录-阿里云 Ubuntu<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>首先登录远程服务器</p>
-</li>
-<li>
-<p>成功看到 welcome 之后</p>
-</li>
-<li>
-<p>echo &lsquo;复制本地~/.ssh/id_rsa.pub 内容&rsquo; &raquo; /.ssh/authorized_keys</p>
-</li>
-<li>
-<p>新建终端，在本地运行 ssh root@实例公网 ip</p>
-</li>
-<li>
-<p>此时就可以在本地终端操作云服务器了</p>
-</li>
-<li>
-<p>你可以在 hosts 文件里给实例 ip 取个别名</p>
-</li>
-<li>
-<p>想要退出云机器，可以输入 exit 回车</p>
-</li>
-<li>
-<p>如果卡了，可以直接退出终端 ctrl + w</p>
-</li>
-</ol>
-<p><!-- raw HTML omitted -->创建应用账户(为什么?)<!-- raw HTML omitted --></p>
-<ol>
-<li>
-<p>linux 的 root 账户拥有最高权限，一旦被攻克机器就完全被人控制(步骤)<br>
-a. adduser chengjian<br>
-b. Enter new UNIX password : 输入密码<br>
-c. 再次输入密码,密码可以跟 root 的密码一样<br>
-d. 一直回车，知道结束，运行如下命令<br>
-e. mkdir /home/chengjian/.ssh<br>
-f. cp ~/.ssh/authorized_keys /home/chengjian/.ssh/<br>
-g. chmod 755 /home/chengjian/.ssh/authorized_keys<br>
-h. chown chengjian:chengjian /home/chengjian/.ssh/authorized_keys</p>
-</li>
-<li>
-<p>给 chengjian 添加 sudu 权限(sudo 是什么)<br>
-a. adduser chengjian sudo<br>
-b. 类似于 Windows 的[以管理员身份运行]<br>
-c. 平时你不应该使用 root 账户，而是用 chengjian 账户<br>
-d. 遇到特殊操作，就在前面加 sudo,请出 root<br>
-e. 需要输入 chengjian 的密码，不是 root 密码<br>
-f. sudo !!的意思是用 sudo 执行上一句命令</p>
-</li>
-</ol>
-<h3 id="font-colorred在服务器上面安装-nodejs-8-和-git步骤font"><!-- raw HTML omitted -->在服务器上面安装 Node.js 8 和 git(步骤)<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>curl -sL <a href="https://deb.nodesource.com/setup_8.x">https://deb.nodesource.com/setup_8.x</a> | sudo bash -</p>
-</li>
-<li>
-<p>sudo sed -i &lsquo;s/deb.nodesource.com/node_8.x/mirrors.tuna.tsinghua.edu.cn/nodesource/deb_8.x/g&rsquo; /etc/apt/sources.list.d/nodesource.list</p>
-</li>
-<li>
-<p>sudo apt-get update</p>
-</li>
-<li>
-<p>sudo apt-get install -y nodejs</p>
-</li>
-<li>
-<p>sudo apt install git</p>
-</li>
-<li>
-<p>遇到[Y/n]输入回车，或者 Y 回车</p>
-</li>
-<li>
-<p>git &ndash;version</p>
-</li>
-</ol>
-<h3 id="font-colorred在服务器上面部署-nodejs-代码font"><!-- raw HTML omitted -->在服务器上面部署 node.js 代码<!-- raw HTML omitted --></h3>
-<ol>
-<li>下载代码(不要使用 ssh 地址，使用 https)
-git clone (GitHub 上 https 下载地址)</li>
-<li>启动
-a. cd node-demo-1<br>
-b. touch log(创建 log 文件，后面可以查看到请求进程)<br>
-c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;
-d. kill -9 pid 可以关掉进程<br>
-e. tail log(可以查看 log 请求进程内容)<br>
-f. killall node 可以关掉所有 node 进程
-g. git pull 会在 github 拉取最新的代码</li>
-</ol>
-]]></content>
-        </item>
-        
-        <item>
-            <title>14 - [JS全解]JS的诞生</title>
-            <link>http://yaochengjian.com/posts/14/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0814</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/14/</guid>
-            <description>1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&amp;quot;1&amp;quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1javascript-的-10-个设计缺陷font"><!-- raw HTML omitted -->1.Javascript 的 10 个设计缺陷<!-- raw HTML omitted --></h3>
-<ol>
-<li>不适合开发大型程序</li>
-<li>非常小的标准库</li>
-<li>null 和 undefined</li>
-</ol>
-<pre><code>null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)
-typeof null // object
-typeof undefined // undefined
-</code></pre><ol start="4">
-<li>全局变量难以控制</li>
-<li>自动插入行尾分号</li>
-<li>加号运算符</li>
-</ol>
-<pre><code>+ 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接
-console.log(1 + 10)
-console.log(&quot;1&quot; + 10)
-</code></pre><ol start="7">
-<li>NaN(NaN 自己也不等于自己)</li>
-</ol>
-<pre><code>NaN === NaN  //false
-NaN !== NaN  //true
-</code></pre><ol start="8">
-<li>数据和对象区分(数组也属于对象)</li>
-<li>== 和 ===</li>
-</ol>
-<pre><code>  == 只是判断两个值是否相等
-  === 不单单判断值是否相等，还判断两边类型是否相等
-</code></pre><ol start="10">
-<li>基本类型的包装对象</li>
-</ol>
-<pre><code>Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。
-　　new Boolean(false);
-
-　　new Number(1234);
-
-　　new String(&quot;Hello World&quot;);
-
-与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。
-　　alert( typeof 1234); // number
-
-　　alert( typeof new Number(1234)); // object
-</code></pre><h3 id="font-colorred2a-href--httpswwwjianshucomp33c1d8505975js-的历史afont"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->JS 的历史<!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
-<h3 id="font-colorred3a-href--httpwwwruanyifengcomblog201106birth_of_javascripthtmljs-的诞生afont"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->JS 的诞生<!-- raw HTML omitted --><!-- raw HTML omitted --></h3>
-]]></content>
-        </item>
-        
-        <item>
-            <title>15 - [JS全解]内存图与JS世界</title>
-            <link>http://yaochengjian.com/posts/15/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0815</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/15/</guid>
-            <description>浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
-2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
-JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
-Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
-2.找到了，则结束查找，使用自己私有的即可
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 </description>
-            <content type="html"><![CDATA[<h3 id="font-colorred浏览器功能font"><!-- raw HTML omitted -->浏览器功能<!-- raw HTML omitted --></h3>
-<p>1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等</p>
-<p>2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程</p>
-<h3 id="font-colorredjs-原型font"><!-- raw HTML omitted -->JS 原型<!-- raw HTML omitted --></h3>
-<p>1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象<br>
-2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身</p>
-<pre><code>Array.prototype.constructor === Array
-</code></pre><p>3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)<br>
-4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)</p>
-<p><!-- raw HTML omitted -->原型链__proto__<!-- raw HTML omitted --><br>
-1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性<br>
-2.找到了，则结束查找，使用自己私有的即可<br>
-3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在
-<img src="../../images/%E5%8E%9F%E5%9E%8B.png" alt=""></p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>16 - [JS全解]canvas实践</title>
-            <link>http://yaochengjian.com/posts/16/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0816</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/16/</guid>
-            <description>Canvas(不能在 css 设置宽高[不支持]) 绘制矩形1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
-2.ctx.fillStyle = &amp;ldquo;black&amp;rdquo; 定义路径内容区域颜色
-3.ctx.fillRect(x,y,width,height)
-4.ctx.fill() 填充路径的内容区域生成实心图形
-绘制三角形1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
-2.ctx.strokeStyle = &amp;lsquo;red&amp;rsquo; 定义描边内容区域颜色
-2.ctx.beginPath() 绘制一个新的形状路径开始
-3.ctx.moveTo(x,y)
-4.ctx.lineTo(x,y)
-5.ctx.stroke() 填充描边路径颜色
-6.ctx.lineWidth 定义线的粗心状态
-7.ctx.lineCap 每个点与点连接是圆的
-绘制圆形1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
-2.ctx.fillStyle = &amp;lsquo;red&amp;rsquo;
-3.ctx.beiginPath() 绘制一个新的形状路径开始
-3.ctx.arc(x,y,半径，圆开始，弧度)
-4.ctx.fill()
-需要注意的细节1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
-2.document.body.clientHeigh : 获取 body 的高度
-3.document.documentElement.clientWidth : 获取 HTML 的宽度
-4.document.documentElement.clientHeight : 获取 HTML 的高度
-var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);ctx.fillStyle = &amp;quot;rgb(200,0,0)&amp;quot;;ctx.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorredcanvas不能在-css-设置宽高不支持font"><!-- raw HTML omitted -->Canvas(不能在 css 设置宽高[不支持])<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->绘制矩形<!-- raw HTML omitted --><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色<br>
-3.ctx.fillRect(x,y,width,height)<br>
-4.ctx.fill() 填充路径的内容区域生成实心图形</p>
-<p><!-- raw HTML omitted -->绘制三角形<!-- raw HTML omitted --><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色<br>
-2.ctx.beginPath() 绘制一个新的形状路径开始<br>
-3.ctx.moveTo(x,y)<br>
-4.ctx.lineTo(x,y)<br>
-5.ctx.stroke() 填充描边路径颜色<br>
-6.ctx.lineWidth 定义线的粗心状态<br>
-7.ctx.lineCap 每个点与点连接是圆的</p>
-<p><!-- raw HTML omitted -->绘制圆形<!-- raw HTML omitted --><br>
-1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
-2.ctx.fillStyle = &lsquo;red&rsquo;<br>
-3.ctx.beiginPath() 绘制一个新的形状路径开始<br>
-3.ctx.arc(x,y,半径，圆开始，弧度)<br>
-4.ctx.fill()</p>
-<p><!-- raw HTML omitted -->需要注意的细节<!-- raw HTML omitted -->
-1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)<br>
-2.document.body.clientHeigh : 获取 body 的高度<br>
-3.document.documentElement.clientWidth : 获取 HTML 的宽度<br>
-4.document.documentElement.clientHeight : 获取 HTML 的高度</p>
-<pre><code>var ctx = canvas.getContext(&quot;2d&quot;);
-ctx.fillStyle = &quot;rgb(200,0,0)&quot;;
-ctx.fillRect(10,10,55,50);
-</code></pre>]]></content>
-        </item>
-        
-        <item>
-            <title>17 - [JS全解]JS语法</title>
-            <link>http://yaochengjian.com/posts/17/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0817</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/17/</guid>
-            <description>1.JS 版本 历史版本ES3，IE6 支持，总体评价 : 垃圾
-ES5，总体评价 : 还是垃圾
-ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
-ES2019 与 ES6 差别不大
-为什么说 ES6 一半垃圾因为 ES 不能删除以前的特性，要兼容旧的网站
-也就是说以前能运行的网站，以后都要能运行
-对比 Python3 你就知道兼容的好处 : 稳定
-2.表达式与语句 表达式 1+2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句 var a = 1 是一个语句  二者的区别 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1js-版本font"><!-- raw HTML omitted -->1.JS 版本<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->历史版本<!-- raw HTML omitted --><br>
-ES3，IE6 支持，总体评价 : 垃圾<br>
-ES5，总体评价 : 还是垃圾<br>
-ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好<br>
-ES2019 与 ES6 差别不大</p>
-<p><!-- raw HTML omitted -->为什么说 ES6 一半垃圾<!-- raw HTML omitted --><br>
-因为 ES 不能删除以前的特性，要兼容旧的网站<br>
-也就是说以前能运行的网站，以后都要能运行<br>
-对比 Python3 你就知道兼容的好处 : 稳定</p>
-<h3 id="font-colorred2表达式与语句font"><!-- raw HTML omitted -->2.表达式与语句<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->表达式<!-- raw HTML omitted --></p>
-<ol>
-<li>1+2 表达式的值为 3</li>
-<li>add(1,2)表达式的值为函数的返回值</li>
-<li>console.log 表达式的值为函数本身</li>
-<li>console.log(3) 表达式的值为多少? undefined</li>
-</ol>
-<p><!-- raw HTML omitted -->语句<!-- raw HTML omitted --></p>
-<ol>
-<li>var a = 1 是一个语句</li>
-</ol>
-<p><!-- raw HTML omitted -->二者的区别<!-- raw HTML omitted --></p>
-<ol>
-<li>表达式一般都有值，语句可能有也可能没有</li>
-<li>语句一般会改变环境(声明、赋值)</li>
-<li>上面两句话并不是绝对的</li>
-</ol>
-<h3 id="font-colorred3空格font"><!-- raw HTML omitted -->3.空格<!-- raw HTML omitted --></h3>
-<ol>
-<li>大部分空格没有实际意义</li>
-<li>只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined</li>
-<li>SYntaxError : 语法错误</li>
-</ol>
-<h3 id="font-colorred4区块-blockfont"><!-- raw HTML omitted -->4.区块 block<!-- raw HTML omitted --></h3>
-<pre><code>{
-    把代码包在一起
-    let a = 1;
-    let b = 2;
-}
-</code></pre><p>常常与 if / for / while 合用</p>
-<h3 id="font-colorred5if-语句font"><!-- raw HTML omitted -->5.if 语句<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->语句<!-- raw HTML omitted --></p>
-<ol>
-<li>if(表达式){语句 1}else{语句 2}</li>
-<li>{}在语句只有一句的时候可以省略，不建议这样做</li>
-</ol>
-<p><!-- raw HTML omitted -->变态情况<!-- raw HTML omitted --></p>
-<ol>
-<li>表达式里可以非常变态，如 a = 1</li>
-<li>语句 1 里可以非常变态，如嵌套的 if else</li>
-<li>语句 2 里可以非常变态，如嵌套的 if else</li>
-</ol>
-<pre><code>
-a = 1
-if(a === 2)   这里其实有一个无形的{}，条件成立了依然会执行，只会管第一句话
-  console.log('a');
-  console.log('b');
-</code></pre><h3 id="font-colorred6switch-语句font"><!-- raw HTML omitted -->6.switch 语句<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->语法<!-- raw HTML omitted --></p>
-<pre><code>switch(a){
-    case 1:
-    console.log(1);
-        break;
-    case 2:
-    console.log(2);
-        break;
-    case 3:
-    case 4:
-    console.log(3,4);
-        break;
-    default:
-    console.log(&quot;hi&quot;);
-}
-</code></pre><ol>
-<li>大部分时候，省略 break 你就完了</li>
-<li>少部分时候，可以利用 break</li>
-</ol>
-<h3 id="font-colorred7问好冒号表达式font"><!-- raw HTML omitted -->7.问好冒号表达式<!-- raw HTML omitted --></h3>
-<ol>
-<li>表达式 1 ? 表达式 2 : 表达式 3</li>
-</ol>
-<pre><code>var a = 10;
-var b = 20;
-a &gt; b ? console.log(a) ? console.log(b);
-</code></pre><h3 id="font-colorred8-短路逻辑font"><!-- raw HTML omitted -->8.&amp;&amp; ||短路逻辑<!-- raw HTML omitted --></h3>
-<ol>
-<li>A &amp;&amp; B 如果 A 是是假，就取 A! 如果 A 是真，就会取 B</li>
-<li>A || B 如果 A 是真，就直接取 A(始终会取一个真值)，全部是假就会取最后一个</li>
-</ol>
-<h3 id="font-colorred9for-循环font"><!-- raw HTML omitted -->9.for 循环<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->语法<!-- raw HTML omitted --></p>
-<pre><code>for(语句1;表达式2;语句3){
-    循环体
-}
-</code></pre><ol>
-<li>先执行语句 1</li>
-<li>然后判断表达式 2</li>
-<li>如果为真，执行循环体，然后执行语句 3</li>
-<li>如果为假，直接退出循环，执行后面的语句</li>
-</ol>
-<p><!-- raw HTML omitted -->10.break 和 coontinue<!-- raw HTML omitted --></p>
-<ol>
-<li>break 退出当前循环</li>
-<li>continent 退出当前一次循环</li>
-</ol>
-<p><!-- raw HTML omitted -->11.label 语句<!-- raw HTML omitted --><br>
-一般不会使用，面试中会遇到 : 举例</p>
-<pre><code>{
-    foo : 1
-}
-</code></pre><p>面试中会被问 : 上述是什么东西?<br>
-我们的回答就是 : 这就是一个 label，它的内容为 1</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>18 - [JS全解]JS数据类型</title>
-            <link>http://yaochengjian.com/posts/18/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0818</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/18/</guid>
-            <description>1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
-  字符串 string
-1.写法&#39;你好&#39; 单引号&amp;quot;你好&amp;quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
- 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
-  未定义 undefined
-  空 null</description>
-            <content type="html"><![CDATA[<h3 id="font1用-0127-表示所有符号font"><!-- raw HTML omitted -->1.用 0~127 表示所有符号<!-- raw HTML omitted --></h3>
-<ol>
-<li>48~57 表示数字符号</li>
-<li>65~90 表示大写字母</li>
-<li>97~122 表示小写字母</li>
-</ol>
-<h3 id="font-colorred2js-中的数据类型7-种font"><!-- raw HTML omitted -->2.JS 中的数据类型(7 种)<!-- raw HTML omitted --></h3>
-<ol>
-<li>
-<p>数字 number</p>
-</li>
-<li>
-<p>字符串 string</p>
-<pre><code>1.写法
- '你好'  单引号
- &quot;你好&quot;  双引号
- `你好`  反引号
-
-2.转义
- 'it's ok' js引擎会认为'it'就结束了，后面的看不懂
- 'it \'s ok' 这就是转义
-
-3.如果你想要在字符串里回车可以使用反引号``
-  let s = `这样是
-  可以的
-  用反引号很容易做到`
-
-4.通过下标读取字符(下标是从0开始)
-  let s = 'hello';
-  s[0]; //'h'
-</code></pre></li>
-<li>
-<p>布尔 bool</p>
-<pre><code> 1.五个falsy值(falsy就是相当于false但又不是false的值)
-   分别是[undefined 、null、0、NaN、'']
-</code></pre></li>
-<li>
-<p>符号 symbol</p>
-</li>
-<li>
-<p>未定义 undefined</p>
-</li>
-<li>
-<p>空 null</p>
-<pre><code>区别
- 1.如果一个变量声明了，但没有赋值，那么默认值就是undefined，而不是null
- 2.如果一个函数，没有写return，那么默认return undefined，而不是null
- 3.undefined更多是默认的空，null是主动的空
-</code></pre></li>
-<li>
-<p>对象 object</p>
-</li>
-</ol>
-<h3 id="font-colorred3特殊值font"><!-- raw HTML omitted -->3.特殊值<!-- raw HTML omitted --></h3>
-<ol>
-<li>正 0 和 负 0</li>
-<li>无穷大 (Infinity 、+Infinity 、-Infinity)</li>
-<li>无法表示的数字 (NaN)</li>
-</ol>
-<h3 id="font-colorred4变量声明font"><!-- raw HTML omitted -->4.变量声明<!-- raw HTML omitted --></h3>
-<ol>
-<li>三种声明方式</li>
-</ol>
-<pre><code>   var a = 1;
-   let a = 1;
-   const a = 1
-
-   区别
-   1.var是过时的、不好用的方式
-   2.let是新的，更合理的方式
-   3.const是声明是必须赋值，且不能再改的方式
-
-   let 声明[规则]
-   1.遵循块作用域，即使用范围不能超出{}
-   2.不能重复声明
-   3.可以赋值，也可以不赋值
-   4.必须先声明再使用，否则报错
-   5.全局声明的let变量，不会变成window的属性
-   6.for循环配合let有奇效
-
-   const 声明[规则]
-   1.跟let几乎一样
-   2.只有一条不一样 : 声明时就要赋值，赋值后不能改
-</code></pre><h3 id="font-colorred5类型转换font"><!-- raw HTML omitted -->5.类型转换<!-- raw HTML omitted --></h3>
-<pre><code>1. number =&gt; string  数字转字符串
-   String(n)
-   n + ''
-
-2. string =&gt; number  字符串转数字
-   Number(s)
-   parseInt(s) / parseFloat(s)
-   s - 0
-   +s
-
-3. x =&gt; boll  转为布尔型
-   Boolean(x)
-   !!x
-
-4. x =&gt; string  把任何东西转为字符串
-   String(x)
-   x.toString()
-</code></pre><p>秘密花园是讲 JavaScript 各种奇葩之处</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>19 - [JS全解]JS对象</title>
-            <link>http://yaochengjian.com/posts/19/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0819</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/19/</guid>
-            <description>1.对象 object 对象定义无序的数据集合键值对的集合let obj = {&#39;name&#39; : &#39;chengjian&#39;,&#39;age&#39; : 18}let obj = new Object({&#39;name&#39; : &#39;chengjian&#39;})细节1.键名是字符串，不是标识符，可以包含任意字符2.引号可省略3.就算引号省略了，键名也还是字符串(重要)4.Object.keys(obj)可以得到obj的所有key变量作属性名let p1 = &amp;quot;name&amp;quot;;let obj = {p1 : &#39;chengjian&#39;} 这样写，属性名为&#39;p1&#39;let obj = {[p1] : &#39;chengjian&#39;} 这样写，属性名为&#39;name&#39;1.不加[]的属性名会自动变成字符串2.加了[]则会当做变量求值3.值如果不是字符串，则会自动变成字符串2.对象增删改查 删除 let obj = {a : chengjian}console.log(&#39;xxx&#39; in obj)1.不含属性名&#39;a&#39; in obj2.含有属性名，但是值为undefined&#39;a&#39; in obj &amp;amp;&amp;amp; obj.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1对象-objectfont"><!-- raw HTML omitted -->1.对象 object<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->对象定义<!-- raw HTML omitted --></p>
-<pre><code>无序的数据集合
-键值对的集合
-let obj = {
-    'name' : 'chengjian',
-    'age'  : 18
-}
-
-let obj = new Object({'name' : 'chengjian'})
-
-细节
-1.键名是字符串，不是标识符，可以包含任意字符
-2.引号可省略
-3.就算引号省略了，键名也还是字符串(重要)
-4.Object.keys(obj)可以得到obj的所有key
-</code></pre><p><!-- raw HTML omitted -->变量作属性名<!-- raw HTML omitted --></p>
-<pre><code>let p1 = &quot;name&quot;;
-let obj = {p1 : 'chengjian'} 这样写，属性名为'p1'
-let obj = {[p1] : 'chengjian'} 这样写，属性名为'name'
-
-1.不加[]的属性名会自动变成字符串
-2.加了[]则会当做变量求值
-3.值如果不是字符串，则会自动变成字符串
-</code></pre><h3 id="font-color2对象增删改查font"><!-- raw HTML omitted -->2.对象增删改查<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->删除<!-- raw HTML omitted --></p>
-<pre><code>  let obj = {
-      a : chengjian
-  }
-  console.log('xxx' in obj)
-
-  1.不含属性名
-    'a' in obj
-
-  2.含有属性名，但是值为undefined
-    'a' in obj &amp;&amp; obj.a === undefined
-</code></pre><ol>
-<li>delete obj.xxx 或 delete obj[&lsquo;xxx&rsquo;] 即可删除 obj 的 xxx 属性</li>
-<li>&lsquo;xxx&rsquo; in window 可以判断该属性是否存在该对象里面，返回 true | false，无法区自身和公有属性</li>
-</ol>
-<p><!-- raw HTML omitted -->查<!-- raw HTML omitted --></p>
-<pre><code>1.查看自身所有属性
-Object.keys(obj)
-
-2.查看自身所有值
-Object.values(obj)
-
-3.查看自身属性和值
-Object.entries(obj)
-
-3.判断一个属性是否是自身属性
-let obj = {
-    'name' : 'chengjian',
-    'age' : 18
-}
-obj.hasOwnProperty('name')
-
-</code></pre><p><!-- raw HTML omitted -->修改或增加属性(写属性)<!-- raw HTML omitted --></p>
-<pre><code>1.Object.assign(赋值的对象，赋值内容[对象形式写出])
-let obj = {}
-Object.assign(obj,{p1:1,p2:2,p3:3})
-
-2.Object.create() 创建一个新对象，使用现有的对象来提供新创建对象的__proto__
-let person = {
-    onOff : true,
-    show : function(){
-      console.log('My name is YaoChengjian');
-    }
-}
-let me = Object.create(person)
-</code></pre>]]></content>
-        </item>
-        
-        <item>
-            <title>20 - [JS全解]JS对象分类</title>
-            <link>http://yaochengjian.com/posts/20/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0820</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/20/</guid>
-            <description>1.堆内存与栈内存  let squareList = [];let widthList = [5,6,5,6,5,6]let squarePrototype = {getArea(){return this.width * this.width;}getLength(){return this.width * 4}}for(let i = 0;i &amp;lt; 12;i++&amp;gt;){squareList[i] = Object.create(squarePrototype);squareList[i].width = widthList[i]}2.new 关键字 大小写1.所有构造函数(专门用于创建对象的函数)首字母大写
-2.所有被构造出来的对象，首字母小写
- function Square(width){this.width = width;}Square.prototype.getArea = function(){return this.width * this.width;}Square.prototype.getLength = function(){return this.width * 4}let square = new Square(5);square.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1堆内存与栈内存font"><!-- raw HTML omitted -->1.堆内存与栈内存<!-- raw HTML omitted --></h3>
-<pre><code>    let squareList = [];
-    let widthList = [5,6,5,6,5,6]
-    let squarePrototype = {
-        getArea(){
-            return this.width * this.width;
-        }
-        getLength(){
-            return this.width * 4
-        }
-    }
-    for(let i = 0;i &lt; 12;i++&gt;){
-        squareList[i] = Object.create(squarePrototype);
-        squareList[i].width = widthList[i]
-    }
-</code></pre><p><img src="../../images/%E5%86%85%E5%AD%98.png" alt=""></p>
-<h3 id="font-colorred2new-关键字font"><!-- raw HTML omitted -->2.new 关键字<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->大小写<!-- raw HTML omitted --><br>
-1.所有构造函数(专门用于创建对象的函数)首字母大写<br>
-2.所有被构造出来的对象，首字母小写</p>
-<pre><code>    function Square(width){
-        this.width = width;
-    }
-    Square.prototype.getArea = function(){
-        return this.width * this.width;
-    }
-    Square.prototype.getLength = function(){
-        return this.width * 4
-    }
-    let square = new Square(5);
-    square.width;
-    square.getArea();
-    square.getLength();
-
-    总结：new Fn()自动做了四件事情
-    1.自动创建空对象
-    2.自动为空对象关联原型，原型地址指定为Fn.prototype
-    3.自动将空对象作为this关键字运行构造函数
-    4.自动return this
-</code></pre><h3 id="font-colorred3如何确定一个对象的原型font"><!-- raw HTML omitted -->3.如何确定一个对象的原型<!-- raw HTML omitted --></h3>
-<pre><code>为什么?
-    1.let obj = new Object() 的原型是Object.prototype
-    2.let arr = new Array() 的原型是Array.prototype
-    3.let square = new Square() 的原型是Square.prototype
-    4.let fn = new Function() 的原型是Function.prototype
-因为new操作故意这么做
-    1.自动创建空对象
-    2.自动为空对象关联原型，原型地址指定为X.prototype
-    3.自动将空对象作为this关键字运行构造函数
-    4.自动return this
-结论
-    你是谁构造的，你的原型就是谁的prototype属性对象的对象
-</code></pre><h3 id="font-colorred4类型-vs-类font"><!-- raw HTML omitted -->4.类型 V.S 类<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->类型<!-- raw HTML omitted --></p>
-<ol>
-<li>类型是 JS 数据的分类，有七种</li>
-<li>四基两空一对象</li>
-</ol>
-<p><!-- raw HTML omitted -->类<!-- raw HTML omitted --></p>
-<ol>
-<li>类是针对于对象的分类，有无数种</li>
-<li>常见的有 Array、Function、Date、RegExp 等</li>
-</ol>
-<pre><code>1.定义一个数组
-    let arr = [1,2,3]
-    let arr = new Array(1,2,3) 元素为1,2,3
-    let arr = new Array(3) 长度为3
-
-2.数组对象的自身属性
-    'length'
-    注意，属性名没有数字，只有字符串
-
-3.JS终极一问
-    a : window是谁构造的? 可以通过constructor属性看出构造者是谁
-    b : window.Object 是谁构造的? 所有函数都是window.Funtion构造的
-    c : window.Function是谁构造的?
-            1.所有函数都是window.Function 构造的
-            2.浏览器构造了Function,然后指定它的构造者是自己
-</code></pre><h3 id="font-colorred5class-语法font"><!-- raw HTML omitted -->5.class 语法<!-- raw HTML omitted --></h3>
-<pre><code>    class Rectangle{
-        constructor(height,width){
-            this.height = height;
-            this.width = width;
-        }
-        get area(){
-            return this.calcArea();
-        }
-        calcArea(){
-            return this.height * this.width;
-        }
-    }
-
-    let square = new Rectangle(10,10);
-
-    1.一个类只能拥有一个名为'construction'的特殊方法
-</code></pre>]]></content>
-        </item>
-        
-        <item>
-            <title>21 - [JS全解]JS数组</title>
-            <link>http://yaochengjian.com/posts/21/</link>
-            <pubDate>Wed, 25 Dec 2019 21:55:11 +0821</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/21/</guid>
-            <description>1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&amp;gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1js-数组font"><!-- raw HTML omitted -->1.JS 数组<!-- raw HTML omitted --></h3>
-<pre><code>1.创建一个数组
-    let arr = [1,2,3];
-    let arr = new Array(1,2,3);
-    let arr = new Array(3) 只有一个参数时候length长度为3
-
-2.转化
-    let arr = '1,2,3'.split(',') 以逗号为分割成为一个数组
-    let arr = '123'.split('') 以空字符串形式分割成为一个数组
-    let arr = Array.from('abc') 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组
-
-3.把伪数组变成数组
-    let divs = document.getElementsByTagName('div');
-    let arrDiv = Array.from(divs);
-    console.log(arrDiv);
-
-4.concat()合并数组
-    let arr1 = [1,2,3];
-    let arr2 = [4,5,6];
-    arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组
-
-5.slice()截取数组
-    let arr1 = [1,2,3,4,5,6];
-    let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组
-    let arr3 = arr.slice(0); =&gt; 截取真个数组
-</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><!-- raw HTML omitted -->2.数组的增删改查(修改原数组)<!-- raw HTML omitted --></h3>
-<pre><code>1.删除头部元素
-    arr.shift() arr被修改，并返回被删元素
-
-2.删除尾部元素
-    arr.pop() arr被修改，并返回被删元素
-
-3.删除部分内容(arr会被修改)
-    arr.splice(index,num) index从第几个开始，num删除多少个
-    arr.splice(idnex,num,x,y) index从第几个开始，num删除多少个，添加x,y上去
-</code></pre><h3 id="font-colorred3查看所有元素font"><!-- raw HTML omitted -->3.查看所有元素<!-- raw HTML omitted --></h3>
-<pre><code>   let arr = [1,2,3,4,5];
-       arr.x = 'xxx';
-1.查看所有属性名
-        Object.keys(arr);
-        for(let key in arr){
-            console.log(`${key} : ${arr[key]}`)
-        }
-
-2.查看数字属性名和值
-        for(let i = 0;i &lt; arr.length;i++){
-                console.log(`${i} : ${arr[i]}`)
-        }
-
-        arr.forEach(function(key,value){
-                console.log(`${key} : ${value}`)
-        })
-
-3.查找某个元素是否在数组里
-        arr.indexOf(3); 存在返回索引，不存在返回-1
-
-4.使用条件查找元素
-        arr.find(function(x){   find元素找到满足条件的即停止,返回那个值
-            return x % 2 === 0
-        });
-
-5.使用条件查找元素的索引
-        arr.findIndex(function(x){  findIndex元素找到满足条件的即停止，返回索引
-            return x % 2 === 0
-        })
-</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><!-- raw HTML omitted -->4.增加数组中的元素(修改原数组)<!-- raw HTML omitted --></h3>
-<pre><code>    let arr = [1,2,3,4,5];
-1.在尾部加元素
-    arr.push(newItem) 修改arr,返回新长度
-    arr.push(item1,item2)
-
-2.在头部加元素
-    arr.unshift(newItem) 修改arr,返回新长度
-    arr.unshift(item1,item2)
-</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><!-- raw HTML omitted -->5.数组中排序(修改原数组)<!-- raw HTML omitted --></h3>
-<pre><code>    let arr = [{name:'发条魔灵',score:98},
-               {name:'疾风亚索',score:94},
-               {name:'寒冰射手',score:91}];
-
-        1.a减b的值是正数则是从小到大排序，负数则从大到小排序
-        2.a和b是arr里面随机一项，一直会比较完
-
-        arr.sort(function(a,b){
-            return a.score - b.score;
-        });
-</code></pre><h3 id="font-colorred6font"><!-- raw HTML omitted -->6.<!-- raw HTML omitted --></h3>
-<pre><code>    let arr = [1,2,3,4,5,6];
-
-1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
-        arr.map(function(item){
-            return item * item
-        });
-
-2.filter()方法，是true就返回，否则就筛选掉
-        arr.filter(function(item){
-            return item % 2 === 0;
-        });
-
-3.reduce()方法
-        1.initial代表初始值(可以设置任意自己想要的数据类型)
-        2.item是数组中的值，从下标0开始
-        arr.reduce(function(initial,item){
-                return  &quot;自己想要的东西&quot;
-        },initial);
-
-        案例1
-        arr.reduce(function(sum,item){
-                return sum+item
-        },0)
-
-        案例2
-        arr.reduce(function(result,item){
-                return result.concat(item*item);
-        },[]);
-</code></pre><pre><code>  面试题
-  let arr = [
-    { 名称: &quot;动物&quot;, id: 1, parent: null },
-    { 名称: &quot;狗&quot;, id: 2, parent: 1 },
-    { 名称: &quot;猫&quot;, id: 3, parent: 1 }
-  ];
-
-  变成
-    {
-    id : 1,
-    名称 : '动物',
-    children : [
-    {id:2,名称:'狗',children:null},
-    {id:3,名称:'猫',children:null}
-    ]
-    }
-</code></pre>
-]]></content>
-        </item>
-        
-        <item>
-            <title>1000 - 变量提升、闭包</title>
-            <link>http://yaochengjian.com/posts/1000/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>http://yaochengjian.com/posts/1000/</guid>
-            <description>1.一般都把 js 放到 body 的末尾 a:为什么？
-b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
-c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
-2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
-&amp;lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&amp;gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
-var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
-1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
-2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
-=&amp;gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
-B:堆内存:引用值对应的空间
-1.存储引用类型值(对象:键值对 函数:代码字符串)
-=&amp;gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
-=&amp;gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
-=&amp;gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</description>
-            <content type="html"><![CDATA[<h3 id="1一般都把-js-放到-body-的末尾">1.一般都把 js 放到 body 的末尾</h3>
-<p>a:为什么？<br>
-b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？<br>
-c:script 标签中有两个属性：defer / async,这两个属性是做什么的？</p>
-<h3 id="2js-数据渲染机制及堆栈内存">2.js 数据渲染机制及堆栈内存</h3>
-<p>a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)</p>
-<pre><code>&lt;!--
-1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))
---&gt;
-var a = 12;
-var b = a;
-b = 13;
-console.log(a);
-</code></pre><p><img src="../../images/js-1.png" alt=""></p>
-<p>b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)</p>
-<pre><code>var ary1 = [12,23];
-var ary2 = ary1;
-ary2.push(100);
-console.log(ary1);
-</code></pre><p><img src="../../images/js2.png" alt=""></p>
-<p>A:栈内存:作用域<br>
-1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)<br>
-2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的<br>
-    =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了</p>
-<p>B:堆内存:引用值对应的空间<br>
-1.存储引用类型值(对象:键值对 函数:代码字符串)<br>
-=&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了<br>
-=&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉<br>
-=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</p>
-]]></content>
-        </item>
         
         <item>
             <title>22 - [JS全解]JS函数</title>
             <link>http://yaochengjian.com/posts/22/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
             
             <guid>http://yaochengjian.com/posts/22/</guid>
             <description>1.四种方式定义函数 1.定义一个函数
 具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x + x)fn = x =&amp;gt; x+x;否则fn = (x+y) =&amp;gt; {console.log(1),return x+y;}()起来js会认为是一个整体fn = name =&amp;gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x+y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是2.调用时机 代码1(定时器是异步,它需要等待同步执行完后执行)let在外头,每次for循环,每次循环都是一个作用域,新的值都会覆盖外面let的值let i = 0;for(i = 0;i &amp;lt; 6;i++){setTimeout(()=&amp;gt;{console.log(i)});}let在里头,每次for循环都会形成一个let的作用域,循环多少次就会有多少个作用域for(let i = 0;i &amp;lt; 6;i++&amp;gt;){setTimeout(()=&amp;gt;{console.log(i)});}3.作用域:就近原则 &amp;amp; 闭包 作用域 : 每个函数执行都会形成一个私有作用域</description>
-            <content type="html"><![CDATA[<h3 id="font-colorred1四种方式定义函数font"><!-- raw HTML omitted -->1.四种方式定义函数<!-- raw HTML omitted --></h3>
+            <content type="html"><![CDATA[<h3 id="font-colorred1四种方式定义函数font"><font color=red>1.四种方式定义函数</font></h3>
 <p>1.定义一个函数</p>
 <pre><code>具名函数(具有名字的函数)
     function 函数名(形式参数1,形式参数2){
@@ -2292,6 +174,2305 @@ argumnets
         console.log(a);
     }()
 </code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>23 - 字符串中API</title>
+            <link>http://yaochengjian.com/posts/23/</link>
+            <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/23/</guid>
+            <description>分割字符串 split(获得一个数组)   let str = &#39;1,2,3,4,5,6&#39;;let arr1 = str.split(&#39;,&#39;); 以&#39;,&#39;号形式分割let arr2 = str.split(&#39;&#39;); 以&#39;&#39;形式分割拼接字符串 concat(获得新的字符串)   let str1 = &#39;abcd&#39;;let str2 = &#39;efgh&#39;;let str3 = str1.concat(str1);截取字符串 substring(获得新的字符串)   let str1 = &#39;你好啊!我的名字叫~~~&#39;;let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)截取字符串 slice   let str1 = &#39;ABCDEFG&#39;;let str2 = str1.slice(0) 拷贝字符串let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)返回指定位置的字符串 charAt   let str1 = &#39;ABCEDFG&#39;;let s = str1.</description>
+            <content type="html"><![CDATA[<ol>
+<li>分割字符串 split(获得一个数组)</li>
+</ol>
+<pre><code>    let str = '1,2,3,4,5,6';
+    let arr1 = str.split(','); 以','号形式分割
+    let arr2 = str.split('');  以''形式分割
+</code></pre><ol start="2">
+<li>拼接字符串 concat(获得新的字符串)</li>
+</ol>
+<pre><code>    let str1 = 'abcd';
+    let str2 = 'efgh';
+    let str3 = str1.concat(str1);
+</code></pre><ol start="3">
+<li>截取字符串 substring(获得新的字符串)</li>
+</ol>
+<pre><code>    let str1 = '你好啊!我的名字叫~~~';
+    let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)
+    let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)
+</code></pre><ol start="4">
+<li>截取字符串 slice</li>
+</ol>
+<pre><code>    let str1 = 'ABCDEFG';
+    let str2 = str1.slice(0) 拷贝字符串
+    let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)
+</code></pre><ol start="5">
+<li>返回指定位置的字符串 charAt</li>
+</ol>
+<pre><code>    let str1 = 'ABCEDFG';
+    let s = str1.charAt(3); 根据字符串索引返回你想要的字符
+</code></pre><ol start="6">
+<li>返回 Unicode 编码 charCodeAt 和 fromCharCode</li>
+</ol>
+<pre><code>    let str1 = 'ABCDEFG';
+    let n = str1.charCodeAt(3); 根据字符串索引返回你想要的字符的Unicode编码
+
+    String.fromCharCode(33);  根据编码返回相应的字符
+</code></pre><ol start="7">
+<li>字符串替换 replace(regexp/substr,str)</li>
+</ol>
+<pre><code>    let str = `大家好!
+    hello
+    `
+    str.replace(/\n/g,'&lt;br/&gt;');
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>24 - [JS全解]JS运算符</title>
+            <link>http://yaochengjian.com/posts/24/</link>
+            <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/24/</guid>
+            <description>1.算术运算符 number 运算
+1.加减乘除(+ - * /)2.取余(%)3.指数(**)7 ** 2 =&amp;gt; 七的平方7 *** 3 =&amp;gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x++x--++x--x5.求值运算符+6.负数运算符-string 运算
+1.字符串只支持一个 + 号的运算,其它符号都不支持2.任何东西+字符串都 = 字符串</description>
+            <content type="html"><![CDATA[<h3 id="1算术运算符">1.算术运算符</h3>
+<p>number 运算</p>
+<pre><code>1.加减乘除(+ - * /)
+
+2.取余(%)
+
+3.指数(**)
+    7 ** 2 =&gt; 七的平方
+    7 *** 3 =&gt; 七的三次方
+
+4.自增自减
+自增在后,先赋值,后计算
+自增在前,先计算,后赋值
+    x++
+    x--
+    ++x
+    --x
+
+5.求值运算符+
+
+6.负数运算符-
+
+</code></pre><p>string 运算</p>
+<pre><code>1.字符串只支持一个 + 号的运算,其它符号都不支持
+2.任何东西+字符串都 = 字符串
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>25 - [JS全解]JS各种类型转换机制</title>
+            <link>http://yaochengjian.com/posts/25/</link>
+            <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/25/</guid>
+            <description>1.Number 和 isNaN 类型详细解读 数据类型详细剖析
+1.Number (null &#39;&amp;rsquo; &#39; &#39; false [])转了都是 0
+Number(&amp;lsquo;13px&amp;rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN
+2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)
+Number 转换也是这种机制
+首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型1.基本类型转换为数字 : 直接使用Number这个方法转换2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字-对象 : 所有对象toString都是 &#39;[object object]&#39;-函数 : (function fn(){}).toString() -&amp;gt; &#39;function fn(){}&#39;-数组 : [12].toString() -&amp;gt; &#39;12&#39; -&amp;gt; Number(&#39;12&#39;) -&amp;gt; 12[12,13].toString() -&amp;gt; &#39;12,13&#39; -&amp;gt; Number(&#39;12,13&#39;) -&amp;gt; NaN-正则 : /^89$/.toString() -&amp;gt; &#39;/^89$/&#39; -&amp;gt; Number(&#39;/^89$/&#39;) -&amp;gt; NaN2.parseInt / parseFloat 1.</description>
+            <content type="html"><![CDATA[<h3 id="1number-和-isnan-类型详细解读">1.Number 和 isNaN 类型详细解读</h3>
+<p>数据类型详细剖析<br>
+1.Number (null '&rsquo; ' ' false [])转了都是 0<br>
+   Number(&lsquo;13px&rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN</p>
+<p>2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)<br>
+   Number 转换也是这种机制</p>
+<pre><code>首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型
+
+1.基本类型转换为数字 : 直接使用Number这个方法转换
+
+2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字
+
+    -对象 : 所有对象toString都是 '[object object]'
+
+    -函数 : (function fn(){}).toString() -&gt; 'function fn(){}'
+
+    -数组 : [12].toString() -&gt; '12' -&gt; Number('12') -&gt; 12
+            [12,13].toString() -&gt; '12,13' -&gt; Number('12,13') -&gt; NaN
+
+    -正则 : /^89$/.toString() -&gt; '/^89$/' -&gt; Number('/^89$/') -&gt; NaN
+</code></pre><h3 id="2parseint--parsefloat">2.parseInt / parseFloat</h3>
+<p>1.等同与 Number,也是为了把其它类型的值转换为数字类型</p>
+<p>parseInt : 把一个字符串中的整数部分解析出来,字符串第一位开始找,是有效数字就找下去,不是则返回 NaN,停止</p>
+<p>parseFloat : 把一个字符串中小数部分解析出来,字符串第一位开始找,字符串第一位开始找,是有效数字就找下去,不是则返回 NaN,停止</p>
+<p>2.基本类型就直接从左到右找,第一位出现无效数字就会返回 NaN</p>
+<p>3.引用类型会 toString(),然后从第一位开始找</p>
+<h3 id="3--运算符">3. + 运算符</h3>
+<p>1.所有东西与字符串相加都等于字符串</p>
+<p>2.基本类型相加,会 Numbe 之后在相加(除了字符串)</p>
+<p>3.引用类型相加,会 toString()之后在相加</p>
+<h3 id="4----运算符null-不等于任何值">4. == | != 运算符(null 不等于任何值)</h3>
+<pre><code>1.基本类型比较 : 不同的基本类型会 Number() 之后再比较(除了null),相同则直接比较
+
+2.引用类型比较 : 是比较该 16 进制内存地址
+
+3.引用类型 与 基本类型比较,会把引用类型toString()在比较，双方为基本类型了,又会重复第一步
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>50 - </title>
+            <link>http://yaochengjian.com/posts/50/</link>
+            <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/50/</guid>
+            <description>去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &amp;gt;= 0;});</description>
+            <content type="html"><![CDATA[<pre><code>去重
+    let arr1 = [1,2,3,4,5,1,1,1,2,3,4],
+    arr2.filter(function(item,index,arr){
+        return arr.indexOf(item) === index;
+    });
+</code></pre><pre><code>    let arr1 = [1, 2];
+    let arr2 = [1, 2, 3, 4];
+    let arr3 = arr2.filter(function(item, index, array) {
+        return arr1.indexOf(item) &gt;= 0;
+    });
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>开博大吉</title>
+            <link>http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+            <pubDate>Thu, 26 Dec 2019 21:51:11 +0800</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+            <description>姚成健 </description>
+            <content type="html"><![CDATA[<h1 id="姚成健">姚成健</h1>
+]]></content>
+        </item>
+        
+        <item>
+            <title>1 - 如何使用hugo搭建个人博客</title>
+            <link>http://yaochengjian.com/posts/1/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0801</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/1/</guid>
+            <description>1.如何使用 hugo 搭建个人博客 a:进入https://gohugo.io/官网，下载并安装hugo
+b:我的电脑-&amp;gt;属性-&amp;gt;高级系统设置-&amp;gt;环境变量-&amp;gt;path-&amp;gt;添加你 hugo 的路径地址
+c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题
+d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)
+1)hugo new site demo(demo 可以更改为自己想要的名字)
+2)cd demo 进入 demo
+3)git init
+4)git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+5)echo &amp;lsquo;theme = &amp;ldquo;ananke&amp;rdquo;&amp;rsquo; &amp;raquo; config.toml
+6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)
+7)hugo server -D 可以得到一个预览地址
+8)打开 config.toml 配置
+baseURL = &amp;quot;yaochengjian.com&amp;quot; //更改为自己购买的域名languageCode = &amp;quot;zh-CN&amp;quot;title = &amp;quot;姚成健的博客&amp;quot;theme = &amp;quot;ananke&amp;quot;9)hugo -D
+10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！</description>
+            <content type="html"><![CDATA[<h2 id="1如何使用-hugo-搭建个人博客">1.如何使用 hugo 搭建个人博客</h2>
+<p>a:进入https://gohugo.io/官网，下载并安装hugo<br>
+b:我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;path-&gt;添加你 hugo 的路径地址<br>
+c:hugo version 查看自己的版本,可以看到就代表自己 hugo 安装没问题<br>
+d:在 hugo 官网点击 Quick Start 根据步骤一步步实现(下面都是用命令行操作)</p>
+<p>1)hugo new site demo(demo 可以更改为自己想要的名字)</p>
+<p>2)cd demo 进入 demo</p>
+<p>3)git init</p>
+<p>4)git submodule add <a href="https://github.com/budparr/gohugo-theme-ananke.git">https://github.com/budparr/gohugo-theme-ananke.git</a> themes/ananke</p>
+<p>5)echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml</p>
+<p>6)hugo new posts/my-first-post.md(my-first-post 可以更改为自己想要的内容)</p>
+<p>7)hugo server -D 可以得到一个预览地址</p>
+<p>8)打开 config.toml 配置</p>
+<pre><code>baseURL = &quot;yaochengjian.com&quot;  //更改为自己购买的域名
+languageCode = &quot;zh-CN&quot;
+title = &quot;姚成健的博客&quot;
+theme = &quot;ananke&quot;
+</code></pre><p>9)hugo -D</p>
+<p>10)上面的完成之后，我们会看到 demo 里面有一个 public 文件名,我们也要在里面 git init 每次只需要提交这个文件里面的内容到 github 仓库即可！！！</p>
+<p>11)在 github 上面创建一个仓库,这里我创建仓库名字是(yaochengjian.github.io),进入仓库找到 settings,设置自己购买的域名<br>
+<img src="../../images/two.png" alt=""></p>
+<p>12)完成购买域名后，我们需要解析 4 条记录<br>
+<img src="../../images/one.png" alt=""></p>
+<p>13)上面步骤就完成了一个博客搭建啦~需要注意的是,我们需要在 content\posts 里面添加自己的内容,添加完成后都需要 hugo -D,在上传到仓库上面去。</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>2 - Node &amp; yarn</title>
+            <link>http://yaochengjian.com/posts/2/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0802</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/2/</guid>
+            <description>安装 node.js   安装双数版本
+1.node8 node10 node12 是稳定版
+2.尽量选择官网安装
+3.下载慢就加入 FQ 插件的代理
+  安装之后
+1.自然就有了 node 命令(因为 PATH)
+2.自然就有了 npm 命令
+3.自然就有了 npx 命令
+  配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)
+1.npm install -global nrm 缩写 npm i -g nrm
+npm 是这个命令的开始
+install 是载入意思
+global 是全局意思
+nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换
+2.nrm ls 执行命令查看可选的源
+其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao
+3.npm config list 查看 nrm 所有配置
+  </description>
+            <content type="html"><![CDATA[<h2 id="安装-nodejs">安装 node.js</h2>
+<ul>
+<li>
+<p>安装双数版本<br>
+1.node8 node10 node12 是稳定版<br>
+2.尽量选择官网安装<br>
+3.下载慢就加入 FQ 插件的代理</p>
+</li>
+<li>
+<p>安装之后<br>
+1.自然就有了 node 命令(因为 PATH)<br>
+2.自然就有了 npm 命令<br>
+3.自然就有了 npx 命令</p>
+</li>
+<li>
+<p>配置 Node.js(因为 node.js 服务器默认在国外，我们需要用淘宝镜像服务器)<br>
+1.npm install -global nrm 缩写 npm i -g nrm<br>
+   npm 是这个命令的开始<br>
+   install 是载入意思<br>
+   global 是全局意思<br>
+   nrm 是一个 npm 源管理器，允许你快速地在 npm 源间切换<br>
+ <br>
+2.nrm ls 执行命令查看可选的源<br>
+<img src="../../images/nrmls.png" alt=""><br>
+其中带*号的是当前使用的源，如果要切换到 taobao 源，执行命令 nrm use taobao<br>
+ 
+3.npm config list 查看 nrm 所有配置<br>
+<img src="../../images/npmconfiglist.png" alt=""></p>
+</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>3 - [Git入门]bash命令行入门</title>
+            <link>http://yaochengjian.com/posts/3/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0803</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/3/</guid>
+            <description>1.文件查看操作 1.命令缩写，程序员把动词缩写，就变成了命令
+2.查：查看文件或目录
+ 查看当前目录绝对路径
+pwd
+ 查看当前目录内容
+ls
+查看指定目录内容
+ls 目录名称
+ 查看文件内容
+cat 文件名称(会显示全部内容)
+head 文件名称(可以控制想看多少行，从开头开始显示)
+tail 文件名称(可以控制想看多少行，从底部开始)
+  2.文件的增加删除操作 1.touch 1.txt
+确定你路径在哪里，创建一个文件
+3.文件(创建 追加 复制 删除)内容 1.echo mmp &amp;gt; 1.txt
+向 1.txt 里面追加内容，最新的命令行会覆盖以前追加的信息
+2.echo mmp &amp;raquo; 1.txt
+向 1.txt 里面追加内容，最新的命令行会叠加以前追加的信息
+3.echo -e &amp;ldquo;1/n2&amp;rdquo; &amp;gt; 1.txt
+向 1.txt 里面追加两行内容 4.mkdir demo-1
+创建一个文件名字为 demo-1 的目录
+mkdir -p a/b/c/d
+创建多层目录
+5.cp 1.txt 2.txt
+复制 1.txt 内容为 2.txt
+cp -r demo demo1</description>
+            <content type="html"><![CDATA[<h2 id="1文件查看操作">1.文件查看操作</h2>
+<p>1.命令缩写，程序员把动词缩写，就变成了命令<br>
+<img src="../../images/mingl.png" alt="">
+ </p>
+<p>2.查：查看文件或目录</p>
+<ul>
+<li>查看当前目录绝对路径<br>
+pwd<br>
+ </li>
+<li>查看当前目录内容<br>
+ls<br>
+查看指定目录内容<br>
+ls 目录名称<br>
+<img src="../../images/lsdemo.png" alt="">
+ </li>
+<li>查看文件内容<br>
+cat 文件名称(会显示全部内容)<br>
+head 文件名称(可以控制想看多少行，从开头开始显示)<br>
+tail 文件名称(可以控制想看多少行，从底部开始)<br>
+<img src="../../images/show.png" alt=""></li>
+</ul>
+<h2 id="2文件的增加删除操作">2.文件的增加删除操作</h2>
+<p>1.touch 1.txt<br>
+确定你路径在哪里，创建一个文件</p>
+<h2 id="3文件创建-追加-复制-删除内容">3.文件(创建 追加 复制 删除)内容</h2>
+<p>1.echo mmp &gt; 1.txt<br>
+向 1.txt 里面追加内容，最新的命令行会覆盖以前追加的信息</p>
+<p>2.echo mmp &raquo; 1.txt<br>
+向 1.txt 里面追加内容，最新的命令行会叠加以前追加的信息</p>
+<p>3.echo -e &ldquo;1/n2&rdquo; &gt; 1.txt<br>
+向 1.txt 里面追加两行内容
+<img src="../../images/echo.png" alt=""></p>
+<p>4.mkdir demo-1<br>
+创建一个文件名字为 demo-1 的目录<br>
+<img src="../../images/mkdir.png" alt=""></p>
+<p>mkdir -p a/b/c/d<br>
+创建多层目录<br>
+<img src="../../images/mkdir-1.png" alt=""></p>
+<p>5.cp 1.txt 2.txt<br>
+复制 1.txt 内容为 2.txt<br>
+<img src="../../images/cp.png" alt=""></p>
+<p>cp -r demo demo1<br>
+复制 demo 目录内容为 demo1<br>
+<img src="../../images/cp1.png" alt=""></p>
+<h2 id="4font移动文件目录--重命名文件目录-都是同一个命令">4.</font>移动文件/目录 &amp;&amp; 重命名文件/目录 都是同一个命令</h2>
+<p>1.mv 1.txt demo<br>
+把 1.txt 移动到 demo 目录上面<br>
+<img src="../../images/mv.png" alt=""></p>
+<h2 id="5font补充">5.</font>补充</h2>
+<p>code .<br>
+用编辑器打开当前目录( . 代表当前目录)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>4 - [Git入门]本地仓库</title>
+            <link>http://yaochengjian.com/posts/4/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0804</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/4/</guid>
+            <description>1.git 就是开启 GitHub 的钥匙 2.git 的 6 行配置(必须存在，否则 git 无法使用) git config &amp;ndash;global user.name 你的英文名(yaochengjian)
+git config &amp;ndash;global user.email 你的邮箱(915248459@qq.com)
+git config &amp;ndash;global push.default simple
+git config &amp;ndash;global core.quotepath false
+git config &amp;ndash;global core.eaitor &amp;ldquo;code &amp;ndash;wait&amp;rdquo;
+git config &amp;ndash;global core.autocrlf input
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致
+3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能) 1.git init
+会创建.git 目录/仓库，用来容纳你的代码快照
+2.git add 路径
+选择哪些变动是需要提交的，相对路径/绝对路径
+3..gitignore
+描述哪些变动是不需要提交的
+4.git status
+通过这个命令可以查看哪些文件需要提交的
+5.git commit -m 字符串
+把上面提交的代码复制一份到.git 目录里面
+git commit -v</description>
+            <content type="html"><![CDATA[<h2 id="1git-就是开启-github-的钥匙">1.git 就是开启 GitHub 的钥匙</h2>
+<h2 id="2git-的-6-行配置必须存在否则-git-无法使用">2.git 的 6 行配置(必须存在，否则 git 无法使用)</h2>
+<p>git config &ndash;global user.name 你的英文名(yaochengjian)<br>
+git config &ndash;global user.email 你的邮箱(<a href="mailto:915248459@qq.com">915248459@qq.com</a>)<br>
+git config &ndash;global push.default simple<br>
+git config &ndash;global core.quotepath false<br>
+git config &ndash;global core.eaitor &ldquo;code &ndash;wait&rdquo;<br>
+git config &ndash;global core.autocrlf input<br>
+注意：上面的英文名和邮箱跟 Github 没有关系，可以跟 GitHub 的用户名和邮箱保持一致，也可以不一致</p>
+<h2 id="3git-可以让你的代码有版本可以随时回退到某个版本当然-git-还有其它更强大的功能">3.git 可以让你的代码有版本(可以随时回退到某个版本，当然 git 还有其它更强大的功能)</h2>
+<p>1.git init<br>
+会创建.git 目录/仓库，用来容纳你的代码快照<br>
+<img src="../../images/gitinit.png" alt=""></p>
+<p>2.git add 路径<br>
+选择哪些变动是需要提交的，相对路径/绝对路径<br>
+<img src="../../images/gitadd.png" alt=""></p>
+<p>3..gitignore<br>
+描述哪些变动是不需要提交的<br>
+<img src="../../images/gitignore.png" alt=""></p>
+<p>4.git status<br>
+通过这个命令可以查看哪些文件需要提交的<br>
+<img src="../../images/status.png" alt=""></p>
+<p>5.git commit -m 字符串<br>
+把上面提交的代码复制一份到.git 目录里面<br>
+<img src="../../images/commit.png" alt=""><br>
+git commit -v<br>
+个人更喜欢&ndash;verbose 选项，因为它能帮我回顾刚刚改了什么东西，而且会迫使我把提交理由写得更详细一些</p>
+<p>6.git log<br>
+可以显示所有提交过的版本信息<br>
+<img src="../../images/gitlog.png" alt=""></p>
+<p>7.git reflog<br>
+可以查看所有分支操作记录以及提交过的版本<br>
+   git reset &ndash;hard 0aa5218(版本号)<br>
+版本回退，可以选择之前提交过的版本<br>
+<img src="../../images/gitreflog.png" alt=""></p>
+<p>8.查看分支 创建分支 切换分支 合并分支 删除分支<br>
+git branck 基于当前 commit 创建一个新的分支，也可以查看分支<br>
+git checkout 用户切换分支<br>
+git merge master 进入保留分支，运行 git merge master<br>
+git branch -d x 合并完成后删除无用分支<br>
+<img src="../../images/branch.png" alt=""><br>
+<img src="../../images/branch1.png" alt=""></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>5 - [Git入门]git远程仓库GitHub</title>
+            <link>http://yaochengjian.com/posts/5/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0805</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/5/</guid>
+            <description>操控远程仓库 GitHub 1.如何生成 ssh key(需要在 github 上面填写公钥)
+a. 运行 ssh-keygen -t rsa -b 4096 -C 你的邮箱
+b. 一直回车，直至到没有提示
+2.如何测试配对成功
+a. ssh -T git@github.com
+b. 如果问你 yes/no，请回答 yes 并回车
+3.上传代码
+a. 新建 GitHub Repo，赋值其 ssh 地址
+b. git remote add origin git@xxxxxxxx
+c. 在本地仓库添加远程仓库地址
+d. origin 是远程仓库的默认名字，可以换，建议不要换
+e. 不要使用https://地址，因为每次都需要密码
+f. git push -u origin master 推送本地 master 分支到远程 origin 的 master 分支
+4.如何下载代码
+a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的 ssh key[一机一 key]</description>
+            <content type="html"><![CDATA[<h2 id="操控远程仓库-github">操控远程仓库 GitHub</h2>
+<p>1.如何生成 ssh key(需要在 github 上面填写公钥)<br>
+   a. 运行 ssh-keygen -t rsa -b 4096 -C 你的邮箱<br>
+   b. 一直回车，直至到没有提示<br>
+<img src="../../images/sshkey.png" alt=""></p>
+<p>2.如何测试配对成功<br>
+   a. ssh -T <a href="mailto:git@github.com">git@github.com</a><br>
+   b. 如果问你 yes/no，请回答 yes 并回车</p>
+<p>3.上传代码<br>
+   a. 新建 GitHub Repo，赋值其 ssh 地址<br>
+   b. git remote add origin git@xxxxxxxx<br>
+   c. 在本地仓库添加远程仓库地址<br>
+   d. origin 是远程仓库的默认名字，可以换，建议不要换<br>
+   e. 不要使用https://地址，因为每次都需要密码<br>
+   f. git push -u origin master 推送本地 master 分支到远程 origin 的 master 分支<br>
+<img src="../../images/gitpush.png" alt=""></p>
+<p>4.如何下载代码<br>
+   a. gitclone git@xxxx[目标路径]
+   b. 如果是不同机器，要写上传新的 ssh key[一机一 key]<br>
+<img src="../../images/clone.png" alt=""></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>6 - HTML入门笔记1</title>
+            <link>http://yaochengjian.com/posts/6/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0806</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/6/</guid>
+            <description>1.HTML 是谁发明的 蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于 1990 发明了首个网页浏览器&amp;ndash;WorldWideWeb 的人
+2.HTML 起手式应该写什么 &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;/&amp;gt;&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie-edge&amp;quot;/&amp;gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;3.章节标签(表示文章/书的层级) -标题 h1~h6
+-章节 section
+-文章 article
+-段落 p
+-头部 header
+-脚部 footer
+-主要内容 main
+-旁支分支 aside
+-划分 div
+4.全局属性(所有标签都有的属性) -class 类选择器
+-contenteditable 页面实时编辑
+-hidden 隐藏
+-id 选择器 ID
+-style 样式，行内样式
+-tabindex 用来控制键盘 tab 顺序，从序号 1 开始，0 代表最后一个
+-title 标题
+5.内容标签 -ol+li 有序列表 ol 子集不能含有任何子元素或者中文</description>
+            <content type="html"><![CDATA[<h2 id="1html-是谁发明的">1.HTML 是谁发明的</h2>
+<p>蒂姆·伯纳斯-李是第一个使用超文本来分享资讯，及于 1990 发明了首个网页浏览器&ndash;WorldWideWeb 的人</p>
+<h2 id="2html-起手式应该写什么">2.HTML 起手式应该写什么</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;/&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie-edge&quot;/&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="3章节标签表示文章书的层级">3.章节标签(表示文章/书的层级)</h2>
+<p>-标题 h1~h6<br>
+-章节 section<br>
+-文章 article<br>
+-段落 p<br>
+-头部 header<br>
+-脚部 footer<br>
+-主要内容 main<br>
+-旁支分支 aside<br>
+-划分 div</p>
+<h2 id="4全局属性所有标签都有的属性">4.全局属性(所有标签都有的属性)</h2>
+<p>-class 类选择器<br>
+-contenteditable 页面实时编辑<br>
+-hidden 隐藏<br>
+-id 选择器 ID<br>
+-style 样式，行内样式<br>
+-tabindex 用来控制键盘 tab 顺序，从序号 1 开始，0 代表最后一个<br>
+-title 标题</p>
+<h2 id="5内容标签">5.内容标签</h2>
+<p>-ol+li 有序列表 ol 子集不能含有任何子元素或者中文<br>
+-ul+li 无序列表 ul 子集不能含有任何子元素或者中文<br>
+-dl+dt+dd 描述列表，dt 是描述的对象，dd 描述对象的内容<br>
+-pre 被包围在 <pre> 标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体<br>
+-hr 水平分割线<br>
+-br 换行<br>
+-a 跳转链接<br>
+-em 强调标签，有斜体的默认样式<br>
+-strong 强调加粗字体标签<br>
+-code 标签内的文本将用等宽字体显示出来<br>
+-quote 是引用的意思，没有任何效果，是一个内联样式<br>
+-blockquote 也是引用意思，是一个块级样式引用</p>
+<h2 id="6vscode-插件推荐prettier-更好地格式化工具代码格式乱可以自动格式化">6.VScode 插件推荐(Prettier 更好地格式化工具，代码格式乱可以自动格式化)</h2>
+<p>a:下载 Prettier<br>
+b:文件-&gt;首选项-&gt;设置-&gt;搜索 auto save-&gt;Files Auto Save 选择 onFocusChange<br>
+c:文件-&gt;首选项-&gt;设置-&gt;搜索 format on save-&gt;Editor:Format On Save 勾上</p>
+<h2 id="7推荐几个比较好用的线上代码工具">7.推荐几个比较好用的线上代码工具</h2>
+<p>a:代码沙盒 codesandbox.io<br>
+b:js.jirengu.com</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>7 - [HTML全解]HTML重难点</title>
+            <link>http://yaochengjian.com/posts/7/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0807</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/7/</guid>
+            <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
+2)parcel 1.a.html(文件名字)
+2.a 标签(属性) (1)href 取值
+a:网址[https://google.com、http://google.com、//google.com]
+b:路径[/a/b/c 或者 a/b/c]
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
+d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
+a:_balck 浏览器总在一个新窗口打开
+b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开</description>
+            <content type="html"><![CDATA[<h2 id="1像用户一样利用网址来打开网页">1.像用户一样利用网址来打开网页</h2>
+<p>1)yarn global add parcel<br>
+2)parcel 1.a.html(文件名字)</p>
+<h2 id="2a-标签属性">2.a 标签(属性)</h2>
+<p>(1)href 取值<br>
+a:网址[https://google.com、http://google.com、//google.com]<br>
+b:路径[/a/b/c 或者 a/b/c]<br>
+c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]<br>
+d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx 标签]</p>
+<pre><code>网址
+&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;
+&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;
+&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;
+路径
+&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;
+&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;
+伪协议
+&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;
+&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;
+&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;
+</code></pre><pre><code>锚文本定位
+&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;p&gt;4&lt;/p&gt;
+&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;
+</code></pre><p>(2)target 属性值<br>
+a:_balck 浏览器总在一个新窗口打开<br>
+b:_top 浏览器在当前窗口最顶层打开
+c:parent 浏览器在超链接父元素(iframe)上面打开<br>
+d:_self 浏览器在当前窗口打开</p>
+<p>(3)作用<br>
+a:跳转外部页面<br>
+b:跳转内部锚点<br>
+c:跳转到邮箱或电话等</p>
+<h2 id="3table">3.table</h2>
+<p>(1)相关标签<br>
+a:table
+b:thead<br>
+c:tbody<br>
+d:tfoot<br>
+e:tr<br>
+f:td<br>
+g:th</p>
+<pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;th&gt;表头1&lt;/th&gt;
+        &lt;th&gt;表头2&lt;/th&gt;
+        &lt;th&gt;表头3&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;表格底部1&lt;/td&gt;
+            &lt;td&gt;表格底部2&lt;/td&gt;
+            &lt;td&gt;表格底部3&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre><p>(2)相关的样式<br>
+a:table-layout<br>
+b:border-collapse 控制 table 表格是否合并，默认是不合并<br>
+c:border-spacing 控制表格和表格之间的距离</p>
+<pre><code>table{
+    border-collapse:collapse;
+    border-spacing:10px;
+}
+</code></pre><h2 id="4img-标签">4.img 标签</h2>
+<p>(1)作用<br>
+a:发出 get 请求，展示一张图片</p>
+<p>(2)属性<br>
+a:alt 图片请求错误时候，会显示 alt 的文字<br>
+b:height 只写高度值，宽度会自适应<br>
+c:width 只写宽度值，高度会自适应<br>
+d:src 图片地址</p>
+<p>(3)js 事件<br>
+a:onload 图片加载成功执行的事件<br>
+b:onerror 图片加载失败执行的事件</p>
+<pre><code>&lt;img src=&quot;1.jpg&quot; id=&quot;img&quot;&gt;&lt;/img&gt;
+&lt;script&gt;
+    var img = document.getElementById('img');
+    img.onload = function(){
+        alert('这代表图片加载出来了');
+    }
+    img.onerror = function(){
+        alert('图片加载出错了')
+    }
+&lt;/script&gt;
+</code></pre><p>(4)响应式<br>
+a:max-width:100% 加上最大宽度为 100%，那这个图片就是响应式了，就不会固定大小</p>
+<h2 id="5from-标签必须要含有一个属性-typesubmit这个表单才能被提交">5.from 标签(必须要含有一个属性 type=&quot;submit&rdquo;，这个表单才能被提交)</h2>
+<p>(1)作用<br>
+a:发 get 或 post 请求，然后刷新页面</p>
+<p>(2)属性<br>
+a:action 后台提交地址<br>
+b:autocomplete 输入框提示信息，输入框必须要有 name 属性<br>
+c:method 提交的方式，有 get 和 post 两个值<br>
+d:target 告诉浏览器我要提交到哪个页面，和 a 标签 target 用法雷同</p>
+<p>(3)事件<br>
+a:onsubmit 在表单确认提交发生的事件</p>
+<pre><code>&lt;from action=&quot;1.php&quot; method=&quot;post&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;提交&quot; id=&quot;submit&quot;&gt;
+&lt;/from&gt;
+&lt;script&gt;
+    var submit = document.getElementById('submit');
+    submit.onsubmit=function(){
+        alert('点击提交按钮触发的事件');
+    }
+&lt;/script&gt;
+</code></pre><h2 id="6form-标签的-input-标签">6.form 标签的 input 标签</h2>
+<p>a:文本输入框</p>
+<pre><code>&lt;input type = &quot;text&quot;&gt;&lt;/input&gt;
+</code></pre><p>b:颜色输入框</p>
+<pre><code>&lt;input type = &quot;color&quot;&gt;&lt;/input&gt;
+</code></pre><p>c:单项选择框(name 必须要一致才能实现单项)</p>
+<pre><code>&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;男&lt;/input&gt;
+&lt;input type=&quot;audio&quot; name=&quot;sex&quot;&gt;女&lt;/input&gt;
+</code></pre><p>d:密码框</p>
+<pre><code>&lt;input type=&quot;password&quot;&gt;&lt;/input&gt;
+</code></pre><p>e:多选框</p>
+<pre><code>&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;LOL&lt;/input&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;王者荣耀&lt;/input&gt;
+&lt;input type=&quot;checkbox&quot; name=&quot;hobies&quot;&gt;绝地求生&lt;/input&gt;
+</code></pre><p>f:上传文件</p>
+<pre><code>&lt;!--只能提交单个文件--&gt;
+&lt;input type=&quot;file&quot;&gt;
+&lt;!--加了multiple能提交多个文件&gt;
+&lt;input type=&quot;file&quot; multiple&gt;
+</code></pre><p>g:文本输入控件(resize:none 用户无法调整元素属性)</p>
+<pre><code>&lt;textarea style=&quot;resize:none&quot;&gt;&lt;/textarea&gt;
+</code></pre><p>h:select 下拉选择</p>
+<pre><code>&lt;select&gt;
+    &lt;option&gt;-请选择-&lt;/option&gt;
+    &lt;option&gt;星期一&lt;/option&gt;
+    &lt;option&gt;星期二&lt;/option&gt;
+&lt;/select&gt;
+</code></pre><h2 id="7js-事件">7.js 事件</h2>
+<p>a:onchange 改变时候触发这个事件<br>
+b:onfocus 光标在身上触发这个事件<br>
+c:onblur 失去光标触发这个事件</p>
+<pre><code>&lt;input type=&quot;text&quot; id=&quot;text&quot;&gt;&lt;/input&gt;
+&lt;script&gt;
+    var text = document.getElementById('text');
+    text.onchange = function(){
+        console.log('文本框内容发生了改变，触发了这个事件');
+    }
+    text.onfocus = function(){
+        console.log('当文本框失去光标时候就会触发这个事件');
+    }
+    text.onblur = function(){
+        console.log('失去光标触发这个事件');
+    }
+&lt;/script&gt;
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>8 - [css全解]css基础</title>
+            <link>http://yaochengjian.com/posts/8/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0808</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/8/</guid>
+            <description>1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+b：使用 caniuse.com
+2.语法超级简单 语法 1
+选择器{
+属性名:属性值
+/*这是一个注释*/
+}
+p{color:blue;background:red;}!注意事项 a：所有符号都是英文符号，如果写错了，浏览器会警告
+b：区分大小写，a 和 A 是不同东西
+c：最后一个分号可以省略，但建议不要省略
+d：任何地方写错了，都不会报错，浏览器会直接忽略
+语法 2：@语法
+@charset &amp;ldquo;utf-8&amp;rdquo;;
+@import url(2.css);
+@media(min-width:100px) and (max-width:200px){ }
+!注意事项 a：@charset 必须放在第一行
+b：前面两个@语法必须以分号;结尾
+c：charset 是字符集的意思，但是 utf-8 是字符编码
+3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
+b：border 没出现?说明选择器错了或者语法错了
+c：bug 解决了才可以把 border 删掉
+4.文档流 -流动方向 a：inline 元素从左到右，到达最右边才会换行
+b：block 元素从上到下，每一个都另起一行
+c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
+-宽度
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
+b：blcok 默认自动计算宽度，可用 width 指定
+c：inline-block 结合前两者特点，可用 width</description>
+            <content type="html"><![CDATA[<h3 id="1-我怎么知道哪些浏览器兼容哪些特性呢">1. 我怎么知道哪些浏览器兼容哪些特性呢？</h3>
+<p>a：几十种浏览器全部跑一遍<br>
+b：使用 caniuse.com</p>
+<h3 id="2语法超级简单">2.语法超级简单</h3>
+<p>语法 1<br>
+<font color=red>选择器</font>{<br>
+    <font color=blue>属性名</font>:<font color=green>属性值</font><br>
+    /*这是一个注释*/<br>
+}</p>
+<pre><code>p{
+    color:blue;
+    background:red;
+}
+</code></pre><p><strong>!注意事项</strong>
+a：所有符号都是英文符号，如果写错了，浏览器会警告<br>
+b：区分大小写，a 和 A 是不同东西<br>
+c：最后一个分号可以省略，但建议不要省略<br>
+d：任何地方写错了，都不会报错，浏览器会直接忽略</p>
+<p>语法 2：@语法<br>
+@charset &ldquo;utf-8&rdquo;;<br>
+@import url(2.css);<br>
+@media(min-width:100px) and (max-width:200px){        }</p>
+<p><strong>!注意事项</strong>
+a：@charset 必须放在第一行<br>
+b：前面两个@语法必须以分号;结尾<br>
+c：charset 是字符集的意思，但是 utf-8 是字符编码</p>
+<h3 id="3border-调试法">3.border 调试法</h3>
+<p>a：怀疑某个元素有问题就给这个元素加 border<br>
+b：border 没出现?说明选择器错了或者语法错了<br>
+c：bug 解决了才可以把 border 删掉</p>
+<h3 id="4文档流">4.文档流</h3>
+<p><strong>-流动方向</strong>
+a：inline 元素从左到右，到达最右边才会换行<br>
+b：block 元素从上到下，每一个都另起一行<br>
+c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块<br>
+<img src="../../images/display.png" alt=""></p>
+<p><strong>-宽度</strong><br>
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定<br>
+b：blcok 默认自动计算宽度，可用 width
+指定<br>
+c：inline-block 结合前两者特点，可用 width</p>
+<p><strong>-高度</strong><br>
+a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关<br>
+b：block 高度由内部文档流元素决定(脱离文档流元素除外)，可以设 height<br>
+c：inline-block 跟 block 类似，可以设置 height</p>
+<h3 id="5overflow-溢出当内容大于容器">5.overflow 溢出(当内容大于容器)</h3>
+<p>a：等内容的宽度或高度大于容器，会溢出<br>
+b：可用 overflow 来设置是否显示滚动条<br>
+c：auto 是灵活设置<br>
+d：scroll 是永远显示<br>
+e：hidden 是直接隐藏溢出部分<br>
+f：visible 是直接显示溢出部分
+g：overflow 可以分为 overflow-x 和 overflow-y</p>
+<p>① 块级元素如果没有设置 width，那么它默认的宽度就是 auto<br>
+② 永远不要写 width=100%，非常特殊的可以写</p>
+<h3 id="6脱离文档流">6.脱离文档流</h3>
+<p><strong>-哪些元素脱离文档流</strong>
+a：float<br>
+b：position:absolute / fixed</p>
+<p><strong>-怎么让元素不脱离文档流</strong><br>
+a：不要使用上面属性就不会脱离文档流了</p>
+<p>① 只要脱离了文档流，就算你清除了，永远都是脱离的了</p>
+<h3 id="7盒模型">7.盒模型</h3>
+<p>① 如果面试官问你！请说一下 css 盒模型 标准回答：css 盒模型分两种<br>
+content-box 宽度或高度 只包含 content<br>
+border-box 宽度或高度 由 border+padding+content(尽量使用 border-box)<br>
+<img src="../../images/border-sizing.png" alt=""></p>
+<p>②margin 合并(只会上下合并，左右不会合并)<br>
+哪些情况会合并<br>
+a：父子 margin 合并<br>
+b：兄弟 margin 合并</p>
+<p>如何阻止合并(不需要知道为什么)
+a：父子合并用 padding 或 border 挡住<br>
+b：父子合并用 overflow:hidden 挡住<br>
+c：父子合并用 display:flex<br>
+d：兄弟合并是符合预期的<br>
+e：兄弟合并可以用 inline-block 消除<br>
+f：总之要一条条死记</p>
+<p>③ 基本单位<br>
+长度单位<br>
+a：px 像素<br>
+b：em 相当于自身 font-size 的倍数<br>
+c: 百分数<br>
+d: 整数</p>
+<p>颜色<br>
+a：十六进制#FF6600 或者 #F60<br>
+b: RGBA 颜色 rgb(255,0,0) 或者 rgba(255,0,0,1) - a 是透明意思(取值 0~1)</p>
+<pre><code>  div{
+      width:100px;
+      height:100px;
+      background:#FF6600;
+      background:rgb(255,0,0);
+      background:rgba(255,0,0,0.5);
+  }
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>9 - [css全解]布局</title>
+            <link>http://yaochengjian.com/posts/9/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0809</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/9/</guid>
+            <description>1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+b: 不固定宽度布局，主要靠文档流的原理来布局
+2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
+&amp;lt;style&amp;gt;span{border:1px solid red;}&amp;lt;/style&amp;gt;//它本来就会根据你页面的宽度大小来自适应&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;3.第三种布局 a: 响应式布局
+b: 意思就是 pc 上固定宽度，手机上不固定宽度
+c: 也就是一种混合布局
+4.布局的两种思路 ① 从大到小
+先定下大局
+然后完善每个部分的小布局
+② 从小到大
+先完成小布局
+然后组合成大布局
+③ 两种均可
+新人推荐用第二种，因为小的简单
+老手一般用第一种，因为熟练有大局观
+4.用什么 css 布局 5.float 布局 a: 步骤
+-子元素上加 float:left/right 和 width
+-在父元素上加.clearfix(必须要加上)
+实践 不同布局
+-用 float 做两栏布局(如顶部条)
+-用 float 做三栏布局(内容区)</description>
+            <content type="html"><![CDATA[<h3 id="1布局分类">1.布局分类</h3>
+<p><font color=#CC3300>两种</font><br>
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px<br>
+b: 不固定宽度布局，主要靠文档流的原理来布局</p>
+<h3 id="2还记得吗">2.还记得吗?</h3>
+<p>a: 文档流本来就是自适应的，不需要加额外的样式</p>
+<pre><code>&lt;style&gt;
+    span{
+        border:1px solid red;
+    }
+&lt;/style&gt;
+//它本来就会根据你页面的宽度大小来自适应
+&lt;span&gt;1&lt;/span&gt;
+&lt;span&gt;2&lt;/span&gt;
+&lt;span&gt;3&lt;/span&gt;
+&lt;span&gt;5&lt;/span&gt;
+&lt;span&gt;1&lt;/span&gt;
+&lt;span&gt;2&lt;/span&gt;
+&lt;span&gt;3&lt;/span&gt;
+&lt;span&gt;5&lt;/span&gt;
+</code></pre><h3 id="3第三种布局">3.第三种布局</h3>
+<p>a: 响应式布局<br>
+b: 意思就是 pc 上固定宽度，手机上不固定宽度<br>
+c: 也就是一种混合布局</p>
+<h3 id="4布局的两种思路">4.布局的两种思路</h3>
+<p><font color=#CC3300>① 从大到小</font><br>
+先定下大局<br>
+然后完善每个部分的小布局</p>
+<p><font color=#CC3300>② 从小到大</font><br>
+先完成小布局<br>
+然后组合成大布局</p>
+<p><font color=#CC3300>③ 两种均可</font><br>
+新人推荐用第二种，因为小的简单<br>
+老手一般用第一种，因为熟练有大局观</p>
+<h3 id="4用什么-css-布局">4.用什么 css 布局</h3>
+<p><img src="../../images/css%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F.PNG" alt=""></p>
+<h3 id="5float-布局">5.float 布局</h3>
+<p>a: 步骤<br>
+-子元素上加 float:left/right 和 width<br>
+-在父元素上加.clearfix(<font color=red>必须要加上</font>)</p>
+<h3 id="实践">实践</h3>
+<p>不同布局<br>
+-用 float 做两栏布局(如顶部条)<br>
+-用 float 做三栏布局(内容区)<br>
+-用 float 做四栏布局(如导航)<br>
+-用 float 做平均布局(如产品展示区)<br>
+<a href="http://yaochengjian.com/Different-layout/1.float" target="_balck">案例展示</a></p>
+<h3 id="6flex-布局">6.Flex 布局</h3>
+<p>a: 让一个元素变成 flex 容器(下面是容器的属性)</p>
+<pre><code>&lt;style&gt;
+    .container{
+        display:flex; /*或者inline-flex*/
+    }
+    &lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+&lt;/style&gt;
+</code></pre><p>b:控制它的流动方向(控制什么方向主轴就是什么方向)<br>
+flex-direction:row 默认<br>
+flex-direction:row-reverse 从右到左排<br>
+flex-direction:cloumn<br>
+flex-direction:cloumn-reverse 道理和上面一样<br>
+<img src="../../images/flex-direction.png" alt=""></p>
+<p>c:控制它是否折行<br>
+flex-warp:nowrap 默认<br>
+flex-warp:wrap 折行<br>
+flex-warp:wrap-reverse 折行反转</p>
+<p>d:主轴的对齐方式-默认主轴是横轴-除非改变了 flex-direction 方向<br>
+justify-content:flex-start 大家都往前靠<br>
+justify-content:flex-end 大家都往后靠<br>
+justify-content:center 大家都往中间靠<br>
+justify-content:space-between 把空间都放在中间<br>
+justify-content:space-around 均匀分布两则空间<br>
+<img src="../../images/justify-content.png" alt=""></p>
+<p>c:次轴对齐(它会根据你主轴方向来决定自己次轴方向)<br>
+align-items:flex-start<br>
+algin-items:flex-end<br>
+algin-items:center<br>
+algin-items:stretch
+<img src="../../images/algin-items.png" alt=""></p>
+<p>d:次轴内容对齐方式<br>
+align-content:flex-start 大家都往前靠<br>
+align-content:flex-end 大家都往后靠<br>
+align-content:center 大家都往中间靠(对单行是没有效果的)<br>
+align-content:space-between 把空间都放在中间<br>
+align-content:space-around 均匀分布两则空间</p>
+<h3 id="font-colorredflex-item-有哪些属性容器里面的子元素font"><font color=red>flex item 有哪些属性(容器里面的子元素)</font></h3>
+<p>a: order 属性(设置弹性盒子模型对象子元素的顺序)<br>
+b：flex-grow 属性(控制自己如何长胖,默认值是 0)<br>
+c：flex-shrink 属性(控制如何变瘦)一般写 flex-shrink:0 防止变瘦，默认是 1<br>
+d：align-self 属性 (algin-self:flex-start algin-self:flex-end 根据次轴来决定的)</p>
+<p><font color=red>flex 布局实践(不同布局)</font><br>
+-用 flex 做两栏布局<br>
+-用 flex 做三栏布局<br>
+-用 flex 做四栏布局<br>
+-用 flex 做平均布局<br>
+-用 flex 组合使用，做更复杂的布局</p>
+<p><a href="http://yaochengjian.com/Different-layout/2.flex" target="_balck">案例展示</a></p>
+<p><font color=red>经验</font><br>
+-永远不要把 width 和 height 写死，除非特殊说明<br>
+-用 min-width / max-width / min-height / max-height<br>
+-flex 可以基本满足所有需求<br>
+-flex 和 margin-xxx:auto 配合有意外效果</p>
+<p><font color=red>什么叫写死</font><br>
+-写死 width:100px;<br>
+不写死<br>
+-width:50%<br>
+-max-width:100px<br>
+-width:30vw<br>
+-min-width:80%<br>
+-特点：不使用 px，或者加 min max 前缀</p>
+<h3 id="font-colorred7grid-布局font"><font color=red>7.Grid 布局</font></h3>
+<p>a: 让一个元素变成 gird 容器(下面是容器的属性)</p>
+<pre><code>.container{
+    display:gird | inline-grid;
+}
+</code></pre><p><font color=red>设置行和列</font><br>
+grid-template-columns:40px 50px auto 50px 40px;<br>
+grid-template-rows:25% 100px auto;
+<img src="../../images/gird.png" alt=""></p>
+<p><font color=red>平均布局可以这样子</font><br>
+grid-template-columns:1fr 1fr 1fr;<br>
+grid-template-rows:1fr 1fr 1fr;</p>
+<p><font color=red>grid-template-areas</font></p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;asdie&gt;&lt;/asdie&gt;
+    &lt;main&gt;&lt;/main&gt;
+    &lt;div class=&quot;ad&quot;&gt;&lt;/div&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+&lt;/div&gt;
+.container{
+    grid-template-areas{
+        &quot;header header header&quot; /*三行三列*/
+        &quot;asdie main ad&quot;
+        &quot;footer footer footer&quot;
+    }
+}
+.ad{
+        grid-areas:ad
+    }
+</code></pre><p><font color=red>grid-gap(基本算替换了 margin 外边距)</font><br>
+a：grid-gap:10px 则行和列都会生效<br>
+b：grid-row-gap:10px 则行生效<br>
+c：grid-column-gap:10px 则列生效</p>
+<h3 id="font-colorredgrid-有哪些属性容器里面的子元素font"><font color=red>grid 有哪些属性(容器里面的子元素)</font></h3>
+<p>a：grid-rows-start:1<br>
+b：grid-rows-end:3<br>
+c：grid-column-start:1<br>
+d：grid-column-end:3</p>
+<p><font color=red>复合样式：</font><br>
+a：grid-row : 2 / 4 就会设置从第二行开始，到第四行结束<br>
+b: grid-column : 2 / 4 就会设置从第二列开始，到第四列结束<br>
+c：grid-area : 1 / 1 / 3 / 6 第一行开始，第一列开始，第三行结束，第 6 列结束<br>
+<a href="http://yaochengjian.com/Different-layout/3.gird" target="_balck">案例展示</a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>10 - [css全解]定位</title>
+            <link>http://yaochengjian.com/posts/10/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0810</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/10/</guid>
+            <description>问两个问题 -背景的范围是从哪到哪?(正确答案是 B)
+A.border 内边沿围成的区域
+B.border 外边沿围成的区域
+-如何验证自己的猜想?border 半透明化
+-从左边看一个 div,是什么样子?
+新属性-position a：position
+1.static 默认值，待在文档流里
+2.relative 相对定位，升起来，但不脱离文档流
+3.absolute 绝对定位，定位基准是祖先里的非 static
+4.fixed 固定定位，定位基准是 viewport(有诈)
+5.sticky 粘滞定位，不好描述直接举例
+经验
+1.如果你写了 absolute，一般都得补一个 relative
+2.如果你写了 absolute 或 fixed，一定要补 top 和 left
+3.sticky 兼容性很差，主要用于面试装逼
+position:relative
+a：使用场景
+1.用于做位移对齐(很少用，现在都直接用 display:flex 了)
+2.用于给 absolute 元素做爸爸
+b：配合 z-index(z-index 必须配合 position 使用，否则不生效)
+1.z-index:auto 默认值，不创建新层叠上下文
+2.z-index：0 | 1 | 2
+3.z-index:-1 | -2
+经验
+1.写 z-index:9999 的都是彩笔
+2.学会管理 z-index
+position:absolute
+a：使用场景
+1.脱离原来的位置，另起一层，比如对话框的关闭按钮</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred问两个问题font"><font color=red>问两个问题</font></h3>
+<p>-背景的范围是从哪到哪?(正确答案是 B)<br>
+A.border 内边沿围成的区域<br>
+B.border 外边沿围成的区域<br>
+-如何验证自己的猜想?border 半透明化</p>
+<p>-从左边看一个 div,是什么样子?<br>
+<img src="../../images/div.png" alt=""></p>
+<h3 id="font-colorred新属性-positionfont"><font color=red>新属性-position</font></h3>
+<p><font color=red>a：position</font><br>
+1.static 默认值，待在文档流里<br>
+2.relative 相对定位，升起来，但不脱离文档流<br>
+3.absolute 绝对定位，定位基准是祖先里的非 static<br>
+4.fixed 固定定位，定位基准是 viewport(有诈)<br>
+5.sticky 粘滞定位，不好描述直接举例</p>
+<p>经验<br>
+1.如果你写了 absolute，一般都得补一个 relative<br>
+2.如果你写了 absolute 或 fixed，一定要补 top 和 left<br>
+3.sticky 兼容性很差，主要用于面试装逼</p>
+<p><font color=red>position:relative</font><br>
+a：使用场景<br>
+1.用于做位移对齐(很少用，现在都直接用 display:flex 了)<br>
+2.用于给 absolute 元素做爸爸</p>
+<p>b：配合 z-index(z-index 必须配合 position 使用，否则不生效)<br>
+1.z-index:auto 默认值，不创建新层叠上下文<br>
+2.z-index：0 | 1 | 2<br>
+3.z-index:-1 | -2</p>
+<p>经验<br>
+1.写 z-index:9999 的都是彩笔<br>
+2.学会管理 z-index</p>
+<p><font color=red>position:absolute</font><br>
+a：使用场景<br>
+1.脱离原来的位置，另起一层，比如对话框的关闭按钮<br>
+2.鼠标提示<br>
+<a href="http://yaochengjian.com/Different-layout/4.absolute" target="_black">案例</a></p>
+<p>b：配合 z-index</p>
+<p>经验<br>
+1.absolute 相对于祖先元素中最近的的定位元素<br>
+2.某些浏览器如果不写 top | left 会位置错乱<br>
+3.善用 left:100%<br>
+4.善用 left:50%;加负 margin</p>
+<p><font color=red>position:fixed 相对于视口定位</font><br>
+a：使用场景<br>
+1.烦人的广告<br>
+2.回到顶部按钮</p>
+<p>b：配合 z-index<br>
+经验<br>
+1.手机上尽量不要用这个属性，坑很多</p>
+<p><font color=red>层叠上下文</font><br>
+a：什么会创建层叠上下文[z-index / opacity]<br>
+1.每个层叠上下文就是一个作用域<br>
+3.要处于同一个作用域的 z-index 才能够比较<br>
+2.这一层层叠上下文会找到自己共同父级的层叠上下文作用域来进行比较(如果没有就默认是 html)</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>11 - [css动画]</title>
+            <link>http://yaochengjian.com/posts/11/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0811</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/11/</guid>
+            <description>transform 完整介绍 a: translate(平移)
+ translateX(长度 | 百分比) translateY(长度 | 百分比) translate(x 轴,y 轴) translateX(50%) 往右边偏移自身宽度的一半  translate(-50%,-50%) 可做绝对定位元素居中
+b: scale(缩放)
+ scaleX(number) scaleY(number) scale(X-number,Y-number)  用得较少，因为容易出现模糊
+c: rotate(旋转)
+d: transform-origin 设置旋转点
+ rotate(度数) 沿 Z 轴转动 rotateX(度数) rotateY(度数)  e: skew(倾斜)
+ skewX(度数) skewY(度数) skew(X,Y)  用得较少
+案例 爱心
+transition 过渡 a: 语法
+ transition-property 状态发生变化的属性(可以用 all 代表所有属性) transition-timing-function 过渡变化的速度 transition-delay 延迟多长时间开始 transition:width 3s , background 3s(这样我们可以采用多种属性一起过渡) 过渡方式有: ease : 速度逐渐变慢，这是默认值</description>
+            <content type="html"><![CDATA[<h3 id="font-colorredtransform-完整介绍font"><font color=red>transform 完整介绍</font></h3>
+<p>a: translate(平移)</p>
+<ol>
+<li>translateX(长度 | 百分比)</li>
+<li>translateY(长度 | 百分比)</li>
+<li>translate(x 轴,y 轴)</li>
+<li>translateX(50%) <font color=red>往右边偏移自身宽度的一半</font></li>
+</ol>
+<p>translate(-50%,-50%) 可做绝对定位元素居中</p>
+<p>b: scale(缩放)</p>
+<ol>
+<li>scaleX(number)</li>
+<li>scaleY(number)</li>
+<li>scale(X-number,Y-number)</li>
+</ol>
+<p>用得较少，因为容易出现模糊</p>
+<p>c: rotate(旋转)<br>
+d: transform-origin 设置旋转点</p>
+<ol>
+<li>rotate(度数) 沿 Z 轴转动</li>
+<li>rotateX(度数)</li>
+<li>rotateY(度数)</li>
+</ol>
+<p>e: skew(倾斜)</p>
+<ol>
+<li>skewX(度数)</li>
+<li>skewY(度数)</li>
+<li>skew(X,Y)</li>
+</ol>
+<p>用得较少<br>
+案例 <a href="http://yaochengjian.com/Different-layout/6.爱心">爱心</a></p>
+<h3 id="font-colorredtransition-过渡font"><font color=red>transition 过渡</font></h3>
+<p>a: 语法</p>
+<ol>
+<li>transition-property 状态发生变化的属性(可以用 all 代表所有属性)</li>
+<li>transition-timing-function 过渡变化的速度</li>
+<li>transition-delay 延迟多长时间开始</li>
+<li>transition:width 3s , background 3s(这样我们可以采用多种属性一起过渡)</li>
+<li>过渡方式有:
+ease : 速度逐渐变慢，这是默认值<br>
+linear : 均速<br>
+ease-in : 以慢速开始<br>
+ease-in-out : 慢速开始 -&gt; 再快速 -&gt; 再慢速</li>
+</ol>
+<p>b: <font color=red>注意:并不是所有属性都能过渡</font></p>
+<ol>
+<li>display:none =&gt; block 没法过渡</li>
+<li>一般改成 visibility:hidden =&gt; visible</li>
+<li>transition 是一次性的，不能重复发生，触发多次</li>
+<li>transition 只能定义开始和结束状态，不能定义中间状态，也就是说只有两个状态</li>
+</ol>
+<h3 id="font-colorredanimation-动画font"><font color=red>animation 动画</font></h3>
+<p><font color=red>a: 语法</font></p>
+<pre><code>第一种
+@keyframs name{
+    form{}
+    to{}
+}
+第二种
+@keyframs name{
+    0%{}
+    20%{}
+    100%{}
+}
+</code></pre><p><font color=red>b:缩写语法</font><br>
+animation: 时长 | 过渡方式 | 延迟 | 次数 | 方向 | 填充模式 | 是否暂停 | 动画名</p>
+<ol>
+<li>过渡方式 : 跟 transition 取值一样</li>
+<li>次数 : 自定义次数或者 infinite(无数次)</li>
+<li>方向 : reverse | alternate(原路返回) | alternate-reverse</li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>12 - [HTTP全解]URL是什么</title>
+            <link>http://yaochengjian.com/posts/12/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0812</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/12/</guid>
+            <description>1.域名是什么 a: 域名实际上是 ip 的别称 知识点
+  一个域名可以对应不同 IP
+这个叫做均衡负载，防止一台机器扛不住
+  一个 IP 可以对应不同域名
+这个叫做共享主机，穷开发者会这么做
+  域名和 IP 是怎么对应起来的？
+通过 DNS
+  当你输入 xiedaimala.com
+  过程
+-你的 Chrom 浏览器会向电信|联通提供的 DNS 服务器询问 xiedaimala.com 对应 IP
+-电信|联通会回答一个 IP(具体过程很复杂，不研究)
+-然后 Chrome 才会想对应 IP 的 80/443 端口发送请求
+-请求内容是查看 xiedaimala.com 的首要
+为什么是 80 或 443 端口
+-服务器默认用 80 提供 http 服务
+-服务器默认用 443 提供 https 服务
+-你可以在开发者工具里看到具体的端口
+如何请求不同的页面
+-路径可以做到(不同的路径可以请求不同的页面)
+同一个页面，不同内容</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1域名是什么font"><font color=red>1.域名是什么</font></h3>
+<p>a: 域名实际上是 ip 的别称
+知识点</p>
+<ol>
+<li>
+<p>一个域名可以对应不同 IP<br>
+这个叫做均衡负载，防止一台机器扛不住</p>
+</li>
+<li>
+<p>一个 IP 可以对应不同域名<br>
+这个叫做共享主机，穷开发者会这么做</p>
+</li>
+<li>
+<p>域名和 IP 是怎么对应起来的？<br>
+通过 DNS</p>
+</li>
+<li>
+<p>当你输入 xiedaimala.com</p>
+</li>
+</ol>
+<p><font color=red>过程</font><br>
+-你的 Chrom 浏览器会向电信|联通提供的 DNS 服务器询问 xiedaimala.com 对应 IP<br>
+-电信|联通会回答一个 IP(具体过程很复杂，不研究)<br>
+-然后 Chrome 才会想对应 IP 的 80/443 端口发送请求<br>
+-请求内容是查看 xiedaimala.com 的首要</p>
+<p><font color=red>为什么是 80 或 443 端口</font><br>
+-服务器默认用 80 提供 http 服务<br>
+-服务器默认用 443 提供 https 服务<br>
+-你可以在开发者工具里看到具体的端口</p>
+<p><font color=red>如何请求不同的页面</font><br>
+-路径可以做到(不同的路径可以请求不同的页面)</p>
+<p><font color=red>同一个页面，不同内容</font><br>
+查询参数可以做到<br>
+-www.baidu.com/s?wd=hi<br>
+-www.baidu.com/s?wd=hello</p>
+<p><font color=red>URL 组成</font><br>
+<a href="https://www.baidu.com/s?wd=hello#5">https://www.baidu.com/s?wd=hello#5</a><br>
+协议+域名或 IP+端口号+路径+查询字符串+锚点</p>
+<p><font color=red>DNS 作用是什么</font></p>
+<ol>
+<li>DNS 就是把域名和 IP 地址联系在一起，有了 DNS 服务，你就不用输入 IP 地址来访问一个网站了，就可以通过输入网址来访问(解析 IP)</li>
+<li>nslookup 用法 : nslookup + 查询对应的域名 [可以得到对应的域名 IP 地址]</li>
+</ol>
+<p><font color=red>域名是什么?分别哪几类域名</font></p>
+<ol>
+<li>.com 商业性的机构或公司</li>
+<li>.cn 中国域名</li>
+<li>.top 机构公司个人</li>
+<li>.org 非盈利的组织、团体 &hellip;&hellip;</li>
+</ol>
+<p><font color=red>curl 命令</font></p>
+<ol>
+<li>用 curl 可以发 HTTP 请求
+-curl <a href="http://baidu.com">http://baidu.com</a><br>
+-curl -v <a href="http://baidu.com">http://baidu.com</a> (加-v 可以看到更详细的内容)</li>
+<li>理解一下概念<br>
+-url 会被 curl 工具重写，先请求 DNS 获得 IP<br>
+-先进行 TCP 连接，TCP 连接成功后，开始发送 HTTP 请求<br>
+-请求内容看一眼<br>
+-响应内容看一眼</li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>13 - [HTTP全解]请求和响应 &amp; Node.js server</title>
+            <link>http://yaochengjian.com/posts/13/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0813</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/13/</guid>
+            <description>演示 Node.js Server   前置条件
+-安装 Node.js 8 +
+-理解 IP 和端口
+-理解 URL 路径和查询参数
+  如何发请求
+-用 Chrome 地址栏
+-用 curl 命令
+  模拟客户端向服务器端请求内容
+-在 github.com/FrankFang/nodejs-test/blob/master/server.js 下载
+-一般这个文件是放在服务器上面，而不是自己的机器上
+  response.setHeader(&amp;ldquo;Content-Type&amp;rdquo;,&amp;ldquo;text/css;charset=utf-8&amp;rdquo;) 让服务器告诉浏览器它发送的数据属于什么文件类型
+response.write() 写入响应内容发送回给浏览器
+response.end() 响应结束
+  HTTP 基础概念   请求(Request Headers)[get 是获取内容，post 是上传内容]
+-请求动词 路径 + 查询参数 协议名/版本 [请求行]
+-Host: 域名或 IP [这三行是请求头]
+Accept: text/html
+Content-Type: 请求体的格式
+-请求体[也就是上传的内容]
+curl -v -X POST &amp;ndash;data &amp;lsquo;上传内容&amp;rsquo; http://localhost:8888/</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred演示-nodejs-serverfont"><font color=red>演示 Node.js Server</font></h3>
+<ol>
+<li>
+<p>前置条件<br>
+-安装 Node.js 8 +<br>
+-理解 IP 和端口<br>
+-理解 URL 路径和查询参数</p>
+</li>
+<li>
+<p>如何发请求<br>
+-用 Chrome 地址栏<br>
+-用 curl 命令</p>
+</li>
+<li>
+<p>模拟客户端向服务器端请求内容<br>
+-在 github.com/FrankFang/nodejs-test/blob/master/server.js 下载<br>
+-一般这个文件是放在服务器上面，而不是自己的机器上</p>
+</li>
+<li>
+<p>response.setHeader(&ldquo;Content-Type&rdquo;,&ldquo;text/css;charset=utf-8&rdquo;) 让服务器告诉浏览器它发送的数据属于什么文件类型<br>
+response.write() 写入响应内容发送回给浏览器<br>
+response.end() 响应结束</p>
+</li>
+</ol>
+<h3 id="font-colorredhttp-基础概念font"><font color=red>HTTP 基础概念</font></h3>
+<ol>
+<li>
+<p>请求(Request Headers)[get 是获取内容，post 是上传内容]<br>
+-请求动词 路径 + 查询参数 协议名/版本 [请求行]</p>
+<p>-Host: 域名或 IP [这三行是请求头]<br>
+Accept: text/html<br>
+Content-Type: 请求体的格式</p>
+<p>-请求体[也就是上传的内容]<br>
+curl -v -X POST &ndash;data &lsquo;上传内容&rsquo; http://localhost:8888/</p>
+</li>
+<li>
+<p>响应(Response Headers)<br>
+-协议名/版本 状态码 状态字符串 [状态行]</p>
+<p>-Content-Type: 响应体的格式 [响应头]</p>
+<p>-响应体 Response[也就是下载内容]</p>
+</li>
+</ol>
+<h3 id="font-colorred用-curl-构造请求font"><font color=red>用 curl 构造请求</font></h3>
+<ol>
+<li>
+<p>设置请求动词(加上-X)<br>
+curl -v -X POST http://localhost:8888</p>
+</li>
+<li>
+<p>设置路径和查询参数<br>
+curl -v -X POST http://localhost:8888/xxx?wd=hello#nihao<br>
+直接在 url 后面加(锚点是不会发送到服务器上面的)</p>
+</li>
+<li>
+<p>设置 请求头(加上-H,可以任意设置)<br>
+curl -v -H &ldquo;Accept:text/html&rdquo; http://localhost:8888<br>
+curl -v -H &ldquo;Content-type:text/html&rdquo; http://localhost:8888</p>
+</li>
+<li>
+<p>设置请求体(加上-d)<br>
+curl -v -d &ldquo;你好吗?&rdquo; http://localhost:8888</p>
+</li>
+<li>
+<p>用 Node.js 读取请求<br>
+-设置响应状态码<br>
+response.statusCode = 200</p>
+<p>-设置响应头<br>
+response.setHeader(&lsquo;Content-Type&rsquo;,&lsquo;text/html&rsquo;)</p>
+<p>-设置响应体<br>
+response.write(&lsquo;内容&rsquo;)</p>
+</li>
+</ol>
+<h3 id="font-colorredssh-远程登录-阿里云-ubuntufont"><font color=red>ssh 远程登录-阿里云 Ubuntu</font></h3>
+<ol>
+<li>
+<p>首先登录远程服务器</p>
+</li>
+<li>
+<p>成功看到 welcome 之后</p>
+</li>
+<li>
+<p>echo &lsquo;复制本地~/.ssh/id_rsa.pub 内容&rsquo; &raquo; /.ssh/authorized_keys</p>
+</li>
+<li>
+<p>新建终端，在本地运行 ssh root@实例公网 ip</p>
+</li>
+<li>
+<p>此时就可以在本地终端操作云服务器了</p>
+</li>
+<li>
+<p>你可以在 hosts 文件里给实例 ip 取个别名</p>
+</li>
+<li>
+<p>想要退出云机器，可以输入 exit 回车</p>
+</li>
+<li>
+<p>如果卡了，可以直接退出终端 ctrl + w</p>
+</li>
+</ol>
+<p><font color=red>创建应用账户(为什么?)</font></p>
+<ol>
+<li>
+<p>linux 的 root 账户拥有最高权限，一旦被攻克机器就完全被人控制(步骤)<br>
+a. adduser chengjian<br>
+b. Enter new UNIX password : 输入密码<br>
+c. 再次输入密码,密码可以跟 root 的密码一样<br>
+d. 一直回车，知道结束，运行如下命令<br>
+e. mkdir /home/chengjian/.ssh<br>
+f. cp ~/.ssh/authorized_keys /home/chengjian/.ssh/<br>
+g. chmod 755 /home/chengjian/.ssh/authorized_keys<br>
+h. chown chengjian:chengjian /home/chengjian/.ssh/authorized_keys</p>
+</li>
+<li>
+<p>给 chengjian 添加 sudu 权限(sudo 是什么)<br>
+a. adduser chengjian sudo<br>
+b. 类似于 Windows 的[以管理员身份运行]<br>
+c. 平时你不应该使用 root 账户，而是用 chengjian 账户<br>
+d. 遇到特殊操作，就在前面加 sudo,请出 root<br>
+e. 需要输入 chengjian 的密码，不是 root 密码<br>
+f. sudo !!的意思是用 sudo 执行上一句命令</p>
+</li>
+</ol>
+<h3 id="font-colorred在服务器上面安装-nodejs-8-和-git步骤font"><font color=red>在服务器上面安装 Node.js 8 和 git(步骤)</font></h3>
+<ol>
+<li>
+<p>curl -sL <a href="https://deb.nodesource.com/setup_8.x">https://deb.nodesource.com/setup_8.x</a> | sudo bash -</p>
+</li>
+<li>
+<p>sudo sed -i &lsquo;s/deb.nodesource.com/node_8.x/mirrors.tuna.tsinghua.edu.cn/nodesource/deb_8.x/g&rsquo; /etc/apt/sources.list.d/nodesource.list</p>
+</li>
+<li>
+<p>sudo apt-get update</p>
+</li>
+<li>
+<p>sudo apt-get install -y nodejs</p>
+</li>
+<li>
+<p>sudo apt install git</p>
+</li>
+<li>
+<p>遇到[Y/n]输入回车，或者 Y 回车</p>
+</li>
+<li>
+<p>git &ndash;version</p>
+</li>
+</ol>
+<h3 id="font-colorred在服务器上面部署-nodejs-代码font"><font color=red>在服务器上面部署 node.js 代码</font></h3>
+<ol>
+<li>下载代码(不要使用 ssh 地址，使用 https)
+git clone (GitHub 上 https 下载地址)</li>
+<li>启动
+a. cd node-demo-1<br>
+b. touch log(创建 log 文件，后面可以查看到请求进程)<br>
+c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;
+d. kill -9 pid 可以关掉进程<br>
+e. tail log(可以查看 log 请求进程内容)<br>
+f. killall node 可以关掉所有 node 进程
+g. git pull 会在 github 拉取最新的代码</li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>14 - [JS全解]JS的诞生</title>
+            <link>http://yaochengjian.com/posts/14/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0814</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/14/</guid>
+            <description>1.Javascript 的 10 个设计缺陷  不适合开发大型程序 非常小的标准库 null 和 undefined  null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)typeof null // objecttypeof undefined // undefined全局变量难以控制 自动插入行尾分号 加号运算符  + 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接console.log(1 + 10)console.log(&amp;quot;1&amp;quot; + 10)NaN(NaN 自己也不等于自己)  NaN === NaN //falseNaN !== NaN //true数据和对象区分(数组也属于对象) == 和 ===   == 只是判断两个值是否相等=== 不单单判断值是否相等，还判断两边类型是否相等基本类型的包装对象  Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。new Boolean(false);new Number(1234);new String(&amp;quot;Hello World&amp;quot;);与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。alert( typeof 1234); // numberalert( typeof new Number(1234)); // object2.</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1javascript-的-10-个设计缺陷font"><font color=red>1.Javascript 的 10 个设计缺陷</font></h3>
+<ol>
+<li>不适合开发大型程序</li>
+<li>非常小的标准库</li>
+<li>null 和 undefined</li>
+</ol>
+<pre><code>null属于对象的一种，意思是该对象为空;undefined则是一种数据类型，表示未定义(typeof 出来是字符串类型)
+typeof null // object
+typeof undefined // undefined
+</code></pre><ol start="4">
+<li>全局变量难以控制</li>
+<li>自动插入行尾分号</li>
+<li>加号运算符</li>
+</ol>
+<pre><code>+ 号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接
+console.log(1 + 10)
+console.log(&quot;1&quot; + 10)
+</code></pre><ol start="7">
+<li>NaN(NaN 自己也不等于自己)</li>
+</ol>
+<pre><code>NaN === NaN  //false
+NaN !== NaN  //true
+</code></pre><ol start="8">
+<li>数据和对象区分(数组也属于对象)</li>
+<li>== 和 ===</li>
+</ol>
+<pre><code>  == 只是判断两个值是否相等
+  === 不单单判断值是否相等，还判断两边类型是否相等
+</code></pre><ol start="10">
+<li>基本类型的包装对象</li>
+</ol>
+<pre><code>Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。
+　　new Boolean(false);
+
+　　new Number(1234);
+
+　　new String(&quot;Hello World&quot;);
+
+与基本数据类型对应的对象类型，作用很小，造成的混淆却很大。
+　　alert( typeof 1234); // number
+
+　　alert( typeof new Number(1234)); // object
+</code></pre><h3 id="font-colorred2a-href--httpswwwjianshucomp33c1d8505975js-的历史afont"><font color=red>2.<a href = "https://www.jianshu.com/p/33c1d8505975">JS 的历史</a></font></h3>
+<h3 id="font-colorred3a-href--httpwwwruanyifengcomblog201106birth_of_javascripthtmljs-的诞生afont"><font color=red>3.<a href = "http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">JS 的诞生</a></font></h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>15 - [JS全解]内存图与JS世界</title>
+            <link>http://yaochengjian.com/posts/15/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0815</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/15/</guid>
+            <description>浏览器功能 1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等
+2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程
+JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
+Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+2.找到了，则结束查找，使用自己私有的即可
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 </description>
+            <content type="html"><![CDATA[<h3 id="font-colorred浏览器功能font"><font color=red>浏览器功能</font></h3>
+<p>1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等</p>
+<p>2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程</p>
+<h3 id="font-colorredjs-原型font"><font color=red>JS 原型</font></h3>
+<p>1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象<br>
+2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身</p>
+<pre><code>Array.prototype.constructor === Array
+</code></pre><p>3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)<br>
+4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)</p>
+<p><font color=red>原型链__proto__</font><br>
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性<br>
+2.找到了，则结束查找，使用自己私有的即可<br>
+3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在
+<img src="../../images/%E5%8E%9F%E5%9E%8B.png" alt=""></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>16 - [JS全解]canvas实践</title>
+            <link>http://yaochengjian.com/posts/16/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0816</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/16/</guid>
+            <description>Canvas(不能在 css 设置宽高[不支持]) 绘制矩形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.fillStyle = &amp;ldquo;black&amp;rdquo; 定义路径内容区域颜色
+3.ctx.fillRect(x,y,width,height)
+4.ctx.fill() 填充路径的内容区域生成实心图形
+绘制三角形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.strokeStyle = &amp;lsquo;red&amp;rsquo; 定义描边内容区域颜色
+2.ctx.beginPath() 绘制一个新的形状路径开始
+3.ctx.moveTo(x,y)
+4.ctx.lineTo(x,y)
+5.ctx.stroke() 填充描边路径颜色
+6.ctx.lineWidth 定义线的粗心状态
+7.ctx.lineCap 每个点与点连接是圆的
+绘制圆形
+1.var ctx = canvas.getContext(&amp;lsquo;2d&amp;rsquo;)
+2.ctx.fillStyle = &amp;lsquo;red&amp;rsquo;
+3.ctx.beiginPath() 绘制一个新的形状路径开始
+3.ctx.arc(x,y,半径，圆开始，弧度)
+4.ctx.fill()
+需要注意的细节 1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)
+2.document.body.clientHeigh : 获取 body 的高度
+3.document.documentElement.clientWidth : 获取 HTML 的宽度
+4.document.documentElement.clientHeight : 获取 HTML 的高度
+var ctx = canvas.</description>
+            <content type="html"><![CDATA[<h3 id="font-colorredcanvas不能在-css-设置宽高不支持font"><font color=red>Canvas(不能在 css 设置宽高[不支持])</font></h3>
+<p><font color=red>绘制矩形</font><br>
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
+2.ctx.fillStyle = &ldquo;black&rdquo; 定义路径内容区域颜色<br>
+3.ctx.fillRect(x,y,width,height)<br>
+4.ctx.fill() 填充路径的内容区域生成实心图形</p>
+<p><font color=red>绘制三角形</font><br>
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
+2.ctx.strokeStyle = &lsquo;red&rsquo; 定义描边内容区域颜色<br>
+2.ctx.beginPath() 绘制一个新的形状路径开始<br>
+3.ctx.moveTo(x,y)<br>
+4.ctx.lineTo(x,y)<br>
+5.ctx.stroke() 填充描边路径颜色<br>
+6.ctx.lineWidth 定义线的粗心状态<br>
+7.ctx.lineCap 每个点与点连接是圆的</p>
+<p><font color=red>绘制圆形</font><br>
+1.var ctx = canvas.getContext(&lsquo;2d&rsquo;)<br>
+2.ctx.fillStyle = &lsquo;red&rsquo;<br>
+3.ctx.beiginPath() 绘制一个新的形状路径开始<br>
+3.ctx.arc(x,y,半径，圆开始，弧度)<br>
+4.ctx.fill()</p>
+<p><font color=red>需要注意的细节</font>
+1.document.body.clientWidth : 获取 body 的宽度(小细节:body 的高度是根据内容高度撑开的)<br>
+2.document.body.clientHeigh : 获取 body 的高度<br>
+3.document.documentElement.clientWidth : 获取 HTML 的宽度<br>
+4.document.documentElement.clientHeight : 获取 HTML 的高度</p>
+<pre><code>var ctx = canvas.getContext(&quot;2d&quot;);
+ctx.fillStyle = &quot;rgb(200,0,0)&quot;;
+ctx.fillRect(10,10,55,50);
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>17 - [JS全解]JS语法</title>
+            <link>http://yaochengjian.com/posts/17/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0817</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/17/</guid>
+            <description>1.JS 版本 历史版本
+ES3，IE6 支持，总体评价 : 垃圾
+ES5，总体评价 : 还是垃圾
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好
+ES2019 与 ES6 差别不大
+为什么说 ES6 一半垃圾
+因为 ES 不能删除以前的特性，要兼容旧的网站
+也就是说以前能运行的网站，以后都要能运行
+对比 Python3 你就知道兼容的好处 : 稳定
+2.表达式与语句 表达式
+ 1+2 表达式的值为 3 add(1,2)表达式的值为函数的返回值 console.log 表达式的值为函数本身 console.log(3) 表达式的值为多少? undefined  语句
+ var a = 1 是一个语句  二者的区别
+ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境(声明、赋值) 上面两句话并不是绝对的  3.空格  大部分空格没有实际意义 只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined SYntaxError : 语法错误  4.区块 block {把代码包在一起let a = 1;let b = 2;}常常与 if / for / while 合用</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1js-版本font"><font color=red>1.JS 版本</font></h3>
+<p><font color=red>历史版本</font><br>
+ES3，IE6 支持，总体评价 : 垃圾<br>
+ES5，总体评价 : 还是垃圾<br>
+ES6，大部分浏览器支持，总体评价 : 一半垃圾一半好<br>
+ES2019 与 ES6 差别不大</p>
+<p><font color=red>为什么说 ES6 一半垃圾</font><br>
+因为 ES 不能删除以前的特性，要兼容旧的网站<br>
+也就是说以前能运行的网站，以后都要能运行<br>
+对比 Python3 你就知道兼容的好处 : 稳定</p>
+<h3 id="font-colorred2表达式与语句font"><font color=red>2.表达式与语句</font></h3>
+<p><font color=red>表达式</font></p>
+<ol>
+<li>1+2 表达式的值为 3</li>
+<li>add(1,2)表达式的值为函数的返回值</li>
+<li>console.log 表达式的值为函数本身</li>
+<li>console.log(3) 表达式的值为多少? undefined</li>
+</ol>
+<p><font color=red>语句</font></p>
+<ol>
+<li>var a = 1 是一个语句</li>
+</ol>
+<p><font color=red>二者的区别</font></p>
+<ol>
+<li>表达式一般都有值，语句可能有也可能没有</li>
+<li>语句一般会改变环境(声明、赋值)</li>
+<li>上面两句话并不是绝对的</li>
+</ol>
+<h3 id="font-colorred3空格font"><font color=red>3.空格</font></h3>
+<ol>
+<li>大部分空格没有实际意义</li>
+<li>只有一个地方不能加回车，那就是 return 后面，加了函数调用会返回一个 undefined</li>
+<li>SYntaxError : 语法错误</li>
+</ol>
+<h3 id="font-colorred4区块-blockfont"><font color=red>4.区块 block</font></h3>
+<pre><code>{
+    把代码包在一起
+    let a = 1;
+    let b = 2;
+}
+</code></pre><p>常常与 if / for / while 合用</p>
+<h3 id="font-colorred5if-语句font"><font color=red>5.if 语句</font></h3>
+<p><font color=red>语句</font></p>
+<ol>
+<li>if(表达式){语句 1}else{语句 2}</li>
+<li>{}在语句只有一句的时候可以省略，不建议这样做</li>
+</ol>
+<p><font color=red>变态情况</font></p>
+<ol>
+<li>表达式里可以非常变态，如 a = 1</li>
+<li>语句 1 里可以非常变态，如嵌套的 if else</li>
+<li>语句 2 里可以非常变态，如嵌套的 if else</li>
+</ol>
+<pre><code>
+a = 1
+if(a === 2)   这里其实有一个无形的{}，条件成立了依然会执行，只会管第一句话
+  console.log('a');
+  console.log('b');
+</code></pre><h3 id="font-colorred6switch-语句font"><font color=red>6.switch 语句</font></h3>
+<p><font color=red>语法</font></p>
+<pre><code>switch(a){
+    case 1:
+    console.log(1);
+        break;
+    case 2:
+    console.log(2);
+        break;
+    case 3:
+    case 4:
+    console.log(3,4);
+        break;
+    default:
+    console.log(&quot;hi&quot;);
+}
+</code></pre><ol>
+<li>大部分时候，省略 break 你就完了</li>
+<li>少部分时候，可以利用 break</li>
+</ol>
+<h3 id="font-colorred7问好冒号表达式font"><font color=red>7.问好冒号表达式</font></h3>
+<ol>
+<li>表达式 1 ? 表达式 2 : 表达式 3</li>
+</ol>
+<pre><code>var a = 10;
+var b = 20;
+a &gt; b ? console.log(a) ? console.log(b);
+</code></pre><h3 id="font-colorred8-短路逻辑font"><font color=red>8.&amp;&amp; ||短路逻辑</font></h3>
+<ol>
+<li>A &amp;&amp; B 如果 A 是是假，就取 A! 如果 A 是真，就会取 B</li>
+<li>A || B 如果 A 是真，就直接取 A(始终会取一个真值)，全部是假就会取最后一个</li>
+</ol>
+<h3 id="font-colorred9for-循环font"><font color=red>9.for 循环</font></h3>
+<p><font color=red>语法</font></p>
+<pre><code>for(语句1;表达式2;语句3){
+    循环体
+}
+</code></pre><ol>
+<li>先执行语句 1</li>
+<li>然后判断表达式 2</li>
+<li>如果为真，执行循环体，然后执行语句 3</li>
+<li>如果为假，直接退出循环，执行后面的语句</li>
+</ol>
+<p><font color=red>10.break 和 coontinue</font></p>
+<ol>
+<li>break 退出当前循环</li>
+<li>continent 退出当前一次循环</li>
+</ol>
+<p><font color=red>11.label 语句</font><br>
+一般不会使用，面试中会遇到 : 举例</p>
+<pre><code>{
+    foo : 1
+}
+</code></pre><p>面试中会被问 : 上述是什么东西?<br>
+我们的回答就是 : 这就是一个 label，它的内容为 1</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>18 - [JS全解]JS数据类型</title>
+            <link>http://yaochengjian.com/posts/18/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0818</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/18/</guid>
+            <description>1.用 0~127 表示所有符号  48~57 表示数字符号 65~90 表示大写字母 97~122 表示小写字母  2.JS 中的数据类型(7 种)   数字 number
+  字符串 string
+1.写法&#39;你好&#39; 单引号&amp;quot;你好&amp;quot; 双引号`你好` 反引号2.转义&#39;it&#39;s ok&#39; js引擎会认为&#39;it&#39;就结束了，后面的看不懂&#39;it \&#39;s ok&#39; 这就是转义3.如果你想要在字符串里回车可以使用反引号``let s = `这样是可以的用反引号很容易做到`4.通过下标读取字符(下标是从0开始)let s = &#39;hello&#39;;s[0]; //&#39;h&#39;  布尔 bool
+ 1.五个falsy值(falsy就是相当于false但又不是false的值)分别是[undefined 、null、0、NaN、&#39;&#39;]  符号 symbol
+  未定义 undefined
+  空 null</description>
+            <content type="html"><![CDATA[<h3 id="font1用-0127-表示所有符号font"><font>1.用 0~127 表示所有符号</font></h3>
+<ol>
+<li>48~57 表示数字符号</li>
+<li>65~90 表示大写字母</li>
+<li>97~122 表示小写字母</li>
+</ol>
+<h3 id="font-colorred2js-中的数据类型7-种font"><font color=red>2.JS 中的数据类型(7 种)</font></h3>
+<ol>
+<li>
+<p>数字 number</p>
+</li>
+<li>
+<p>字符串 string</p>
+<pre><code>1.写法
+ '你好'  单引号
+ &quot;你好&quot;  双引号
+ `你好`  反引号
+
+2.转义
+ 'it's ok' js引擎会认为'it'就结束了，后面的看不懂
+ 'it \'s ok' 这就是转义
+
+3.如果你想要在字符串里回车可以使用反引号``
+  let s = `这样是
+  可以的
+  用反引号很容易做到`
+
+4.通过下标读取字符(下标是从0开始)
+  let s = 'hello';
+  s[0]; //'h'
+</code></pre></li>
+<li>
+<p>布尔 bool</p>
+<pre><code> 1.五个falsy值(falsy就是相当于false但又不是false的值)
+   分别是[undefined 、null、0、NaN、'']
+</code></pre></li>
+<li>
+<p>符号 symbol</p>
+</li>
+<li>
+<p>未定义 undefined</p>
+</li>
+<li>
+<p>空 null</p>
+<pre><code>区别
+ 1.如果一个变量声明了，但没有赋值，那么默认值就是undefined，而不是null
+ 2.如果一个函数，没有写return，那么默认return undefined，而不是null
+ 3.undefined更多是默认的空，null是主动的空
+</code></pre></li>
+<li>
+<p>对象 object</p>
+</li>
+</ol>
+<h3 id="font-colorred3特殊值font"><font color=red>3.特殊值</font></h3>
+<ol>
+<li>正 0 和 负 0</li>
+<li>无穷大 (Infinity 、+Infinity 、-Infinity)</li>
+<li>无法表示的数字 (NaN)</li>
+</ol>
+<h3 id="font-colorred4变量声明font"><font color=red>4.变量声明</font></h3>
+<ol>
+<li>三种声明方式</li>
+</ol>
+<pre><code>   var a = 1;
+   let a = 1;
+   const a = 1
+
+   区别
+   1.var是过时的、不好用的方式
+   2.let是新的，更合理的方式
+   3.const是声明是必须赋值，且不能再改的方式
+
+   let 声明[规则]
+   1.遵循块作用域，即使用范围不能超出{}
+   2.不能重复声明
+   3.可以赋值，也可以不赋值
+   4.必须先声明再使用，否则报错
+   5.全局声明的let变量，不会变成window的属性
+   6.for循环配合let有奇效
+
+   const 声明[规则]
+   1.跟let几乎一样
+   2.只有一条不一样 : 声明时就要赋值，赋值后不能改
+</code></pre><h3 id="font-colorred5类型转换font"><font color=red>5.类型转换</font></h3>
+<pre><code>1. number =&gt; string  数字转字符串
+   String(n)
+   n + ''
+
+2. string =&gt; number  字符串转数字
+   Number(s)
+   parseInt(s) / parseFloat(s)
+   s - 0
+   +s
+
+3. x =&gt; boll  转为布尔型
+   Boolean(x)
+   !!x
+
+4. x =&gt; string  把任何东西转为字符串
+   String(x)
+   x.toString()
+</code></pre><p>秘密花园是讲 JavaScript 各种奇葩之处</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>19 - [JS全解]JS对象</title>
+            <link>http://yaochengjian.com/posts/19/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0819</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/19/</guid>
+            <description>1.对象 object 对象定义
+无序的数据集合键值对的集合let obj = {&#39;name&#39; : &#39;chengjian&#39;,&#39;age&#39; : 18}let obj = new Object({&#39;name&#39; : &#39;chengjian&#39;})细节1.键名是字符串，不是标识符，可以包含任意字符2.引号可省略3.就算引号省略了，键名也还是字符串(重要)4.Object.keys(obj)可以得到obj的所有key变量作属性名
+let p1 = &amp;quot;name&amp;quot;;let obj = {p1 : &#39;chengjian&#39;} 这样写，属性名为&#39;p1&#39;let obj = {[p1] : &#39;chengjian&#39;} 这样写，属性名为&#39;name&#39;1.不加[]的属性名会自动变成字符串2.加了[]则会当做变量求值3.值如果不是字符串，则会自动变成字符串2.对象增删改查 删除
+ let obj = {a : chengjian}console.log(&#39;xxx&#39; in obj)1.不含属性名&#39;a&#39; in obj2.含有属性名，但是值为undefined&#39;a&#39; in obj &amp;amp;&amp;amp; obj.</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1对象-objectfont"><font color=red>1.对象 object</font></h3>
+<p><font color=red>对象定义</font></p>
+<pre><code>无序的数据集合
+键值对的集合
+let obj = {
+    'name' : 'chengjian',
+    'age'  : 18
+}
+
+let obj = new Object({'name' : 'chengjian'})
+
+细节
+1.键名是字符串，不是标识符，可以包含任意字符
+2.引号可省略
+3.就算引号省略了，键名也还是字符串(重要)
+4.Object.keys(obj)可以得到obj的所有key
+</code></pre><p><font color=red>变量作属性名</font></p>
+<pre><code>let p1 = &quot;name&quot;;
+let obj = {p1 : 'chengjian'} 这样写，属性名为'p1'
+let obj = {[p1] : 'chengjian'} 这样写，属性名为'name'
+
+1.不加[]的属性名会自动变成字符串
+2.加了[]则会当做变量求值
+3.值如果不是字符串，则会自动变成字符串
+</code></pre><h3 id="font-color2对象增删改查font"><font color>2.对象增删改查</font></h3>
+<p><font color=red>删除</font></p>
+<pre><code>  let obj = {
+      a : chengjian
+  }
+  console.log('xxx' in obj)
+
+  1.不含属性名
+    'a' in obj
+
+  2.含有属性名，但是值为undefined
+    'a' in obj &amp;&amp; obj.a === undefined
+</code></pre><ol>
+<li>delete obj.xxx 或 delete obj[&lsquo;xxx&rsquo;] 即可删除 obj 的 xxx 属性</li>
+<li>&lsquo;xxx&rsquo; in window 可以判断该属性是否存在该对象里面，返回 true | false，无法区自身和公有属性</li>
+</ol>
+<p><font color=red>查</font></p>
+<pre><code>1.查看自身所有属性
+Object.keys(obj)
+
+2.查看自身所有值
+Object.values(obj)
+
+3.查看自身属性和值
+Object.entries(obj)
+
+3.判断一个属性是否是自身属性
+let obj = {
+    'name' : 'chengjian',
+    'age' : 18
+}
+obj.hasOwnProperty('name')
+
+</code></pre><p><font color=red>修改或增加属性(写属性)</font></p>
+<pre><code>1.Object.assign(赋值的对象，赋值内容[对象形式写出])
+let obj = {}
+Object.assign(obj,{p1:1,p2:2,p3:3})
+
+2.Object.create() 创建一个新对象，使用现有的对象来提供新创建对象的__proto__
+let person = {
+    onOff : true,
+    show : function(){
+      console.log('My name is YaoChengjian');
+    }
+}
+let me = Object.create(person)
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>20 - [JS全解]JS对象分类</title>
+            <link>http://yaochengjian.com/posts/20/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0820</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/20/</guid>
+            <description>1.堆内存与栈内存  let squareList = [];let widthList = [5,6,5,6,5,6]let squarePrototype = {getArea(){return this.width * this.width;}getLength(){return this.width * 4}}for(let i = 0;i &amp;lt; 12;i++&amp;gt;){squareList[i] = Object.create(squarePrototype);squareList[i].width = widthList[i]}2.new 关键字 大小写
+1.所有构造函数(专门用于创建对象的函数)首字母大写
+2.所有被构造出来的对象，首字母小写
+ function Square(width){this.width = width;}Square.prototype.getArea = function(){return this.width * this.width;}Square.prototype.getLength = function(){return this.width * 4}let square = new Square(5);square.</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1堆内存与栈内存font"><font color=red>1.堆内存与栈内存</font></h3>
+<pre><code>    let squareList = [];
+    let widthList = [5,6,5,6,5,6]
+    let squarePrototype = {
+        getArea(){
+            return this.width * this.width;
+        }
+        getLength(){
+            return this.width * 4
+        }
+    }
+    for(let i = 0;i &lt; 12;i++&gt;){
+        squareList[i] = Object.create(squarePrototype);
+        squareList[i].width = widthList[i]
+    }
+</code></pre><p><img src="../../images/%E5%86%85%E5%AD%98.png" alt=""></p>
+<h3 id="font-colorred2new-关键字font"><font color=red>2.new 关键字</font></h3>
+<p><font color=red>大小写</font><br>
+1.所有构造函数(专门用于创建对象的函数)首字母大写<br>
+2.所有被构造出来的对象，首字母小写</p>
+<pre><code>    function Square(width){
+        this.width = width;
+    }
+    Square.prototype.getArea = function(){
+        return this.width * this.width;
+    }
+    Square.prototype.getLength = function(){
+        return this.width * 4
+    }
+    let square = new Square(5);
+    square.width;
+    square.getArea();
+    square.getLength();
+
+    总结：new Fn()自动做了四件事情
+    1.自动创建空对象
+    2.自动为空对象关联原型，原型地址指定为Fn.prototype
+    3.自动将空对象作为this关键字运行构造函数
+    4.自动return this
+</code></pre><h3 id="font-colorred3如何确定一个对象的原型font"><font color=red>3.如何确定一个对象的原型</font></h3>
+<pre><code>为什么?
+    1.let obj = new Object() 的原型是Object.prototype
+    2.let arr = new Array() 的原型是Array.prototype
+    3.let square = new Square() 的原型是Square.prototype
+    4.let fn = new Function() 的原型是Function.prototype
+因为new操作故意这么做
+    1.自动创建空对象
+    2.自动为空对象关联原型，原型地址指定为X.prototype
+    3.自动将空对象作为this关键字运行构造函数
+    4.自动return this
+结论
+    你是谁构造的，你的原型就是谁的prototype属性对象的对象
+</code></pre><h3 id="font-colorred4类型-vs-类font"><font color=red>4.类型 V.S 类</font></h3>
+<p><font color=red>类型</font></p>
+<ol>
+<li>类型是 JS 数据的分类，有七种</li>
+<li>四基两空一对象</li>
+</ol>
+<p><font color=red>类</font></p>
+<ol>
+<li>类是针对于对象的分类，有无数种</li>
+<li>常见的有 Array、Function、Date、RegExp 等</li>
+</ol>
+<pre><code>1.定义一个数组
+    let arr = [1,2,3]
+    let arr = new Array(1,2,3) 元素为1,2,3
+    let arr = new Array(3) 长度为3
+
+2.数组对象的自身属性
+    'length'
+    注意，属性名没有数字，只有字符串
+
+3.JS终极一问
+    a : window是谁构造的? 可以通过constructor属性看出构造者是谁
+    b : window.Object 是谁构造的? 所有函数都是window.Funtion构造的
+    c : window.Function是谁构造的?
+            1.所有函数都是window.Function 构造的
+            2.浏览器构造了Function,然后指定它的构造者是自己
+</code></pre><h3 id="font-colorred5class-语法font"><font color=red>5.class 语法</font></h3>
+<pre><code>    class Rectangle{
+        constructor(height,width){
+            this.height = height;
+            this.width = width;
+        }
+        get area(){
+            return this.calcArea();
+        }
+        calcArea(){
+            return this.height * this.width;
+        }
+    }
+
+    let square = new Rectangle(10,10);
+
+    1.一个类只能拥有一个名为'construction'的特殊方法
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>21 - [JS全解]JS数组</title>
+            <link>http://yaochengjian.com/posts/21/</link>
+            <pubDate>Wed, 25 Dec 2019 21:55:11 +0821</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/21/</guid>
+            <description>1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&amp;gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.</description>
+            <content type="html"><![CDATA[<h3 id="font-colorred1js-数组font"><font color=red>1.JS 数组</font></h3>
+<pre><code>1.创建一个数组
+    let arr = [1,2,3];
+    let arr = new Array(1,2,3);
+    let arr = new Array(3) 只有一个参数时候length长度为3
+
+2.转化
+    let arr = '1,2,3'.split(',') 以逗号为分割成为一个数组
+    let arr = '123'.split('') 以空字符串形式分割成为一个数组
+    let arr = Array.from('abc') 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组
+
+3.把伪数组变成数组
+    let divs = document.getElementsByTagName('div');
+    let arrDiv = Array.from(divs);
+    console.log(arrDiv);
+
+4.concat()合并数组
+    let arr1 = [1,2,3];
+    let arr2 = [4,5,6];
+    arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组
+
+5.slice()截取数组
+    let arr1 = [1,2,3,4,5,6];
+    let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组
+    let arr3 = arr.slice(0); =&gt; 截取真个数组
+    let arr4 = arr.slice(2,5) =&gt; [3,4,5] 从索引0到索引5(不包括索引5)
+</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><font color=red>2.数组的增删改查(修改原数组)</font></h3>
+<pre><code>1.删除头部元素
+    arr.shift() arr被修改，并返回被删元素
+
+2.删除尾部元素
+    arr.pop() arr被修改，并返回被删元素
+
+3.删除部分内容(arr会被修改)
+    arr.splice(index,num) index从第几个开始，num删除多少个
+    arr.splice(idnex,num,x,y) index从第几个开始，num删除多少个，添加x,y上去
+</code></pre><h3 id="font-colorred3查看所有元素font"><font color=red>3.查看所有元素</font></h3>
+<pre><code>   let arr = [1,2,3,4,5];
+       arr.x = 'xxx';
+1.查看所有属性名
+        Object.keys(arr);
+        for(let key in arr){
+            console.log(`${key} : ${arr[key]}`)
+        }
+
+2.查看数字属性名和值
+        for(let i = 0;i &lt; arr.length;i++){
+                console.log(`${i} : ${arr[i]}`)
+        }
+
+        arr.forEach(function(key,value){
+                console.log(`${key} : ${value}`)
+        })
+
+3.查找某个元素是否在数组里
+        arr.indexOf(3); 存在返回索引，不存在返回-1
+
+4.使用条件查找元素
+        arr.find(function(x){   find元素找到满足条件的即停止,返回那个值
+            return x % 2 === 0
+        });
+
+5.使用条件查找元素的索引
+        arr.findIndex(function(x){  findIndex元素找到满足条件的即停止，返回索引
+            return x % 2 === 0
+        })
+</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><font color=red>4.增加数组中的元素(修改原数组)</font></h3>
+<pre><code>    let arr = [1,2,3,4,5];
+1.在尾部加元素
+    arr.push(newItem) 修改arr,返回新长度
+    arr.push(item1,item2)
+
+2.在头部加元素
+    arr.unshift(newItem) 修改arr,返回新长度
+    arr.unshift(item1,item2)
+</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><font color=red>5.数组中排序(修改原数组)</font></h3>
+<pre><code>    let arr = [{name:'发条魔灵',score:98},
+               {name:'疾风亚索',score:94},
+               {name:'寒冰射手',score:91}];
+
+        1.a减b的值是正数则是从小到大排序，负数则从大到小排序
+        2.a和b是arr里面随机一项，一直会比较完
+
+        arr.sort(function(a,b){
+            return a.score - b.score;
+        });
+</code></pre><h3 id="font-colorred6font"><font color=red>6.</font></h3>
+<pre><code>    let arr = [1,2,3,4,5,6];
+
+1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
+        arr.map(function(item){
+            return item * item
+        });
+
+2.filter()方法，是true就返回，否则就筛选掉
+        arr.filter(function(item){
+            return item % 2 === 0;
+        });
+
+3.reduce()方法
+        1.initial代表初始值(可以设置任意自己想要的数据类型)
+        2.item是数组中的值，从下标0开始
+        arr.reduce(function(initial,item){
+                return  &quot;自己想要的东西&quot;
+        },initial);
+
+        案例1
+        arr.reduce(function(sum,item){
+                return sum+item
+        },0)
+
+        案例2
+        arr.reduce(function(result,item){
+                return result.concat(item*item);
+        },[]);
+</code></pre><pre><code>  面试题
+  let arr = [
+    { 名称: &quot;动物&quot;, id: 1, parent: null },
+    { 名称: &quot;狗&quot;, id: 2, parent: 1 },
+    { 名称: &quot;猫&quot;, id: 3, parent: 1 }
+  ];
+
+  变成
+    {
+    id : 1,
+    名称 : '动物',
+    children : [
+    {id:2,名称:'狗',children:null},
+    {id:3,名称:'猫',children:null}
+    ]
+    }
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>1000 - 变量提升、闭包</title>
+            <link>http://yaochengjian.com/posts/1000/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/1000/</guid>
+            <description>1.一般都把 js 放到 body 的末尾 a:为什么？
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？
+2.js 数据渲染机制及堆栈内存 a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)
+&amp;lt;!--1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))--&amp;gt;var a = 12;var b = a;b = 13;console.log(a);b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)
+var ary1 = [12,23];var ary2 = ary1;ary2.push(100);console.log(ary1);A:栈内存:作用域
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的
+=&amp;gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了
+B:堆内存:引用值对应的空间
+1.存储引用类型值(对象:键值对 函数:代码字符串)
+=&amp;gt;当前堆内存稀释被销毁，那么这个引用值彻底没了
+=&amp;gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉
+=&amp;gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</description>
+            <content type="html"><![CDATA[<h3 id="1一般都把-js-放到-body-的末尾">1.一般都把 js 放到 body 的末尾</h3>
+<p>a:为什么？<br>
+b:放在 head 中可以不可以？如何放到 head 中也可以实现出放到 body 末尾的效果？<br>
+c:script 标签中有两个属性：defer / async,这两个属性是做什么的？</p>
+<h3 id="2js-数据渲染机制及堆栈内存">2.js 数据渲染机制及堆栈内存</h3>
+<p>a:基本类型(因为数据简单，之间在全局作用域开辟一个地址存储)</p>
+<pre><code>&lt;!--
+1.变量提升(找var和函数(var开始定义是undefined、函数定义赋值是同时完成的))
+--&gt;
+var a = 12;
+var b = a;
+b = 13;
+console.log(a);
+</code></pre><p><img src="../../images/js-1.png" alt=""></p>
+<p>b:引用类型(因为数据复杂，所以会开辟一个堆内存来存储)</p>
+<pre><code>var ary1 = [12,23];
+var ary2 = ary1;
+ary2.push(100);
+console.log(ary1);
+</code></pre><p><img src="../../images/js2.png" alt=""></p>
+<p>A:栈内存:作用域<br>
+1.提供一个供 js 代码自上而下执行的环境(代码都是在栈内存中执行的)<br>
+2.由于基本数据类型比较简单，他们都是直接在栈内存中开辟一个位置，把值直接存进去的<br>
+    =&gt;当栈内存被销毁，存储的那些基本值也都跟着销毁了</p>
+<p>B:堆内存:引用值对应的空间<br>
+1.存储引用类型值(对象:键值对 函数:代码字符串)<br>
+=&gt;当前堆内存稀释被销毁，那么这个引用值彻底没了<br>
+=&gt;堆内存的释放：当堆内存没有被任何变量或者其它东西所占用，浏览器会在空闲的时候，自主进行内存回收，把所有不被占用的堆内存销毁掉<br>
+=&gt;xxx = null 通过空对象指针 null 可以让原始变量(或者其它东西)谁都不指向，那么原有被占用内存就没有被东西占用了，浏览器就会销毁它</p>
+]]></content>
         </item>
         
     </channel>

@@ -34,7 +34,7 @@
 <meta itemprop="description" content="1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:21" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:21" />
-<meta itemprop="wordCount" content="253">
+<meta itemprop="wordCount" content="260">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -125,7 +125,7 @@
             
 
             <div class="post-content">
-                <h3 id="font-colorred1js-数组font"><!-- raw HTML omitted -->1.JS 数组<!-- raw HTML omitted --></h3>
+                <h3 id="font-colorred1js-数组font"><font color=red>1.JS 数组</font></h3>
 <pre><code>1.创建一个数组
     let arr = [1,2,3];
     let arr = new Array(1,2,3);
@@ -150,7 +150,8 @@
     let arr1 = [1,2,3,4,5,6];
     let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组
     let arr3 = arr.slice(0); =&gt; 截取真个数组
-</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><!-- raw HTML omitted -->2.数组的增删改查(修改原数组)<!-- raw HTML omitted --></h3>
+    let arr4 = arr.slice(2,5) =&gt; [3,4,5] 从索引0到索引5(不包括索引5)
+</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><font color=red>2.数组的增删改查(修改原数组)</font></h3>
 <pre><code>1.删除头部元素
     arr.shift() arr被修改，并返回被删元素
 
@@ -160,7 +161,7 @@
 3.删除部分内容(arr会被修改)
     arr.splice(index,num) index从第几个开始，num删除多少个
     arr.splice(idnex,num,x,y) index从第几个开始，num删除多少个，添加x,y上去
-</code></pre><h3 id="font-colorred3查看所有元素font"><!-- raw HTML omitted -->3.查看所有元素<!-- raw HTML omitted --></h3>
+</code></pre><h3 id="font-colorred3查看所有元素font"><font color=red>3.查看所有元素</font></h3>
 <pre><code>   let arr = [1,2,3,4,5];
        arr.x = 'xxx';
 1.查看所有属性名
@@ -190,7 +191,7 @@
         arr.findIndex(function(x){  findIndex元素找到满足条件的即停止，返回索引
             return x % 2 === 0
         })
-</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><!-- raw HTML omitted -->4.增加数组中的元素(修改原数组)<!-- raw HTML omitted --></h3>
+</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><font color=red>4.增加数组中的元素(修改原数组)</font></h3>
 <pre><code>    let arr = [1,2,3,4,5];
 1.在尾部加元素
     arr.push(newItem) 修改arr,返回新长度
@@ -199,7 +200,7 @@
 2.在头部加元素
     arr.unshift(newItem) 修改arr,返回新长度
     arr.unshift(item1,item2)
-</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><!-- raw HTML omitted -->5.数组中排序(修改原数组)<!-- raw HTML omitted --></h3>
+</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><font color=red>5.数组中排序(修改原数组)</font></h3>
 <pre><code>    let arr = [{name:'发条魔灵',score:98},
                {name:'疾风亚索',score:94},
                {name:'寒冰射手',score:91}];
@@ -210,7 +211,7 @@
         arr.sort(function(a,b){
             return a.score - b.score;
         });
-</code></pre><h3 id="font-colorred6font"><!-- raw HTML omitted -->6.<!-- raw HTML omitted --></h3>
+</code></pre><h3 id="font-colorred6font"><font color=red>6.</font></h3>
 <pre><code>    let arr = [1,2,3,4,5,6];
 
 1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
@@ -264,7 +265,7 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>253 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>260 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:34 &#43;0800</p>
         </div>

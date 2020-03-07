@@ -5,25 +5,28 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.布局分类 两种a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+<meta name="description" content="1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
 b: 不固定宽度布局，主要靠文档流的原理来布局
 2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
 &amp;lt;style&amp;gt;span{border:1px solid red;}&amp;lt;/style&amp;gt;//它本来就会根据你页面的宽度大小来自适应&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;1&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;2&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;3&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt;5&amp;lt;/span&amp;gt;3.第三种布局 a: 响应式布局
 b: 意思就是 pc 上固定宽度，手机上不固定宽度
 c: 也就是一种混合布局
-4.布局的两种思路 ① 从大到小先定下大局
+4.布局的两种思路 ① 从大到小
+先定下大局
 然后完善每个部分的小布局
-② 从小到大先完成小布局
+② 从小到大
+先完成小布局
 然后组合成大布局
-③ 两种均可新人推荐用第二种，因为小的简单
+③ 两种均可
+新人推荐用第二种，因为小的简单
 老手一般用第一种，因为熟练有大局观
 4.用什么 css 布局 5.float 布局 a: 步骤
 -子元素上加 float:left/right 和 width
 -在父元素上加.clearfix(必须要加上)
 实践 不同布局
 -用 float 做两栏布局(如顶部条)
--用 float 做三栏布局(内容区)
--用 float 做四栏布局(如导航)" />
+-用 float 做三栏布局(内容区)" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -49,28 +52,31 @@ c: 也就是一种混合布局
 
 
 <meta itemprop="name" content="9 - [css全解]布局">
-<meta itemprop="description" content="1.布局分类 两种a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+<meta itemprop="description" content="1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
 b: 不固定宽度布局，主要靠文档流的原理来布局
 2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
 &lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a: 响应式布局
 b: 意思就是 pc 上固定宽度，手机上不固定宽度
 c: 也就是一种混合布局
-4.布局的两种思路 ① 从大到小先定下大局
+4.布局的两种思路 ① 从大到小
+先定下大局
 然后完善每个部分的小布局
-② 从小到大先完成小布局
+② 从小到大
+先完成小布局
 然后组合成大布局
-③ 两种均可新人推荐用第二种，因为小的简单
+③ 两种均可
+新人推荐用第二种，因为小的简单
 老手一般用第一种，因为熟练有大局观
 4.用什么 css 布局 5.float 布局 a: 步骤
 -子元素上加 float:left/right 和 width
 -在父元素上加.clearfix(必须要加上)
 实践 不同布局
 -用 float 做两栏布局(如顶部条)
--用 float 做三栏布局(内容区)
--用 float 做四栏布局(如导航)">
+-用 float 做三栏布局(内容区)">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:09" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:09" />
-<meta itemprop="wordCount" content="289">
+<meta itemprop="wordCount" content="303">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -79,25 +85,28 @@ c: 也就是一种混合布局
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
 <meta name="twitter:title" content="9 - [css全解]布局"/>
-<meta name="twitter:description" content="1.布局分类 两种a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
+<meta name="twitter:description" content="1.布局分类 两种
+a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px
 b: 不固定宽度布局，主要靠文档流的原理来布局
 2.还记得吗? a: 文档流本来就是自适应的，不需要加额外的样式
 &lt;style&gt;span{border:1px solid red;}&lt;/style&gt;//它本来就会根据你页面的宽度大小来自适应&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;&lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;span&gt;3&lt;/span&gt;&lt;span&gt;5&lt;/span&gt;3.第三种布局 a: 响应式布局
 b: 意思就是 pc 上固定宽度，手机上不固定宽度
 c: 也就是一种混合布局
-4.布局的两种思路 ① 从大到小先定下大局
+4.布局的两种思路 ① 从大到小
+先定下大局
 然后完善每个部分的小布局
-② 从小到大先完成小布局
+② 从小到大
+先完成小布局
 然后组合成大布局
-③ 两种均可新人推荐用第二种，因为小的简单
+③ 两种均可
+新人推荐用第二种，因为小的简单
 老手一般用第一种，因为熟练有大局观
 4.用什么 css 布局 5.float 布局 a: 步骤
 -子元素上加 float:left/right 和 width
 -在父元素上加.clearfix(必须要加上)
 实践 不同布局
 -用 float 做两栏布局(如顶部条)
--用 float 做三栏布局(内容区)
--用 float 做四栏布局(如导航)"/>
+-用 float 做三栏布局(内容区)"/>
 
 
 
@@ -179,11 +188,11 @@ c: 也就是一种混合布局
             
 
             <div class="post-content">
-                <h3 id="font-colorred1布局分类font"><!-- raw HTML omitted -->1.布局分类<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->两种<!-- raw HTML omitted --><br>
+                <h3 id="1布局分类">1.布局分类</h3>
+<p><font color=#CC3300>两种</font><br>
 a: 固定宽度布局，一般宽度为 960 、 1000 、 1024px<br>
 b: 不固定宽度布局，主要靠文档流的原理来布局</p>
-<h3 id="font-colorred2还记得吗font"><!-- raw HTML omitted -->2.还记得吗?<!-- raw HTML omitted --></h3>
+<h3 id="2还记得吗">2.还记得吗?</h3>
 <p>a: 文档流本来就是自适应的，不需要加额外的样式</p>
 <pre><code>&lt;style&gt;
     span{
@@ -199,34 +208,34 @@ b: 不固定宽度布局，主要靠文档流的原理来布局</p>
 &lt;span&gt;2&lt;/span&gt;
 &lt;span&gt;3&lt;/span&gt;
 &lt;span&gt;5&lt;/span&gt;
-</code></pre><h3 id="font-colorred3第三种布局font"><!-- raw HTML omitted -->3.第三种布局<!-- raw HTML omitted --></h3>
+</code></pre><h3 id="3第三种布局">3.第三种布局</h3>
 <p>a: 响应式布局<br>
 b: 意思就是 pc 上固定宽度，手机上不固定宽度<br>
 c: 也就是一种混合布局</p>
-<h3 id="font-colorred4布局的两种思路font"><!-- raw HTML omitted -->4.布局的两种思路<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted -->① 从大到小<!-- raw HTML omitted --><br>
+<h3 id="4布局的两种思路">4.布局的两种思路</h3>
+<p><font color=#CC3300>① 从大到小</font><br>
 先定下大局<br>
 然后完善每个部分的小布局</p>
-<p><!-- raw HTML omitted -->② 从小到大<!-- raw HTML omitted --><br>
+<p><font color=#CC3300>② 从小到大</font><br>
 先完成小布局<br>
 然后组合成大布局</p>
-<p><!-- raw HTML omitted -->③ 两种均可<!-- raw HTML omitted --><br>
+<p><font color=#CC3300>③ 两种均可</font><br>
 新人推荐用第二种，因为小的简单<br>
 老手一般用第一种，因为熟练有大局观</p>
-<h3 id="font-colorred4用什么-css-布局font"><!-- raw HTML omitted -->4.用什么 css 布局<!-- raw HTML omitted --></h3>
+<h3 id="4用什么-css-布局">4.用什么 css 布局</h3>
 <p><img src="../../images/css%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F.PNG" alt=""></p>
-<h3 id="font-colorred5float-布局font"><!-- raw HTML omitted -->5.float 布局<!-- raw HTML omitted --></h3>
+<h3 id="5float-布局">5.float 布局</h3>
 <p>a: 步骤<br>
 -子元素上加 float:left/right 和 width<br>
--在父元素上加.clearfix(<!-- raw HTML omitted -->必须要加上<!-- raw HTML omitted -->)</p>
-<h3 id="font-colorred实践font"><!-- raw HTML omitted -->实践<!-- raw HTML omitted --></h3>
+-在父元素上加.clearfix(<font color=red>必须要加上</font>)</p>
+<h3 id="实践">实践</h3>
 <p>不同布局<br>
 -用 float 做两栏布局(如顶部条)<br>
 -用 float 做三栏布局(内容区)<br>
 -用 float 做四栏布局(如导航)<br>
 -用 float 做平均布局(如产品展示区)<br>
-<!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
-<h3 id="font-colorred6flex-布局font"><!-- raw HTML omitted -->6.Flex 布局<!-- raw HTML omitted --></h3>
+<a href="http://yaochengjian.com/Different-layout/1.float" target="_balck">案例展示</a></p>
+<h3 id="6flex-布局">6.Flex 布局</h3>
 <p>a: 让一个元素变成 flex 容器(下面是容器的属性)</p>
 <pre><code>&lt;style&gt;
     .container{
@@ -263,24 +272,24 @@ align-content:flex-end 大家都往后靠<br>
 align-content:center 大家都往中间靠(对单行是没有效果的)<br>
 align-content:space-between 把空间都放在中间<br>
 align-content:space-around 均匀分布两则空间</p>
-<h3 id="font-colorredflex-item-有哪些属性容器里面的子元素font"><!-- raw HTML omitted -->flex item 有哪些属性(容器里面的子元素)<!-- raw HTML omitted --></h3>
+<h3 id="font-colorredflex-item-有哪些属性容器里面的子元素font"><font color=red>flex item 有哪些属性(容器里面的子元素)</font></h3>
 <p>a: order 属性(设置弹性盒子模型对象子元素的顺序)<br>
 b：flex-grow 属性(控制自己如何长胖,默认值是 0)<br>
 c：flex-shrink 属性(控制如何变瘦)一般写 flex-shrink:0 防止变瘦，默认是 1<br>
 d：align-self 属性 (algin-self:flex-start algin-self:flex-end 根据次轴来决定的)</p>
-<p><!-- raw HTML omitted -->flex 布局实践(不同布局)<!-- raw HTML omitted --><br>
+<p><font color=red>flex 布局实践(不同布局)</font><br>
 -用 flex 做两栏布局<br>
 -用 flex 做三栏布局<br>
 -用 flex 做四栏布局<br>
 -用 flex 做平均布局<br>
 -用 flex 组合使用，做更复杂的布局</p>
-<p><!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted -->经验<!-- raw HTML omitted --><br>
+<p><a href="http://yaochengjian.com/Different-layout/2.flex" target="_balck">案例展示</a></p>
+<p><font color=red>经验</font><br>
 -永远不要把 width 和 height 写死，除非特殊说明<br>
 -用 min-width / max-width / min-height / max-height<br>
 -flex 可以基本满足所有需求<br>
 -flex 和 margin-xxx:auto 配合有意外效果</p>
-<p><!-- raw HTML omitted -->什么叫写死<!-- raw HTML omitted --><br>
+<p><font color=red>什么叫写死</font><br>
 -写死 width:100px;<br>
 不写死<br>
 -width:50%<br>
@@ -288,19 +297,19 @@ d：align-self 属性 (algin-self:flex-start algin-self:flex-end 根据次轴来
 -width:30vw<br>
 -min-width:80%<br>
 -特点：不使用 px，或者加 min max 前缀</p>
-<h3 id="font-colorred7grid-布局font"><!-- raw HTML omitted -->7.Grid 布局<!-- raw HTML omitted --></h3>
+<h3 id="font-colorred7grid-布局font"><font color=red>7.Grid 布局</font></h3>
 <p>a: 让一个元素变成 gird 容器(下面是容器的属性)</p>
 <pre><code>.container{
     display:gird | inline-grid;
 }
-</code></pre><p><!-- raw HTML omitted -->设置行和列<!-- raw HTML omitted --><br>
+</code></pre><p><font color=red>设置行和列</font><br>
 grid-template-columns:40px 50px auto 50px 40px;<br>
 grid-template-rows:25% 100px auto;
 <img src="../../images/gird.png" alt=""></p>
-<p><!-- raw HTML omitted -->平均布局可以这样子<!-- raw HTML omitted --><br>
+<p><font color=red>平均布局可以这样子</font><br>
 grid-template-columns:1fr 1fr 1fr;<br>
 grid-template-rows:1fr 1fr 1fr;</p>
-<p><!-- raw HTML omitted -->grid-template-areas<!-- raw HTML omitted --></p>
+<p><font color=red>grid-template-areas</font></p>
 <pre><code>&lt;div class=&quot;container&quot;&gt;
     &lt;header&gt;&lt;/header&gt;
     &lt;asdie&gt;&lt;/asdie&gt;
@@ -318,20 +327,20 @@ grid-template-rows:1fr 1fr 1fr;</p>
 .ad{
         grid-areas:ad
     }
-</code></pre><p><!-- raw HTML omitted -->grid-gap(基本算替换了 margin 外边距)<!-- raw HTML omitted --><br>
+</code></pre><p><font color=red>grid-gap(基本算替换了 margin 外边距)</font><br>
 a：grid-gap:10px 则行和列都会生效<br>
 b：grid-row-gap:10px 则行生效<br>
 c：grid-column-gap:10px 则列生效</p>
-<h3 id="font-colorredgrid-有哪些属性容器里面的子元素font"><!-- raw HTML omitted -->grid 有哪些属性(容器里面的子元素)<!-- raw HTML omitted --></h3>
+<h3 id="font-colorredgrid-有哪些属性容器里面的子元素font"><font color=red>grid 有哪些属性(容器里面的子元素)</font></h3>
 <p>a：grid-rows-start:1<br>
 b：grid-rows-end:3<br>
 c：grid-column-start:1<br>
 d：grid-column-end:3</p>
-<p><!-- raw HTML omitted -->复合样式：<!-- raw HTML omitted --><br>
+<p><font color=red>复合样式：</font><br>
 a：grid-row : 2 / 4 就会设置从第二行开始，到第四行结束<br>
 b: grid-column : 2 / 4 就会设置从第二列开始，到第四列结束<br>
 c：grid-area : 1 / 1 / 3 / 6 第一行开始，第一列开始，第三行结束，第 6 列结束<br>
-<!-- raw HTML omitted -->案例展示<!-- raw HTML omitted --></p>
+<a href="http://yaochengjian.com/Different-layout/3.gird" target="_balck">案例展示</a></p>
 
             </div>
         </article>
@@ -340,7 +349,7 @@ c：grid-area : 1 / 1 / 3 / 6 第一行开始，第一列开始，第三行结�
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>289 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>303 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:46 &#43;0800</p>
         </div>

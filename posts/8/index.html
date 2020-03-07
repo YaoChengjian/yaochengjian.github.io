@@ -5,13 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+<meta name="description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
 b：使用 caniuse.com
 2.语法超级简单 语法 1
 选择器{
-属性名:属性值/*这是一个注释*/
+属性名:属性值
+/*这是一个注释*/
 }
-p{color:blue;background:red;}!注意事项a：所有符号都是英文符号，如果写错了，浏览器会警告
+p{color:blue;background:red;}!注意事项 a：所有符号都是英文符号，如果写错了，浏览器会警告
 b：区分大小写，a 和 A 是不同东西
 c：最后一个分号可以省略，但建议不要省略
 d：任何地方写错了，都不会报错，浏览器会直接忽略
@@ -19,19 +20,19 @@ d：任何地方写错了，都不会报错，浏览器会直接忽略
 @charset &amp;ldquo;utf-8&amp;rdquo;;
 @import url(2.css);
 @media(min-width:100px) and (max-width:200px){ }
-!注意事项a：@charset 必须放在第一行
+!注意事项 a：@charset 必须放在第一行
 b：前面两个@语法必须以分号;结尾
 c：charset 是字符集的意思，但是 utf-8 是字符编码
 3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
 b：border 没出现?说明选择器错了或者语法错了
 c：bug 解决了才可以把 border 删掉
-4.文档流 -流动方向a：inline 元素从左到右，到达最右边才会换行
+4.文档流 -流动方向 a：inline 元素从左到右，到达最右边才会换行
 b：block 元素从上到下，每一个都另起一行
 c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
--宽度a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
+-宽度
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
 b：blcok 默认自动计算宽度，可用 width 指定
-c：inline-block 结合前两者特点，可用 width
--高度a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关" />
+c：inline-block 结合前两者特点，可用 width" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -57,13 +58,14 @@ c：inline-block 结合前两者特点，可用 width
 
 
 <meta itemprop="name" content="8 - [css全解]css基础">
-<meta itemprop="description" content="1.我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+<meta itemprop="description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
 b：使用 caniuse.com
 2.语法超级简单 语法 1
 选择器{
-属性名:属性值/*这是一个注释*/
+属性名:属性值
+/*这是一个注释*/
 }
-p{color:blue;background:red;}!注意事项a：所有符号都是英文符号，如果写错了，浏览器会警告
+p{color:blue;background:red;}!注意事项 a：所有符号都是英文符号，如果写错了，浏览器会警告
 b：区分大小写，a 和 A 是不同东西
 c：最后一个分号可以省略，但建议不要省略
 d：任何地方写错了，都不会报错，浏览器会直接忽略
@@ -71,22 +73,22 @@ d：任何地方写错了，都不会报错，浏览器会直接忽略
 @charset &ldquo;utf-8&rdquo;;
 @import url(2.css);
 @media(min-width:100px) and (max-width:200px){ }
-!注意事项a：@charset 必须放在第一行
+!注意事项 a：@charset 必须放在第一行
 b：前面两个@语法必须以分号;结尾
 c：charset 是字符集的意思，但是 utf-8 是字符编码
 3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
 b：border 没出现?说明选择器错了或者语法错了
 c：bug 解决了才可以把 border 删掉
-4.文档流 -流动方向a：inline 元素从左到右，到达最右边才会换行
+4.文档流 -流动方向 a：inline 元素从左到右，到达最右边才会换行
 b：block 元素从上到下，每一个都另起一行
 c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
--宽度a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
+-宽度
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
 b：blcok 默认自动计算宽度，可用 width 指定
-c：inline-block 结合前两者特点，可用 width
--高度a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关">
+c：inline-block 结合前两者特点，可用 width">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:08" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:08" />
-<meta itemprop="wordCount" content="187">
+<meta itemprop="wordCount" content="200">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -95,13 +97,14 @@ c：inline-block 结合前两者特点，可用 width
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
 <meta name="twitter:title" content="8 - [css全解]css基础"/>
-<meta name="twitter:description" content="1.我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
+<meta name="twitter:description" content="1. 我怎么知道哪些浏览器兼容哪些特性呢？ a：几十种浏览器全部跑一遍
 b：使用 caniuse.com
 2.语法超级简单 语法 1
 选择器{
-属性名:属性值/*这是一个注释*/
+属性名:属性值
+/*这是一个注释*/
 }
-p{color:blue;background:red;}!注意事项a：所有符号都是英文符号，如果写错了，浏览器会警告
+p{color:blue;background:red;}!注意事项 a：所有符号都是英文符号，如果写错了，浏览器会警告
 b：区分大小写，a 和 A 是不同东西
 c：最后一个分号可以省略，但建议不要省略
 d：任何地方写错了，都不会报错，浏览器会直接忽略
@@ -109,19 +112,19 @@ d：任何地方写错了，都不会报错，浏览器会直接忽略
 @charset &ldquo;utf-8&rdquo;;
 @import url(2.css);
 @media(min-width:100px) and (max-width:200px){ }
-!注意事项a：@charset 必须放在第一行
+!注意事项 a：@charset 必须放在第一行
 b：前面两个@语法必须以分号;结尾
 c：charset 是字符集的意思，但是 utf-8 是字符编码
 3.border 调试法 a：怀疑某个元素有问题就给这个元素加 border
 b：border 没出现?说明选择器错了或者语法错了
 c：bug 解决了才可以把 border 删掉
-4.文档流 -流动方向a：inline 元素从左到右，到达最右边才会换行
+4.文档流 -流动方向 a：inline 元素从左到右，到达最右边才会换行
 b：block 元素从上到下，每一个都另起一行
 c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块
--宽度a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
+-宽度
+a：inline 宽度靠内部内容宽度撑开，不能用 width 指定
 b：blcok 默认自动计算宽度，可用 width 指定
-c：inline-block 结合前两者特点，可用 width
--高度a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关"/>
+c：inline-block 结合前两者特点，可用 width"/>
 
 
 
@@ -203,20 +206,20 @@ c：inline-block 结合前两者特点，可用 width
             
 
             <div class="post-content">
-                <h3 id="font-colorred1font-我怎么知道哪些浏览器兼容哪些特性呢"><!-- raw HTML omitted -->1.<!-- raw HTML omitted --> 我怎么知道哪些浏览器兼容哪些特性呢？</h3>
+                <h3 id="1-我怎么知道哪些浏览器兼容哪些特性呢">1. 我怎么知道哪些浏览器兼容哪些特性呢？</h3>
 <p>a：几十种浏览器全部跑一遍<br>
 b：使用 caniuse.com</p>
-<h3 id="font-colorred2font语法超级简单"><!-- raw HTML omitted -->2.<!-- raw HTML omitted -->语法超级简单</h3>
+<h3 id="2语法超级简单">2.语法超级简单</h3>
 <p>语法 1<br>
-<!-- raw HTML omitted -->选择器<!-- raw HTML omitted -->{<br>
-    <!-- raw HTML omitted -->属性名<!-- raw HTML omitted -->:<!-- raw HTML omitted -->属性值<!-- raw HTML omitted --><br>
+<font color=red>选择器</font>{<br>
+    <font color=blue>属性名</font>:<font color=green>属性值</font><br>
     /*这是一个注释*/<br>
 }</p>
 <pre><code>p{
     color:blue;
     background:red;
 }
-</code></pre><p><!-- raw HTML omitted --><!-- raw HTML omitted -->!注意事项<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+</code></pre><p><strong>!注意事项</strong>
 a：所有符号都是英文符号，如果写错了，浏览器会警告<br>
 b：区分大小写，a 和 A 是不同东西<br>
 c：最后一个分号可以省略，但建议不要省略<br>
@@ -225,30 +228,30 @@ d：任何地方写错了，都不会报错，浏览器会直接忽略</p>
 @charset &ldquo;utf-8&rdquo;;<br>
 @import url(2.css);<br>
 @media(min-width:100px) and (max-width:200px){        }</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->!注意事项<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<p><strong>!注意事项</strong>
 a：@charset 必须放在第一行<br>
 b：前面两个@语法必须以分号;结尾<br>
 c：charset 是字符集的意思，但是 utf-8 是字符编码</p>
-<h3 id="font-colorred3fontborder-调试法"><!-- raw HTML omitted -->3.<!-- raw HTML omitted -->border 调试法</h3>
+<h3 id="3border-调试法">3.border 调试法</h3>
 <p>a：怀疑某个元素有问题就给这个元素加 border<br>
 b：border 没出现?说明选择器错了或者语法错了<br>
 c：bug 解决了才可以把 border 删掉</p>
-<h3 id="font-colorred4font文档流"><!-- raw HTML omitted -->4.<!-- raw HTML omitted -->文档流</h3>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-流动方向<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<h3 id="4文档流">4.文档流</h3>
+<p><strong>-流动方向</strong>
 a：inline 元素从左到右，到达最右边才会换行<br>
 b：block 元素从上到下，每一个都另起一行<br>
 c：inline-block 也是从左到右，但是到达最后的时候不会把自己分为两块<br>
 <img src="../../images/display.png" alt=""></p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-宽度<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<p><strong>-宽度</strong><br>
 a：inline 宽度靠内部内容宽度撑开，不能用 width 指定<br>
 b：blcok 默认自动计算宽度，可用 width
 指定<br>
 c：inline-block 结合前两者特点，可用 width</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-高度<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<p><strong>-高度</strong><br>
 a：inline 高度由 line-height 间接确定，跟 height 无关，跟 padding 无关<br>
 b：block 高度由内部文档流元素决定(脱离文档流元素除外)，可以设 height<br>
 c：inline-block 跟 block 类似，可以设置 height</p>
-<h3 id="font-colorred5overflow-溢出当内容大于容器font"><!-- raw HTML omitted -->5.overflow 溢出(当内容大于容器)<!-- raw HTML omitted --></h3>
+<h3 id="5overflow-溢出当内容大于容器">5.overflow 溢出(当内容大于容器)</h3>
 <p>a：等内容的宽度或高度大于容器，会溢出<br>
 b：可用 overflow 来设置是否显示滚动条<br>
 c：auto 是灵活设置<br>
@@ -258,23 +261,23 @@ f：visible 是直接显示溢出部分
 g：overflow 可以分为 overflow-x 和 overflow-y</p>
 <p>① 块级元素如果没有设置 width，那么它默认的宽度就是 auto<br>
 ② 永远不要写 width=100%，非常特殊的可以写</p>
-<h3 id="font-colorred6脱离文档流font"><!-- raw HTML omitted -->6.脱离文档流<!-- raw HTML omitted --></h3>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-哪些元素脱离文档流<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<h3 id="6脱离文档流">6.脱离文档流</h3>
+<p><strong>-哪些元素脱离文档流</strong>
 a：float<br>
 b：position:absolute / fixed</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->-怎么让元素不脱离文档流<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<p><strong>-怎么让元素不脱离文档流</strong><br>
 a：不要使用上面属性就不会脱离文档流了</p>
 <p>① 只要脱离了文档流，就算你清除了，永远都是脱离的了</p>
-<h3 id="font-colorred7盒模型font"><!-- raw HTML omitted -->7.盒模型<!-- raw HTML omitted --></h3>
-<p>① 如果面试官问你！请说一下 css 盒模型 <!-- raw HTML omitted -->标准回答：<!-- raw HTML omitted -->css 盒模型分两种<br>
+<h3 id="7盒模型">7.盒模型</h3>
+<p>① 如果面试官问你！请说一下 css 盒模型 标准回答：css 盒模型分两种<br>
 content-box 宽度或高度 只包含 content<br>
 border-box 宽度或高度 由 border+padding+content(尽量使用 border-box)<br>
 <img src="../../images/border-sizing.png" alt=""></p>
 <p>②margin 合并(只会上下合并，左右不会合并)<br>
-<!-- raw HTML omitted -->哪些情况会合并<!-- raw HTML omitted --><br>
+哪些情况会合并<br>
 a：父子 margin 合并<br>
 b：兄弟 margin 合并</p>
-<p><!-- raw HTML omitted -->如何阻止合并(不需要知道为什么)<!-- raw HTML omitted --><br>
+<p>如何阻止合并(不需要知道为什么)
 a：父子合并用 padding 或 border 挡住<br>
 b：父子合并用 overflow:hidden 挡住<br>
 c：父子合并用 display:flex<br>
@@ -282,12 +285,12 @@ d：兄弟合并是符合预期的<br>
 e：兄弟合并可以用 inline-block 消除<br>
 f：总之要一条条死记</p>
 <p>③ 基本单位<br>
-<!-- raw HTML omitted -->长度单位<!-- raw HTML omitted --><br>
+长度单位<br>
 a：px 像素<br>
 b：em 相当于自身 font-size 的倍数<br>
 c: 百分数<br>
 d: 整数</p>
-<p><!-- raw HTML omitted -->颜色<!-- raw HTML omitted --><br>
+<p>颜色<br>
 a：十六进制#FF6600 或者 #F60<br>
 b: RGBA 颜色 rgb(255,0,0) 或者 rgba(255,0,0,1) - a 是透明意思(取值 0~1)</p>
 <pre><code>  div{
@@ -305,7 +308,7 @@ b: RGBA 颜色 rgb(255,0,0) 或者 rgba(255,0,0,1) - a 是透明意思(取值 0~
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>187 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>200 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:47 &#43;0800</p>
         </div>

@@ -11,7 +11,8 @@ JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都�
 2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
 Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
 4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
 2.找到了，则结束查找，使用自己私有的即可
 3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 " />
 <meta name="keywords" content="" />
@@ -45,12 +46,13 @@ JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都�
 2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
 Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
 4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
 2.找到了，则结束查找，使用自己私有的即可
 3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 ">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:15" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:15" />
-<meta itemprop="wordCount" content="36">
+<meta itemprop="wordCount" content="37">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -65,7 +67,8 @@ JS 原型 1.所有的函数(函数也是对象,函数也是类)数据类型都�
 2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身
 Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)
 4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)
-原型链__proto__1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
+原型链__proto__
+1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性
 2.找到了，则结束查找，使用自己私有的即可
 3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在 "/>
 
@@ -149,16 +152,16 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
             
 
             <div class="post-content">
-                <h3 id="font-colorred浏览器功能font"><!-- raw HTML omitted -->浏览器功能<!-- raw HTML omitted --></h3>
+                <h3 id="font-colorred浏览器功能font"><font color=red>浏览器功能</font></h3>
 <p>1.发起请求，下载 HTML,解析 HTML，下载 CSS，解析 CSS，渲染界面,下载 JS，解析 JS，执行 JS 等</p>
 <p>2.JS 是单线程的，一个页面只能开一个渲染引擎和 JS 引擎，线程不能在开线程</p>
-<h3 id="font-colorredjs-原型font"><!-- raw HTML omitted -->JS 原型<!-- raw HTML omitted --></h3>
+<h3 id="font-colorredjs-原型font"><font color=red>JS 原型</font></h3>
 <p>1.所有的函数(函数也是对象,函数也是类)数据类型都天生自带一个属性:prototype(原型),这个属性的值是一个对象<br>
 2.在浏览器给 prototype 开辟的堆内存中有一个天生自带的属性:constructor，这个属性存储的值是当前函数本身</p>
 <pre><code>Array.prototype.constructor === Array
 </code></pre><p>3.每一个对象都有一个__ proto__的属性，这个属性指向当前实例所属类的原型(如果不能确定是谁的实例，都是 Object 的实例)<br>
 4.每一个类把供实例调取的公共属性方法，存储到自己原型上(原型 prototype 的作用就是存储一些公共的属性和方法，供它的实例调取使用)</p>
-<p><!-- raw HTML omitted -->原型链__proto__<!-- raw HTML omitted --><br>
+<p><font color=red>原型链__proto__</font><br>
 1.它是一种基于__proto__向上查找机制。当我们操作实例的某个属性或者方法的时候，首先找自己空间中私有的属性<br>
 2.找到了，则结束查找，使用自己私有的即可<br>
 3.没有找到，则基于__proto__找所属类的 prototype，如果找到就用这个公有的，如果没找到，基于原型上的__proto__向上查找，一直找到 Object.prototype 的原型为止，如果在没有，操作的属性或者方法不存在
@@ -171,7 +174,7 @@ Array.prototype.constructor === Array3.每一个对象都有一个__ proto__的
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>36 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>37 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:40 &#43;0800</p>
         </div>
