@@ -177,7 +177,7 @@ argumnets
         </item>
         
         <item>
-            <title>23 - 字符串中API</title>
+            <title>23 - [JS全解]字符串中API</title>
             <link>http://yaochengjian.com/posts/23/</link>
             <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
             
@@ -314,6 +314,116 @@ Number 转换也是这种机制
 2.引用类型比较 : 是比较该 16 进制内存地址
 
 3.引用类型 与 基本类型比较,会把引用类型toString()在比较，双方为基本类型了,又会重复第一步
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>25 - [JS编程接口]DOM编程</title>
+            <link>http://yaochengjian.com/posts/26/</link>
+            <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/26/</guid>
+            <description>1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
+2.document.getElementById(&amp;lsquo;xxx&amp;rsquo;) 通过 id 获取该标签
+3.document.getElementsByTagName(&amp;lsquo;div&amp;rsquo;) 通过标签获取属性,是一个伪数组
+4.document.getElementsByClassName(&amp;lsquo;red&amp;rsquo;) 通过类获取该标签,是一个伪数组
+5.document.querySelector(&#39;#id&amp;rsquo;)
+6.document.querySelectorAll(&#39;.red&amp;rsquo;)
+2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1);div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.createElement(&#39;div&#39;);div.</description>
+            <content type="html"><![CDATA[<h3 id="1获取元素的-api">1.获取元素的 API</h3>
+<p>1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取<br>
+2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签<br>
+3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组<br>
+4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组<br>
+5.document.querySelector('#id&rsquo;)<br>
+6.document.querySelectorAll('.red&rsquo;)</p>
+<h3 id="2获取特定元素">2.获取特定元素</h3>
+<pre><code>1.获取html元素
+document.documentElement
+
+2.获取head元素
+document.head
+
+3.获取body元素
+document.body
+
+4.获取窗口(窗口不是元素,是一个对象)
+window
+
+5.获取所有元素(第六个falsy值)
+因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值
+document.all
+</code></pre><h3 id="3节点">3.节点</h3>
+<pre><code>1. element.nodeType 得到一个数字
+2. 1表示元素Element,也叫标签Tag
+3. 3表示文本Text
+4. 8表示注释Comment
+5. 9表示文档document
+记住2和3即可
+</code></pre><h3 id="4节点的增删改查">4.节点的增删改查</h3>
+<p>1.增加</p>
+<pre><code>1.创建一个标签节点
+    let div1 = document.createElement('div');
+
+2.创建一个文本节点
+    text1 = document.createTextNode('你好');
+
+3.标签里面插入文本
+    div1.appendChild(text1);
+    div1.innerText = '你好' 或者 div1.textContent = '你好'
+    但是不能用div1.appendChild('你好')
+</code></pre><p>2.删除</p>
+<pre><code>1.两种方法
+node.prototype提供方法(必须要父亲来删除)
+    let div1 = document.createElement('div');
+    div.parentNode.removeChild(div1);
+
+element.prototype提供方法(可以自己删除自己)
+    let div1 = document.createElement('div');
+    div.remove();
+</code></pre><p>3.改属性</p>
+<pre><code>1.改class : div.styleName = 'red blue'(会覆盖之前的)
+2.改class : div.classList.add('red') 添加一个类属性
+3.添加属性 : div.setAttribute('class','div1')
+4.获取属性 : div.getAttribute('class')
+</code></pre><p>改时间处理函数</p>
+<pre><code>div.onclick 默认为null
+1.默认点击div不会有任何时间发送
+2.但是如果你把div.onclick 改为一个函数fn
+3.那么点击div的时候,浏览器就会调用这个函数
+4.并且是这样调用的fn.call(div,event)
+5.div会被当做this
+6.event则包含了点击事件的所有信息,如坐标等
+</code></pre><p>4.查</p>
+<pre><code>1.查爸爸
+    div.parentNode 或者 div.parentElement
+
+2.查爷爷
+    div.parentNode.parentNode
+
+3.查子代
+    div.childNodes 会包括其它节点(文本、注释...)
+    div.children
+
+4.查兄弟姐妹
+    div.parentNode.childNodes
+    div.parentNode.children
+
+5.查看老大
+    div.firstChild
+
+6.查看老幺
+    div.lastChild
+
+7.查看上一个哥哥/姐姐
+    div.previousSibling 这个会查看到其它节点(注释 | 文本...)
+    div.previousElementSibling
+
+8.查看下一个弟弟/妹妹
+    div.nextSibling 这个会查看到其它节点(注释 | 文本...)
+    div.nextElementSibling
 </code></pre>]]></content>
         </item>
         

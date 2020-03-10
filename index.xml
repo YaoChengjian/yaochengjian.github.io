@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>23 - 字符串中API</title>
+      <title>23 - [JS全解]字符串中API</title>
       <link>http://yaochengjian.com/posts/23/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -53,6 +53,23 @@ Number(&amp;lsquo;13px&amp;rsquo;) Number 如果当前字符串出现任意一�
 2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)
 Number 转换也是这种机制
 首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型1.基本类型转换为数字 : 直接使用Number这个方法转换2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字-对象 : 所有对象toString都是 &#39;[object object]&#39;-函数 : (function fn(){}).toString() -&amp;gt; &#39;function fn(){}&#39;-数组 : [12].toString() -&amp;gt; &#39;12&#39; -&amp;gt; Number(&#39;12&#39;) -&amp;gt; 12[12,13].toString() -&amp;gt; &#39;12,13&#39; -&amp;gt; Number(&#39;12,13&#39;) -&amp;gt; NaN-正则 : /^89$/.toString() -&amp;gt; &#39;/^89$/&#39; -&amp;gt; Number(&#39;/^89$/&#39;) -&amp;gt; NaN2.parseInt / parseFloat 1.</description>
+    </item>
+    
+    <item>
+      <title>25 - [JS编程接口]DOM编程</title>
+      <link>http://yaochengjian.com/posts/26/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/26/</guid>
+      <description>1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
+2.document.getElementById(&amp;lsquo;xxx&amp;rsquo;) 通过 id 获取该标签
+3.document.getElementsByTagName(&amp;lsquo;div&amp;rsquo;) 通过标签获取属性,是一个伪数组
+4.document.getElementsByClassName(&amp;lsquo;red&amp;rsquo;) 通过类获取该标签,是一个伪数组
+5.document.querySelector(&#39;#id&amp;rsquo;)
+6.document.querySelectorAll(&#39;.red&amp;rsquo;)
+2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1);div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.createElement(&#39;div&#39;);div.</description>
     </item>
     
     <item>
