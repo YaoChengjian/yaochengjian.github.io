@@ -546,7 +546,23 @@ element.prototype提供方法(可以自己删除自己)
 4. .width() 取出或设置某个元素的宽度
 5. .height() 取出或设置某个元素的高度
 6. .val()   取出某个表单元素的值
-</code></pre><p>6.更详细内容<br>
+</code></pre><p>6.移动元素</p>
+<pre><code>1. $('div').insertAfter($('p')) 把div元素移动p元素的后面
+
+2. $('p').insertBefore('div') 把p元素移动到div的前面
+
+3. $('p').appendTo('div') 把p元素插入div内部的后面
+
+4. $('p').prepednTo('div') 把p元素插入div内部的前面
+</code></pre><p>7.创建元素、复制、删除</p>
+<pre><code>1. .clone() 复制元素
+2. .remove() 删除元素,不保留删除元素的事件
+3. .detach() 删除元素,保留删除元素的事件
+4. .empty() 不会删除元素,删除元素的内容
+</code></pre><pre><code>1. $('&lt;p&gt;Hello&lt;/p&gt;')
+2. $('&lt;li class = &quot;new&quot;&gt;new list item &lt;/li&gt;')
+3. $('ul').append('&lt;li&gt; list item &lt;/li&gt;')
+</code></pre><p>7.更详细内容<br>
 <font color=red><a href = "http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html">jQuery 设计思想 - 阮一峰的网络日志&gt;</a></font></p>
 ]]></content>
         </item>

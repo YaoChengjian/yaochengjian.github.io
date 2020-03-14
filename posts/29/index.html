@@ -44,7 +44,7 @@
 1. $(&#39;h1&#39;).html() html()没有参数,表示取出h1的值2. $(&#39;h1&#39;).html(&#39;hello&#39;) html()有参数hello,表示更改h1里面内容常见取值和赋值函数如下:1. .">
 <meta itemprop="datePublished" content="2020-02-28T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-28T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="91">
+<meta itemprop="wordCount" content="132">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -176,7 +176,23 @@
 4. .width() 取出或设置某个元素的宽度
 5. .height() 取出或设置某个元素的高度
 6. .val()   取出某个表单元素的值
-</code></pre><p>6.更详细内容<br>
+</code></pre><p>6.移动元素</p>
+<pre><code>1. $('div').insertAfter($('p')) 把div元素移动p元素的后面
+
+2. $('p').insertBefore('div') 把p元素移动到div的前面
+
+3. $('p').appendTo('div') 把p元素插入div内部的后面
+
+4. $('p').prepednTo('div') 把p元素插入div内部的前面
+</code></pre><p>7.创建元素、复制、删除</p>
+<pre><code>1. .clone() 复制元素
+2. .remove() 删除元素,不保留删除元素的事件
+3. .detach() 删除元素,保留删除元素的事件
+4. .empty() 不会删除元素,删除元素的内容
+</code></pre><pre><code>1. $('&lt;p&gt;Hello&lt;/p&gt;')
+2. $('&lt;li class = &quot;new&quot;&gt;new list item &lt;/li&gt;')
+3. $('ul').append('&lt;li&gt; list item &lt;/li&gt;')
+</code></pre><p>7.更详细内容<br>
 <font color=red><a href = "http://www.ruanyifeng.com/blog/2011/07/jquery_fundamentals.html">jQuery 设计思想 - 阮一峰的网络日志&gt;</a></font></p>
 
             </div>
@@ -186,7 +202,7 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>91 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>132 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-28 08:00 &#43;0800</p>
         </div>
