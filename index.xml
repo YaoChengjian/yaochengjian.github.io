@@ -56,7 +56,7 @@ Number 转换也是这种机制
     </item>
     
     <item>
-      <title>25 - [JS编程接口]DOM编程</title>
+      <title>26 - [JS编程接口]DOM编程</title>
       <link>http://yaochengjian.com/posts/26/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -68,8 +68,46 @@ Number 转换也是这种机制
 5.document.querySelector(&#39;#id&amp;rsquo;)
 6.document.querySelectorAll(&#39;.red&amp;rsquo;)
 2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
-1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1);div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
-1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.createElement(&#39;div&#39;);div.</description>
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.</description>
+    </item>
+    
+    <item>
+      <title>27 - [JS编程接口]手写DOM库</title>
+      <link>http://yaochengjian.com/posts/27/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/27/</guid>
+      <description>1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装</description>
+    </item>
+    
+    <item>
+      <title>28 - [JS编程接口]jQuery中的设计模式</title>
+      <link>http://yaochengjian.com/posts/28/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/28/</guid>
+      <description>1.链式风格(也叫 JQuery 风格) 1.window.jQuery()是提供的全局函数
+2.jQuery(选择器)用于获取对应的元素
+3.但是它却不返回这些元素,返回一个对象(jQuery 构造出来的对象)
+4.这个对象可以操作对应的元素
+&amp;lt;body&amp;gt;&amp;lt;div id = &#39;test&#39;&amp;gt;你好1&amp;lt;/div&amp;gt;&amp;lt;div id = &#39;test&#39;&amp;gt;你好2&amp;lt;/div&amp;gt;&amp;lt;div id = &#39;test&#39;&amp;gt;你好3&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;script&amp;gt;window.jQuery = function(seletor){const element = document.querySeletorAll(seletor);return {addClassName(className){for(let i = 0;i &amp;lt; element.length;i++){element[i].classList.add(className);}}return this;}}&amp;lt;/script&amp;gt;2.命名风格 1.如果是通过 jQuery 获取过来的就用 $ 命名开头
+2.不是 jQuery 获取过来的就不用
+ let div = document.querySelector(&#39;#div&#39;);let $div = jQuery(&#39;#div&#39;); 返回来是一个对象(api)</description>
+    </item>
+    
+    <item>
+      <title>29 - [JS编程接口]使用jQuery</title>
+      <link>http://yaochengjian.com/posts/29/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/29/</guid>
+      <description>1.如何使用 jQuery 1.获取网页元素(&amp;hellip;)
+1. $(document) 选择整个文档对象2. $(&#39;div&#39;) 获取页面div的元素3. $(&#39;div.myClass&#39;) 选择class为myClass的div元素4. $(&#39;input[name=first]&#39;) 选择name属性等于first的input元素2.筛选
+1. $(&#39;div&#39;).has(&#39;p&#39;) 选择div包含p的元素2. $(&#39;div&#39;).not(&#39;.myClass&#39;) 选择class不等于myClss的div元素3. $(&#39;div&#39;).filter(&#39;.myClass&#39;) 选择class等于myClass的div元素4. $(&#39;div&#39;).first(&#39;.myClass&#39;) 选择第1个div元素5. $(&#39;div&#39;).find(&#39;p&#39;).eq(3) div子下第3个p元素3.找后面或者父级或者儿子元素&amp;hellip;
+1. $(&#39;div&#39;).next(&#39;p&#39;) 选择div元素后面的第一个p元素2. $(&#39;div&#39;).parent() 选择div元素的父元素3. $(&#39;div&#39;).children() 选择div的所有子元素4. $(&#39;div&#39;).siblings() 选择div的兄弟元素4.jQuery 还提供 .end() 方法,回退到上一个对象上面
+ $(&#39;div&#39;).find(&#39;h3&#39;).eq(2).html(&#39;hello&#39;).end() 退回到选中所有的h3元素的那一步.eq(0) 选中第1个h3元素.html(&#39;World&#39;) 将它内容改为World5.元素的操作 : 取值和赋值
+1. $(&#39;h1&#39;).html() html()没有参数,表示取出h1的值2. $(&#39;h1&#39;).html(&#39;hello&#39;) html()有参数hello,表示更改h1里面内容常见取值和赋值函数如下:1. .</description>
     </item>
     
     <item>

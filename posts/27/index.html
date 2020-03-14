@@ -5,16 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &amp;gt;= 0;});" />
+<meta name="description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="http://yaochengjian.com/posts/50/" />
+<link rel="canonical" href="http://yaochengjian.com/posts/27/" />
 
 
     <title>
         
-            50 -  :: 姚 成 健 
+            27 - [JS编程接口]手写DOM库 :: 姚 成 健 
         
     </title>
 
@@ -30,11 +30,11 @@
 
 
 
-<meta itemprop="name" content="50 - ">
-<meta itemprop="description" content="去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &gt;= 0;});">
-<meta itemprop="datePublished" content="2020-01-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-01-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="35">
+<meta itemprop="name" content="27 - [JS编程接口]手写DOM库">
+<meta itemprop="description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装">
+<meta itemprop="datePublished" content="2020-03-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="21">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -42,14 +42,14 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="50 - "/>
-<meta name="twitter:description" content="去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &gt;= 0;});"/>
+<meta name="twitter:title" content="27 - [JS编程接口]手写DOM库"/>
+<meta name="twitter:description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装"/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-01-04 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-03-01 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -119,23 +119,27 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/50/">50 -</a>
+                <a href="http://yaochengjian.com/posts/27/">27 - [JS编程接口]手写DOM库</a>
             </h1>
 
             
 
             <div class="post-content">
-                <pre><code>去重
-    let arr1 = [1,2,3,4,5,1,1,1,2,3,4],
-    arr2.filter(function(item,index,arr){
-        return arr.indexOf(item) === index;
-    });
-</code></pre><pre><code>    let arr1 = [1, 2];
-    let arr2 = [1, 2, 3, 4];
-    let arr3 = arr2.filter(function(item, index, array) {
-        return arr1.indexOf(item) &gt;= 0;
-    });
-</code></pre>
+                <pre><code>1.classList用法
+    node.classList.add('container') 添加一个类名
+    node.classList.remove('container') 删除一个类名
+    node.classList.contains('container') 判断是否含有这个类名
+
+1.insertBefore
+    node.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面
+
+3.appendChild
+    parentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加
+
+4.removeChild
+    parentNode.removeChild(node) 删除节点
+</code></pre><p><font color=red>github 地址 : <a href = 'http://yaochengjian.com/dom-1/src/dom.js'>dom 封装</a></font></p>
+
             </div>
         </article>
 
@@ -143,9 +147,9 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>35 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>21 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-04 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-01 08:00 &#43;0800</p>
         </div>
 
         
@@ -158,17 +162,17 @@
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="http://yaochengjian.com/posts/29/">
+                            <a href="http://yaochengjian.com/posts/26/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">29 - [JS编程接口]使用jQuery</span>
+                                <span class="button__text">26 - [JS编程接口]DOM编程</span>
                             </a>
                         </span>
                     
 
                     
                         <span class="button next">
-                            <a href="http://yaochengjian.com/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/">
-                                <span class="button__text">开博大吉</span>
+                            <a href="http://yaochengjian.com/posts/28/">
+                                <span class="button__text">28 - [JS编程接口]jQuery中的设计模式</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
