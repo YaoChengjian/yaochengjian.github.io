@@ -111,6 +111,73 @@ Number 转换也是这种机制
     </item>
     
     <item>
+      <title>30 - [项目]前端导航站点</title>
+      <link>http://yaochengjian.com/posts/30/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/30/</guid>
+      <description>1.onbeforeunload 当窗口即将被关闭,会触发该事件
+2.JSON.stringify() 把一个对象变成 JSON 对象形式的字符串
+let obj = [1,2,3];JSON.stringify(obj);3.JSON.parse() 把一个 JSON 对象形式字符串变成一个对象
+let str = &#39;[0:1,1:2]&#39;;JSON.parse(str);4. localStorage.setItem(key,value) 把值以字符串的形式存储在本地 localStorage.getItem(key) 把存储在本地的值取出来
+let str = &#39;123456&#39;;localStorage.setItem(&#39;x&#39;,str)localStorage.getItem(&#39;x&#39;);</description>
+    </item>
+    
+    <item>
+      <title>31 - [前后分离]AJAX的原理</title>
+      <link>http://yaochengjian.com/posts/31/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/31/</guid>
+      <description>1.背景 1.AJAX 是浏览器上的功能
+2.浏览器可以发请求,收响应
+3.浏览器在 window 上加了一个 XMLHttpRequest 函数
+4.用这个构造函数可以构造出一个对象
+5.JS 通过它实现发请求,收响应
+2.node-dev 代替 node 命令 : npm install -g node-dev
+1.方便我们开发
+2.修改代码会自动帮我们重启
+使用 : node-dev &amp;hellip;&amp;hellip;
+3.AJAX  1. let xml = new XMLHttpRequest();2. xml.open(method , url ,async) method请求的方式(&#39;GET&#39;/&#39;POST&#39;), 请求的url地址 , async是true请求则是异步进行,false则是同步进行3. xml.setRequesHeader() 设置请求的头部4. xml.onreadystatechange = function(){} 只要xml.readyState的值变化,就会触发该事件函数5. xml.readyState 属性( 0 ~ 4)0 : 未调用open()方法1 ：open()方法已经被调用2 : send()方法已经被调用3 ：responseText属性已经包含部分数据4 ：已经接收全部数据6.</description>
+    </item>
+    
+    <item>
+      <title>32 - [前后分离]异步与Promise</title>
+      <link>http://yaochengjian.com/posts/32/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/32/</guid>
+      <description>1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
+2.前面学的很多知识基本上都是同步的 &amp;ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
+const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&amp;gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
+1.先取得一个 DOM 里面的 button 引用
+2.点击按钮的时候,添加一个 click 事件监听
+1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
+2.一但 alert 结束,创建一个 p 元素
+3.给它的文本内容赋值
+4.最后,把这个段落放进网页
+2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
+1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&amp;gt;{=&amp;gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&amp;gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&amp;gt; resolve : 当异步操作执行成功,我们执行resolve方法=&amp;gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&amp;gt;{resolve(100);},1000);}).</description>
+    </item>
+    
+    <item>
+      <title>32 - [前后分离]跨域、CORS、JSONP</title>
+      <link>http://yaochengjian.com/posts/33/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/33/</guid>
+      <description>1.跨域关键知识 1.同源策略(浏览器故意设计的一个功能限制)
+2.CORS(突破浏览器限制的一个方法)
+3.JSONP(IE 时代的妥协)
+2.同源策略 1.源
+window.origin 或 location.origin 可以得到当前源
+源 = 协议 + 域名 + 端口号
+2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源
+3.同源策略定义
+1.浏览器规定a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私</description>
+    </item>
+    
+    <item>
       <title>50 - </title>
       <link>http://yaochengjian.com/posts/50/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>

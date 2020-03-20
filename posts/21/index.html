@@ -215,12 +215,12 @@
 <pre><code>    let arr = [1,2,3,4,5,6];
 
 1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
-        arr.map(function(item){
+        arr.map(function(item,index,arr){
             return item * item
         });
 
 2.filter()方法，是true就返回，否则就筛选掉
-        arr.filter(function(item){
+        arr.filter(function(item,index,arr){
             return item % 2 === 0;
         });
 
