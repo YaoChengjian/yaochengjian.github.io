@@ -5,15 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.跨域关键知识 1.同源策略(浏览器故意设计的一个功能限制)
-2.CORS(突破浏览器限制的一个方法)
-3.JSONP(IE 时代的妥协)
-2.同源策略 1.源
-window.origin 或 location.origin 可以得到当前源
-源 = 协议 &#43; 域名 &#43; 端口号
-2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源
-3.同源策略定义
-1.浏览器规定a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私" />
+<meta name="description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
+2.前面学的很多知识基本上都是同步的 &amp;ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
+const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&amp;gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
+1.先取得一个 DOM 里面的 button 引用
+2.点击按钮的时候,添加一个 click 事件监听
+1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
+2.一但 alert 结束,创建一个 p 元素
+3.给它的文本内容赋值
+4.最后,把这个段落放进网页
+2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
+1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&amp;gt;{=&amp;gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&amp;gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&amp;gt; resolve : 当异步操作执行成功,我们执行resolve方法=&amp;gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&amp;gt;{resolve(100);},1000);})." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -22,7 +24,7 @@ window.origin 或 location.origin 可以得到当前源
 
     <title>
         
-            32 - [前后分离]跨域、CORS、JSONP :: 姚 成 健 
+            33 - [前后分离]异步与Promise :: 姚 成 健 
         
     </title>
 
@@ -38,19 +40,21 @@ window.origin 或 location.origin 可以得到当前源
 
 
 
-<meta itemprop="name" content="32 - [前后分离]跨域、CORS、JSONP">
-<meta itemprop="description" content="1.跨域关键知识 1.同源策略(浏览器故意设计的一个功能限制)
-2.CORS(突破浏览器限制的一个方法)
-3.JSONP(IE 时代的妥协)
-2.同源策略 1.源
-window.origin 或 location.origin 可以得到当前源
-源 = 协议 &#43; 域名 &#43; 端口号
-2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源
-3.同源策略定义
-1.浏览器规定a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私">
-<meta itemprop="datePublished" content="2020-02-24T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-02-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="47">
+<meta itemprop="name" content="33 - [前后分离]异步与Promise">
+<meta itemprop="description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
+2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
+const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
+1.先取得一个 DOM 里面的 button 引用
+2.点击按钮的时候,添加一个 click 事件监听
+1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
+2.一但 alert 结束,创建一个 p 元素
+3.给它的文本内容赋值
+4.最后,把这个段落放进网页
+2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
+1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&gt;{=&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&gt; resolve : 当异步操作执行成功,我们执行resolve方法=&gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&gt;{resolve(100);},1000);}).">
+<meta itemprop="datePublished" content="2020-02-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="280">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -58,22 +62,24 @@ window.origin 或 location.origin 可以得到当前源
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="32 - [前后分离]跨域、CORS、JSONP"/>
-<meta name="twitter:description" content="1.跨域关键知识 1.同源策略(浏览器故意设计的一个功能限制)
-2.CORS(突破浏览器限制的一个方法)
-3.JSONP(IE 时代的妥协)
-2.同源策略 1.源
-window.origin 或 location.origin 可以得到当前源
-源 = 协议 &#43; 域名 &#43; 端口号
-2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源
-3.同源策略定义
-1.浏览器规定a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私"/>
+<meta name="twitter:title" content="33 - [前后分离]异步与Promise"/>
+<meta name="twitter:description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
+2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
+const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
+1.先取得一个 DOM 里面的 button 引用
+2.点击按钮的时候,添加一个 click 事件监听
+1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
+2.一但 alert 结束,创建一个 p 元素
+3.给它的文本内容赋值
+4.最后,把这个段落放进网页
+2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
+1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&gt;{=&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&gt; resolve : 当异步操作执行成功,我们执行resolve方法=&gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&gt;{resolve(100);},1000);})."/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-02-24 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-02-25 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -134,7 +140,7 @@ window.origin 或 location.origin 可以得到当前源
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
 
             
 
@@ -143,35 +149,138 @@ window.origin 或 location.origin 可以得到当前源
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/33/">32 - [前后分离]跨域、CORS、JSONP</a>
+                <a href="http://yaochengjian.com/posts/33/">33 - [前后分离]异步与Promise</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="1跨域关键知识">1.跨域关键知识</h3>
-<p>1.同源策略(浏览器故意设计的一个功能限制)<br>
-2.CORS(突破浏览器限制的一个方法)<br>
-3.JSONP(IE 时代的妥协)</p>
-<h3 id="2同源策略">2.同源策略</h3>
-<p>1.源<br>
-window.origin 或 location.origin 可以得到当前源<br>
-源 = 协议 + 域名 + 端口号</p>
-<p>2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源</p>
-<p>3.同源策略定义</p>
-<pre><code>1.浏览器规定
-    a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域
+                <h3 id="1什么是同步什么是异步">1.什么是同步?什么是异步?</h3>
+<p>1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始</p>
+<p>2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子</p>
+<pre><code>const btn = document.querySelector('button');
 
-2.举例
-    a. 假设frank.com/index.html 引用了cdn.com/1.js
-    b. 那么就说 [1.js 运行在源frank.com里]
-    c. 注意这跟cdn.com没有关系,虽然1.js从它那下载
-    d. 所以1.js就只能获取frank.com的数据
-    d. 不能获取1.frank.com 或者 qq.com 的数据
+      btn.addEventListener('click',()=&gt;{
+          alert('You clicked me!');
 
-3.这是浏览器的功能!浏览器故意要这样设计的
+          let pElem = document.createElement('p');
+          pElem.textContent = 'This is a newly-added paragraph.';
+          document.appendChild(pElem);
+      });
+</code></pre><p>这段代码,一行一行的顺序执行:<br>
+1.先取得一个 DOM 里面的 button 引用</p>
+<p>2.点击按钮的时候,添加一个 click 事件监听<br>
+    1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)<br>
+    2.一但 alert 结束,创建一个 p 元素<br>
+    3.给它的文本内容赋值<br>
+    4.最后,把这个段落放进网页</p>
+<h3 id="2promise">2.Promise</h3>
+<p>1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为'Promise'设计模式</p>
+<pre><code>1. 三个状态 ：
+pending(准备:初始化成功,开始执行异步的任务)
+fulfilled(成功)
+rejected(失败)
 
-4.同源策略的目的是为了保护用户隐私,安全隐私
+    new Promise((resolve,reject)=&gt;{
+        =&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会
+        把当前函数体中的异步操作执行)
+        =&gt; 'Promise是同步编程的,它可以管理异步操作'
+        =&gt; resolve : 当异步操作执行成功,我们执行resolve方法
+        =&gt; reject : 当异步操作执行失败,我们执行reject方法
+
+        setTimeout(()=&gt;{
+            resolve(100);
+        },1000);
+    }).then((res)=&gt;{
+        =&gt; 第一个传递函数是resolve
+        console.log(res);
+    },()=&gt;{
+        =&gt; 第二个传递的函数是reject
+    });
+</code></pre><pre><code>    let val = null;
+    let xhr = new XMLHttpRequest();
+        xhr.open('get','1.js',true);
+        xhr.onreadystatechange = () =&gt;{
+            if(xhr.readystate === 4 &amp;&amp; xhr.status === 200){
+                val = xhr.responseText;
+            }
+        }
+    xhr.send();
+    console.log(val); =&gt;如果使用异步ajax请求,不等ajax彻底完成,就把val输出,此时结果是null
+</code></pre><p>Promise 使用案例</p>
+<pre><code>let pro = new Promise((resolve, reject) =&gt; {
+        let xhr = new XMLHttpRequest();
+        xhr.open(&quot;get&quot;, &quot;1.json&quot;, true);
+        xhr.onreadystatechange = () =&gt; {
+          if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
+            resolve(xhr.responseText); //=&gt;成功会请求到的值传给第1个then
+          }
+          if (xhr.status !== 200) {
+            reject();
+          }
+        };
+        xhr.send();
+      });
+
+      pro.then(
+          res =&gt; {
+            console.log(res);
+            // =&gt; 数据绑定
+            return 100; //=&gt;它返回结果传递给第二个then
+          },
+          () =&gt; {}
+        )
+        .then(res =&gt; {
+          // =&gt; res 就是第一个then return返回的结果
+          // =&gt; 当第一个then中的函数执行完,会执行第二个
+        })
+        .then(() =&gt; {
+          // =&gt; 当第二个then中的函数执行完,会执行第三个 等等
+        });
+</code></pre><p>2.Promise.all([]) 等待所有 promise 成功,如果都成功了,则 all 对应的 promise 也成功,如果有一个失败了,则 all 对应的 promise 失败</p>
+<pre><code>    let p1 = new Promise((resolve,reject)=&gt;{
+      resolve(&quot;成功了1&quot;);
+    });
+
+    let p2 = new Promise((resolve,reject)=&gt;{
+      resolve(&quot;成功了2&quot;);
+    });
+
+    Promise.all([p1,p2]).then((res)=&gt;{
+      console.log(res); // 得到的是一个数组[&quot;成功了1&quot;,&quot;成功了2&quot;]
+    });
+
+1.Promse.all在处理多个异步处理时非常有用，比如说一个页面上需要等两个或多个ajax的数据回来以后才正常显示，在此之前只显示loading图标。
+</code></pre><pre><code>    function fn(time){
+      return new Promise((resolve,reject)=&gt;{
+        setTimeout(()=&gt;{
+          resolve(`${time / 1000}秒醒来`);
+        },time);
+      });
+    }
+
+    let p1 = fn(3000);
+    let p2 = fn(2000);
+
+    Promise.all([p1,p2]).then((res)=&gt;{
+      console.log(res);  // [&quot;3秒醒来&quot;,&quot;2秒醒来&quot;]
+    });
+1.需要特别注意的是,Promise.all获得成功结果的数据里面的数据顺序和promise.all接收到的数据顺序是一致的,即p1的结果在前,即便p1的结果获取的比p2要晚。这带来一个绝大的好处:在前端开发请求数据的过程中,偶尔会遇到发送多个请求并根据请求顺序获取和使用数据的场景,使用Promise.all毫无疑问可以解决这个问题。
+</code></pre><p>3.Promise.race 的使用</p>
+<pre><code>1.顾名思义,Promise.race就是赛跑意思,意思就是说,Promise.race([p1,p2,p3])里面哪个结果获取的快,就返回那个结果,不管结果本身是成功状态还是失败状态
+    function fn(time){
+      return new Promise((resolve,reject)=&gt;{
+        setTimeout(()=&gt;{
+          console.log(time);
+        },tiem);
+      });
+    }
+
+    let p1 = fn(1000);
+    let p2 = fn(500);
+    Promise.race([p1,p2]).then((res)=&gt;{
+      console.log(res);
+    });
 </code></pre>
             </div>
         </article>
@@ -180,9 +289,9 @@ window.origin 或 location.origin 可以得到当前源<br>
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>47 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>280 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-24 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-25 08:00 &#43;0800</p>
         </div>
 
         
@@ -197,15 +306,15 @@ window.origin 或 location.origin 可以得到当前源<br>
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/32/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">32 - [前后分离]异步与Promise</span>
+                                <span class="button__text">32 - [前后分离]AJAX的原理</span>
                             </a>
                         </span>
                     
 
                     
                         <span class="button next">
-                            <a href="http://yaochengjian.com/posts/50/">
-                                <span class="button__text">50 - </span>
+                            <a href="http://yaochengjian.com/posts/34/">
+                                <span class="button__text">34 - [前后分离]跨域、CORS、JSONP</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

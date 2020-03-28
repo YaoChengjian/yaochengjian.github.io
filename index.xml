@@ -12,41 +12,41 @@
     
     
     <item>
-      <title>22 - [JS全解]JS函数</title>
-      <link>http://yaochengjian.com/posts/22/</link>
+      <title>23 - [JS全解]JS函数</title>
+      <link>http://yaochengjian.com/posts/23/</link>
       <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/22/</guid>
+      <guid>http://yaochengjian.com/posts/23/</guid>
       <description>1.四种方式定义函数 1.定义一个函数
 具名函数(具有名字的函数)function 函数名(形式参数1,形式参数2){语句return 返回值}匿名函数上面的具名函数,去掉函数就是匿名函数箭头函数如果只有一个形参,可以省略括号,箭头后面只有一句话默认是(return x + x)fn = x =&amp;gt; x+x;否则fn = (x+y) =&amp;gt; {console.log(1),return x+y;}()起来js会认为是一个整体fn = name =&amp;gt; ({name:&#39;chengjian&#39;})用构造函数let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x+y&#39;)基本没人用，但是能让你知道函数是谁构造的所有的函数都是Function构造出来的包括Object、Array、Function也是2.调用时机 代码1(定时器是异步,它需要等待同步执行完后执行)let在外头,每次for循环,每次循环都是一个作用域,新的值都会覆盖外面let的值let i = 0;for(i = 0;i &amp;lt; 6;i++){setTimeout(()=&amp;gt;{console.log(i)});}let在里头,每次for循环都会形成一个let的作用域,循环多少次就会有多少个作用域for(let i = 0;i &amp;lt; 6;i++&amp;gt;){setTimeout(()=&amp;gt;{console.log(i)});}3.作用域:就近原则 &amp;amp; 闭包 作用域 : 每个函数执行都会形成一个私有作用域</description>
     </item>
     
     <item>
-      <title>23 - [JS全解]字符串中API</title>
-      <link>http://yaochengjian.com/posts/23/</link>
+      <title>24 - [JS全解]字符串中API</title>
+      <link>http://yaochengjian.com/posts/24/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/23/</guid>
+      <guid>http://yaochengjian.com/posts/24/</guid>
       <description>分割字符串 split(获得一个数组)   let str = &#39;1,2,3,4,5,6&#39;;let arr1 = str.split(&#39;,&#39;); 以&#39;,&#39;号形式分割let arr2 = str.split(&#39;&#39;); 以&#39;&#39;形式分割拼接字符串 concat(获得新的字符串)   let str1 = &#39;abcd&#39;;let str2 = &#39;efgh&#39;;let str3 = str1.concat(str1);截取字符串 substring(获得新的字符串)   let str1 = &#39;你好啊!我的名字叫~~~&#39;;let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)截取字符串 slice   let str1 = &#39;ABCDEFG&#39;;let str2 = str1.slice(0) 拷贝字符串let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)返回指定位置的字符串 charAt   let str1 = &#39;ABCEDFG&#39;;let s = str1.</description>
     </item>
     
     <item>
-      <title>24 - [JS全解]JS运算符</title>
-      <link>http://yaochengjian.com/posts/24/</link>
+      <title>25 - [JS全解]JS运算符</title>
+      <link>http://yaochengjian.com/posts/25/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/24/</guid>
+      <guid>http://yaochengjian.com/posts/25/</guid>
       <description>1.算术运算符 number 运算
 1.加减乘除(+ - * /)2.取余(%)3.指数(**)7 ** 2 =&amp;gt; 七的平方7 *** 3 =&amp;gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x++x--++x--x5.求值运算符+6.负数运算符-string 运算
 1.字符串只支持一个 + 号的运算,其它符号都不支持2.任何东西+字符串都 = 字符串</description>
     </item>
     
     <item>
-      <title>25 - [JS全解]JS各种类型转换机制</title>
-      <link>http://yaochengjian.com/posts/25/</link>
+      <title>26 - [JS全解]JS各种类型转换机制</title>
+      <link>http://yaochengjian.com/posts/26/</link>
       <pubDate>Tue, 03 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/25/</guid>
+      <guid>http://yaochengjian.com/posts/26/</guid>
       <description>1.Number 和 isNaN 类型详细解读 数据类型详细剖析
 1.Number (null &#39;&amp;rsquo; &#39; &#39; false [])转了都是 0
 Number(&amp;lsquo;13px&amp;rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN
@@ -56,11 +56,11 @@ Number 转换也是这种机制
     </item>
     
     <item>
-      <title>26 - [JS编程接口]DOM编程</title>
-      <link>http://yaochengjian.com/posts/26/</link>
+      <title>27 - [JS编程接口]DOM编程</title>
+      <link>http://yaochengjian.com/posts/27/</link>
       <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/26/</guid>
+      <guid>http://yaochengjian.com/posts/27/</guid>
       <description>1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
 2.document.getElementById(&amp;lsquo;xxx&amp;rsquo;) 通过 id 获取该标签
 3.document.getElementsByTagName(&amp;lsquo;div&amp;rsquo;) 通过标签获取属性,是一个伪数组
@@ -73,20 +73,20 @@ Number 转换也是这种机制
     </item>
     
     <item>
-      <title>27 - [JS编程接口]手写DOM库</title>
-      <link>http://yaochengjian.com/posts/27/</link>
+      <title>28 - [JS编程接口]手写DOM库</title>
+      <link>http://yaochengjian.com/posts/28/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/27/</guid>
+      <guid>http://yaochengjian.com/posts/28/</guid>
       <description>1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装</description>
     </item>
     
     <item>
-      <title>28 - [JS编程接口]jQuery中的设计模式</title>
-      <link>http://yaochengjian.com/posts/28/</link>
+      <title>29 - [JS编程接口]jQuery中的设计模式</title>
+      <link>http://yaochengjian.com/posts/29/</link>
       <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/28/</guid>
+      <guid>http://yaochengjian.com/posts/29/</guid>
       <description>1.链式风格(也叫 JQuery 风格) 1.window.jQuery()是提供的全局函数
 2.jQuery(选择器)用于获取对应的元素
 3.但是它却不返回这些元素,返回一个对象(jQuery 构造出来的对象)
@@ -97,11 +97,11 @@ Number 转换也是这种机制
     </item>
     
     <item>
-      <title>29 - [JS编程接口]使用jQuery</title>
-      <link>http://yaochengjian.com/posts/29/</link>
+      <title>30 - [JS编程接口]使用jQuery</title>
+      <link>http://yaochengjian.com/posts/30/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/29/</guid>
+      <guid>http://yaochengjian.com/posts/30/</guid>
       <description>1.如何使用 jQuery 1.获取网页元素(&amp;hellip;)
 1. $(document) 选择整个文档对象2. $(&#39;div&#39;) 获取页面div的元素3. $(&#39;div.myClass&#39;) 选择class为myClass的div元素4. $(&#39;input[name=first]&#39;) 选择name属性等于first的input元素2.筛选
 1. $(&#39;div&#39;).has(&#39;p&#39;) 选择div包含p的元素2. $(&#39;div&#39;).not(&#39;.myClass&#39;) 选择class不等于myClss的div元素3. $(&#39;div&#39;).filter(&#39;.myClass&#39;) 选择class等于myClass的div元素4. $(&#39;div&#39;).first(&#39;.myClass&#39;) 选择第1个div元素5. $(&#39;div&#39;).find(&#39;p&#39;).eq(3) div子下第3个p元素3.找后面或者父级或者儿子元素&amp;hellip;
@@ -111,24 +111,25 @@ Number 转换也是这种机制
     </item>
     
     <item>
-      <title>30 - [项目]前端导航站点</title>
-      <link>http://yaochengjian.com/posts/30/</link>
+      <title>31 - [项目]前端导航站点</title>
+      <link>http://yaochengjian.com/posts/31/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/30/</guid>
+      <guid>http://yaochengjian.com/posts/31/</guid>
       <description>1.onbeforeunload 当窗口即将被关闭,会触发该事件
 2.JSON.stringify() 把一个对象变成 JSON 对象形式的字符串
 let obj = [1,2,3];JSON.stringify(obj);3.JSON.parse() 把一个 JSON 对象形式字符串变成一个对象
-let str = &#39;[0:1,1:2]&#39;;JSON.parse(str);4. localStorage.setItem(key,value) 把值以字符串的形式存储在本地 localStorage.getItem(key) 把存储在本地的值取出来
+let str = &#39;[0:1,1:2]&#39;;JSON.parse(str);4.localStorage 是本地存储(永久性),解决 cookie 存储空间不足的问题
+localStorage.setItem(key,value) 把值以字符串的形式存储在本地 localStorage.getItem(key) 把存储在本地的值取出来
 let str = &#39;123456&#39;;localStorage.setItem(&#39;x&#39;,str)localStorage.getItem(&#39;x&#39;);</description>
     </item>
     
     <item>
-      <title>31 - [前后分离]AJAX的原理</title>
-      <link>http://yaochengjian.com/posts/31/</link>
+      <title>32 - [前后分离]AJAX的原理</title>
+      <link>http://yaochengjian.com/posts/32/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/31/</guid>
+      <guid>http://yaochengjian.com/posts/32/</guid>
       <description>1.背景 1.AJAX 是浏览器上的功能
 2.浏览器可以发请求,收响应
 3.浏览器在 window 上加了一个 XMLHttpRequest 函数
@@ -142,11 +143,11 @@ let str = &#39;123456&#39;;localStorage.setItem(&#39;x&#39;,str)localStorage.g
     </item>
     
     <item>
-      <title>32 - [前后分离]异步与Promise</title>
-      <link>http://yaochengjian.com/posts/32/</link>
+      <title>33 - [前后分离]异步与Promise</title>
+      <link>http://yaochengjian.com/posts/33/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/32/</guid>
+      <guid>http://yaochengjian.com/posts/33/</guid>
       <description>1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
 2.前面学的很多知识基本上都是同步的 &amp;ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
 const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&amp;gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
@@ -161,11 +162,11 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
     </item>
     
     <item>
-      <title>32 - [前后分离]跨域、CORS、JSONP</title>
-      <link>http://yaochengjian.com/posts/33/</link>
+      <title>34 - [前后分离]跨域、CORS、JSONP</title>
+      <link>http://yaochengjian.com/posts/34/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://yaochengjian.com/posts/33/</guid>
+      <guid>http://yaochengjian.com/posts/34/</guid>
       <description>1.跨域关键知识 1.同源策略(浏览器故意设计的一个功能限制)
 2.CORS(突破浏览器限制的一个方法)
 3.JSONP(IE 时代的妥协)
@@ -174,7 +175,42 @@ window.origin 或 location.origin 可以得到当前源
 源 = 协议 + 域名 + 端口号
 2.如果两个 url 的协议、域名、端口号 完全一致,那么这两个 url 就是同源
 3.同源策略定义
-1.浏览器规定a. 如果JS运行在源A里,那么久只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私</description>
+1.浏览器规定a. 如果JS运行在源A里,那么就只能获取源A的数据,不能获取源B的数据,即不允许跨域2.举例a. 假设frank.com/index.html 引用了cdn.com/1.jsb. 那么就说 [1.js 运行在源frank.com里]c. 注意这跟cdn.com没有关系,虽然1.js从它那下载d. 所以1.js就只能获取frank.com的数据d. 不能获取1.frank.com 或者 qq.com 的数据3.这是浏览器的功能!浏览器故意要这样设计的4.同源策略的目的是为了保护用户隐私,安全隐私4.其他疑问
+1.为什么a.qq.com 访问 qq.com也算跨域、答 : 因为历史上,出现过不同公司共用域名。a.qq.com 和 qq.com 不一定是同一个网站,浏览器谨慎起见,认为这是不同的源2.为什么不同端口也算跨域?答 : 原因同上,一个端口一个公司。任何安全相关的问题都要谨慎对待3.为什么两个网站的ip是一样的,也算跨域?答 : 原因同上,ip可以共用4.为什么可以跨域使用CSS、JS和图片等?答 : 同源策略限制的是数据访问,我们引用CSS、JS和图片的时候,其实并不知道其内容,我们只是在引用3.解决方法一 : CORS (ie6,7,8,9 不支持) 1.</description>
+    </item>
+    
+    <item>
+      <title>35 - [前后分离]Node.js</title>
+      <link>http://yaochengjian.com/posts/35/</link>
+      <pubDate>Sun, 23 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/35/</guid>
+      <description>1.什么是 node.js 1.简单的说 node.js 就是运行在服务端的 JavaScript
+2.如果你是一个前端程序员,你不懂得 PHP、Python 等动态编程语言,然后你想创建自己的服务器,那么 node.js 是一个非常好的选择
+2.怎么使用 1.require : 我们可以用 require 指令来载入 node.js 模块
+require(&amp;ldquo;http&amp;rdquo;);
+1. var http = require(&amp;quot;http&amp;quot;); 载入http模块,并将实例化HTTP赋值给变量http2. http对象下面有哪些方法1.http.listen() 接收一个数值参数,指定这个HTTP服务器监听的端口号2.http.createServer(function(request,response){request : 是一个请求对象,里面有请求属性整合1.request.url 获取请求的url/后面的域名(/index)2.request.method 获取请求的方式3.request.on(&amp;quot;data&amp;quot;,(data)=&amp;gt;{}) 当服务端接收到数据时触发4.request.on(&amp;quot;end&amp;quot;,()=&amp;gt;{}); 当服务端接收完数据时触发5.获取cookierequest.headers[&#39;cookie&#39;]response : 是一个响应对象,里面有响应属性整合1.response.statusCode = 200 设置响应状态码2.response.setHeader(&#39;Content-Type&#39;,&#39;text/css;charset=utf-8&#39;) 设置响应头的文件类型3.response.write(&#39;二哈&#39;) 设置响应回去的内容4.response.end() 响应结束,里面可以发送响应的数据5.设置cookieresponse.setHeader(&amp;quot;Set-Cookie&amp;quot;,&amp;quot;name=value&amp;quot;);});3.require(&amp;lsquo;fs&amp;rsquo;); fs 模块用于对系统文件及目录进行读写操作
+ var fs = require(&#39;fs&#39;);1.fs.readyFileSync(&amp;quot;文件路径&amp;quot;,&amp;quot;编码格式&amp;quot;) 获取这个文件的内容,是一个字符串2.</description>
+    </item>
+    
+    <item>
+      <title>37 - [前后分离]Ajax实战:Cookie、Session</title>
+      <link>http://yaochengjian.com/posts/36/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/36/</guid>
+      <description>1.什么是动态服务器 1.是否请求了数据库
+a. 没有请求服务器就是静态服务器
+b. 请求了数据库就是动态服务器
+2.目标 1 1.实现用户注册功能
+a. 用户提交用户名和密码
+b. users.json 里就新增一行数据
+2.思路
+a. 前端写一个 form,让用户填写 name 和 password
+b. 前端监听表单事件
+c. 前端发送 post 请求,请求位于请求体
+d. 后端获取请求体中的 name 和 password
+e. 后盾存储数据</description>
     </item>
     
     <item>
@@ -183,7 +219,7 @@ window.origin 或 location.origin 可以得到当前源
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>http://yaochengjian.com/posts/50/</guid>
-      <description>去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &amp;gt;= 0;});</description>
+      <description>去重let arr1 = [1,2,3,4,5,1,1,1,2,3,4],arr2.filter(function(item,index,arr){return arr.indexOf(item) === index;}); let arr1 = [1, 2];let arr2 = [1, 2, 3, 4];let arr3 = arr2.filter(function(item, index, array) {return arr1.indexOf(item) &amp;gt;= 0;});2. js 模块化 css.jslet string = &#39;12345&#39;export default string;main.jsimport string from &amp;quot;./css.js&amp;quot;</description>
     </item>
     
     <item>
@@ -668,12 +704,53 @@ let p1 = &amp;quot;name&amp;quot;;let obj = {p1 : &#39;chengjian&#39;} 这样�
     </item>
     
     <item>
-      <title>21 - [JS全解]JS数组</title>
+      <title>21 - [JS全解]JS对象继承</title>
       <link>http://yaochengjian.com/posts/21/</link>
       <pubDate>Wed, 25 Dec 2019 21:55:11 +0821</pubDate>
       
       <guid>http://yaochengjian.com/posts/21/</guid>
+      <description>1.继承(子类继承父类的属性和方法) 1.原型继承
+2.call 继承
+3.寄生组合继承
+4.Es6 中 class 类实现继承
+1.原型继承
+a. 方式 : Son.prototype = new Person(),Person 的实例本身具备父类 Person 的私有属性和公有方法,子类 Son 的原型指向它,那么子类 B 的实例就可以找到这些属性方法了
+b. 和传统后台语言的继承不一样,子类继承父类,并不是把父类的属性方法客隆一份给子类(这样处理子类和父类就没直接关系了),JS 中的原型继承是让子类和父类建立原型链接的机制,子类的实例调取父类原型上的方法,都是基于原型链的查找机制完成的 存在的问题 : 子类可以重写父类原型上的方法(重写),子类和父类还有关系的 Son.prototype.__proto__.getX = null 把父类 Person 原型上的 getX 重写为 null,Person 的其它实例也会受到影响
+原型继承存在的问题:
+1.父类实例私有的属性以及公有的属性都变为了子类实例的公有属性
+2.如果子类 Son 的原型上之前有属性方法,之前的方法都没有了
+=&amp;gt; 原型继承 : 让子类的原型指向父类的一个实例function Person(){this.name = &#39;chengjian&#39;;}Person.prototype = {constructor : A,getX : function(){console.log(this.x);}}function Son(){this.age = 18;}Son.</description>
+    </item>
+    
+    <item>
+      <title>22 - [JS全解]JS数组</title>
+      <link>http://yaochengjian.com/posts/22/</link>
+      <pubDate>Wed, 25 Dec 2019 21:55:11 +0822</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/22/</guid>
       <description>1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&amp;gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.</description>
+    </item>
+    
+    <item>
+      <title>22-1 - [JS全解]Map 、 Set</title>
+      <link>http://yaochengjian.com/posts/22-1/</link>
+      <pubDate>Wed, 25 Dec 2019 21:55:11 +0823</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/22-1/</guid>
+      <description>1.Map([iterable]) 键值对为两个元素的数组例如:[1,&amp;lsquo;one&amp;rsquo;] 1.map 的实例属性和操作方法
+&amp;mdash;-size : 返回成员总数
+&amp;mdash;-set(key,value) : 添加新的键值
+&amp;mdash;-has(key) : 是否有某个键
+&amp;mdash;-get(key) : 读取某个对应的值
+&amp;mdash;-delete(key) : 删除某个键
+&amp;mdash;-clear() : 清空
+2.map 实例遍历的方法
+&amp;mdash;-keys() : 返回键名
+&amp;mdash;-values() : 返回键值
+&amp;mdash;-entires() : 返回键值对
+&amp;mdash;-forEach() : 遍历所有成员
+利用map实现去重let array = [1,2,3,5,1,2,3,4]let map = new Map();for(let i = 0;i &amp;lt; array.length;i++&amp;gt;){if(map.has(array[i])){continue;}else{map.set(array[i],true);}}let newAry = [...map.keys()]2.Set([iterable])对象允许你存储任何类型的唯一值(set 里面的值是唯一的) 方法和属性
+&amp;mdash;-size : 返回 set 对象的个数</description>
     </item>
     
     <item>

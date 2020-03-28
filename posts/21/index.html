@@ -5,7 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&amp;gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr." />
+<meta name="description" content="1.继承(子类继承父类的属性和方法) 1.原型继承
+2.call 继承
+3.寄生组合继承
+4.Es6 中 class 类实现继承
+1.原型继承
+a. 方式 : Son.prototype = new Person(),Person 的实例本身具备父类 Person 的私有属性和公有方法,子类 Son 的原型指向它,那么子类 B 的实例就可以找到这些属性方法了
+b. 和传统后台语言的继承不一样,子类继承父类,并不是把父类的属性方法客隆一份给子类(这样处理子类和父类就没直接关系了),JS 中的原型继承是让子类和父类建立原型链接的机制,子类的实例调取父类原型上的方法,都是基于原型链的查找机制完成的 存在的问题 : 子类可以重写父类原型上的方法(重写),子类和父类还有关系的 Son.prototype.__proto__.getX = null 把父类 Person 原型上的 getX 重写为 null,Person 的其它实例也会受到影响
+原型继承存在的问题:
+1.父类实例私有的属性以及公有的属性都变为了子类实例的公有属性
+2.如果子类 Son 的原型上之前有属性方法,之前的方法都没有了
+=&amp;gt; 原型继承 : 让子类的原型指向父类的一个实例function Person(){this.name = &#39;chengjian&#39;;}Person.prototype = {constructor : A,getX : function(){console.log(this.x);}}function Son(){this.age = 18;}Son." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -14,7 +24,7 @@
 
     <title>
         
-            21 - [JS全解]JS数组 :: 姚 成 健 
+            21 - [JS全解]JS对象继承 :: 姚 成 健 
         
     </title>
 
@@ -30,11 +40,21 @@
 
 
 
-<meta itemprop="name" content="21 - [JS全解]JS数组">
-<meta itemprop="description" content="1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr.">
+<meta itemprop="name" content="21 - [JS全解]JS对象继承">
+<meta itemprop="description" content="1.继承(子类继承父类的属性和方法) 1.原型继承
+2.call 继承
+3.寄生组合继承
+4.Es6 中 class 类实现继承
+1.原型继承
+a. 方式 : Son.prototype = new Person(),Person 的实例本身具备父类 Person 的私有属性和公有方法,子类 Son 的原型指向它,那么子类 B 的实例就可以找到这些属性方法了
+b. 和传统后台语言的继承不一样,子类继承父类,并不是把父类的属性方法客隆一份给子类(这样处理子类和父类就没直接关系了),JS 中的原型继承是让子类和父类建立原型链接的机制,子类的实例调取父类原型上的方法,都是基于原型链的查找机制完成的 存在的问题 : 子类可以重写父类原型上的方法(重写),子类和父类还有关系的 Son.prototype.__proto__.getX = null 把父类 Person 原型上的 getX 重写为 null,Person 的其它实例也会受到影响
+原型继承存在的问题:
+1.父类实例私有的属性以及公有的属性都变为了子类实例的公有属性
+2.如果子类 Son 的原型上之前有属性方法,之前的方法都没有了
+=&gt; 原型继承 : 让子类的原型指向父类的一个实例function Person(){this.name = &#39;chengjian&#39;;}Person.prototype = {constructor : A,getX : function(){console.log(this.x);}}function Son(){this.age = 18;}Son.">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:21" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:21" />
-<meta itemprop="wordCount" content="260">
+<meta itemprop="wordCount" content="238">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -42,8 +62,18 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="21 - [JS全解]JS数组"/>
-<meta name="twitter:description" content="1.JS 数组 1.创建一个数组let arr = [1,2,3];let arr = new Array(1,2,3);let arr = new Array(3) 只有一个参数时候length长度为32.转化let arr = &#39;1,2,3&#39;.split(&#39;,&#39;) 以逗号为分割成为一个数组let arr = &#39;123&#39;.split(&#39;&#39;) 以空字符串形式分割成为一个数组let arr = Array.from(&#39;abc&#39;) 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组3.把伪数组变成数组let divs = document.getElementsByTagName(&#39;div&#39;);let arrDiv = Array.from(divs);console.log(arrDiv);4.concat()合并数组let arr1 = [1,2,3];let arr2 = [4,5,6];arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组5.slice()截取数组let arr1 = [1,2,3,4,5,6];let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组let arr3 = arr."/>
+<meta name="twitter:title" content="21 - [JS全解]JS对象继承"/>
+<meta name="twitter:description" content="1.继承(子类继承父类的属性和方法) 1.原型继承
+2.call 继承
+3.寄生组合继承
+4.Es6 中 class 类实现继承
+1.原型继承
+a. 方式 : Son.prototype = new Person(),Person 的实例本身具备父类 Person 的私有属性和公有方法,子类 Son 的原型指向它,那么子类 B 的实例就可以找到这些属性方法了
+b. 和传统后台语言的继承不一样,子类继承父类,并不是把父类的属性方法客隆一份给子类(这样处理子类和父类就没直接关系了),JS 中的原型继承是让子类和父类建立原型链接的机制,子类的实例调取父类原型上的方法,都是基于原型链的查找机制完成的 存在的问题 : 子类可以重写父类原型上的方法(重写),子类和父类还有关系的 Son.prototype.__proto__.getX = null 把父类 Person 原型上的 getX 重写为 null,Person 的其它实例也会受到影响
+原型继承存在的问题:
+1.父类实例私有的属性以及公有的属性都变为了子类实例的公有属性
+2.如果子类 Son 的原型上之前有属性方法,之前的方法都没有了
+=&gt; 原型继承 : 让子类的原型指向父类的一个实例function Person(){this.name = &#39;chengjian&#39;;}Person.prototype = {constructor : A,getX : function(){console.log(this.x);}}function Son(){this.age = 18;}Son."/>
 
 
 
@@ -119,145 +149,107 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/21/">21 - [JS全解]JS数组</a>
+                <a href="http://yaochengjian.com/posts/21/">21 - [JS全解]JS对象继承</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="font-colorred1js-数组font"><font color=red>1.JS 数组</font></h3>
-<pre><code>1.创建一个数组
-    let arr = [1,2,3];
-    let arr = new Array(1,2,3);
-    let arr = new Array(3) 只有一个参数时候length长度为3
+                <h3 id="1继承子类继承父类的属性和方法">1.继承(子类继承父类的属性和方法)</h3>
+<p>1.原型继承<br>
+2.call 继承<br>
+3.寄生组合继承<br>
+4.Es6 中 class 类实现继承</p>
+<p><font color=red>1.原型继承</font></p>
+<p>a. 方式 : Son.prototype = new Person(),Person 的实例本身具备父类 Person 的私有属性和公有方法,子类 Son 的原型指向它,那么子类 B 的实例就可以找到这些属性方法了</p>
+<p>b. 和传统后台语言的继承不一样,子类继承父类,并不是把父类的属性方法客隆一份给子类(这样处理子类和父类就没直接关系了),JS 中的原型继承是让子类和父类建立原型链接的机制,子类的实例调取父类原型上的方法,都是基于原型链的查找机制完成的 <font color=red>存在的问题 : 子类可以重写父类原型上的方法(重写),子类和父类还有关系的</font> Son.prototype.__proto__.getX = null <font color=red>把父类 Person 原型上的 getX 重写为 null,Person 的其它实例也会受到影响</font></p>
+<p><font color=red>原型继承存在的问题:</font><br>
+1.父类实例私有的属性以及公有的属性都变为了子类实例的公有属性<br>
+2.如果子类 Son 的原型上之前有属性方法,之前的方法都没有了</p>
+<pre><code>=&gt; 原型继承 : 让子类的原型指向父类的一个实例
 
-2.转化
-    let arr = '1,2,3'.split(',') 以逗号为分割成为一个数组
-    let arr = '123'.split('') 以空字符串形式分割成为一个数组
-    let arr = Array.from('abc') 需要满足(是否有下标，是否有length属性)有就可以尝试变成数组
-
-3.把伪数组变成数组
-    let divs = document.getElementsByTagName('div');
-    let arrDiv = Array.from(divs);
-    console.log(arrDiv);
-
-4.concat()合并数组
-    let arr1 = [1,2,3];
-    let arr2 = [4,5,6];
-    arr.concat(arr2); 得出来是新的一个数组，不会改变原来数组
-
-5.slice()截取数组
-    let arr1 = [1,2,3,4,5,6];
-    let arr2 = arr.slice(2); =&gt; [3,4,5,6] 会得到一个新的数组，不会改变原来数组
-    let arr3 = arr.slice(0); =&gt; 截取真个数组
-    let arr4 = arr.slice(2,5) =&gt; [3,4,5] 从索引0到索引5(不包括索引5)
-</code></pre><h3 id="font-colorred2数组的增删改查修改原数组font"><font color=red>2.数组的增删改查(修改原数组)</font></h3>
-<pre><code>1.删除头部元素
-    arr.shift() arr被修改，并返回被删元素
-
-2.删除尾部元素
-    arr.pop() arr被修改，并返回被删元素
-
-3.删除部分内容(arr会被修改)
-    arr.splice(index,num) index从第几个开始，num删除多少个
-    arr.splice(idnex,num,x,y) index从第几个开始，num删除多少个，添加x,y上去
-</code></pre><h3 id="font-colorred3查看所有元素font"><font color=red>3.查看所有元素</font></h3>
-<pre><code>   let arr = [1,2,3,4,5];
-       arr.x = 'xxx';
-1.查看所有属性名
-        Object.keys(arr);
-        for(let key in arr){
-            console.log(`${key} : ${arr[key]}`)
-        }
-
-2.查看数字属性名和值
-        for(let i = 0;i &lt; arr.length;i++){
-                console.log(`${i} : ${arr[i]}`)
-        }
-
-        arr.forEach(function(key,value){
-                console.log(`${key} : ${value}`)
-        })
-
-3.查找某个元素是否在数组里
-        arr.indexOf(3); 存在返回索引，不存在返回-1
-
-4.使用条件查找元素
-        arr.find(function(x){   find元素找到满足条件的即停止,返回那个值
-            return x % 2 === 0
-        });
-
-5.使用条件查找元素的索引
-        arr.findIndex(function(x){  findIndex元素找到满足条件的即停止，返回索引
-            return x % 2 === 0
-        })
-</code></pre><h3 id="font-colorred4增加数组中的元素修改原数组font"><font color=red>4.增加数组中的元素(修改原数组)</font></h3>
-<pre><code>    let arr = [1,2,3,4,5];
-1.在尾部加元素
-    arr.push(newItem) 修改arr,返回新长度
-    arr.push(item1,item2)
-
-2.在头部加元素
-    arr.unshift(newItem) 修改arr,返回新长度
-    arr.unshift(item1,item2)
-</code></pre><h3 id="font-colorred5数组中排序修改原数组font"><font color=red>5.数组中排序(修改原数组)</font></h3>
-<pre><code>    let arr = [{name:'发条魔灵',score:98},
-               {name:'疾风亚索',score:94},
-               {name:'寒冰射手',score:91}];
-
-        1.a减b的值是正数则是从小到大排序，负数则从大到小排序
-        2.a和b是arr里面随机一项，一直会比较完
-
-        arr.sort(function(a,b){
-            return a.score - b.score;
-        });
-</code></pre><h3 id="font-colorred6font"><font color=red>6.</font></h3>
-<pre><code>    let arr = [1,2,3,4,5,6];
-
-1.map()方法创建一个新数组，其结果是该数组中的每一个元素都调用一个提供函数后返回结果
-        arr.map(function(item,index,arr){
-            return item * item
-        });
-
-2.filter()方法，是true就返回，否则就筛选掉
-        arr.filter(function(item,index,arr){
-            return item % 2 === 0;
-        });
-
-3.reduce()方法
-        1.initial代表初始值(可以设置任意自己想要的数据类型)
-        2.item是数组中的值，从下标0开始
-        arr.reduce(function(initial,item){
-                return  &quot;自己想要的东西&quot;
-        },initial);
-
-        案例1
-        arr.reduce(function(sum,item){
-                return sum+item
-        },0)
-
-        案例2
-        arr.reduce(function(result,item){
-                return result.concat(item*item);
-        },[]);
-</code></pre><pre><code>  面试题
-  let arr = [
-    { 名称: &quot;动物&quot;, id: 1, parent: null },
-    { 名称: &quot;狗&quot;, id: 2, parent: 1 },
-    { 名称: &quot;猫&quot;, id: 3, parent: 1 }
-  ];
-
-  变成
-    {
-    id : 1,
-    名称 : '动物',
-    children : [
-    {id:2,名称:'狗',children:null},
-    {id:3,名称:'猫',children:null}
-    ]
+function Person(){
+    this.name = 'chengjian';
+}
+Person.prototype = {
+    constructor : A,
+    getX : function(){
+        console.log(this.x);
     }
-</code></pre>
+}
 
+function Son(){
+    this.age = 18;
+}
+Son.prototype = new Person();
+
+let s = new Son();
+
+</code></pre><p><font color=red>2.call 继承</font><br>
+a. call 继承:把父类 Person 作为普通函数执行,让 Person 中 this 变成 Son 的实例,相当于给 Son 的实例增加一些属性和方法<br>
+b. <font color=red>弊端:把父类 Person 当做普通函数执行,和父类原型没什么关系了,仅仅是把 Person 中的私有属性变为子类 Son 实例的私有属性而已,Person 原型上的公有属性方法和 Son 及它的实例没什么关系</font></p>
+<pre><code>function Person(name){
+    this.name = name;
+}
+Person.prototype.say = function(){
+    console.log(this.name);
+}
+
+function Son(age,name){
+    Person.call(this,name); // call继承,把Person执行,让Person中的this变成Son的实例
+    this.age = age;
+}
+let s = new Son(18,'chengjian');
+</code></pre><p><font color=red>3.寄生组合继承 : Person 的私有变为 Son 的私有,Person 的公有变为 Son 的公有</font></p>
+<pre><code>Object.create : 内置Object类天生自带的方法
+    1.创建一个空对象
+    2.让这个空对象__proto__指向传递进来的对象(传递进来的对象作为你空对象的原型)
+
+function Person(name){
+    this.name = name;
+}
+Person.prototype.say = function(){
+    console.log(`my name is ${this.name}`);
+}
+function Son(age,name){
+    Person.call(this,name);  // 基于call把Person的私有变为Son的私有
+    this.age = age;
+}
+Son.prototype = Person.prototype; // 一般不这样写,这样写可以轻易修改父类的东西,这样会导致Person的其它实例也会受到影响
+
+Son.prototype = Object.create(Person.prototype);
+
+let s = new Son(18,'chengjian');
+</code></pre><p><font color=red>4.Es6 中 class 类实现继承</font></p>
+<pre><code>1.ES6创建类是有自己标准语法(这种语法创建出来的类只能new执行,不能当做普通函数执行)
+
+class Person{ // Person是类名,没有小括号
+    constructor(name,age){
+        // 等价于传统ES5类的构造体
+        this.name = name;
+        this.age = age;
+    }
+
+    // 给Person原型上设置方法(只能设置方法不能设置属性)
+    say(name){
+        console.log(name);
+    }
+
+    // 把Person当做一个普通对象设置私有方法(等价于Person.sayAge = function(){})
+    static sayAge(){
+        console.log(this.age);
+    }
+}
+
+class Son extends Person{
+    constructor(sex,name,age){
+        super(name,age);  // super 等等于 call 继承 私有属性
+        this.sex = sex;
+    }
+}
+
+let s = new Son('男');
+</code></pre>
             </div>
         </article>
 
@@ -265,7 +257,7 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>260 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>238 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:34 &#43;0800</p>
         </div>
@@ -289,8 +281,8 @@
 
                     
                         <span class="button next">
-                            <a href="http://yaochengjian.com/posts/1000/">
-                                <span class="button__text">1000 - 变量提升、闭包</span>
+                            <a href="http://yaochengjian.com/posts/22/">
+                                <span class="button__text">22 - [JS全解]JS数组</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

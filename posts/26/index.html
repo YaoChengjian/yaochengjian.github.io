@@ -5,15 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
-2.document.getElementById(&amp;lsquo;xxx&amp;rsquo;) 通过 id 获取该标签
-3.document.getElementsByTagName(&amp;lsquo;div&amp;rsquo;) 通过标签获取属性,是一个伪数组
-4.document.getElementsByClassName(&amp;lsquo;red&amp;rsquo;) 通过类获取该标签,是一个伪数组
-5.document.querySelector(&#39;#id&amp;rsquo;)
-6.document.querySelectorAll(&#39;.red&amp;rsquo;)
-2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
-1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
-1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document." />
+<meta name="description" content="1.Number 和 isNaN 类型详细解读 数据类型详细剖析
+1.Number (null &#39;&amp;rsquo; &#39; &#39; false [])转了都是 0
+Number(&amp;lsquo;13px&amp;rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN
+2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)
+Number 转换也是这种机制
+首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型1.基本类型转换为数字 : 直接使用Number这个方法转换2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字-对象 : 所有对象toString都是 &#39;[object object]&#39;-函数 : (function fn(){}).toString() -&amp;gt; &#39;function fn(){}&#39;-数组 : [12].toString() -&amp;gt; &#39;12&#39; -&amp;gt; Number(&#39;12&#39;) -&amp;gt; 12[12,13].toString() -&amp;gt; &#39;12,13&#39; -&amp;gt; Number(&#39;12,13&#39;) -&amp;gt; NaN-正则 : /^89$/.toString() -&amp;gt; &#39;/^89$/&#39; -&amp;gt; Number(&#39;/^89$/&#39;) -&amp;gt; NaN2.parseInt / parseFloat 1." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -22,7 +19,7 @@
 
     <title>
         
-            26 - [JS编程接口]DOM编程 :: 姚 成 健 
+            26 - [JS全解]JS各种类型转换机制 :: 姚 成 健 
         
     </title>
 
@@ -38,19 +35,16 @@
 
 
 
-<meta itemprop="name" content="26 - [JS编程接口]DOM编程">
-<meta itemprop="description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
-2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签
-3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组
-4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组
-5.document.querySelector(&#39;#id&rsquo;)
-6.document.querySelectorAll(&#39;.red&rsquo;)
-2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
-1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
-1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.">
-<meta itemprop="datePublished" content="2020-03-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="135">
+<meta itemprop="name" content="26 - [JS全解]JS各种类型转换机制">
+<meta itemprop="description" content="1.Number 和 isNaN 类型详细解读 数据类型详细剖析
+1.Number (null &#39;&rsquo; &#39; &#39; false [])转了都是 0
+Number(&lsquo;13px&rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN
+2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)
+Number 转换也是这种机制
+首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型1.基本类型转换为数字 : 直接使用Number这个方法转换2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字-对象 : 所有对象toString都是 &#39;[object object]&#39;-函数 : (function fn(){}).toString() -&gt; &#39;function fn(){}&#39;-数组 : [12].toString() -&gt; &#39;12&#39; -&gt; Number(&#39;12&#39;) -&gt; 12[12,13].toString() -&gt; &#39;12,13&#39; -&gt; Number(&#39;12,13&#39;) -&gt; NaN-正则 : /^89$/.toString() -&gt; &#39;/^89$/&#39; -&gt; Number(&#39;/^89$/&#39;) -&gt; NaN2.parseInt / parseFloat 1.">
+<meta itemprop="datePublished" content="2020-03-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="112">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -58,22 +52,19 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="26 - [JS编程接口]DOM编程"/>
-<meta name="twitter:description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
-2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签
-3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组
-4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组
-5.document.querySelector(&#39;#id&rsquo;)
-6.document.querySelectorAll(&#39;.red&rsquo;)
-2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
-1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
-1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document."/>
+<meta name="twitter:title" content="26 - [JS全解]JS各种类型转换机制"/>
+<meta name="twitter:description" content="1.Number 和 isNaN 类型详细解读 数据类型详细剖析
+1.Number (null &#39;&rsquo; &#39; &#39; false [])转了都是 0
+Number(&lsquo;13px&rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN
+2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)
+Number 转换也是这种机制
+首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型1.基本类型转换为数字 : 直接使用Number这个方法转换2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字-对象 : 所有对象toString都是 &#39;[object object]&#39;-函数 : (function fn(){}).toString() -&gt; &#39;function fn(){}&#39;-数组 : [12].toString() -&gt; &#39;12&#39; -&gt; Number(&#39;12&#39;) -&gt; 12[12,13].toString() -&gt; &#39;12,13&#39; -&gt; Number(&#39;12,13&#39;) -&gt; NaN-正则 : /^89$/.toString() -&gt; &#39;/^89$/&#39; -&gt; Number(&#39;/^89$/&#39;) -&gt; NaN2.parseInt / parseFloat 1."/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-03-02 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-03-03 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -143,104 +134,48 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/26/">26 - [JS编程接口]DOM编程</a>
+                <a href="http://yaochengjian.com/posts/26/">26 - [JS全解]JS各种类型转换机制</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="1获取元素的-api">1.获取元素的 API</h3>
-<p>1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取<br>
-2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签<br>
-3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组<br>
-4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组<br>
-5.document.querySelector('#id&rsquo;)<br>
-6.document.querySelectorAll('.red&rsquo;)</p>
-<h3 id="2获取特定元素">2.获取特定元素</h3>
-<pre><code>1.获取html元素
-document.documentElement
+                <h3 id="1number-和-isnan-类型详细解读">1.Number 和 isNaN 类型详细解读</h3>
+<p>数据类型详细剖析<br>
+1.Number (null '&rsquo; ' ' false [])转了都是 0<br>
+   Number(&lsquo;13px&rsquo;) Number 如果当前字符串出现任意一个非有效数字字符,结果都为 NaN</p>
+<p>2.isNaN 检测机制(数字类型只有 NaN 不是有效数字,其余都是有效数字)<br>
+   Number 转换也是这种机制</p>
+<pre><code>首先会检测当前值是否为数字类型,如果不是,浏览器会默认把值转换为数字类型
 
-2.获取head元素
-document.head
+1.基本类型转换为数字 : 直接使用Number这个方法转换
 
-3.获取body元素
-document.body
+2.引用类型值转换为数字 : 先用toString()转换为数字,然后再把字符串调取Number转换为数字
 
-4.获取窗口(窗口不是元素,是一个对象)
-window
+    -对象 : 所有对象toString都是 '[object object]'
 
-5.获取所有元素(第六个falsy值)
-因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值
-document.all
-</code></pre><h3 id="3节点">3.节点</h3>
-<pre><code>1. element.nodeType 得到一个数字
-2. 1表示元素Element,也叫标签Tag
-3. 3表示文本Text
-4. 8表示注释Comment
-5. 9表示文档document
-记住2和3即可
-</code></pre><h3 id="4节点的增删改查">4.节点的增删改查</h3>
-<p>1.增加</p>
-<pre><code>1.创建一个标签节点
-    let div1 = document.createElement('div');
+    -函数 : (function fn(){}).toString() -&gt; 'function fn(){}'
 
-2.创建一个文本节点
-    text1 = document.createTextNode('你好');
+    -数组 : [12].toString() -&gt; '12' -&gt; Number('12') -&gt; 12
+            [12,13].toString() -&gt; '12,13' -&gt; Number('12,13') -&gt; NaN
 
-3.标签里面插入文本
-    div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置
-    div1.innerText = '你好' 或者 div1.textContent = '你好'
-    但是不能用div1.appendChild('你好')
-</code></pre><p>2.删除</p>
-<pre><code>1.两种方法
-node.prototype提供方法(必须要父亲来删除)
-    let div1 = document.createElement('div');
-    div.parentNode.removeChild(div1);
+    -正则 : /^89$/.toString() -&gt; '/^89$/' -&gt; Number('/^89$/') -&gt; NaN
+</code></pre><h3 id="2parseint--parsefloat">2.parseInt / parseFloat</h3>
+<p>1.等同与 Number,也是为了把其它类型的值转换为数字类型</p>
+<p>parseInt : 把一个字符串中的整数部分解析出来,字符串第一位开始找,是有效数字就找下去,不是则返回 NaN,停止</p>
+<p>parseFloat : 把一个字符串中小数部分解析出来,字符串第一位开始找,字符串第一位开始找,是有效数字就找下去,不是则返回 NaN,停止</p>
+<p>2.基本类型就直接从左到右找,第一位出现无效数字就会返回 NaN</p>
+<p>3.引用类型会 toString(),然后从第一位开始找</p>
+<h3 id="3--运算符">3. + 运算符</h3>
+<p>1.所有东西与字符串相加都等于字符串</p>
+<p>2.基本类型相加,会 Numbe 之后在相加(除了字符串)</p>
+<p>3.引用类型相加,会 toString()之后在相加</p>
+<h3 id="4----运算符null-不等于任何值">4. == | != 运算符(null 不等于任何值)</h3>
+<pre><code>1.基本类型比较 : 不同的基本类型会 Number() 之后再比较(除了null),相同则直接比较
 
-element.prototype提供方法(可以自己删除自己)
-    let div1 = document.createElement('div');
-    div.remove();
-</code></pre><p>3.改属性</p>
-<pre><code>1.改class : div.styleName = 'red blue'(会覆盖之前的)
-2.改class : div.classList.add('red') 添加一个类属性
-3.添加属性 : div.setAttribute('class','div1')
-4.获取属性 : div.getAttribute('class')
-</code></pre><p>改时间处理函数</p>
-<pre><code>div.onclick 默认为null
-1.默认点击div不会有任何时间发送
-2.但是如果你把div.onclick 改为一个函数fn
-3.那么点击div的时候,浏览器就会调用这个函数
-4.并且是这样调用的fn.call(div,event)
-5.div会被当做this
-6.event则包含了点击事件的所有信息,如坐标等
-</code></pre><p>4.查</p>
-<pre><code>1.查爸爸
-    div.parentNode 或者 div.parentElement
+2.引用类型比较 : 是比较该 16 进制内存地址
 
-2.查爷爷
-    div.parentNode.parentNode
-
-3.查子代
-    div.childNodes 会包括其它节点(文本、注释...)
-    div.children
-
-4.查兄弟姐妹
-    div.parentNode.childNodes
-    div.parentNode.children
-
-5.查看老大
-    div.firstChild
-
-6.查看老幺
-    div.lastChild
-
-7.查看上一个哥哥/姐姐
-    div.previousSibling 这个会查看到其它节点(注释 | 文本...)
-    div.previousElementSibling
-
-8.查看下一个弟弟/妹妹
-    div.nextSibling 这个会查看到其它节点(注释 | 文本...)
-    div.nextElementSibling
+3.引用类型 与 基本类型比较,会把引用类型toString()在比较，双方为基本类型了,又会重复第一步
 </code></pre>
             </div>
         </article>
@@ -249,9 +184,9 @@ element.prototype提供方法(可以自己删除自己)
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>135 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>112 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-02 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-03 08:00 &#43;0800</p>
         </div>
 
         
@@ -266,7 +201,7 @@ element.prototype提供方法(可以自己删除自己)
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/25/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">25 - [JS全解]JS各种类型转换机制</span>
+                                <span class="button__text">25 - [JS全解]JS运算符</span>
                             </a>
                         </span>
                     
@@ -274,7 +209,7 @@ element.prototype提供方法(可以自己删除自己)
                     
                         <span class="button next">
                             <a href="http://yaochengjian.com/posts/27/">
-                                <span class="button__text">27 - [JS编程接口]手写DOM库</span>
+                                <span class="button__text">27 - [JS编程接口]DOM编程</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

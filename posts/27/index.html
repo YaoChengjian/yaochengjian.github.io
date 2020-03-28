@@ -5,7 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装" />
+<meta name="description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
+2.document.getElementById(&amp;lsquo;xxx&amp;rsquo;) 通过 id 获取该标签
+3.document.getElementsByTagName(&amp;lsquo;div&amp;rsquo;) 通过标签获取属性,是一个伪数组
+4.document.getElementsByClassName(&amp;lsquo;red&amp;rsquo;) 通过类获取该标签,是一个伪数组
+5.document.querySelector(&#39;#id&amp;rsquo;)
+6.document.querySelectorAll(&#39;.red&amp;rsquo;)
+2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -14,7 +22,7 @@
 
     <title>
         
-            27 - [JS编程接口]手写DOM库 :: 姚 成 健 
+            27 - [JS编程接口]DOM编程 :: 姚 成 健 
         
     </title>
 
@@ -30,11 +38,19 @@
 
 
 
-<meta itemprop="name" content="27 - [JS编程接口]手写DOM库">
-<meta itemprop="description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装">
-<meta itemprop="datePublished" content="2020-03-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="21">
+<meta itemprop="name" content="27 - [JS编程接口]DOM编程">
+<meta itemprop="description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
+2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签
+3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组
+4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组
+5.document.querySelector(&#39;#id&rsquo;)
+6.document.querySelectorAll(&#39;.red&rsquo;)
+2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document.">
+<meta itemprop="datePublished" content="2020-03-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="135">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -42,14 +58,22 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="27 - [JS编程接口]手写DOM库"/>
-<meta name="twitter:description" content="1.classList用法node.classList.add(&#39;container&#39;) 添加一个类名node.classList.remove(&#39;container&#39;) 删除一个类名node.classList.contains(&#39;container&#39;) 判断是否含有这个类名1.insertBeforenode.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面3.appendChildparentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加4.removeChildparentNode.removeChild(node) 删除节点github 地址 : dom 封装"/>
+<meta name="twitter:title" content="27 - [JS编程接口]DOM编程"/>
+<meta name="twitter:description" content="1.获取元素的 API 1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取
+2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签
+3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组
+4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组
+5.document.querySelector(&#39;#id&rsquo;)
+6.document.querySelectorAll(&#39;.red&rsquo;)
+2.获取特定元素 1.获取html元素document.documentElement2.获取head元素document.head3.获取body元素document.body4.获取窗口(窗口不是元素,是一个对象)window5.获取所有元素(第六个falsy值)因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值document.all3.节点 1. element.nodeType 得到一个数字2. 1表示元素Element,也叫标签Tag3. 3表示文本Text4. 8表示注释Comment5. 9表示文档document记住2和3即可4.节点的增删改查 1.增加
+1.创建一个标签节点let div1 = document.createElement(&#39;div&#39;);2.创建一个文本节点text1 = document.createTextNode(&#39;你好&#39;);3.标签里面插入文本div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置div1.innerText = &#39;你好&#39; 或者 div1.textContent = &#39;你好&#39;但是不能用div1.appendChild(&#39;你好&#39;)2.删除
+1.两种方法node.prototype提供方法(必须要父亲来删除)let div1 = document."/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-03-01 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-03-02 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -119,27 +143,105 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/27/">27 - [JS编程接口]手写DOM库</a>
+                <a href="http://yaochengjian.com/posts/27/">27 - [JS编程接口]DOM编程</a>
             </h1>
 
             
 
             <div class="post-content">
-                <pre><code>1.classList用法
-    node.classList.add('container') 添加一个类名
-    node.classList.remove('container') 删除一个类名
-    node.classList.contains('container') 判断是否含有这个类名
+                <h3 id="1获取元素的-api">1.获取元素的 API</h3>
+<p>1.window.idxxx 或者直接 idxxx 一个标签拥有 id,直接用这种方式就可以获取<br>
+2.document.getElementById(&lsquo;xxx&rsquo;) 通过 id 获取该标签<br>
+3.document.getElementsByTagName(&lsquo;div&rsquo;) 通过标签获取属性,是一个伪数组<br>
+4.document.getElementsByClassName(&lsquo;red&rsquo;) 通过类获取该标签,是一个伪数组<br>
+5.document.querySelector('#id&rsquo;)<br>
+6.document.querySelectorAll('.red&rsquo;)</p>
+<h3 id="2获取特定元素">2.获取特定元素</h3>
+<pre><code>1.获取html元素
+document.documentElement
 
-1.insertBefore
-    node.insertBefore(newNode,oldNode) 把newNode插入oldNode节点前面
+2.获取head元素
+document.head
 
-3.appendChild
-    parentNode.appendChild(node) 在某个容器插入节点,如果页面已经存在,会抹掉在添加
+3.获取body元素
+document.body
 
-4.removeChild
-    parentNode.removeChild(node) 删除节点
-</code></pre><p><font color=red>github 地址 : <a href = 'http://yaochengjian.com/dom-1/src/dom.js'>dom 封装</a></font></p>
+4.获取窗口(窗口不是元素,是一个对象)
+window
 
+5.获取所有元素(第六个falsy值)
+因为这个东西是ie发明的,在ie里面是真值,其它浏览器是假值
+document.all
+</code></pre><h3 id="3节点">3.节点</h3>
+<pre><code>1. element.nodeType 得到一个数字
+2. 1表示元素Element,也叫标签Tag
+3. 3表示文本Text
+4. 8表示注释Comment
+5. 9表示文档document
+记住2和3即可
+</code></pre><h3 id="4节点的增删改查">4.节点的增删改查</h3>
+<p>1.增加</p>
+<pre><code>1.创建一个标签节点
+    let div1 = document.createElement('div');
+
+2.创建一个文本节点
+    text1 = document.createTextNode('你好');
+
+3.标签里面插入文本
+    div1.appendChild(text1); 如果页面本来存在标签,会擦掉在插入你想要位置
+    div1.innerText = '你好' 或者 div1.textContent = '你好'
+    但是不能用div1.appendChild('你好')
+</code></pre><p>2.删除</p>
+<pre><code>1.两种方法
+node.prototype提供方法(必须要父亲来删除)
+    let div1 = document.createElement('div');
+    div.parentNode.removeChild(div1);
+
+element.prototype提供方法(可以自己删除自己)
+    let div1 = document.createElement('div');
+    div.remove();
+</code></pre><p>3.改属性</p>
+<pre><code>1.改class : div.styleName = 'red blue'(会覆盖之前的)
+2.改class : div.classList.add('red') 添加一个类属性
+3.添加属性 : div.setAttribute('class','div1')
+4.获取属性 : div.getAttribute('class')
+</code></pre><p>改时间处理函数</p>
+<pre><code>div.onclick 默认为null
+1.默认点击div不会有任何时间发送
+2.但是如果你把div.onclick 改为一个函数fn
+3.那么点击div的时候,浏览器就会调用这个函数
+4.并且是这样调用的fn.call(div,event)
+5.div会被当做this
+6.event则包含了点击事件的所有信息,如坐标等
+</code></pre><p>4.查</p>
+<pre><code>1.查爸爸
+    div.parentNode 或者 div.parentElement
+
+2.查爷爷
+    div.parentNode.parentNode
+
+3.查子代
+    div.childNodes 会包括其它节点(文本、注释...)
+    div.children
+
+4.查兄弟姐妹
+    div.parentNode.childNodes
+    div.parentNode.children
+
+5.查看老大
+    div.firstChild
+
+6.查看老幺
+    div.lastChild
+
+7.查看上一个哥哥/姐姐
+    div.previousSibling 这个会查看到其它节点(注释 | 文本...)
+    div.previousElementSibling
+
+8.查看下一个弟弟/妹妹
+    div.nextSibling 这个会查看到其它节点(注释 | 文本...)
+    div.nextElementSibling
+</code></pre>
             </div>
         </article>
 
@@ -147,9 +249,9 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>21 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>135 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-01 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-02 08:00 &#43;0800</p>
         </div>
 
         
@@ -164,7 +266,7 @@
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/26/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">26 - [JS编程接口]DOM编程</span>
+                                <span class="button__text">26 - [JS全解]JS各种类型转换机制</span>
                             </a>
                         </span>
                     
@@ -172,7 +274,7 @@
                     
                         <span class="button next">
                             <a href="http://yaochengjian.com/posts/28/">
-                                <span class="button__text">28 - [JS编程接口]jQuery中的设计模式</span>
+                                <span class="button__text">28 - [JS编程接口]手写DOM库</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

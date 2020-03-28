@@ -5,17 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
-2.前面学的很多知识基本上都是同步的 &amp;ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
-const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&amp;gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
-1.先取得一个 DOM 里面的 button 引用
-2.点击按钮的时候,添加一个 click 事件监听
-1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
-2.一但 alert 结束,创建一个 p 元素
-3.给它的文本内容赋值
-4.最后,把这个段落放进网页
-2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
-1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&amp;gt;{=&amp;gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&amp;gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&amp;gt; resolve : 当异步操作执行成功,我们执行resolve方法=&amp;gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&amp;gt;{resolve(100);},1000);})." />
+<meta name="description" content="1.背景 1.AJAX 是浏览器上的功能
+2.浏览器可以发请求,收响应
+3.浏览器在 window 上加了一个 XMLHttpRequest 函数
+4.用这个构造函数可以构造出一个对象
+5.JS 通过它实现发请求,收响应
+2.node-dev 代替 node 命令 : npm install -g node-dev
+1.方便我们开发
+2.修改代码会自动帮我们重启
+使用 : node-dev &amp;hellip;&amp;hellip;
+3.AJAX  1. let xml = new XMLHttpRequest();2. xml.open(method , url ,async) method请求的方式(&#39;GET&#39;/&#39;POST&#39;), 请求的url地址 , async是true请求则是异步进行,false则是同步进行3. xml.setRequesHeader() 设置请求的头部4. xml.onreadystatechange = function(){} 只要xml.readyState的值变化,就会触发该事件函数5. xml.readyState 属性( 0 ~ 4)0 : 未调用open()方法1 ：open()方法已经被调用2 : send()方法已经被调用3 ：responseText属性已经包含部分数据4 ：已经接收全部数据6." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -24,7 +23,7 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
 
     <title>
         
-            32 - [前后分离]异步与Promise :: 姚 成 健 
+            32 - [前后分离]AJAX的原理 :: 姚 成 健 
         
     </title>
 
@@ -40,21 +39,20 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
 
 
 
-<meta itemprop="name" content="32 - [前后分离]异步与Promise">
-<meta itemprop="description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
-2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
-const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
-1.先取得一个 DOM 里面的 button 引用
-2.点击按钮的时候,添加一个 click 事件监听
-1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
-2.一但 alert 结束,创建一个 p 元素
-3.给它的文本内容赋值
-4.最后,把这个段落放进网页
-2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
-1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&gt;{=&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&gt; resolve : 当异步操作执行成功,我们执行resolve方法=&gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&gt;{resolve(100);},1000);}).">
-<meta itemprop="datePublished" content="2020-02-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-02-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="198">
+<meta itemprop="name" content="32 - [前后分离]AJAX的原理">
+<meta itemprop="description" content="1.背景 1.AJAX 是浏览器上的功能
+2.浏览器可以发请求,收响应
+3.浏览器在 window 上加了一个 XMLHttpRequest 函数
+4.用这个构造函数可以构造出一个对象
+5.JS 通过它实现发请求,收响应
+2.node-dev 代替 node 命令 : npm install -g node-dev
+1.方便我们开发
+2.修改代码会自动帮我们重启
+使用 : node-dev &hellip;&hellip;
+3.AJAX  1. let xml = new XMLHttpRequest();2. xml.open(method , url ,async) method请求的方式(&#39;GET&#39;/&#39;POST&#39;), 请求的url地址 , async是true请求则是异步进行,false则是同步进行3. xml.setRequesHeader() 设置请求的头部4. xml.onreadystatechange = function(){} 只要xml.readyState的值变化,就会触发该事件函数5. xml.readyState 属性( 0 ~ 4)0 : 未调用open()方法1 ：open()方法已经被调用2 : send()方法已经被调用3 ：responseText属性已经包含部分数据4 ：已经接收全部数据6.">
+<meta itemprop="datePublished" content="2020-02-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="215">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -62,24 +60,23 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="32 - [前后分离]异步与Promise"/>
-<meta name="twitter:description" content="1.什么是同步?什么是异步? 1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始
-2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子
-const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;click&#39;,()=&gt;{alert(&#39;You clicked me!&#39;);let pElem = document.createElement(&#39;p&#39;);pElem.textContent = &#39;This is a newly-added paragraph.&#39;;document.appendChild(pElem);});这段代码,一行一行的顺序执行:
-1.先取得一个 DOM 里面的 button 引用
-2.点击按钮的时候,添加一个 click 事件监听
-1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)
-2.一但 alert 结束,创建一个 p 元素
-3.给它的文本内容赋值
-4.最后,把这个段落放进网页
-2.Promise 1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为&#39;Promise&#39;设计模式
-1. 三个状态 ：pending(准备:初始化成功,开始执行异步的任务)fulfilled(成功)rejected(失败)new Promise((resolve,reject)=&gt;{=&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会把当前函数体中的异步操作执行)=&gt; &#39;Promise是同步编程的,它可以管理异步操作&#39;=&gt; resolve : 当异步操作执行成功,我们执行resolve方法=&gt; reject : 当异步操作执行失败,我们执行reject方法setTimeout(()=&gt;{resolve(100);},1000);})."/>
+<meta name="twitter:title" content="32 - [前后分离]AJAX的原理"/>
+<meta name="twitter:description" content="1.背景 1.AJAX 是浏览器上的功能
+2.浏览器可以发请求,收响应
+3.浏览器在 window 上加了一个 XMLHttpRequest 函数
+4.用这个构造函数可以构造出一个对象
+5.JS 通过它实现发请求,收响应
+2.node-dev 代替 node 命令 : npm install -g node-dev
+1.方便我们开发
+2.修改代码会自动帮我们重启
+使用 : node-dev &hellip;&hellip;
+3.AJAX  1. let xml = new XMLHttpRequest();2. xml.open(method , url ,async) method请求的方式(&#39;GET&#39;/&#39;POST&#39;), 请求的url地址 , async是true请求则是异步进行,false则是同步进行3. xml.setRequesHeader() 设置请求的头部4. xml.onreadystatechange = function(){} 只要xml.readyState的值变化,就会触发该事件函数5. xml.readyState 属性( 0 ~ 4)0 : 未调用open()方法1 ：open()方法已经被调用2 : send()方法已经被调用3 ：responseText属性已经包含部分数据4 ：已经接收全部数据6."/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-02-25 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-02-26 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -140,7 +137,7 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
 
             
 
@@ -149,94 +146,103 @@ const btn = document.querySelector(&#39;button&#39;);btn.addEventListener(&#39;
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/32/">32 - [前后分离]异步与Promise</a>
+                <a href="http://yaochengjian.com/posts/32/">32 - [前后分离]AJAX的原理</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="1什么是同步什么是异步">1.什么是同步?什么是异步?</h3>
-<p>1.要理解什么是异步 JavaScript,我们应该从确切理解同步 JavaScript 开始</p>
-<p>2.前面学的很多知识基本上都是同步的 &ndash; 运行代码,然后浏览器尽快返回结果,先看一个简单的例子</p>
-<pre><code>const btn = document.querySelector('button');
+                <h3 id="1背景">1.背景</h3>
+<p>1.AJAX 是浏览器上的功能<br>
+2.浏览器可以发请求,收响应<br>
+3.浏览器在 window 上加了一个 XMLHttpRequest 函数<br>
+4.用这个构造函数可以构造出一个对象<br>
+5.JS 通过它实现发请求,收响应</p>
+<h3 id="2node-dev-代替-node">2.node-dev 代替 node</h3>
+<p>命令 : npm install -g node-dev</p>
+<p>1.方便我们开发<br>
+2.修改代码会自动帮我们重启</p>
+<p>使用 : node-dev &hellip;&hellip;</p>
+<h3 id="3ajax">3.AJAX</h3>
+<pre><code>    1. let xml = new XMLHttpRequest();
 
-      btn.addEventListener('click',()=&gt;{
-          alert('You clicked me!');
+    2. xml.open(method , url ,async) method请求的方式('GET'/'POST'), 请求的url地址 , async是true请求则是异步进行,false则是同步进行
 
-          let pElem = document.createElement('p');
-          pElem.textContent = 'This is a newly-added paragraph.';
-          document.appendChild(pElem);
-      });
-</code></pre><p>这段代码,一行一行的顺序执行:<br>
-1.先取得一个 DOM 里面的 button 引用</p>
-<p>2.点击按钮的时候,添加一个 click 事件监听<br>
-    1.alert()消息出现(一直没有点击 alert 消息框,其它事情都阻塞,知道前面操作完成)<br>
-    2.一但 alert 结束,创建一个 p 元素<br>
-    3.给它的文本内容赋值<br>
-    4.最后,把这个段落放进网页</p>
-<h3 id="2promise">2.Promise</h3>
-<p>1.它是 ES6 中新增加的类(new Promise),目的是为了管理 JS 中的异步编程的,所以我们也把它称为'Promise'设计模式</p>
-<pre><code>1. 三个状态 ：
-pending(准备:初始化成功,开始执行异步的任务)
-fulfilled(成功)
-rejected(失败)
+    3. xml.setRequesHeader() 设置请求的头部
 
-    new Promise((resolve,reject)=&gt;{
-        =&gt; 这里面一般执行一个异步的任务(new Promise的时候,创建Promise的实例,立即会
-        把当前函数体中的异步操作执行)
-        =&gt; 'Promise是同步编程的,它可以管理异步操作'
-        =&gt; resolve : 当异步操作执行成功,我们执行resolve方法
-        =&gt; reject : 当异步操作执行失败,我们执行reject方法
+    4. xml.onreadystatechange = function(){} 只要xml.readyState的值变化,就会触发该事件函数
 
-        setTimeout(()=&gt;{
-            resolve(100);
-        },1000);
-    }).then((res)=&gt;{
-        =&gt; 第一个传递函数是resolve
-        console.log(res);
-    },()=&gt;{
-        =&gt; 第二个传递的函数是reject
-    });
-</code></pre><pre><code>    let val = null;
-    let xhr = new XMLHttpRequest();
-        xhr.open('get','1.js',true);
-        xhr.onreadystatechange = () =&gt;{
-            if(xhr.readystate === 4 &amp;&amp; xhr.status === 200){
-                val = xhr.responseText;
+    5. xml.readyState 属性( 0 ~ 4)
+       0 : 未调用open()方法
+       1 ：open()方法已经被调用
+       2 : send()方法已经被调用
+       3 ：responseText属性已经包含部分数据
+       4 ：已经接收全部数据
+
+    6. xml.status === 200 代表一个成功请求,状态码
+
+    7. xml.responseText 当xml.readyState === 4 &amp;&amp; xml.status === 200是全部后端的返回数据
+
+    8. xml.send() 用于发送http请求,如果是异步请求(请求发送后立即返回),如果是同步(此方法直到响应到达后才返回)
+</code></pre><h3 id="4挑战-1加载-css">4.挑战 1(加载 CSS)</h3>
+<pre><code>1.加载css
+  a : 以前我们用&lt;link rel = 'stylesheet' href=&quot;1.css&quot;/&gt;
+  b : 今天请用AJAX加载CSS
+
+2.四个步骤
+  a : 创建XMLHttpRequest对象
+
+
+  b : 调用对象的open方法
+      1.xml.open(method,url)
+      2.method : 请求方式 url : 请求地址
+
+  c : 监听对象的onload &amp; onerror 事件
+      1.专业前端会改用onreadystatechange事件(只要xml.readyState属性发送变化,就会调用相应的处理函数)
+
+      2.在事件处理函数里操作CSS文件内容
+
+  d : 调用对象的send方法(发送请求)
+
+  const xml = new XMLHttpRequest();
+        xml.open('GET','1.css');
+        xml.onreadystatechange = function(){
+            if(xml.readyState === 4 &amp;&amp; xml.status === 200){
+                console.log(xml.responseText);
             }
         }
-    xhr.send();
-    console.log(val); =&gt;如果使用异步ajax请求,不等ajax彻底完成,就把val输出,此时结果是null
-</code></pre><p>Promise 使用案例</p>
-<pre><code>let pro = new Promise((resolve, reject) =&gt; {
-        let xhr = new XMLHttpRequest();
-        xhr.open(&quot;get&quot;, &quot;1.json&quot;, true);
-        xhr.onreadystatechange = () =&gt; {
-          if (xhr.readyState === 4 &amp;&amp; xhr.status === 200) {
-            resolve(xhr.responseText); //=&gt;成功会请求到的值传给第1个then
-          }
-          if (xhr.status !== 200) {
-            reject();
-          }
-        };
-        xhr.send();
-      });
+        xml.send();
+</code></pre><h3 id="5json-是一门语言跟-htmlcssxmljs-一样是一门独立的语言">5.JSON 是一门语言(跟 HTML、css、XML、JS 一样,是一门独立的语言)</h3>
+<p><font color=red><a href="https://www.json.org/json-zh.html">JSON 铁轨图(所有语法)</a></font></p>
+<p>1.JSON 不是编程语言(是标记语言),跟 HTML、XML、Markdown 一样,用来展示数据</p>
+<p>2.支持的数据类型(6 种)</p>
+<pre><code>1. string 只支持双引号,不支持单引号和无引号
+2. number 支持科学记数法
+3. bool true 和 false
+4. null 没有undefined
+5. object
+6. array
 
-      pro.then(
-          res =&gt; {
-            console.log(res);
-            // =&gt; 数据绑定
-            return 100; //=&gt;它返回结果传递给第二个then
-          },
-          () =&gt; {}
-        )
-        .then(res =&gt; {
-          // =&gt; res 就是第一个then return返回的结果
-          // =&gt; 当第一个then中的函数执行完,会执行第二个
-        })
-        .then(() =&gt; {
-          // =&gt; 当第二个then中的函数执行完,会执行第三个 等等
-        });
+不支持函数,不支持变量
+</code></pre><h3 id="5windowjson">5.window.JSON</h3>
+<pre><code>JSON.parse
+    1.将符合JSON语法的字符串转换成JS对应类型的数据
+    2.JSON字符串 =&gt; JS数据
+    3.由于JSON只有6种类型,所以转成的数据也只有6种
+    4.如果不符合JSON语法,则直接抛出一个Error对象
+    5.用 try{}catch(){} 消化
+
+    let json = `{'name':'yaochengjian','age':18}`;
+    try{
+        JSON.parse(json);
+    }catch(error){
+        json = {name:'yaochengjian',age:18}
+    }
+</code></pre><p>JSON.stringify</p>
+<pre><code>    1.是 JSON.parse 的逆运算
+    2.JS 数据 =&gt; JSON 字符串
+    3.由于 JS 的数据类型比 JSON 多,所以不一定能成功
+    4.如果失败,就抛出一个 Error 对象
 </code></pre>
             </div>
         </article>
@@ -245,9 +251,9 @@ rejected(失败)
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>198 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>215 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-25 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-26 08:00 &#43;0800</p>
         </div>
 
         
@@ -262,7 +268,7 @@ rejected(失败)
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/31/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">31 - [前后分离]AJAX的原理</span>
+                                <span class="button__text">31 - [项目]前端导航站点</span>
                             </a>
                         </span>
                     
@@ -270,7 +276,7 @@ rejected(失败)
                     
                         <span class="button next">
                             <a href="http://yaochengjian.com/posts/33/">
-                                <span class="button__text">32 - [前后分离]跨域、CORS、JSONP</span>
+                                <span class="button__text">33 - [前后分离]异步与Promise</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

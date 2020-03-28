@@ -5,18 +5,27 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&amp;gt; 七的平方7 *** 3 =&amp;gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串" />
+<meta name="description" content="1.什么是动态服务器 1.是否请求了数据库
+a. 没有请求服务器就是静态服务器
+b. 请求了数据库就是动态服务器
+2.目标 1 1.实现用户注册功能
+a. 用户提交用户名和密码
+b. users.json 里就新增一行数据
+2.思路
+a. 前端写一个 form,让用户填写 name 和 password
+b. 前端监听表单事件
+c. 前端发送 post 请求,请求位于请求体
+d. 后端获取请求体中的 name 和 password
+e. 后盾存储数据" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
-<link rel="canonical" href="http://yaochengjian.com/posts/25/" />
+<link rel="canonical" href="http://yaochengjian.com/posts/36/" />
 
 
     <title>
         
-            25 - [JS全解]JS运算符 :: 姚 成 健 
+            37 - [前后分离]Ajax实战:Cookie、Session :: 姚 成 健 
         
     </title>
 
@@ -32,13 +41,22 @@
 
 
 
-<meta itemprop="name" content="25 - [JS全解]JS运算符">
-<meta itemprop="description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&gt; 七的平方7 *** 3 =&gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串">
-<meta itemprop="datePublished" content="2020-03-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="36">
+<meta itemprop="name" content="37 - [前后分离]Ajax实战:Cookie、Session">
+<meta itemprop="description" content="1.什么是动态服务器 1.是否请求了数据库
+a. 没有请求服务器就是静态服务器
+b. 请求了数据库就是动态服务器
+2.目标 1 1.实现用户注册功能
+a. 用户提交用户名和密码
+b. users.json 里就新增一行数据
+2.思路
+a. 前端写一个 form,让用户填写 name 和 password
+b. 前端监听表单事件
+c. 前端发送 post 请求,请求位于请求体
+d. 后端获取请求体中的 name 和 password
+e. 后盾存储数据">
+<meta itemprop="datePublished" content="2020-02-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="34">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -46,16 +64,25 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="25 - [JS全解]JS运算符"/>
-<meta name="twitter:description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&gt; 七的平方7 *** 3 =&gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串"/>
+<meta name="twitter:title" content="37 - [前后分离]Ajax实战:Cookie、Session"/>
+<meta name="twitter:description" content="1.什么是动态服务器 1.是否请求了数据库
+a. 没有请求服务器就是静态服务器
+b. 请求了数据库就是动态服务器
+2.目标 1 1.实现用户注册功能
+a. 用户提交用户名和密码
+b. users.json 里就新增一行数据
+2.思路
+a. 前端写一个 form,让用户填写 name 和 password
+b. 前端监听表单事件
+c. 前端发送 post 请求,请求位于请求体
+d. 后端获取请求体中的 name 和 password
+e. 后盾存储数据"/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-03-04 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-02-22 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -125,38 +152,27 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/25/">25 - [JS全解]JS运算符</a>
+                <a href="http://yaochengjian.com/posts/36/">37 - [前后分离]Ajax实战:Cookie、Session</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="1算术运算符">1.算术运算符</h3>
-<p>number 运算</p>
-<pre><code>1.加减乘除(+ - * /)
+                <h3 id="1什么是动态服务器">1.什么是动态服务器</h3>
+<p>1.是否请求了数据库<br>
+a. 没有请求服务器就是静态服务器<br>
+b. 请求了数据库就是动态服务器</p>
+<h3 id="2目标-1">2.目标 1</h3>
+<p>1.实现用户注册功能<br>
+a. 用户提交用户名和密码<br>
+b. users.json 里就新增一行数据</p>
+<p>2.思路<br>
+a. 前端写一个 form,让用户填写 name 和 password<br>
+b. 前端监听表单事件<br>
+c. 前端发送 post 请求,请求位于请求体<br>
+d. 后端获取请求体中的 name 和 password<br>
+e. 后盾存储数据</p>
 
-2.取余(%)
-
-3.指数(**)
-    7 ** 2 =&gt; 七的平方
-    7 *** 3 =&gt; 七的三次方
-
-4.自增自减
-自增在后,先赋值,后计算
-自增在前,先计算,后赋值
-    x++
-    x--
-    ++x
-    --x
-
-5.求值运算符+
-
-6.负数运算符-
-
-</code></pre><p>string 运算</p>
-<pre><code>1.字符串只支持一个 + 号的运算,其它符号都不支持
-2.任何东西+字符串都 = 字符串
-</code></pre>
             </div>
         </article>
 
@@ -164,9 +180,9 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>36 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>34 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-04 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-22 08:00 &#43;0800</p>
         </div>
 
         
@@ -179,17 +195,17 @@
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="http://yaochengjian.com/posts/24/">
+                            <a href="http://yaochengjian.com/posts/35/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">24 - [JS全解]字符串中API</span>
+                                <span class="button__text">35 - [前后分离]Node.js</span>
                             </a>
                         </span>
                     
 
                     
                         <span class="button next">
-                            <a href="http://yaochengjian.com/posts/26/">
-                                <span class="button__text">26 - [JS全解]JS各种类型转换机制</span>
+                            <a href="http://yaochengjian.com/posts/50/">
+                                <span class="button__text">50 - </span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

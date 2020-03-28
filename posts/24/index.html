@@ -5,9 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&amp;gt; 七的平方7 *** 3 =&amp;gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串" />
+<meta name="description" content="分割字符串 split(获得一个数组)   let str = &#39;1,2,3,4,5,6&#39;;let arr1 = str.split(&#39;,&#39;); 以&#39;,&#39;号形式分割let arr2 = str.split(&#39;&#39;); 以&#39;&#39;形式分割拼接字符串 concat(获得新的字符串)   let str1 = &#39;abcd&#39;;let str2 = &#39;efgh&#39;;let str3 = str1.concat(str1);截取字符串 substring(获得新的字符串)   let str1 = &#39;你好啊!我的名字叫~~~&#39;;let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)截取字符串 slice   let str1 = &#39;ABCDEFG&#39;;let str2 = str1.slice(0) 拷贝字符串let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)返回指定位置的字符串 charAt   let str1 = &#39;ABCEDFG&#39;;let s = str1." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -16,7 +14,7 @@
 
     <title>
         
-            24 - [JS全解]JS运算符 :: 姚 成 健 
+            24 - [JS全解]字符串中API :: 姚 成 健 
         
     </title>
 
@@ -32,13 +30,11 @@
 
 
 
-<meta itemprop="name" content="24 - [JS全解]JS运算符">
-<meta itemprop="description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&gt; 七的平方7 *** 3 =&gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串">
-<meta itemprop="datePublished" content="2020-03-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-03-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="36">
+<meta itemprop="name" content="24 - [JS全解]字符串中API">
+<meta itemprop="description" content="分割字符串 split(获得一个数组)   let str = &#39;1,2,3,4,5,6&#39;;let arr1 = str.split(&#39;,&#39;); 以&#39;,&#39;号形式分割let arr2 = str.split(&#39;&#39;); 以&#39;&#39;形式分割拼接字符串 concat(获得新的字符串)   let str1 = &#39;abcd&#39;;let str2 = &#39;efgh&#39;;let str3 = str1.concat(str1);截取字符串 substring(获得新的字符串)   let str1 = &#39;你好啊!我的名字叫~~~&#39;;let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)截取字符串 slice   let str1 = &#39;ABCDEFG&#39;;let str2 = str1.slice(0) 拷贝字符串let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)返回指定位置的字符串 charAt   let str1 = &#39;ABCEDFG&#39;;let s = str1.">
+<meta itemprop="datePublished" content="2020-03-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="99">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -46,16 +42,14 @@
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
-<meta name="twitter:title" content="24 - [JS全解]JS运算符"/>
-<meta name="twitter:description" content="1.算术运算符 number 运算
-1.加减乘除(&#43; - * /)2.取余(%)3.指数(**)7 ** 2 =&gt; 七的平方7 *** 3 =&gt; 七的三次方4.自增自减自增在后,先赋值,后计算自增在前,先计算,后赋值x&#43;&#43;x--&#43;&#43;x--x5.求值运算符&#43;6.负数运算符-string 运算
-1.字符串只支持一个 &#43; 号的运算,其它符号都不支持2.任何东西&#43;字符串都 = 字符串"/>
+<meta name="twitter:title" content="24 - [JS全解]字符串中API"/>
+<meta name="twitter:description" content="分割字符串 split(获得一个数组)   let str = &#39;1,2,3,4,5,6&#39;;let arr1 = str.split(&#39;,&#39;); 以&#39;,&#39;号形式分割let arr2 = str.split(&#39;&#39;); 以&#39;&#39;形式分割拼接字符串 concat(获得新的字符串)   let str1 = &#39;abcd&#39;;let str2 = &#39;efgh&#39;;let str3 = str1.concat(str1);截取字符串 substring(获得新的字符串)   let str1 = &#39;你好啊!我的名字叫~~~&#39;;let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)截取字符串 slice   let str1 = &#39;ABCDEFG&#39;;let str2 = str1.slice(0) 拷贝字符串let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)返回指定位置的字符串 charAt   let str1 = &#39;ABCEDFG&#39;;let s = str1."/>
 
 
 
 
 
-    <meta property="article:published_time" content="2020-03-04 00:00:00 &#43;0000 UTC" />
+    <meta property="article:published_time" content="2020-03-05 00:00:00 &#43;0000 UTC" />
 
 
 
@@ -125,37 +119,55 @@
 
         <article>
             <h1 class="post-title">
-                <a href="http://yaochengjian.com/posts/24/">24 - [JS全解]JS运算符</a>
+                <a href="http://yaochengjian.com/posts/24/">24 - [JS全解]字符串中API</a>
             </h1>
 
             
 
             <div class="post-content">
-                <h3 id="1算术运算符">1.算术运算符</h3>
-<p>number 运算</p>
-<pre><code>1.加减乘除(+ - * /)
+                <ol>
+<li>分割字符串 split(获得一个数组)</li>
+</ol>
+<pre><code>    let str = '1,2,3,4,5,6';
+    let arr1 = str.split(','); 以','号形式分割
+    let arr2 = str.split('');  以''形式分割
+</code></pre><ol start="2">
+<li>拼接字符串 concat(获得新的字符串)</li>
+</ol>
+<pre><code>    let str1 = 'abcd';
+    let str2 = 'efgh';
+    let str3 = str1.concat(str1);
+</code></pre><ol start="3">
+<li>截取字符串 substring(获得新的字符串)</li>
+</ol>
+<pre><code>    let str1 = '你好啊!我的名字叫~~~';
+    let str2 = str1.substring(0,1); 索引0开始,截取到索引1(不包括索引1)
+    let str3 = str1.substring(3,6); 索引0开始,截取到索引1(不包括索引1)
+</code></pre><ol start="4">
+<li>截取字符串 slice</li>
+</ol>
+<pre><code>    let str1 = 'ABCDEFG';
+    let str2 = str1.slice(0) 拷贝字符串
+    let str3 = str1.slice(2,5) 索引2开始，到索引5结束(不包括索引5)
+</code></pre><ol start="5">
+<li>返回指定位置的字符串 charAt</li>
+</ol>
+<pre><code>    let str1 = 'ABCEDFG';
+    let s = str1.charAt(3); 根据字符串索引返回你想要的字符
+</code></pre><ol start="6">
+<li>返回 Unicode 编码 charCodeAt 和 fromCharCode</li>
+</ol>
+<pre><code>    let str1 = 'ABCDEFG';
+    let n = str1.charCodeAt(3); 根据字符串索引返回你想要的字符的Unicode编码
 
-2.取余(%)
-
-3.指数(**)
-    7 ** 2 =&gt; 七的平方
-    7 *** 3 =&gt; 七的三次方
-
-4.自增自减
-自增在后,先赋值,后计算
-自增在前,先计算,后赋值
-    x++
-    x--
-    ++x
-    --x
-
-5.求值运算符+
-
-6.负数运算符-
-
-</code></pre><p>string 运算</p>
-<pre><code>1.字符串只支持一个 + 号的运算,其它符号都不支持
-2.任何东西+字符串都 = 字符串
+    String.fromCharCode(33);  根据编码返回相应的字符
+</code></pre><ol start="7">
+<li>字符串替换 replace(regexp/substr,str)</li>
+</ol>
+<pre><code>    let str = `大家好!
+    hello
+    `
+    str.replace(/\n/g,'&lt;br/&gt;');
 </code></pre>
             </div>
         </article>
@@ -164,9 +176,9 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>36 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>99 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-04 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-05 08:00 &#43;0800</p>
         </div>
 
         
@@ -181,7 +193,7 @@
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/23/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">23 - [JS全解]字符串中API</span>
+                                <span class="button__text">23 - [JS全解]JS函数</span>
                             </a>
                         </span>
                     
@@ -189,7 +201,7 @@
                     
                         <span class="button next">
                             <a href="http://yaochengjian.com/posts/25/">
-                                <span class="button__text">25 - [JS全解]JS各种类型转换机制</span>
+                                <span class="button__text">25 - [JS全解]JS运算符</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="1.Map([iterable]) 键值对为两个元素的数组例如:[1,&amp;lsquo;one&amp;rsquo;] 1.map 的实例属性和操作方法
+&amp;mdash;-size : 返回成员总数
+&amp;mdash;-set(key,value) : 添加新的键值
+&amp;mdash;-has(key) : 是否有某个键
+&amp;mdash;-get(key) : 读取某个对应的值
+&amp;mdash;-delete(key) : 删除某个键
+&amp;mdash;-clear() : 清空
+2.map 实例遍历的方法
+&amp;mdash;-keys() : 返回键名
+&amp;mdash;-values() : 返回键值
+&amp;mdash;-entires() : 返回键值对
+&amp;mdash;-forEach() : 遍历所有成员
+利用map实现去重let array = [1,2,3,5,1,2,3,4]let map = new Map();for(let i = 0;i &amp;lt; array.length;i&#43;&#43;&amp;gt;){if(map.has(array[i])){continue;}else{map.set(array[i],true);}}let newAry = [...map.keys()]2.Set([iterable])对象允许你存储任何类型的唯一值(set 里面的值是唯一的) 方法和属性
+&amp;mdash;-size : 返回 set 对象的个数" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://yaochengjian.com/posts/22-1/" />
+
+
+    <title>
+        
+            22-1 - [JS全解]Map 、 Set :: 姚 成 健 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+<meta itemprop="name" content="22-1 - [JS全解]Map 、 Set">
+<meta itemprop="description" content="1.Map([iterable]) 键值对为两个元素的数组例如:[1,&lsquo;one&rsquo;] 1.map 的实例属性和操作方法
+&mdash;-size : 返回成员总数
+&mdash;-set(key,value) : 添加新的键值
+&mdash;-has(key) : 是否有某个键
+&mdash;-get(key) : 读取某个对应的值
+&mdash;-delete(key) : 删除某个键
+&mdash;-clear() : 清空
+2.map 实例遍历的方法
+&mdash;-keys() : 返回键名
+&mdash;-values() : 返回键值
+&mdash;-entires() : 返回键值对
+&mdash;-forEach() : 遍历所有成员
+利用map实现去重let array = [1,2,3,5,1,2,3,4]let map = new Map();for(let i = 0;i &lt; array.length;i&#43;&#43;&gt;){if(map.has(array[i])){continue;}else{map.set(array[i],true);}}let newAry = [...map.keys()]2.Set([iterable])对象允许你存储任何类型的唯一值(set 里面的值是唯一的) 方法和属性
+&mdash;-size : 返回 set 对象的个数">
+<meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:23" />
+<meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:23" />
+<meta itemprop="wordCount" content="107">
+<meta itemprop="image" content="http://yaochengjian.com/"/>
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://yaochengjian.com/"/>
+
+<meta name="twitter:title" content="22-1 - [JS全解]Map 、 Set"/>
+<meta name="twitter:description" content="1.Map([iterable]) 键值对为两个元素的数组例如:[1,&lsquo;one&rsquo;] 1.map 的实例属性和操作方法
+&mdash;-size : 返回成员总数
+&mdash;-set(key,value) : 添加新的键值
+&mdash;-has(key) : 是否有某个键
+&mdash;-get(key) : 读取某个对应的值
+&mdash;-delete(key) : 删除某个键
+&mdash;-clear() : 清空
+2.map 实例遍历的方法
+&mdash;-keys() : 返回键名
+&mdash;-values() : 返回键值
+&mdash;-entires() : 返回键值对
+&mdash;-forEach() : 遍历所有成员
+利用map实现去重let array = [1,2,3,5,1,2,3,4]let map = new Map();for(let i = 0;i &lt; array.length;i&#43;&#43;&gt;){if(map.has(array[i])){continue;}else{map.set(array[i],true);}}let newAry = [...map.keys()]2.Set([iterable])对象允许你存储任何类型的唯一值(set 里面的值是唯一的) 方法和属性
+&mdash;-size : 返回 set 对象的个数"/>
+
+
+
+
+
+    <meta property="article:published_time" content="2019-12-25 21:55:11 &#43;0823 &#43;0823" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Yao Chengjian</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://yaochengjian.com/posts">博客</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="http://yaochengjian.com/posts/22-1/">22-1 - [JS全解]Map 、 Set</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h3 id="1mapiterable-键值对为两个元素的数组例如1one">1.Map([iterable]) 键值对为两个元素的数组例如:[1,&lsquo;one&rsquo;]</h3>
+<p><font color=red>1.map 的实例属性和操作方法</font><br>
+&mdash;-size : 返回成员总数<br>
+&mdash;-set(key,value) : 添加新的键值<br>
+&mdash;-has(key) : 是否有某个键<br>
+&mdash;-get(key) : 读取某个对应的值<br>
+&mdash;-delete(key) : 删除某个键<br>
+&mdash;-clear() : 清空</p>
+<p><font color=red>2.map 实例遍历的方法</font><br>
+&mdash;-keys() : 返回键名<br>
+&mdash;-values() : 返回键值<br>
+&mdash;-entires() : 返回键值对<br>
+&mdash;-forEach() : 遍历所有成员</p>
+<pre><code>利用map实现去重
+    let array = [1,2,3,5,1,2,3,4]
+    let map = new Map();
+    for(let i = 0;i &lt; array.length;i++&gt;){
+        if(map.has(array[i])){
+            continue;
+        }else{
+            map.set(array[i],true);
+        }
+    }
+    let newAry = [...map.keys()]
+</code></pre><h3 id="2setiterable对象允许你存储任何类型的唯一值set-里面的值是唯一的">2.Set([iterable])对象允许你存储任何类型的唯一值(set 里面的值是唯一的)</h3>
+<p><font color=red>方法和属性</font><br>
+&mdash;-size : 返回 set 对象的个数<br>
+&mdash;-add(value) : 在 set 对象尾部添加一个元素,返回该 set 对象<br>
+&mdash;-clear() : 移除 set 对象内的所有元素
+&mdash;-delete(value) : 移除 set 中与这个值相等的元素<br>
+&mdash;-has(value) : 判断 set 中是否存在这个值
+&mdash;-entires() : 返回键值对的数组(二维数组)<br>
+&mdash;-keys() : 返回键名<br>
+&mdash;-values() : 返回键值<br>
+&mdash;-entires() : 返回键值对<br>
+&mdash;-forEach() : 遍历所有成员</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>107 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:32 &#43;0800</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="http://yaochengjian.com/posts/22/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">22 - [JS全解]JS数组</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="http://yaochengjian.com/posts/1000/">
+                                <span class="button__text">1000 - 变量提升、闭包</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="http://yaochengjian.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>
