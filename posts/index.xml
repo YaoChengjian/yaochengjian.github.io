@@ -1361,7 +1361,15 @@ export default{
   color: red;
 }
 &lt;/style&gt;
-</code></pre>]]></content>
+</code></pre><h2 id="总结">总结</h2>
+<p>1.虽然有两个版本,但现在前端基本不会去用完整版,平时使用都是代码体积小的运行时版本,因为编译器的脏活交给
+vue-loader 去做就好<br>
+<font color=red>选择运行时版本的理由</font><br>
+1.保证用户体验,用户下载的文件体积更小,但只支持 h 函数<br>
+2.保证开发体验,开发者可直接在 vue 文件里写 HTML 标签、差值表达式,而不用写 h 函数<br>
+3.活让 loader 做,vue-loader 会把 vue 文件里的 HTML 转换为 h 函数,这样我不用写太多麻烦的,运行时版本就可以做到和
+完整版一样的事情,还更节约文件大小,提升用户体验</p>
+]]></content>
         </item>
         
         <item>
