@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="1.安装 webpack 1.npm info webpack 可以打印出 webpack 的所有信息
+2.npm install webpack -g 在全局安装 webpack
+3.npm uninstall -g webpack 在全局卸载 webpack
+2.webpack 是干嘛用的? 1.转译代码(ES6 转 ES5)
+2.构建 build
+3.代码压缩
+4.代码分析
+3.用 webpack 生成 js 1.mkdir webpack-demo (文件名可修改)
+2.cd webpack-demo
+3.npm init -y
+4.npm install webpack webpack-cli &amp;ndash;save-dev(安装依赖,在本地安装)
+5.创建一个 src 目录,目录下创建一个 index.js
+6../node-modules/.bin/webpack 或者使用 npx webpack 运行本地目录 webpack
+4.如何消除警告(WARNING in configuration&amp;hellip;) 1.在目录加上 webpack.config.js 文件(添加以下代码)
+module.exports = {mode : &#39;development&#39; development开发模式,production是用户模式(切换模式)}2." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://yaochengjian.com/posts/38/" />
+
+
+    <title>
+        
+            39 - webpack :: 姚 成 健 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+<meta itemprop="name" content="39 - webpack">
+<meta itemprop="description" content="1.安装 webpack 1.npm info webpack 可以打印出 webpack 的所有信息
+2.npm install webpack -g 在全局安装 webpack
+3.npm uninstall -g webpack 在全局卸载 webpack
+2.webpack 是干嘛用的? 1.转译代码(ES6 转 ES5)
+2.构建 build
+3.代码压缩
+4.代码分析
+3.用 webpack 生成 js 1.mkdir webpack-demo (文件名可修改)
+2.cd webpack-demo
+3.npm init -y
+4.npm install webpack webpack-cli &ndash;save-dev(安装依赖,在本地安装)
+5.创建一个 src 目录,目录下创建一个 index.js
+6../node-modules/.bin/webpack 或者使用 npx webpack 运行本地目录 webpack
+4.如何消除警告(WARNING in configuration&hellip;) 1.在目录加上 webpack.config.js 文件(添加以下代码)
+module.exports = {mode : &#39;development&#39; development开发模式,production是用户模式(切换模式)}2.">
+<meta itemprop="datePublished" content="2020-02-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="426">
+<meta itemprop="image" content="http://yaochengjian.com/"/>
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://yaochengjian.com/"/>
+
+<meta name="twitter:title" content="39 - webpack"/>
+<meta name="twitter:description" content="1.安装 webpack 1.npm info webpack 可以打印出 webpack 的所有信息
+2.npm install webpack -g 在全局安装 webpack
+3.npm uninstall -g webpack 在全局卸载 webpack
+2.webpack 是干嘛用的? 1.转译代码(ES6 转 ES5)
+2.构建 build
+3.代码压缩
+4.代码分析
+3.用 webpack 生成 js 1.mkdir webpack-demo (文件名可修改)
+2.cd webpack-demo
+3.npm init -y
+4.npm install webpack webpack-cli &ndash;save-dev(安装依赖,在本地安装)
+5.创建一个 src 目录,目录下创建一个 index.js
+6../node-modules/.bin/webpack 或者使用 npx webpack 运行本地目录 webpack
+4.如何消除警告(WARNING in configuration&hellip;) 1.在目录加上 webpack.config.js 文件(添加以下代码)
+module.exports = {mode : &#39;development&#39; development开发模式,production是用户模式(切换模式)}2."/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-02-20 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Yao Chengjian</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://yaochengjian.com/posts">博客</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="http://yaochengjian.com/posts/38/">39 - webpack</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h3 id="1安装-webpack">1.安装 webpack</h3>
+<p>1.npm info webpack 可以打印出 webpack 的所有信息<br>
+2.npm install webpack -g 在全局安装 webpack<br>
+3.npm uninstall -g webpack 在全局卸载 webpack</p>
+<h3 id="2webpack-是干嘛用的">2.webpack 是干嘛用的?</h3>
+<p>1.转译代码(ES6 转 ES5)<br>
+2.构建 build<br>
+3.代码压缩<br>
+4.代码分析</p>
+<h3 id="3font-colorred用-webpack-生成-jsfont">3.<font color=red>用 webpack 生成 js</font></h3>
+<p>1.<font color=red>mkdir webpack-demo</font> (文件名可修改)<br>
+2.<font color=red>cd webpack-demo</font><br>
+3.<font color=red>npm init -y</font><br>
+4.<font color=red>npm install webpack webpack-cli &ndash;save-dev</font>(安装依赖,在本地安装)<br>
+5.创建一个 src 目录,目录下创建一个 index.js<br>
+6.<font color=red>./node-modules/.bin/webpack 或者使用 npx webpack</font> 运行本地目录 webpack</p>
+<h3 id="4如何消除警告warning-in-configuration">4.如何消除警告(WARNING in configuration&hellip;)</h3>
+<p>1.在目录加上 webpack.config.js 文件(添加以下代码)</p>
+<pre><code>module.exports = {
+    mode : 'development'  development开发模式,production是用户模式(切换模式)
+}
+</code></pre><p>2.webpack 配置 entry 和 output</p>
+<pre><code>    var path = require('path');
+    module.exports = {
+        mode: 'development',
+        entry: './src/index.js',  转义代码路径
+        output: {
+            filename: 'index.js'  转义完成后dist目录下的name
+        }
+    }
+</code></pre><p>3.理解 webpack 文件名中的 hash 的用途(http 缓存)<br>
+a.HTTP 响应头中的 Cache-Control<br>
+b.如果你访问一个网址,会给你访问 html,html 会引入 1.css,2.css,1.js&hellip;.,如果你第二次在访问的时候就会有部分文件会缓存在你的硬盘中
+在你缓存有效时间内,在进行访问这个网站缓存下来的文件就不需要在次请求服务器,直接从你的硬盘中获取,能达到超快访问</p>
+<pre><code>    var path = require('path');
+    module.exports = {
+        mode: 'development',
+        entry: './src/index.js',
+        output: {
+            filename: '[name].[contenthash].js' http缓存
+        }
+    }
+
+    1.每次运行webpack的时候,都会生成新的hash文件,如何解决?(每次运行webpack,把dist目录删掉,在生成即可)
+    解决:在package.json中scripts里面添加一句 &quot;build&quot; : &quot;rm -rf dist &amp; webpack&quot;
+    2.在命令行重新运行yarn build即可
+</code></pre><h3 id="5font-colorred用-webpack-生成-htmlfont">5.<font color=red>用 webpack 生成 HTML</font></h3>
+<p>1.<font color=red>yarn add html-webpack-plugin &ndash;dev</font><br>
+2.需要在 src 目录下创建 assets 目录,在 assets 目录创建 html 文件<br>
+3.在 webpack.config.js 添加如下代码</p>
+<pre><code>    var HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+    module.exports = {
+        plugins : [new HtmlWebpackPlugin({
+            title: '&lt;% htmlWebpackPlugin.options.title %&gt;',  如果想用html的title,需要在这里添加 &lt;% htmlWebpackPlugin.options.title %&gt;
+            template: 'src/assets/index.html' 需要在src创建assets目录
+        })]
+    }
+</code></pre><h3 id="6font-colorredwebpack-引入-cssimport-导入font">6.<font color=red>webpack 引入 css(import 导入)</font></h3>
+<p>1.<font color=red>yarn add css-loader &ndash;dev</font><br>
+2.<font color=red>yarn add style-loader &ndash;dev</font><br>
+3.<font color=red>注意：这里 npm 或者 yarn 不能使用淘宝镜像</font>yarn config set registry <a href="https://registry.npmjs.org/">https://registry.npmjs.org/</a><br>
+4.在 webpack.config.js 添加如下代码</p>
+<pre><code>    module.exports = {
+        module: {
+            rules:[
+                {
+                    test: /\.css$/i,
+                    use: [&quot;style-loader&quot;,&quot;css-loader&quot;]
+                }
+            ]
+        }
+    }
+</code></pre><h3 id="7font-colorred使用-webpack-dev-serverfont">7.<font color=red>使用 webpack-dev-server</font></h3>
+<p>1.<font color=red>yarn add webpack-dev-server &ndash;dev</font></p>
+<p>2.在 webpack.config.js 添加如下代码</p>
+<pre><code>    module.exports = {
+        devtool: 'inline-source-map',
+        devServer: {
+            contentBase: './dist'
+        }
+    }
+</code></pre><p>3.在 package.json 里面 scripts 属性添加如下代码</p>
+<pre><code>    &quot;start&quot;: &quot;webpack-dev-server&quot;
+</code></pre><p>4.运行 yarn start</p>
+<h3 id="8font-colorred如何生成-css-文件font">8.<font color=red>如何生成 css 文件</font></h3>
+<p>1.<font color=red>yarn add mini-css-extract-plugin &ndash;dev</font><br>
+2.<font color=red>在 webpack.config.js 添加如下代码</font></p>
+<pre><code>    const MiniCssExtractPlugin = require(&quot;mini-css-extract-plugin&quot;);
+    module.exports = {
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+                chunkFilename: '[id].css'
+            })
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                publicPath: '../',
+                                hmr: process.env.NODE_ENV === 'development'
+                            },
+                        },
+                        'css-loader',
+                    ]
+                }
+            ]
+        }
+    }
+</code></pre><h3 id="9font-colorred使用两个-webpackconfigjsfont">9.<font color=red>使用两个 webpack.config.js</font></h3>
+<p>1.切换两种模式(用户模式 | 开发模式)</p>
+<pre><code>    1.需要拷贝多一份webpack.config.js,如果是用户模式则把css生成文件,开发模式怎用import导入
+    2.在webpack.json下scripts属性
+        &quot;build&quot; : &quot;rm -rf dist &amp;&amp; webpack --config webpack.config.prod.js&quot;,
+        &quot;start&quot; : &quot;webpack-dev-server&quot;
+</code></pre><h3 id="10font-colorred用-webpack-引入-scssfont">10.<font color=red>用 webpack 引入 SCSS</font></h3>
+<p>1.<font color=red>yarn add sass-loader dart-sass webpack &ndash;save-dev</font><br>
+2.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: &quot;sass-loader&quot;,
+            options: {
+            implementation: require('dart-sass')
+            }
+          }
+        ],
+      },
+    ],
+  },
+};
+</code></pre><h3 id="11font-colorred用-webpack-引入-lessfont">11.<font color=red>用 webpack 引入 less</font></h3>
+<p>1.<font color=red>yarn add less-loader &ndash;dev</font><br>
+2.<font color=red>需要安装一下 less 环境 yarn add less &ndash;dev</font><br>
+3.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: [&quot;style-loader&quot;,&quot;css-loader&quot;,&quot;less-loader&quot;]
+      },
+    ],
+  },
+};
+</code></pre><h3 id="12font-colorred用-webpack-引入图片font">12<font color=red>用 webpack 引入图片</font></h3>
+<p>会自动帮你添加上哈希值<br>
+1.<font color=red>yarn add file-loader &ndash;dev</font><br>
+2.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader'],
+            }
+        ]
+    }
+}
+</code></pre>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>426 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-20 08:00 &#43;0800</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="http://yaochengjian.com/posts/37/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">38 - MVC</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="http://yaochengjian.com/posts/39/">
+                                <span class="button__text">39 - vue全解(起手式0)</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="http://yaochengjian.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>

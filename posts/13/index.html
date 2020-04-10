@@ -332,13 +332,13 @@ f. sudo !!的意思是用 sudo 执行上一句命令</p>
 <ol>
 <li>下载代码(不要使用 ssh 地址，使用 https)
 git clone (GitHub 上 https 下载地址)</li>
-<li>启动
+<li>启动<br>
 a. cd node-demo-1<br>
 b. touch log(创建 log 文件，后面可以查看到请求进程)<br>
-c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;
+c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;<br>
 d. kill -9 pid 可以关掉进程<br>
 e. tail log(可以查看 log 请求进程内容)<br>
-f. killall node 可以关掉所有 node 进程
+f. killall node 可以关掉所有 node 进程<br>
 g. git pull 会在 github 拉取最新的代码</li>
 </ol>
 

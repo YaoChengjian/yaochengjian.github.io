@@ -7,14 +7,14 @@
 <meta name="author" content="">
 <meta name="description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
+1)yarn global add http-server
+2)http-server
 2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
 b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
 d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
-网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开" />
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -42,17 +42,17 @@ b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父
 <meta itemprop="name" content="7 - [HTML全解]HTML重难点">
 <meta itemprop="description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
+1)yarn global add http-server
+2)http-server
 2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
 b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
 d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx 标签]
-网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;伪协议&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开">
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;伪协议&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target 属性值">
 <meta itemprop="datePublished" content="2019-12-25T21:55:11&#43;08:07" />
 <meta itemprop="dateModified" content="2019-12-25T21:55:11&#43;08:07" />
-<meta itemprop="wordCount" content="308">
+<meta itemprop="wordCount" content="313">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -63,14 +63,14 @@ b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父
 <meta name="twitter:title" content="7 - [HTML全解]HTML重难点"/>
 <meta name="twitter:description" content="1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
+1)yarn global add http-server
+2)http-server
 2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
 b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
 d:id[href=&rdquo;#xxx&quot;定位锚文本为#xxx 标签]
-网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;伪协议&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开"/>
+网址&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;https://google.com&quot;&gt;谷歌&lt;/a&gt;&lt;a href = &quot;//google.com&quot;&gt;谷歌&lt;/a&gt;路径&lt;a href = &quot;/a/b/c&quot;&gt;相对路径&lt;/a&gt;&lt;a href = &quot;a/b/c&quot;&gt;绝对路径&lt;/a&gt;伪协议&lt;a href = &quot;javascript:;&quot;&gt;点击会跳转不了&lt;/a&gt;&lt;a href = &quot;mailto:915248459@qq.com&quot;&gt;邮箱&lt;/a&gt;&lt;a href = &quot;tel:13580466113&quot;&gt;电话&lt;/a&gt;锚文本定位&lt;p id = &quot;xxx&quot;&gt;1&lt;/p&gt;&lt;p&gt;2&lt;/p&gt;&lt;p&gt;3&lt;/p&gt;&lt;p&gt;4&lt;/p&gt;&lt;a href = &quot;#xxx&quot;&gt;会定位到id为#xxx上面去&lt;/a&gt;(2)target 属性值"/>
 
 
 
@@ -155,6 +155,8 @@ b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父
                 <h2 id="1像用户一样利用网址来打开网页">1.像用户一样利用网址来打开网页</h2>
 <p>1)yarn global add parcel<br>
 2)parcel 1.a.html(文件名字)</p>
+<p>1)yarn global add http-server<br>
+2)http-server</p>
 <h2 id="2a-标签属性">2.a 标签(属性)</h2>
 <p>(1)href 取值<br>
 a:网址[https://google.com、http://google.com、//google.com]<br>
@@ -325,7 +327,7 @@ c:onblur 失去光标触发这个事件</p>
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>308 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>313 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-12-25 21:48 &#43;0800</p>
         </div>

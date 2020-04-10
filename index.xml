@@ -214,6 +214,82 @@ e. 后盾存储数据</description>
     </item>
     
     <item>
+      <title>38 - MVC</title>
+      <link>http://yaochengjian.com/posts/37/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/37/</guid>
+      <description>1.MVC 是啥? a.每个模块都可以写成三个对象,分别是 M、V、C
+b.M - Model(数据模型)负责操作所有数据
+c.V - View(视图)负责所有 UI 界面
+d.C - Controller(控制器)负责其他
+2.为什么要有设计模式 a.代码重复太多,相同的页面重复写等。MVC 设计模式就是为了解决代码重复，优化代码结构
+3.不学 MVC 会有什么情况 a.会出现意大利面条式代码的情况,过于臃肿太长,代码重复率高,页面不整洁等
+b.你会变成类似外包程序员,每天重复干着重复的事情,不懂得提升自己,不会封装,不会造轮子
+4.用 yarn | 或者 npm 引入 jQuery 1.yranyarn init -v 最好初始化一下yarnyarn add jquery2.npmnpm i jquery然后在js里面 inport $ from &amp;quot;jquery&amp;quot;2.jquery 中的 api
+1.trigger(&#39;click&#39;) 自动点击事件$(&amp;quot;li&amp;quot;).trigger(&amp;quot;click&amp;quot;);2.toggleClass(类名,boolean) boolean可以加可不加(true则添加,false则不添加),如果该元素含有此类则删除,没有则添加$(&amp;quot;li&amp;quot;).toggleClass(&#39;active&#39;);3.prependTo() 把一个元素插入到父元素里面的前面$(&#39;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&#39;).prependTo($(&amp;quot;#father&amp;quot;));5.简单认识 EventBus 1.什么是 EventBus
+EventBus 可以使用监听和触发事件,对所有点实现通信
+2.监听和触发两个 API
+eventBus.trigger(&#39;click&#39;);eventBus.on(&#39;click&#39;,(){console.log(&amp;quot;我触发了&amp;quot;)})</description>
+    </item>
+    
+    <item>
+      <title>39 - webpack</title>
+      <link>http://yaochengjian.com/posts/38/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/38/</guid>
+      <description>1.安装 webpack 1.npm info webpack 可以打印出 webpack 的所有信息
+2.npm install webpack -g 在全局安装 webpack
+3.npm uninstall -g webpack 在全局卸载 webpack
+2.webpack 是干嘛用的? 1.转译代码(ES6 转 ES5)
+2.构建 build
+3.代码压缩
+4.代码分析
+3.用 webpack 生成 js 1.mkdir webpack-demo (文件名可修改)
+2.cd webpack-demo
+3.npm init -y
+4.npm install webpack webpack-cli &amp;ndash;save-dev(安装依赖,在本地安装)
+5.创建一个 src 目录,目录下创建一个 index.js
+6../node-modules/.bin/webpack 或者使用 npx webpack 运行本地目录 webpack
+4.如何消除警告(WARNING in configuration&amp;hellip;) 1.在目录加上 webpack.config.js 文件(添加以下代码)
+module.exports = {mode : &#39;development&#39; development开发模式,production是用户模式(切换模式)}2.</description>
+    </item>
+    
+    <item>
+      <title>39 - vue全解(起手式0)</title>
+      <link>http://yaochengjian.com/posts/39/</link>
+      <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/39/</guid>
+      <description>1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
+答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
+b: 安装@vue/cli 与卸载@vue/cli
+安装: npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
+c: @vue/cli 和 webpack 是什么关系?
+答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
+d: 通过 vue create vue-demo 命令创建一个新项目
+e: 进入该目录,yarn serve 开启预览</description>
+    </item>
+    
+    <item>
+      <title>40 - vue全解(起手式1)</title>
+      <link>http://yaochengjian.com/posts/40/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/40/</guid>
+      <description>1.Vue 简介 a: JavaScript 框架
+b: 简化 Dom 操作
+c: 响应式数据驱动
+d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)
+e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建
+ 1.导入开发版本的Vue.js2.创建Vue实例对象,设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el : &amp;quot;#app&amp;quot;,data : {message : &amp;quot;hello vue!&amp;quot;}});&amp;lt;/script&amp;gt;2.el:挂载点 a: Vue 实例的作用范围是什么呢?
+答: Vue 会管理 el 选项命中的元素及内部的后代元素
+ &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.</description>
+    </item>
+    
+    <item>
       <title>50 - </title>
       <link>http://yaochengjian.com/posts/50/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
@@ -396,14 +472,14 @@ a. gitclone git@xxxx[目标路径] b. 如果是不同机器，要写上传新的
       <guid>http://yaochengjian.com/posts/7/</guid>
       <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
+1)yarn global add http-server
+2)http-server
 2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
 b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
 d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
-网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开</description>
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值</description>
     </item>
     
     <item>

@@ -838,8 +838,8 @@ rejected(失败)
     function fn(time){
       return new Promise((resolve,reject)=&gt;{
         setTimeout(()=&gt;{
-          console.log(time);
-        },tiem);
+          reslove(time)
+        },time);
       });
     }
 
@@ -1001,6 +1001,517 @@ c. 前端发送 post 请求,请求位于请求体<br>
 d. 后端获取请求体中的 name 和 password<br>
 e. 后盾存储数据</p>
 ]]></content>
+        </item>
+        
+        <item>
+            <title>38 - MVC</title>
+            <link>http://yaochengjian.com/posts/37/</link>
+            <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/37/</guid>
+            <description>1.MVC 是啥? a.每个模块都可以写成三个对象,分别是 M、V、C
+b.M - Model(数据模型)负责操作所有数据
+c.V - View(视图)负责所有 UI 界面
+d.C - Controller(控制器)负责其他
+2.为什么要有设计模式 a.代码重复太多,相同的页面重复写等。MVC 设计模式就是为了解决代码重复，优化代码结构
+3.不学 MVC 会有什么情况 a.会出现意大利面条式代码的情况,过于臃肿太长,代码重复率高,页面不整洁等
+b.你会变成类似外包程序员,每天重复干着重复的事情,不懂得提升自己,不会封装,不会造轮子
+4.用 yarn | 或者 npm 引入 jQuery 1.yranyarn init -v 最好初始化一下yarnyarn add jquery2.npmnpm i jquery然后在js里面 inport $ from &amp;quot;jquery&amp;quot;2.jquery 中的 api
+1.trigger(&#39;click&#39;) 自动点击事件$(&amp;quot;li&amp;quot;).trigger(&amp;quot;click&amp;quot;);2.toggleClass(类名,boolean) boolean可以加可不加(true则添加,false则不添加),如果该元素含有此类则删除,没有则添加$(&amp;quot;li&amp;quot;).toggleClass(&#39;active&#39;);3.prependTo() 把一个元素插入到父元素里面的前面$(&#39;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&#39;).prependTo($(&amp;quot;#father&amp;quot;));5.简单认识 EventBus 1.什么是 EventBus
+EventBus 可以使用监听和触发事件,对所有点实现通信
+2.监听和触发两个 API
+eventBus.trigger(&#39;click&#39;);eventBus.on(&#39;click&#39;,(){console.log(&amp;quot;我触发了&amp;quot;)})</description>
+            <content type="html"><![CDATA[<h3 id="1mvc-是啥">1.MVC 是啥?</h3>
+<p>a.每个模块都可以写成三个对象,分别是 M、V、C<br>
+b.M - Model(数据模型)负责操作所有数据<br>
+c.V - View(视图)负责所有 UI 界面<br>
+d.C - Controller(控制器)负责其他</p>
+<h3 id="2为什么要有设计模式">2.为什么要有设计模式</h3>
+<p>a.代码重复太多,相同的页面重复写等。MVC 设计模式就是为了解决代码重复，优化代码结构</p>
+<h3 id="3不学-mvc-会有什么情况">3.不学 MVC 会有什么情况</h3>
+<p>a.会出现意大利面条式代码的情况,过于臃肿太长,代码重复率高,页面不整洁等<br>
+b.你会变成类似外包程序员,每天重复干着重复的事情,不懂得提升自己,不会封装,不会造轮子</p>
+<h3 id="4用-yarn--或者-npm-引入-jquery">4.用 yarn | 或者 npm 引入 jQuery</h3>
+<pre><code>1.yran
+    yarn init -v 最好初始化一下yarn
+    yarn add jquery
+
+2.npm
+    npm i jquery
+
+然后在js里面 inport $ from &quot;jquery&quot;
+</code></pre><p>2.jquery 中的 api</p>
+<pre><code>1.trigger('click') 自动点击事件
+    $(&quot;li&quot;).trigger(&quot;click&quot;);
+
+2.toggleClass(类名,boolean) boolean可以加可不加(true则添加,false则不添加),如果该元素含有此类则删除,没有则添加
+    $(&quot;li&quot;).toggleClass('active');
+
+3.prependTo() 把一个元素插入到父元素里面的前面
+    $('&lt;div&gt;&lt;/div&gt;').prependTo($(&quot;#father&quot;));
+</code></pre><h3 id="5简单认识-eventbus">5.简单认识 EventBus</h3>
+<p>1.什么是 EventBus<br>
+EventBus 可以使用监听和触发事件,对所有点实现通信</p>
+<p>2.监听和触发两个 API</p>
+<pre><code>eventBus.trigger('click');
+eventBus.on('click',(){
+    console.log(&quot;我触发了&quot;)
+})
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>39 - webpack</title>
+            <link>http://yaochengjian.com/posts/38/</link>
+            <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/38/</guid>
+            <description>1.安装 webpack 1.npm info webpack 可以打印出 webpack 的所有信息
+2.npm install webpack -g 在全局安装 webpack
+3.npm uninstall -g webpack 在全局卸载 webpack
+2.webpack 是干嘛用的? 1.转译代码(ES6 转 ES5)
+2.构建 build
+3.代码压缩
+4.代码分析
+3.用 webpack 生成 js 1.mkdir webpack-demo (文件名可修改)
+2.cd webpack-demo
+3.npm init -y
+4.npm install webpack webpack-cli &amp;ndash;save-dev(安装依赖,在本地安装)
+5.创建一个 src 目录,目录下创建一个 index.js
+6../node-modules/.bin/webpack 或者使用 npx webpack 运行本地目录 webpack
+4.如何消除警告(WARNING in configuration&amp;hellip;) 1.在目录加上 webpack.config.js 文件(添加以下代码)
+module.exports = {mode : &#39;development&#39; development开发模式,production是用户模式(切换模式)}2.</description>
+            <content type="html"><![CDATA[<h3 id="1安装-webpack">1.安装 webpack</h3>
+<p>1.npm info webpack 可以打印出 webpack 的所有信息<br>
+2.npm install webpack -g 在全局安装 webpack<br>
+3.npm uninstall -g webpack 在全局卸载 webpack</p>
+<h3 id="2webpack-是干嘛用的">2.webpack 是干嘛用的?</h3>
+<p>1.转译代码(ES6 转 ES5)<br>
+2.构建 build<br>
+3.代码压缩<br>
+4.代码分析</p>
+<h3 id="3font-colorred用-webpack-生成-jsfont">3.<font color=red>用 webpack 生成 js</font></h3>
+<p>1.<font color=red>mkdir webpack-demo</font> (文件名可修改)<br>
+2.<font color=red>cd webpack-demo</font><br>
+3.<font color=red>npm init -y</font><br>
+4.<font color=red>npm install webpack webpack-cli &ndash;save-dev</font>(安装依赖,在本地安装)<br>
+5.创建一个 src 目录,目录下创建一个 index.js<br>
+6.<font color=red>./node-modules/.bin/webpack 或者使用 npx webpack</font> 运行本地目录 webpack</p>
+<h3 id="4如何消除警告warning-in-configuration">4.如何消除警告(WARNING in configuration&hellip;)</h3>
+<p>1.在目录加上 webpack.config.js 文件(添加以下代码)</p>
+<pre><code>module.exports = {
+    mode : 'development'  development开发模式,production是用户模式(切换模式)
+}
+</code></pre><p>2.webpack 配置 entry 和 output</p>
+<pre><code>    var path = require('path');
+    module.exports = {
+        mode: 'development',
+        entry: './src/index.js',  转义代码路径
+        output: {
+            filename: 'index.js'  转义完成后dist目录下的name
+        }
+    }
+</code></pre><p>3.理解 webpack 文件名中的 hash 的用途(http 缓存)<br>
+a.HTTP 响应头中的 Cache-Control<br>
+b.如果你访问一个网址,会给你访问 html,html 会引入 1.css,2.css,1.js&hellip;.,如果你第二次在访问的时候就会有部分文件会缓存在你的硬盘中
+在你缓存有效时间内,在进行访问这个网站缓存下来的文件就不需要在次请求服务器,直接从你的硬盘中获取,能达到超快访问</p>
+<pre><code>    var path = require('path');
+    module.exports = {
+        mode: 'development',
+        entry: './src/index.js',
+        output: {
+            filename: '[name].[contenthash].js' http缓存
+        }
+    }
+
+    1.每次运行webpack的时候,都会生成新的hash文件,如何解决?(每次运行webpack,把dist目录删掉,在生成即可)
+    解决:在package.json中scripts里面添加一句 &quot;build&quot; : &quot;rm -rf dist &amp; webpack&quot;
+    2.在命令行重新运行yarn build即可
+</code></pre><h3 id="5font-colorred用-webpack-生成-htmlfont">5.<font color=red>用 webpack 生成 HTML</font></h3>
+<p>1.<font color=red>yarn add html-webpack-plugin &ndash;dev</font><br>
+2.需要在 src 目录下创建 assets 目录,在 assets 目录创建 html 文件<br>
+3.在 webpack.config.js 添加如下代码</p>
+<pre><code>    var HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+    module.exports = {
+        plugins : [new HtmlWebpackPlugin({
+            title: '&lt;% htmlWebpackPlugin.options.title %&gt;',  如果想用html的title,需要在这里添加 &lt;% htmlWebpackPlugin.options.title %&gt;
+            template: 'src/assets/index.html' 需要在src创建assets目录
+        })]
+    }
+</code></pre><h3 id="6font-colorredwebpack-引入-cssimport-导入font">6.<font color=red>webpack 引入 css(import 导入)</font></h3>
+<p>1.<font color=red>yarn add css-loader &ndash;dev</font><br>
+2.<font color=red>yarn add style-loader &ndash;dev</font><br>
+3.<font color=red>注意：这里 npm 或者 yarn 不能使用淘宝镜像</font>yarn config set registry <a href="https://registry.npmjs.org/">https://registry.npmjs.org/</a><br>
+4.在 webpack.config.js 添加如下代码</p>
+<pre><code>    module.exports = {
+        module: {
+            rules:[
+                {
+                    test: /\.css$/i,
+                    use: [&quot;style-loader&quot;,&quot;css-loader&quot;]
+                }
+            ]
+        }
+    }
+</code></pre><h3 id="7font-colorred使用-webpack-dev-serverfont">7.<font color=red>使用 webpack-dev-server</font></h3>
+<p>1.<font color=red>yarn add webpack-dev-server &ndash;dev</font></p>
+<p>2.在 webpack.config.js 添加如下代码</p>
+<pre><code>    module.exports = {
+        devtool: 'inline-source-map',
+        devServer: {
+            contentBase: './dist'
+        }
+    }
+</code></pre><p>3.在 package.json 里面 scripts 属性添加如下代码</p>
+<pre><code>    &quot;start&quot;: &quot;webpack-dev-server&quot;
+</code></pre><p>4.运行 yarn start</p>
+<h3 id="8font-colorred如何生成-css-文件font">8.<font color=red>如何生成 css 文件</font></h3>
+<p>1.<font color=red>yarn add mini-css-extract-plugin &ndash;dev</font><br>
+2.<font color=red>在 webpack.config.js 添加如下代码</font></p>
+<pre><code>    const MiniCssExtractPlugin = require(&quot;mini-css-extract-plugin&quot;);
+    module.exports = {
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+                chunkFilename: '[id].css'
+            })
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.css$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                publicPath: '../',
+                                hmr: process.env.NODE_ENV === 'development'
+                            },
+                        },
+                        'css-loader',
+                    ]
+                }
+            ]
+        }
+    }
+</code></pre><h3 id="9font-colorred使用两个-webpackconfigjsfont">9.<font color=red>使用两个 webpack.config.js</font></h3>
+<p>1.切换两种模式(用户模式 | 开发模式)</p>
+<pre><code>    1.需要拷贝多一份webpack.config.js,如果是用户模式则把css生成文件,开发模式怎用import导入
+    2.在webpack.json下scripts属性
+        &quot;build&quot; : &quot;rm -rf dist &amp;&amp; webpack --config webpack.config.prod.js&quot;,
+        &quot;start&quot; : &quot;webpack-dev-server&quot;
+</code></pre><h3 id="10font-colorred用-webpack-引入-scssfont">10.<font color=red>用 webpack 引入 SCSS</font></h3>
+<p>1.<font color=red>yarn add sass-loader dart-sass webpack &ndash;save-dev</font><br>
+2.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: &quot;sass-loader&quot;,
+            options: {
+            implementation: require('dart-sass')
+            }
+          }
+        ],
+      },
+    ],
+  },
+};
+</code></pre><h3 id="11font-colorred用-webpack-引入-lessfont">11.<font color=red>用 webpack 引入 less</font></h3>
+<p>1.<font color=red>yarn add less-loader &ndash;dev</font><br>
+2.<font color=red>需要安装一下 less 环境 yarn add less &ndash;dev</font><br>
+3.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: [&quot;style-loader&quot;,&quot;css-loader&quot;,&quot;less-loader&quot;]
+      },
+    ],
+  },
+};
+</code></pre><h3 id="12font-colorred用-webpack-引入图片font">12<font color=red>用 webpack 引入图片</font></h3>
+<p>会自动帮你添加上哈希值<br>
+1.<font color=red>yarn add file-loader &ndash;dev</font><br>
+2.在 webpack.config.js 添加如下代码</p>
+<pre><code>module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader'],
+            }
+        ]
+    }
+}
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>39 - vue全解(起手式0)</title>
+            <link>http://yaochengjian.com/posts/39/</link>
+            <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/39/</guid>
+            <description>1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
+答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
+b: 安装@vue/cli 与卸载@vue/cli
+安装: npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
+c: @vue/cli 和 webpack 是什么关系?
+答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
+d: 通过 vue create vue-demo 命令创建一个新项目
+e: 进入该目录,yarn serve 开启预览</description>
+            <content type="html"><![CDATA[<h3 id="1使用-vuecli-搭建项目">1.使用 @vue/cli 搭建项目</h3>
+<p><font color=red>a: @vue/cli 是什么?</font><br>
+答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架</p>
+<p><font color=red>b: 安装@vue/cli 与卸载@vue/cli</font><br>
+安装: npm install -g @vue/cli 或 yarn global add @vue/cli<br>
+卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli</p>
+<p><font color=red>c: @vue/cli 和 webpack 是什么关系?</font><br>
+答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则</p>
+<p><font color=red>d: 通过 vue create vue-demo 命令创建一个新项目</font></p>
+<p><font color=red>e: 进入该目录,yarn serve 开启预览</font></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>40 - vue全解(起手式1)</title>
+            <link>http://yaochengjian.com/posts/40/</link>
+            <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/40/</guid>
+            <description>1.Vue 简介 a: JavaScript 框架
+b: 简化 Dom 操作
+c: 响应式数据驱动
+d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)
+e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建
+ 1.导入开发版本的Vue.js2.创建Vue实例对象,设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el : &amp;quot;#app&amp;quot;,data : {message : &amp;quot;hello vue!&amp;quot;}});&amp;lt;/script&amp;gt;2.el:挂载点 a: Vue 实例的作用范围是什么呢?
+答: Vue 会管理 el 选项命中的元素及内部的后代元素
+ &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.</description>
+            <content type="html"><![CDATA[<h3 id="1vue-简介">1.Vue 简介</h3>
+<p>a: JavaScript 框架<br>
+b: 简化 Dom 操作<br>
+c: 响应式数据驱动<br>
+d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)<br>
+e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建</p>
+<pre><code>    1.导入开发版本的Vue.js
+    2.创建Vue实例对象,设置el属性和data属性
+    3.使用简洁的模板语法把数据渲染到页面上
+
+    &lt;div id = &quot;app&quot;&gt;
+        {{message}}
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vue = new Vue({
+            el : &quot;#app&quot;,
+            data : {
+                message : &quot;hello vue!&quot;
+            }
+        });
+    &lt;/script&gt;
+</code></pre><h3 id="2el挂载点">2.el:挂载点</h3>
+<p><font color=red>a: Vue 实例的作用范围是什么呢?</font><br>
+答: Vue 会管理 el 选项命中的元素及内部的后代元素</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        {{message}}
+        &lt;span&gt;{{message}}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vm = new Vue({
+            el: &quot;#app&quot;,
+            data: {
+                message: &quot;欢迎使用vue&quot;
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>b: 是否可以使用其它的选择器?</font><br>
+答: 可以使用其他的选择器,但是建议使用 ID 选择器</p>
+<p><font color=red>c: 是否可以设置其它的 dom 元素呢?</font><br>
+答: 可以使用其他的双标签,不能使用 HTML 和 BODY</p>
+<h3 id="3font-colorreddata数据对象font">3.<font color=red>data:数据对象</font></h3>
+<p>a: Vue 中用到的数据定义在 data 中<br>
+b: data 中可以写复杂类型的数据<br>
+c: 渲染复杂类型数据时,遵守 js 的语法即可</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;h1&gt;{{message}}&lt;h1&gt;
+        &lt;h2&gt;{{school.name}} {{school.mobile}}&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;{{campus[0]}}&lt;/li&gt;
+            &lt;li&gt;{{campus[1]}}&lt;/li&gt;
+            &lt;li&gt;{{campus[2]}}&lt;/li&gt;
+            &lt;li&gt;{{campus[3]}}&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vm = new Vue({
+            el:&quot;#app&quot;,
+            data: {
+                message: &quot;大家好!我是黑马程序员&quot;,
+                school: {
+                    name: &quot;黑马程序员&quot;,
+                    mobile: &quot;400-618-9090&quot;
+                },
+                campus: [&quot;北京校区&quot;,&quot;上海校区&quot;,&quot;广州校区&quot;,&quot;深圳校区&quot;]
+            }
+        });
+    &lt;/script&gt;
+</code></pre><h3 id="4font-colorred本地应用-vue-指令指的是以-v-开头的一组特殊语法font">4.<font color=red>本地应用-Vue 指令指的是,以 v-开头的一组特殊语法</font></h3>
+<p><font color=red>a: v-text 指令作用</font><br>
+1.<font color=red>设置标签的内容</font><br>
+2.默认写法会替换全部内容,使用<font color=red>差值表达式{{}}</font>可以替换指定内容<br>
+3.内部支持写表达式</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;h1 v-text=&quot;sessage&quot;&gt;&lt;h1&gt;  如果标签里面存在内容会全部被替换掉
+        &lt;h1 v-text=&quot;sessage + '!'&quot;&gt;  v-text支持表达式
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vm = new Vue({
+            el: &quot;app&quot;,
+            data: {
+                sessage: &quot;黑马程序员&quot;
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>b: v-html 指令作用</font><br>
+1.<font color=red>设置元素的 innerHTML</font><br>
+2.内容中有<font color=red>html</font>结构会被解析为<font color=red>标签</font><br>
+3.<font color=red>v-text</font>指令无论内容是什么,只会解析为<font color=red>文本</font><br>
+4.解析文本使用<font color=red>v-text</font>,解析 html 结构使用<font color=red>v-html</font></p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;h1 v-html=&quot;content&quot;&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vm = new Vue({
+            el: &quot;#app&quot;,
+            data: {
+                content: &quot;&lt;a href='http://itheima.com'&gt;黑马程序猿&lt;/a&gt;&quot;
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>c: v-on:绑定事件</font><br>
+1.事件名不需要写<font color=red>on</font><br>
+2.指令可以简写为<font color=red>@</font><br>
+3.绑定的方法定义在 methods 属性中(是对象)<br>
+4.方法内部通过<font color=red>this</font>关键字可以访问定义在<font color=red>data 中</font>数据</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;button v-text=&quot;value&quot; v-on:click=&quot;sayName&quot;&gt;&lt;/button&gt;
+        &lt;button v-text=&quot;value&quot; @click=&quot;sayName&quot;&gt;&lt;/button&gt;
+    &lt;div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        let vm = new Vue({
+            el: &quot;#app&quot;,
+            data: {
+                value: &quot;黑马程序猿&quot;
+            },
+            methods: {
+                sayName: function(){
+                    alert(`my name is ${this.value}`);
+                }
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>d: v-show 指令作用</font><br>
+1.根据真假(boolean)切换元素的显示状态<br>
+2.原理是修改元素的 display 实现显示隐藏<br>
+3.指令后面可以是<font color=red>表达式或者布尔值</font>,最终会解析为布尔值<br>
+4.值为 true 元素显示,值为 false 元素隐藏</p>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+      &lt;img
+        src=&quot;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=904699221,385943135&amp;fm=26&amp;gp=0.jpg&quot;
+        alt=&quot;&quot;
+        v-show=&quot;bool&quot;
+      /&gt;
+      &lt;button v-text=&quot;display&quot; @click=&quot;showImg&quot;&gt;隐藏&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      let vm = new Vue({
+        el: &quot;#app&quot;,
+        data: {
+          display: &quot;隐藏&quot;,
+          bool: true,
+        },
+        methods: {
+          showImg: function () {
+            this.bool = !this.bool;
+            this.display = this.bool ? &quot;隐藏&quot; : &quot;显示&quot;;
+          },
+        },
+      });
+</code></pre><p><font color=red>e: v-if 指令</font><br>
+1.根据表达式真假切换元素的显示状态<br>
+2.本质是通过操作 dom 来切换显示状态<br>
+3.表达式为 true,元素存在于 dom 树中,为 false,则从 dom 树移除<br>
+4.直接操作 dom 比较耗性能</p>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+      &lt;button v-text=&quot;value&quot; v-on:click=&quot;isShow&quot;&gt;&lt;/button&gt;
+      &lt;img
+        src=&quot;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=904699221,385943135&amp;fm=26&amp;gp=0.jpg&quot;
+        alt=&quot;&quot;
+        v-if=&quot;bool&quot;
+      /&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      let vm = new Vue({
+        el: &quot;#app&quot;,
+        data: {
+          bool: true,
+          value: &quot;隐藏&quot;,
+        },
+        methods: {
+          isShow: function () {
+            this.bool = !this.bool;
+            this.value = this.bool ? &quot;隐藏&quot; : &quot;显示&quot;;
+          },
+        },
+      });
+</code></pre><p><font color=red>f: v-bind 指令</font><br>
+1.为元素绑定属性<br>
+2.完整写法是 v-bind:属性名<br>
+3.简写的话可以直接省略 v-bind,只保留 :属性名<br>
+4.需要动态的增删 class 建议使用对象方式</p>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+      &lt;img v-bind:src=&quot;url&quot; alt=&quot;&quot; /&gt;
+      &lt;br /&gt;
+      &lt;img v-bind:src=&quot;url&quot; alt=&quot;&quot; @click=&quot;isShow&quot; :class=&quot;{active:bool}&quot; /&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      let vm = new Vue({
+        el: &quot;#app&quot;,
+        data: {
+          url:
+            &quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586370798767&amp;di=41cdc4f1d844e54216dcee9411da0ca3&amp;imgtype=0&amp;src=http%3A%2F%2Fa0.att.hudong.com%2F78%2F52%2F01200000123847134434529793168.jpg&quot;,
+          bool: false,
+        },
+        methods: {
+          isShow: function () {
+            this.bool = !this.bool;
+          },
+        },
+      });
+</code></pre>]]></content>
         </item>
         
         <item>
@@ -1431,17 +1942,19 @@ b:js.jirengu.com</p>
             <guid>http://yaochengjian.com/posts/7/</guid>
             <description>1.像用户一样利用网址来打开网页 1)yarn global add parcel
 2)parcel 1.a.html(文件名字)
+1)yarn global add http-server
+2)http-server
 2.a 标签(属性) (1)href 取值
 a:网址[https://google.com、http://google.com、//google.com]
 b:路径[/a/b/c 或者 a/b/c]
 c:伪协议[javascript:;代码、mailto:邮箱、tel:手机号]
 d:id[href=&amp;rdquo;#xxx&amp;quot;定位锚文本为#xxx 标签]
-网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值
-a:_balck 浏览器总在一个新窗口打开
-b:_top 浏览器在当前窗口最顶层打开 c:parent 浏览器在超链接父元素(iframe)上面打开</description>
+网址&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;https://google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;//google.com&amp;quot;&amp;gt;谷歌&amp;lt;/a&amp;gt;路径&amp;lt;a href = &amp;quot;/a/b/c&amp;quot;&amp;gt;相对路径&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;a/b/c&amp;quot;&amp;gt;绝对路径&amp;lt;/a&amp;gt;伪协议&amp;lt;a href = &amp;quot;javascript:;&amp;quot;&amp;gt;点击会跳转不了&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;mailto:915248459@qq.com&amp;quot;&amp;gt;邮箱&amp;lt;/a&amp;gt;&amp;lt;a href = &amp;quot;tel:13580466113&amp;quot;&amp;gt;电话&amp;lt;/a&amp;gt;锚文本定位&amp;lt;p id = &amp;quot;xxx&amp;quot;&amp;gt;1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;3&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;4&amp;lt;/p&amp;gt;&amp;lt;a href = &amp;quot;#xxx&amp;quot;&amp;gt;会定位到id为#xxx上面去&amp;lt;/a&amp;gt;(2)target 属性值</description>
             <content type="html"><![CDATA[<h2 id="1像用户一样利用网址来打开网页">1.像用户一样利用网址来打开网页</h2>
 <p>1)yarn global add parcel<br>
 2)parcel 1.a.html(文件名字)</p>
+<p>1)yarn global add http-server<br>
+2)http-server</p>
 <h2 id="2a-标签属性">2.a 标签(属性)</h2>
 <p>(1)href 取值<br>
 a:网址[https://google.com、http://google.com、//google.com]<br>
@@ -2369,13 +2882,13 @@ f. sudo !!的意思是用 sudo 执行上一句命令</p>
 <ol>
 <li>下载代码(不要使用 ssh 地址，使用 https)
 git clone (GitHub 上 https 下载地址)</li>
-<li>启动
+<li>启动<br>
 a. cd node-demo-1<br>
 b. touch log(创建 log 文件，后面可以查看到请求进程)<br>
-c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;
+c. node server.js 8888 &gt; log 2&gt;&amp;1 &amp;<br>
 d. kill -9 pid 可以关掉进程<br>
 e. tail log(可以查看 log 请求进程内容)<br>
-f. killall node 可以关掉所有 node 进程
+f. killall node 可以关掉所有 node 进程<br>
 g. git pull 会在 github 拉取最新的代码</li>
 </ol>
 ]]></content>
