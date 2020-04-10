@@ -13,7 +13,10 @@ b: 安装@vue/cli 与卸载@vue/cli
 c: @vue/cli 和 webpack 是什么关系?
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
 d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览" />
+e: 进入该目录,yarn serve 开启预览
+2.vue.js 完整版和运行时版本区别 完整版 vue.js
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
+ &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -47,10 +50,13 @@ b: 安装@vue/cli 与卸载@vue/cli
 c: @vue/cli 和 webpack 是什么关系?
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
 d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览">
+e: 进入该目录,yarn serve 开启预览
+2.vue.js 完整版和运行时版本区别 完整版 vue.js
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
+ &lt;div id = &quot;app&quot;&gt;{{n}}&lt;/div&gt;vue.">
 <meta itemprop="datePublished" content="2020-02-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="57">
+<meta itemprop="wordCount" content="204">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -67,7 +73,10 @@ b: 安装@vue/cli 与卸载@vue/cli
 c: @vue/cli 和 webpack 是什么关系?
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
 d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览"/>
+e: 进入该目录,yarn serve 开启预览
+2.vue.js 完整版和运行时版本区别 完整版 vue.js
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
+ &lt;div id = &quot;app&quot;&gt;{{n}}&lt;/div&gt;vue."/>
 
 
 
@@ -159,7 +168,87 @@ e: 进入该目录,yarn serve 开启预览"/>
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则</p>
 <p><font color=red>d: 通过 vue create vue-demo 命令创建一个新项目</font></p>
 <p><font color=red>e: 进入该目录,yarn serve 开启预览</font></p>
+<h3 id="2vuejs-完整版和运行时版本区别">2.vue.js 完整版和运行时版本区别</h3>
+<p><font color=red>完整版 vue.js</font><br>
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给<font color=red>template</font>选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        {{n}}
+    &lt;/div&gt;
 
+    vue.min.js是压缩版本,里面没有注释
+    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            data : {
+                n : 1
+            }
+        });
+    &lt;/script&gt;
+
+    或
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            template : `&lt;div&gt;{{n}}&lt;/div&gt;`,
+            data : {
+                n : 3
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>运行时版本 vue.runtime.js</font><br>
+a.运行时版本在 html 中差值表达式和 template 就无法编译出来(没有包含编译器),只能通过 render 函数来渲染</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+
+    &lt;/div&gt;
+
+    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.runtime.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            render(h){
+                h是createElement缩写
+                return h(&quot;div&quot;,this.n);
+            },
+            data : {
+                n : 3
+            }
+        });
+    &lt;/script&gt;
+</code></pre><h3 id="3vue-单文件组件">3.Vue 单文件组件</h3>
+<p>三个标签 : (template、script、style)</p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot; v-bind:class=&quot;red&quot;&gt;
+    {{ n }}
+    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default{
+    如果是vue单文件这里data必须是一个函数,并且要return
+    data(){
+        return {
+            n : 1
+        }
+    },
+    methods : {
+        add(){
+            this.n += 1;
+        }
+    }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.red {
+  color: red;
+}
+&lt;/style&gt;
+</code></pre>
             </div>
         </article>
 
@@ -167,7 +256,7 @@ e: 进入该目录,yarn serve 开启预览"/>
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>57 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>204 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-19 08:00 &#43;0800</p>
         </div>

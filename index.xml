@@ -270,7 +270,10 @@ b: 安装@vue/cli 与卸载@vue/cli
 c: @vue/cli 和 webpack 是什么关系?
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
 d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览</description>
+e: 进入该目录,yarn serve 开启预览
+2.vue.js 完整版和运行时版本区别 完整版 vue.js
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
+ &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue.</description>
     </item>
     
     <item>

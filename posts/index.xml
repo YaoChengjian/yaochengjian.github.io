@@ -1267,7 +1267,10 @@ b: 安装@vue/cli 与卸载@vue/cli
 c: @vue/cli 和 webpack 是什么关系?
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
 d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览</description>
+e: 进入该目录,yarn serve 开启预览
+2.vue.js 完整版和运行时版本区别 完整版 vue.js
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
+ &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue.</description>
             <content type="html"><![CDATA[<h3 id="1使用-vuecli-搭建项目">1.使用 @vue/cli 搭建项目</h3>
 <p><font color=red>a: @vue/cli 是什么?</font><br>
 答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架</p>
@@ -1278,7 +1281,87 @@ e: 进入该目录,yarn serve 开启预览</description>
 答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则</p>
 <p><font color=red>d: 通过 vue create vue-demo 命令创建一个新项目</font></p>
 <p><font color=red>e: 进入该目录,yarn serve 开启预览</font></p>
-]]></content>
+<h3 id="2vuejs-完整版和运行时版本区别">2.vue.js 完整版和运行时版本区别</h3>
+<p><font color=red>完整版 vue.js</font><br>
+a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给<font color=red>template</font>选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        {{n}}
+    &lt;/div&gt;
+
+    vue.min.js是压缩版本,里面没有注释
+    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            data : {
+                n : 1
+            }
+        });
+    &lt;/script&gt;
+
+    或
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            template : `&lt;div&gt;{{n}}&lt;/div&gt;`,
+            data : {
+                n : 3
+            }
+        });
+    &lt;/script&gt;
+</code></pre><p><font color=red>运行时版本 vue.runtime.js</font><br>
+a.运行时版本在 html 中差值表达式和 template 就无法编译出来(没有包含编译器),只能通过 render 函数来渲染</p>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+
+    &lt;/div&gt;
+
+    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.runtime.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        let vm = new Vue({
+            el : &quot;#app&quot;,
+            render(h){
+                h是createElement缩写
+                return h(&quot;div&quot;,this.n);
+            },
+            data : {
+                n : 3
+            }
+        });
+    &lt;/script&gt;
+</code></pre><h3 id="3vue-单文件组件">3.Vue 单文件组件</h3>
+<p>三个标签 : (template、script、style)</p>
+<pre><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot; v-bind:class=&quot;red&quot;&gt;
+    {{ n }}
+    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default{
+    如果是vue单文件这里data必须是一个函数,并且要return
+    data(){
+        return {
+            n : 1
+        }
+    },
+    methods : {
+        add(){
+            this.n += 1;
+        }
+    }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.red {
+  color: red;
+}
+&lt;/style&gt;
+</code></pre>]]></content>
         </item>
         
         <item>
