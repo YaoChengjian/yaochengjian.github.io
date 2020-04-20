@@ -969,7 +969,7 @@ process.argv[2]可以用来监听你输入的端口号</p>
         </item>
         
         <item>
-            <title>37 - [前后分离]Ajax实战:Cookie、Session</title>
+            <title>36 - [前后分离]Ajax实战:Cookie、Session</title>
             <link>http://yaochengjian.com/posts/36/</link>
             <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
             
@@ -1004,7 +1004,7 @@ e. 后盾存储数据</p>
         </item>
         
         <item>
-            <title>38 - MVC</title>
+            <title>37 - MVC</title>
             <link>http://yaochengjian.com/posts/37/</link>
             <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
             
@@ -1061,7 +1061,7 @@ eventBus.on('click',(){
         </item>
         
         <item>
-            <title>39 - webpack</title>
+            <title>38 - webpack</title>
             <link>http://yaochengjian.com/posts/38/</link>
             <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
             
@@ -1259,117 +1259,114 @@ b.如果你访问一个网址,会给你访问 html,html 会引入 1.css,2.css,1.
             <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
             
             <guid>http://yaochengjian.com/posts/39/</guid>
-            <description>1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
-b: 安装@vue/cli 与卸载@vue/cli
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
-c: @vue/cli 和 webpack 是什么关系?
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
-d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览
-2.vue.js 完整版和运行时版本区别 完整版 vue.js
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
- &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue.</description>
-            <content type="html"><![CDATA[<h3 id="1使用-vuecli-搭建项目">1.使用 @vue/cli 搭建项目</h3>
-<p><font color=red>a: @vue/cli 是什么?</font><br>
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架</p>
-<p><font color=red>b: 安装@vue/cli 与卸载@vue/cli</font><br>
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli<br>
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli</p>
-<p><font color=red>c: @vue/cli 和 webpack 是什么关系?</font><br>
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则</p>
-<p><font color=red>d: 通过 vue create vue-demo 命令创建一个新项目</font></p>
-<p><font color=red>e: 进入该目录,yarn serve 开启预览</font></p>
+            <description>1.使用@vue/cli 搭建项目   @vue/cli 是什么？
+答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架
+  安装@vue/cli 与卸载@vue/cli
+安装：npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli
+  @vue/cli 和 webpack 是什么关系？
+答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则
+  如何创建一个 vue 项目？
+答：通过 vue create vue-demo 命令创建一个新的项目
+  vue 的基本配置信息
+  进入该目录，yarn serve 开启预览
+  vue 2.x 与 3.x 的差异   2.</description>
+            <content type="html"><![CDATA[<h3 id="1使用vuecli-搭建项目">1.使用@vue/cli 搭建项目</h3>
+<ul>
+<li>
+<p>@vue/cli 是什么？<br>
+<code style="color:red">答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架</code></p>
+</li>
+<li>
+<p>安装@vue/cli 与卸载@vue/cli<br>
+<code style="color:red">安装：npm install -g @vue/cli 或 yarn global add @vue/cli</code><br>
+<code style="color:red">卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli</code></p>
+</li>
+<li>
+<p>@vue/cli 和 webpack 是什么关系？<br>
+<code style="color:red">答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则</code></p>
+</li>
+<li>
+<p>如何创建一个 vue 项目？<br>
+<code style="color:red">答：通过 vue create vue-demo 命令创建一个新的项目</code></p>
+</li>
+<li>
+<p>vue 的基本配置信息<br>
+<img src="../../images/vue1.png" alt=""></p>
+</li>
+<li>
+<p>进入该目录，<code style="color:red">yarn serve</code> 开启预览</p>
+</li>
+<li>
+<p>vue <code style="color:red">2.x 与 3.x </code>的差异
+<img src="../../images/vue2.png" alt=""></p>
+</li>
+</ul>
 <h3 id="2vuejs-完整版和运行时版本区别">2.vue.js 完整版和运行时版本区别</h3>
-<p><font color=red>完整版 vue.js</font><br>
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给<font color=red>template</font>选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-        {{n}}
-    &lt;/div&gt;
-
-    vue.min.js是压缩版本,里面没有注释
-    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.min.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            data : {
-                n : 1
+<ul>
+<li>完整版 vue.js<br>
+<code style="color:red">同时包含编译器和非完整版本，如果你需要在客户端编译模板，或者使用 template 属性，那么你就需要加上编译器，即完整版</code></li>
+</ul>
+<pre><code>    new Vue({
+        el: &quot;#app&quot;,
+        data(){
+            return {
+                n: 1
             }
-        });
-    &lt;/script&gt;
-
-    或
+        },
+        template: `
+            &lt;div&gt;{{n}}&lt;/div&gt; //如果是vue.runtime.js就无法编译出来，没有编译器
+        `
+    })
+</code></pre><ul>
+<li>运行时版本 vue.runtime.js<br>
+<code style="color:red">运行时版本在 HTML 中差值表达式和 template 就无法编译出来(没有编译器)，只能通过 render 函数来渲染</code></li>
+</ul>
+<pre><code>    import Demo1 from &quot;./Demo1.vue&quot;;
+    new Vue({
+        el: &quot;#app&quot;,
+        render(h){
+            return h(Demo1) // h是createElement缩写
+        }
+    })
+</code></pre><ul>
+<li>render 函数的初步了解<br>
+<code style="color:red">1.在 render 函数方法中，有个默认 h 参数(是 createElement 的缩写，类型是一个函数)</code><br>
+<code style="color:red">2.函数中第一个参数可以是(String | Object | Function)</code></li>
+</ul>
+<h3 id="3总结完整版-和-运行时版本">3.总结完整版 和 运行时版本</h3>
+<p><code>1.虽然有两个版本，但现在前端基本不会去用完整版，平时使用都是代码体积小的运行时版本，因为编译器的脏活交给 vue-loader 去做就好</code><br>
+<code>2.保证用户体验，用户下载的文件体积更小，但只支持 h 函数</code><br>
+<code>3.保证开发体验，开发者可直接在 vue 文件里面学 HTML 标签、差值表达式，而不用写 h 函数</code><br>
+<code>4.活让 loader 做，vue-loader 会把 vue 文件里的 HTML 转换为 h 函数，这样我不用写太多麻烦的，运行时版本就可以做到和完整版一样的事情，还更节约文件大小，提升用户体验</code></p>
+<h3 id="4vue-单文件组件">4.Vue 单文件组件</h3>
+<p><img src="../../images/vue3.png" alt=""></p>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            {{n}}
+            &lt;button @click=&quot;add1&quot;&gt;+1&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/tempate&gt;
 
     &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            template : `&lt;div&gt;{{n}}&lt;/div&gt;`,
-            data : {
-                n : 3
-            }
-        });
-    &lt;/script&gt;
-</code></pre><p><font color=red>运行时版本 vue.runtime.js</font><br>
-a.运行时版本在 html 中差值表达式和 template 就无法编译出来(没有包含编译器),只能通过 render 函数来渲染</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-
-    &lt;/div&gt;
-
-    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.runtime.min.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            render(h){
-                h是createElement缩写
-                return h(&quot;div&quot;,this.n);
+        export default{
+            // 1.如果是vue单文件这里data必须是一个函数，并且要return
+            // 2. 这样能够避免引用了同一个内存地址，造成对象共用
+            data(){
+                return{
+                    n: 1
+                }
             },
-            data : {
-                n : 3
+            methods: {
+                add1(){
+                    this.n += 1;
+                }
             }
-        });
+        }
     &lt;/script&gt;
-</code></pre><h3 id="3vue-单文件组件">3.Vue 单文件组件</h3>
-<p>三个标签 : (template、script、style)</p>
-<pre><code>&lt;template&gt;
-  &lt;div id=&quot;app&quot; v-bind:class=&quot;red&quot;&gt;
-    {{ n }}
-    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
 
-&lt;script&gt;
-export default{
-    如果是vue单文件这里data必须是一个函数,并且要return
-    data(){
-        return {
-            n : 1
-        }
-    },
-    methods : {
-        add(){
-            this.n += 1;
-        }
-    }
-}
-&lt;/script&gt;
-
-&lt;style&gt;
-.red {
-  color: red;
-}
-&lt;/style&gt;
-</code></pre><h2 id="总结">总结</h2>
-<p>1.虽然有两个版本,但现在前端基本不会去用完整版,平时使用都是代码体积小的运行时版本,因为编译器的脏活交给
-vue-loader 去做就好<br>
-<font color=red>选择运行时版本的理由</font><br>
-1.保证用户体验,用户下载的文件体积更小,但只支持 h 函数<br>
-2.保证开发体验,开发者可直接在 vue 文件里写 HTML 标签、差值表达式,而不用写 h 函数<br>
-3.活让 loader 做,vue-loader 会把 vue 文件里的 HTML 转换为 h 函数,这样我不用写太多麻烦的,运行时版本就可以做到和
-完整版一样的事情,还更节约文件大小,提升用户体验</p>
-]]></content>
+    &lt;style scoped&gt;&lt;/style&gt;
+</code></pre>]]></content>
         </item>
         
         <item>
@@ -1378,46 +1375,46 @@ vue-loader 去做就好<br>
             <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
             
             <guid>http://yaochengjian.com/posts/40/</guid>
-            <description>1.Vue 简介 a: JavaScript 框架
-b: 简化 Dom 操作
-c: 响应式数据驱动
-d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)
-e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建
- 1.导入开发版本的Vue.js2.创建Vue实例对象,设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el : &amp;quot;#app&amp;quot;,data : {message : &amp;quot;hello vue!&amp;quot;}});&amp;lt;/script&amp;gt;2.el:挂载点 a: Vue 实例的作用范围是什么呢?
-答: Vue 会管理 el 选项命中的元素及内部的后代元素
- &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.</description>
-            <content type="html"><![CDATA[<h3 id="1vue-简介">1.Vue 简介</h3>
-<p>a: JavaScript 框架<br>
-b: 简化 Dom 操作<br>
-c: 响应式数据驱动<br>
-d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)<br>
-e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建</p>
-<pre><code>    1.导入开发版本的Vue.js
-    2.创建Vue实例对象,设置el属性和data属性
+            <description>1.vue 简介  JavaScript 框架 简化 Dom 操作 响应式数据驱动 开发环境版本(类似完整版的 jQuery)，生产环境版本(类似 mini 版本的 jQuery) 可以根据官方步骤来创建一个 vue 项目，也可以使用@vue/cli 来搭建   1.导入开发版本的vue.js2.创建vue实例对象，设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el: &amp;quot;#app&amp;quot;,data: {message: &amp;quot;hello vue!!&amp;quot;}});&amp;lt;/script&amp;gt;2.el 挂载点  vue 实例的作用范围是什么呢？
+答：Vue 会管理 el 选项命中的元素以及内部的后代元素 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vm = new Vue({el: &amp;quot;#app&amp;quot;,data: {message: &amp;quot;欢迎使用vue&amp;quot;}});&amp;lt;/script&amp;gt;  使用可以使用其它的选择器?</description>
+            <content type="html"><![CDATA[<h3 id="1vue-简介">1.vue 简介</h3>
+<ul>
+<li>JavaScript 框架</li>
+<li>简化 Dom 操作</li>
+<li>响应式数据驱动</li>
+<li>开发环境版本<code style="color:red">(类似完整版的 jQuery)，生产环境版本(类似 mini 版本的 jQuery)</code></li>
+<li>可以根据官方步骤来创建一个 vue 项目，也可以使用@vue/cli 来搭建</li>
+</ul>
+<pre><code>    1.导入开发版本的vue.js
+    2.创建vue实例对象，设置el属性和data属性
     3.使用简洁的模板语法把数据渲染到页面上
-
-    &lt;div id = &quot;app&quot;&gt;
+    &lt;div&gt;
         {{message}}
     &lt;/div&gt;
 
     &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+
     &lt;script&gt;
         let vue = new Vue({
-            el : &quot;#app&quot;,
-            data : {
-                message : &quot;hello vue!&quot;
+            el: &quot;#app&quot;,
+            data: {
+                message: &quot;hello vue!!&quot;
             }
         });
     &lt;/script&gt;
-</code></pre><h3 id="2el挂载点">2.el:挂载点</h3>
-<p><font color=red>a: Vue 实例的作用范围是什么呢?</font><br>
-答: Vue 会管理 el 选项命中的元素及内部的后代元素</p>
+</code></pre><h3 id="2el-挂载点">2.el 挂载点</h3>
+<ul>
+<li>vue 实例的作用范围是什么呢？<br>
+<code style="color:red">答：Vue 会管理 el 选项命中的元素以及内部的后代元素</code></li>
+<li>示例</li>
+</ul>
 <pre><code>    &lt;div id = &quot;app&quot;&gt;
         {{message}}
         &lt;span&gt;{{message}}&lt;/span&gt;
-    &lt;/div&gt;
+    &lt;div&gt;
 
     &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+
     &lt;script&gt;
         let vm = new Vue({
             el: &quot;#app&quot;,
@@ -1426,182 +1423,765 @@ e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli �
             }
         });
     &lt;/script&gt;
-</code></pre><p><font color=red>b: 是否可以使用其它的选择器?</font><br>
-答: 可以使用其他的选择器,但是建议使用 ID 选择器</p>
-<p><font color=red>c: 是否可以设置其它的 dom 元素呢?</font><br>
-答: 可以使用其他的双标签,不能使用 HTML 和 BODY</p>
-<h3 id="3font-colorreddata数据对象font">3.<font color=red>data:数据对象</font></h3>
-<p>a: Vue 中用到的数据定义在 data 中<br>
-b: data 中可以写复杂类型的数据<br>
-c: 渲染复杂类型数据时,遵守 js 的语法即可</p>
+</code></pre><ul>
+<li>
+<p>使用可以使用其它的选择器?<br>
+<code style="color:red">答：可以使用其它的选择器，但是建议使用 ID 选择器</code></p>
+</li>
+<li>
+<p>是否可以设置其它的 dom 元素呢?
+<code style="color:red">答：可以使用其它的双标签，不能使用 HTML 和 BODY</code></p>
+</li>
+</ul>
+<h3 id="3data-数据对象code-stylecolorred支持对象和函数组件必须要使用函数code">3.data 数据对象<code style="color:red">(支持对象和函数，组件必须要使用函数)</code></h3>
+<ul>
+<li>Vue 中用到的数据定义在 data 中</li>
+<li>data 中可以写复杂类型的数据</li>
+<li>渲染复杂类型数据时，遵守 js 的语法即可</li>
+<li>组件的定义只接受<code style="color:red">function</code></li>
+<li>示例</li>
+</ul>
 <pre><code>    &lt;div id = &quot;app&quot;&gt;
-        &lt;h1&gt;{{message}}&lt;h1&gt;
-        &lt;h2&gt;{{school.name}} {{school.mobile}}&lt;/h2&gt;
+        &lt;h1&gt;{{message}}&lt;/h1&gt;
+        &lt;h2&gt;{{school.name}}{{school.mobile}}&lt;/h2&gt;
         &lt;ul&gt;
             &lt;li&gt;{{campus[0]}}&lt;/li&gt;
             &lt;li&gt;{{campus[1]}}&lt;/li&gt;
             &lt;li&gt;{{campus[2]}}&lt;/li&gt;
-            &lt;li&gt;{{campus[3]}}&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
     &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        let vm = new Vue({
-            el:&quot;#app&quot;,
-            data: {
-                message: &quot;大家好!我是黑马程序员&quot;,
-                school: {
-                    name: &quot;黑马程序员&quot;,
-                    mobile: &quot;400-618-9090&quot;
-                },
-                campus: [&quot;北京校区&quot;,&quot;上海校区&quot;,&quot;广州校区&quot;,&quot;深圳校区&quot;]
-            }
-        });
-    &lt;/script&gt;
-</code></pre><h3 id="4font-colorred本地应用-vue-指令指的是以-v-开头的一组特殊语法font">4.<font color=red>本地应用-Vue 指令指的是,以 v-开头的一组特殊语法</font></h3>
-<p><font color=red>a: v-text 指令作用</font><br>
-1.<font color=red>设置标签的内容</font><br>
-2.默认写法会替换全部内容,使用<font color=red>差值表达式{{}}</font>可以替换指定内容<br>
-3.内部支持写表达式</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-        &lt;h1 v-text=&quot;sessage&quot;&gt;&lt;h1&gt;  如果标签里面存在内容会全部被替换掉
-        &lt;h1 v-text=&quot;sessage + '!'&quot;&gt;  v-text支持表达式
-    &lt;/div&gt;
 
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        let vm = new Vue({
-            el: &quot;app&quot;,
-            data: {
-                sessage: &quot;黑马程序员&quot;
-            }
-        });
-    &lt;/script&gt;
-</code></pre><p><font color=red>b: v-html 指令作用</font><br>
-1.<font color=red>设置元素的 innerHTML</font><br>
-2.内容中有<font color=red>html</font>结构会被解析为<font color=red>标签</font><br>
-3.<font color=red>v-text</font>指令无论内容是什么,只会解析为<font color=red>文本</font><br>
-4.解析文本使用<font color=red>v-text</font>,解析 html 结构使用<font color=red>v-html</font></p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-        &lt;h1 v-html=&quot;content&quot;&gt;&lt;/h1&gt;
-    &lt;/div&gt;
-
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
     &lt;script&gt;
         let vm = new Vue({
             el: &quot;#app&quot;,
             data: {
-                content: &quot;&lt;a href='http://itheima.com'&gt;黑马程序猿&lt;/a&gt;&quot;
+                message: &quot;大家好！！&quot;,
+                school: {name: '周瑞发', mobile: '1301121241'},
+                campus: [&quot;北京&quot;,&quot;上海&quot;,&quot;广州&quot;,&quot;深圳&quot;]
             }
         });
     &lt;/script&gt;
-</code></pre><p><font color=red>c: v-on:绑定事件</font><br>
-1.事件名不需要写<font color=red>on</font><br>
-2.指令可以简写为<font color=red>@</font><br>
-3.绑定的方法定义在 methods 属性中(是对象)<br>
-4.方法内部通过<font color=red>this</font>关键字可以访问定义在<font color=red>data 中</font>数据</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-        &lt;button v-text=&quot;value&quot; v-on:click=&quot;sayName&quot;&gt;&lt;/button&gt;
-        &lt;button v-text=&quot;value&quot; @click=&quot;sayName&quot;&gt;&lt;/button&gt;
-    &lt;div&gt;
+</code></pre><h3 id="4vuecomponent-组件code-stylecolorred完整版才支持code">4.Vue.component 组件<code style="color:red">完整版才支持</code></h3>
+<ul>
+<li>定义一个名为<code style="color:red">button-counter，名字可更改</code>的新组件</li>
+<li>component 第一个参数为你定义组件的名字，第二个参数跟 Vue 实例 options 一样</li>
+<li>组件可以无限复用，<code style="color:red">data 必须是一个函数</code>，避免引用同样的内存地址，导致数据错乱</li>
+<li>建议大写组件名，以防和 html 标签发生冲突</li>
+<li>示例</li>
+</ul>
+<pre><code>    Vue.component(&quot;Button-counter&quot;,{
+        data(){
+            return{
+                count: 0
+            }
+        },
+        template: `
+            &lt;button @click=&quot;count++&quot;&gt;你点击了我{{count}}下&lt;/button&gt;
+        `
+    });
 
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+    new Vue({
+        el: &quot;#app&quot;,
+        template: `
+            &lt;Button-counter&gt;&lt;/Button-counter&gt;
+        `
+    });
+</code></pre><p>或</p>
+<pre><code>    import Demo from &quot;./Demo.vue&quot;;
+    new Vue({
+        el: &quot;#app&quot;,
+        components: {Demo},
+        template: `
+            &lt;div&gt;
+                &lt;Demo&gt;&lt;/Demo&gt;
+            &lt;/div&gt;
+        `
+    });
+</code></pre><h3 id="5什么是-vue-的生命周期">5.什么是 vue 的生命周期</h3>
+<p><code style="color:red">答：Vue 实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载 Dom、渲染-&gt;更新-&gt;渲染、卸载等一系列过程，这就是 Vue 的生命周期，通俗说这就是 Vue 实例从创建到销毁过程，这就是生命周期。</code>
+<img src="https://user-gold-cdn.xitu.io/2020/4/13/171714db83b1ca49?w=1200&amp;h=3039&amp;f=png&amp;s=77677" alt="&ldquo;vue生命周期图&rdquo;"></p>
+<h3 id="6生命周期四个钩子">6.生命周期四个钩子</h3>
+<ul>
+<li>created</li>
+<li>类型： <code style="color:red">Function</code></li>
+<li>详细：<code style="color:red">在实例创建完成后立即被调用</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    new Vue({
+        created(){
+            console.log(&quot;Vue实例创建完成后立即就会执行该函数&quot;);
+        }
+    })
+</code></pre><ul>
+<li>mounted</li>
+<li>类型：<code style="color:red">Function</code></li>
+<li>详细：<code style="color:red">已经挂载了选择器，就会触发该函数，这时候 el 就已经被$el 替换了</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    new Vue({
+        el: &quot;#app&quot;,
+        mounted(){
+            console.log(&quot;已经挂载了el，就会触发该函数&quot;);
+        }
+    })
+</code></pre><ul>
+<li>updated</li>
+<li>类型：<code style="color:red">Function</code></li>
+<li>详细：<code style="color:red">同组件下 data 对象数据发生了改变就会触发该函数</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    new Vue({
+        el: &quot;#app&quot;,
+        data(){
+            return {
+                n: 0
+            }
+        },
+        methods: {
+            add1(){
+                this.n += 1;
+            }
+        },
+        template: `
+            &lt;div&gt;
+                {{n}}
+                &lt;button @click=&quot;add1&quot;&gt;+1&lt;/button&gt;
+            &lt;/div&gt;
+        `,
+        updated(){
+            console.log(&quot;数据更新或者页面更新会执行该函数&quot;);
+        }
+    })
+</code></pre><ul>
+<li>destroyed</li>
+<li>类型：<code style="color:red">Function</code></li>
+<li>详细：<code style="color:red">组件被销毁后调用该函数，同组件才会触发该函数</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    import Demo from &quot;./Demo.vue&quot;
+    new Vue({
+        el: &quot;#app&quot;,
+        components: {Demo}
+        data(){
+            return{
+                isShow: true
+            }
+        },
+        template: `
+            &lt;button @click=&quot;isShow=false&quot;&gt;隐藏&lt;/button&gt;
+            &lt;Demo v-if=&quot;isShow&quot;&gt;&lt;/Demo&gt;
+        `
+    })
+</code></pre><h3 id="7使用-props-传递数据">7.使用 props 传递数据</h3>
+<ul>
+<li>详细：<code style="color:red">组件不仅仅是要把模板的内容进行复用，更重要的是组件之间的通信，通常父组件的模板中包含子组件，父组件要向子组件传递数据或者参数，子组件接收到后根据参数的不同来进行对应的渲染。数据传递在 vue 组件可以通过 props 来实现</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    // child.vue
+    &lt;template&gt;
+      &lt;div&gt;{{message}}&lt;/div&gt;
+    &lt;/template&gt;
+
     &lt;script&gt;
-        let vm = new Vue({
-            el: &quot;#app&quot;,
-            data: {
-                value: &quot;黑马程序猿&quot;
+      export default {
+        props: [&quot;message&quot;]
+      };
+    &lt;/script&gt;
+
+    &lt;style&gt;&lt;/style&gt;
+
+
+    // father.vue
+    &lt;template&gt;
+      &lt;div&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;message&quot; /&gt;
+        &lt;child :message=&quot;message&quot;&gt;&lt;/child&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    import child from &quot;./child.vue&quot;;
+    export default {
+      data() {
+        return {
+          message: &quot;&quot;
+        };
+      },
+      components: { child }
+    };
+    &lt;/script&gt;
+
+    // main.js
+    import father from &quot;./father.vue&quot;;
+    new Vue({
+      el: &quot;#app&quot;,
+      components: { father },
+      template: `
+        &lt;div&gt;
+          &lt;father&gt;&lt;/father&gt;
+        &lt;/div&gt;
+      `,
+    });
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>41 - computed和watch</title>
+            <link>http://yaochengjian.com/posts/41/</link>
+            <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/41/</guid>
+            <description>1.es6 中的 getter 和 setter getter:取值函数,不用再函数后面加括号就能拿到函数里面的值
+ let obj = {surname : &amp;quot;yao&amp;quot;,name : &amp;quot;chengjian&amp;quot;,get surnameName(){return &amp;quot;姓名&amp;quot; + &amp;quot;---&amp;quot; + this.surname + this.name;}}console.log(obj.surnameName); // obj.surnameName方式调用即可setter:设置函数,通过设置对象方式来设置属性里面的值
+ let obj = {surname : &amp;quot;yao&amp;quot;,name : &amp;quot;chengjian&amp;quot;,set surnameName(xxx){console.log(xxx);}}obj.surnameName = &amp;quot;你好&amp;quot; //通过set方式来设置值2.computed 计算属性  类型 : { [key: string]: Function | {get: Function, set: Function} } 详细 计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的this上下文自动地绑定为 Vue 实例。注意如果你为一个计算属性性使用箭头函数，则this不会指向这个组件的实例，不过你仍然可以将其实例作为函数的第一个参数来访问。 示例：   let vm = new Vue({el: &amp;quot;app&amp;quot;,data(){return {a: 2}},computed: {aDouble: vm =&amp;gt; vm.</description>
+            <content type="html"><![CDATA[<h3 id="1es6-中的-getter-和-setter">1.es6 中的 getter 和 setter</h3>
+<p>getter:取值函数,不用再函数后面加括号就能拿到函数里面的值</p>
+<pre><code>    let obj = {
+        surname : &quot;yao&quot;,
+        name : &quot;chengjian&quot;,
+        get surnameName(){
+            return &quot;姓名&quot; + &quot;---&quot; + this.surname + this.name;
+        }
+    }
+    console.log(obj.surnameName); // obj.surnameName方式调用即可
+</code></pre><p>setter:设置函数,通过设置对象方式来设置属性里面的值</p>
+<pre><code>    let obj = {
+        surname : &quot;yao&quot;,
+        name : &quot;chengjian&quot;,
+        set surnameName(xxx){
+            console.log(xxx);
+        }
+    }
+    obj.surnameName = &quot;你好&quot; //通过set方式来设置值
+</code></pre><h3 id="2computed-计算属性">2.computed 计算属性</h3>
+<ul>
+<li>类型 : <code style="color:red">{ [key: string]: Function | {get: Function, set: Function} }</code></li>
+<li>详细
+计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的<code style="color:red">this</code>上下文自动地绑定为 Vue 实例。注意如果你为一个计算属性性使用箭头函数，则<code style="color:red">this</code>不会指向这个组件的实例，不过你仍然可以将其<code style="color:red">实例</code>作为函数的第一个参数来访问。</li>
+<li><b>示例</b>：</li>
+</ul>
+<pre><code>    let vm = new Vue({
+        el: &quot;app&quot;,
+        data(){
+            return {
+                a: 2
+            }
+        },
+        computed: {
+            aDouble: vm =&gt; vm.a * 2
+        },
+        template: `
+            &lt;div&gt;
+                {{aDouble}}
+            &lt;/div&gt;
+        `
+    });
+</code></pre><p>计算属性的结果被缓存，除非依赖的响应式属性变化才会重新计算。注意，如果某个依赖(比如非响应式属性)在该实例范畴之外，则计算属性是不会被更新的。</p>
+<ul>
+<li><b>示例</b>：</li>
+</ul>
+<pre><code>  let vm = new Vue({
+      data(){
+          return {
+              a : 1
+          }
+      },
+      computed: {
+          //仅读取
+          aDouble: function(){
+              return this.a * 2;
+          },
+
+          //读取和设置
+          aPlus: {
+              get: function(){
+                  return this.a + 1;
+              },
+              set: function(){
+                  this.a = v - 1;
+              }
+          }
+      }
+  });
+
+  vm.aPlus    // =&gt; 2
+  vm.aPlus = 3;
+  vm.a        // =&gt; 2
+  vm.aDouble  // =&gt; 4
+</code></pre><ul>
+<li><b>computed 显示案例</b>：</li>
+</ul>
+<pre><code>  &lt;template&gt;
+&lt;div&gt;
+  &lt;button @click=&quot;changeGender('')&quot;&gt;全部&lt;/button&gt;
+  &lt;button @click=&quot;changeGender('男')&quot;&gt;男&lt;/button&gt;
+  &lt;button @click=&quot;changeGender('女')&quot;&gt;女&lt;/button&gt;
+  &lt;ul&gt;
+    &lt;li v-for=&quot;(item,key) in displayName&quot;&gt;{{item.name}}--{{item.sex}}&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+let createUser = (name, age, sex) =&gt; {
+return { name, age, sex };
+};
+export default {
+data() {
+  return {
+    users: [
+      createUser(&quot;frank&quot;, 18, &quot;男&quot;),
+      createUser(&quot;lucy&quot;, 20, &quot;女&quot;),
+      createUser(&quot;tom&quot;, 19, &quot;男&quot;),
+      createUser(&quot;sady&quot;, 16, &quot;女&quot;)
+    ],
+    gender: &quot;&quot;
+  };
+},
+computed: {
+  displayName() {
+    let gender = this.gender;
+    let users = this.users;
+    let genderObj = {
+      man: &quot;男&quot;,
+      women: &quot;女&quot;
+    };
+
+    if (gender === &quot;&quot;) {
+      return users;
+    } else {
+      return users.filter(item =&gt; {
+        return item.sex === genderObj[gender];
+      });
+    }
+  }
+},
+methods: {
+  changeGender(string) {
+    if (string) {
+      string = string === &quot;男&quot; ? &quot;man&quot; : &quot;women&quot;;
+    }
+    this.gender = string;
+  }
+}
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;&lt;/style&gt;
+</code></pre><ul>
+<li>computed 用来监控自己定义的变量，该变量不在 data 里面声明，直接在 computed 里面定义，然后就可以在页面上进行双向数据绑定展示出结果或者用作其他处理。</li>
+<li><code style="color:red">比较适合对多个变量或者对象进行处理后返回一个结果值</code>，也就是数多个变量中的某一个值发生了变化则我们监控的这个值也就会发生变化，举例：购物车里面的商品列表和总金额之间的关系，只要商品列表里面的商品数量发生变化，或增多曾少或者删除商品，总金额都应该发生变化。这里的这个总金额使用 computed 属性来进行计算是最好的选择。</li>
+</ul>
+<h3 id="3watch监控-data-里面数据变化">3.watch(监控 data 里面数据变化)</h3>
+<ul>
+<li>类型：<code style="color:red">{ [key: string]: string | Function | Object | Array }</code></li>
+<li>详细：<br>
+一个对象，键是需要观测的表达式，值是对应的回调函数。值也可以是方法名，或者包含选项的对象。<br>
+watch 主要用于监控 vue 实例的变化，他监控的变量必须在 data 里面声明才可以，它可以监控一个变量，也可以监控一个对象。</li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            {{n}}
+            &lt;br/&gt;
+            &lt;button @click=&quot;add1&quot;&gt;+1&lt;/button&gt;
+            &lt;button @click=&quot;add2&quot;&gt;+2&lt;/button&gt;
+            &lt;button @click=&quot;minus1&quot;&gt;-1&lt;/button&gt;
+            &lt;button @click=&quot;minus2&quot;&gt;-2&lt;/button&gt;
+            &lt;br/&gt;
+            &lt;button @click=&quot;undo&quot;&gt;&lt;/button&gt;
+            &lt;br/&gt;
+            {{history}}
+        &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default {
+            data(){
+                return {
+                    n: 0,
+                    history: [],
+                    isUndoMode: false
+                }
             },
-            methods: {
-                sayName: function(){
-                    alert(`my name is ${this.value}`);
+            methods:{
+                add1(){ this.n += 1 },
+                add2(){ this.n += 2 },
+                minus(){ this.n -= 1 },
+                minus(){ this.n -= 2 }
+            },
+            watch: {  // watch是异步操作
+                n(newV,oldV){ // newV是n数据更新后的新值,oldV是n数据未更新的旧值
+                    if(!this.isUndoMode){
+                        this.history.push({ form : newV,to : oldV });
+                    }
+                }
+            },
+            undo(){
+                const last = this.history.pop();
+                const old = last.from;
+                this.isUndoMode = true;
+                this.n = old;   // 一更新n的值马上又会触发n的函数
+                this.$nextTick(()=&gt;{
+                    this.isUndoMode = false;
+                },0);
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style scoped&gt;&lt;/style&gt;
+</code></pre><ul>
+<li>handler 和 immediate 用法<br>
+<code style="color:red">immediate: true 第一次是否要执行</code></li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;{{n}}&lt;/div&gt;
+    &lt;/tempalte&gt;
+
+    &lt;script&gt;
+        export default{
+            data(){
+                return {
+                    n: 0
+                }
+            },
+            watch: {
+                n: {
+                    handler(){
+                        this.n = &quot;一开始就监听数据,并且执行这里的内容&quot;
+                    }，
+                    immediate: true  // 第一次是否要执行
                 }
             }
-        });
+        }
     &lt;/script&gt;
-</code></pre><p><font color=red>d: v-show 指令作用</font><br>
-1.根据真假(boolean)切换元素的显示状态<br>
-2.原理是修改元素的 display 实现显示隐藏<br>
-3.指令后面可以是<font color=red>表达式或者布尔值</font>,最终会解析为布尔值<br>
-4.值为 true 元素显示,值为 false 元素隐藏</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-      &lt;img
-        src=&quot;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=904699221,385943135&amp;fm=26&amp;gp=0.jpg&quot;
-        alt=&quot;&quot;
-        v-show=&quot;bool&quot;
-      /&gt;
-      &lt;button v-text=&quot;display&quot; @click=&quot;showImg&quot;&gt;隐藏&lt;/button&gt;
+
+    &lt;style scoped&gt;&lt;/style&gt;
+</code></pre><ul>
+<li>何为 data 数据变化<br>
+<code style="color:red">简单类型看值,引用类型看地址</code><br>
+<code style="color:red">deep: true 引用类型里面属性的值变了也会触发 obj 变了</code></li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;button @click=&quot;obj={a:'a'}&quot;&gt;obj&lt;/button&gt;
+
+    // 引用类型里面属性的值变了也会触发obj变了
+    &lt;button @click=&quot;obj.a = 'a+1'&quot;&gt;obj.a&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      obj: {
+        a: &quot;a&quot;
+      }
+    };
+  },
+  watch: {
+    obj: {
+      handler(newV, oldV) {
+        console.log(`obj内存地址变了,以前的是${oldV},旧的是${newV}`);
+      },
+      deep: true  // 引用类型里面属性的值变了也会触发obj变了
+    }
+  }
+};
+&lt;/script&gt;
+
+&lt;style&gt;&lt;/style&gt;
+</code></pre><ul>
+<li>watch 语法完整用法</li>
+</ul>
+<pre><code>&lt;template&gt;
+    &lt;div&gt;
+        {{n}}
+        &lt;button @click=&quot;add1&quot;&gt;+1&lt;/button&gt;
     &lt;/div&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      let vm = new Vue({
+&lt;/template&gt;
+
+&lt;script&gt;
+    export default{
+        data(){
+            return{
+                n: 0,
+                obj: {
+                    a: 0
+                }
+            }
+        },
+        methods:{
+            add1(){
+                this.n += 1;
+            },
+            logN(){
+                console.log(this.n);
+            }
+        },
+        watch:{
+            n(){} // 可以是函数
+            n: 'logN' // 可以是methods里面的函数
+            n: { handle(){} , deep:true }
+            n: { handle(){} , immediate:true }
+            n: [f1(){},f2(){}] //都会执行里面的函数
+            'obj.a'(){} // 监听obj里面a的值是否变化
+        }
+    }
+&lt;/script&gt;
+
+&lt;style scoped&gt;&lt;/style&gt;
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>42 - vue全解(模板、指令与修饰符)</title>
+            <link>http://yaochengjian.com/posts/42/</link>
+            <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://yaochengjian.com/posts/42/</guid>
+            <description>1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML{{n}}&amp;lt;div&amp;gt; Vue 完整版，写在选项里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML&amp;lt;div&amp;gt;new Vue({el: &amp;quot;#app&amp;quot;,data(){return { n:0 }},template: `&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&amp;lt;template&amp;gt;&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;&amp;lt;template&amp;gt;&amp;lt;script&amp;gt;export default{data(){return { n:0 }}}&amp;lt;/script&amp;gt;// 另外一个地方引入该vue文件import Demo import &amp;quot;Demo.</description>
+            <content type="html"><![CDATA[<h3 id="1模板-template-三种写法">1.模板 template 三种写法</h3>
+<ul>
+<li>Vue 完整版，写在 HTML 里</li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;  // =&gt; HTML
+        {{n}}
+    &lt;div&gt;
+</code></pre><ul>
+<li>Vue 完整版，写在选项里</li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;  // =&gt; HTML
+    &lt;div&gt;
+
+    new Vue({
         el: &quot;#app&quot;,
-        data: {
-          display: &quot;隐藏&quot;,
-          bool: true,
+        data(){
+            return { n:0 }
         },
-        methods: {
-          showImg: function () {
-            this.bool = !this.bool;
-            this.display = this.bool ? &quot;隐藏&quot; : &quot;显示&quot;;
-          },
-        },
-      });
-</code></pre><p><font color=red>e: v-if 指令</font><br>
-1.根据表达式真假切换元素的显示状态<br>
-2.本质是通过操作 dom 来切换显示状态<br>
-3.表达式为 true,元素存在于 dom 树中,为 false,则从 dom 树移除<br>
-4.直接操作 dom 比较耗性能</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-      &lt;button v-text=&quot;value&quot; v-on:click=&quot;isShow&quot;&gt;&lt;/button&gt;
-      &lt;img
-        src=&quot;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=904699221,385943135&amp;fm=26&amp;gp=0.jpg&quot;
-        alt=&quot;&quot;
-        v-if=&quot;bool&quot;
-      /&gt;
+        template: `
+            &lt;div&gt;
+                {{n}}
+            &lt;/div&gt;
+        `
+    })
+    // 注意一个细节：div#app会被template替代
+</code></pre><ul>
+<li>Vue 运行时版，配合 vue 单组件文件</li>
+<li>示例</li>
+</ul>
+<pre><code>    // vue单组件文件
+    &lt;template&gt;
+        &lt;div&gt;{{n}}&lt;/div&gt;
+    &lt;template&gt;
+
+    &lt;script&gt;
+        export default{
+            data(){
+                return { n:0 }
+            }
+        }
+    &lt;/script&gt;
+
+    // 另外一个地方引入该vue文件
+    import Demo import &quot;Demo.vue&quot;;
+    new Vue({
+        el: &quot;#app&quot;,
+        render(h){
+            return h(Demo)
+        }
+    })
+</code></pre><h3 id="2指令">2.指令</h3>
+<ul>
+<li>v-text</li>
+<li>预期：<code style="color:red">string</code></li>
+<li>详细：<code style="color:red">更新元素的 textCont。如果要更新部分的 textContent，需要使用{{meg}}来差值</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;span v-text=&quot;msg&quot;&gt;&lt;/span&gt;
+        &lt;!-- 和下面一样 --&gt;
+        &lt;span&gt;{{msg}}&lt;/span&gt;
     &lt;/div&gt;
 
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
     &lt;script&gt;
-      let vm = new Vue({
-        el: &quot;#app&quot;,
-        data: {
-          bool: true,
-          value: &quot;隐藏&quot;,
-        },
-        methods: {
-          isShow: function () {
-            this.bool = !this.bool;
-            this.value = this.bool ? &quot;隐藏&quot; : &quot;显示&quot;;
-          },
-        },
-      });
-</code></pre><p><font color=red>f: v-bind 指令</font><br>
-1.为元素绑定属性<br>
-2.完整写法是 v-bind:属性名<br>
-3.简写的话可以直接省略 v-bind,只保留 :属性名<br>
-4.需要动态的增删 class 建议使用对象方式</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-      &lt;img v-bind:src=&quot;url&quot; alt=&quot;&quot; /&gt;
-      &lt;br /&gt;
-      &lt;img v-bind:src=&quot;url&quot; alt=&quot;&quot; @click=&quot;isShow&quot; :class=&quot;{active:bool}&quot; /&gt;
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return{
+                    msg: '你好呀！'
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-html</li>
+<li>预期：<code style="color:red">string</code></li>
+<li>详细：<code style="color:red">更新元素 innerHTML。可以识别 html 标签，并且渲染在页面上</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;#app&quot;&gt;
+        &lt;p v-html=&quot;msg&quot;&gt;&lt;/p&gt;
+    &lt;div&gt;
+
+    &lt;script&gt;
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return {
+                    msg: &quot;&lt;strong&gt;你好呀！&lt;/strong&gt;&quot;
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-pre</li>
+<li><code style="color:red">不需要表达式</code></li>
+<li>详细：<code style="color:red">不需要将 {{}} 进行编译，会把{{}}也显示出来</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;span v-pre&gt;{{n}}&lt;/span&gt;
     &lt;/div&gt;
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+
     &lt;script&gt;
-      let vm = new Vue({
-        el: &quot;#app&quot;,
-        data: {
-          url:
-            &quot;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586370798767&amp;di=41cdc4f1d844e54216dcee9411da0ca3&amp;imgtype=0&amp;src=http%3A%2F%2Fa0.att.hudong.com%2F78%2F52%2F01200000123847134434529793168.jpg&quot;,
-          bool: false,
-        },
-        methods: {
-          isShow: function () {
-            this.bool = !this.bool;
-          },
-        },
-      });
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return{
+                    n: 0
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-bind</li>
+<li>缩写：<code style="color:red">:</code></li>
+<li>预期：<code style="color:red">任何(变量、字符串&hellip;)</code></li>
+<li>详细：<code style="color:red">在绑定 class 或 style 属性时，支持其它类型的值，如数组或对象</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;!-- 绑定一个属性 --&gt;
+    &lt;img v-bind:src=&quot;imageSrc&quot;&gt;
+
+    &lt;!-- 缩写 --&gt;
+    &lt;img :src=&quot;imageSrc&quot;&gt;
+
+    &lt;!-- class绑定 --&gt;
+    &lt;div :class=&quot;{red:isRed}&quot;&gt;&lt;/div&gt;
+    &lt;div :class=&quot;[classA, classB]&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- style 绑定 --&gt;
+    &lt;div :style=&quot;{color:'red'}&quot;&gt;111&lt;/div&gt;
+    &lt;div :style=&quot;[styleObjectA, styleObjectB]&quot;&gt;&lt;/div&gt;
+</code></pre><ul>
+<li>v-on:事件名</li>
+<li>缩写：<code style="color:red">@事件名</code></li>
+<li>详细：<code style="color:red">绑定事件</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;button v-on:click=&quot;add1&quot;&gt; +1 &lt;/button&gt;
+
+    &lt;!-- vue做了处理，不会马上执行xxx，还是会等你点击执行 --&gt;
+    &lt;button @click=&quot;xxx(1)&quot;&gt;xxx&lt;/button&gt;
+
+    &lt;!-- 还能放其它可执行代码 --&gt;
+    &lt;button @click=&quot;n+=1&quot;&gt;{{n}}&lt;/button&gt;
+</code></pre><ul>
+<li>v-if &amp;&amp; v-else</li>
+<li>详细：<br>
+<code style="color:red">1.根据表达式真假切换元素的显示状态，本质是通过 dom 来切换显示状态。true 为显示状态，false 为隐藏状态。</code><br>
+<code style="color:red">2.v-else 必须要和 v-if 匹配使用，v-else 不能单独使用，只有 v-if 的值为 false 时，v-else 模块才会显示出来</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+      &lt;div&gt;
+        &lt;button @click=&quot;show&quot;&gt;{{message}}&lt;/button&gt;
+        &lt;div class=&quot;red&quot; v-if=&quot;isShow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;blue&quot; v-else&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    export default {
+      data() {
+        return {
+          message: &quot;隐藏&quot;,
+          isShow: true
+        };
+      },
+      methods: {
+        show() {
+          this.isShow = !this.isShow;
+          this.message = this.isShow ? &quot;隐藏&quot; : &quot;显示&quot;;
+        }
+      }
+    };
+    &lt;/script&gt;
+
+    &lt;style Lang=&quot;css&quot; spoced&gt;
+    .red,.blue{
+        width: 200px;
+        height:200px;
+    }
+    .red{
+        border: 1px solid red;
+    }
+    .blue{
+        border: 1px solid blue;
+    }
+    &lt;/style&gt;
+</code></pre><ul>
+<li>v-show</li>
+<li>用法：<code style="color:red">根据表达式真假值，切换元素的 display CSS 属性</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            &lt;button @click=&quot;isShow=false&quot;&gt;点击&lt;/button&gt;
+            &lt;p v-show=&quot;isShow&quot;&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default{
+            data(){
+                return {
+                    isShow:true
+                }
+            }
+        }
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-for</li>
+<li>详细：<code style="color:red">for(value,key) in 对象或数组</code></li>
+<li>注意：<code style="color:red">使用 v-for 就必须要在后面加上:key，否则会一直出现警告</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li v-for=&quot;(value,key) in users&quot; :key=&quot;key.id&quot;&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default {
+            data(){
+                return{
+                    users: [&quot;frank&quot;,&quot;tom&quot;,&quot;lucy&quot;,&quot;juck&quot;]
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;&lt;/style&gt;
 </code></pre>]]></content>
         </item>
         

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML{{n}}&amp;lt;div&amp;gt; Vue 完整版，写在选项里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML&amp;lt;div&amp;gt;new Vue({el: &amp;quot;#app&amp;quot;,data(){return { n:0 }},template: `&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&amp;lt;template&amp;gt;&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;&amp;lt;template&amp;gt;&amp;lt;script&amp;gt;export default{data(){return { n:0 }}}&amp;lt;/script&amp;gt;// 另外一个地方引入该vue文件import Demo import &amp;quot;Demo." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://yaochengjian.com/posts/42/" />
+
+
+    <title>
+        
+            42 - vue全解(模板、指令与修饰符) :: 姚 成 健 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+<meta itemprop="name" content="42 - vue全解(模板、指令与修饰符)">
+<meta itemprop="description" content="1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML{{n}}&lt;div&gt; Vue 完整版，写在选项里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML&lt;div&gt;new Vue({el: &quot;#app&quot;,data(){return { n:0 }},template: `&lt;div&gt;{{n}}&lt;/div&gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&lt;template&gt;&lt;div&gt;{{n}}&lt;/div&gt;&lt;template&gt;&lt;script&gt;export default{data(){return { n:0 }}}&lt;/script&gt;// 另外一个地方引入该vue文件import Demo import &quot;Demo.">
+<meta itemprop="datePublished" content="2020-02-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="364">
+<meta itemprop="image" content="http://yaochengjian.com/"/>
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://yaochengjian.com/"/>
+
+<meta name="twitter:title" content="42 - vue全解(模板、指令与修饰符)"/>
+<meta name="twitter:description" content="1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML{{n}}&lt;div&gt; Vue 完整版，写在选项里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML&lt;div&gt;new Vue({el: &quot;#app&quot;,data(){return { n:0 }},template: `&lt;div&gt;{{n}}&lt;/div&gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&lt;template&gt;&lt;div&gt;{{n}}&lt;/div&gt;&lt;template&gt;&lt;script&gt;export default{data(){return { n:0 }}}&lt;/script&gt;// 另外一个地方引入该vue文件import Demo import &quot;Demo."/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-02-16 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Yao Chengjian</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://yaochengjian.com/posts">博客</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="http://yaochengjian.com/posts/42/">42 - vue全解(模板、指令与修饰符)</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h3 id="1模板-template-三种写法">1.模板 template 三种写法</h3>
+<ul>
+<li>Vue 完整版，写在 HTML 里</li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;  // =&gt; HTML
+        {{n}}
+    &lt;div&gt;
+</code></pre><ul>
+<li>Vue 完整版，写在选项里</li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;  // =&gt; HTML
+    &lt;div&gt;
+
+    new Vue({
+        el: &quot;#app&quot;,
+        data(){
+            return { n:0 }
+        },
+        template: `
+            &lt;div&gt;
+                {{n}}
+            &lt;/div&gt;
+        `
+    })
+    // 注意一个细节：div#app会被template替代
+</code></pre><ul>
+<li>Vue 运行时版，配合 vue 单组件文件</li>
+<li>示例</li>
+</ul>
+<pre><code>    // vue单组件文件
+    &lt;template&gt;
+        &lt;div&gt;{{n}}&lt;/div&gt;
+    &lt;template&gt;
+
+    &lt;script&gt;
+        export default{
+            data(){
+                return { n:0 }
+            }
+        }
+    &lt;/script&gt;
+
+    // 另外一个地方引入该vue文件
+    import Demo import &quot;Demo.vue&quot;;
+    new Vue({
+        el: &quot;#app&quot;,
+        render(h){
+            return h(Demo)
+        }
+    })
+</code></pre><h3 id="2指令">2.指令</h3>
+<ul>
+<li>v-text</li>
+<li>预期：<code style="color:red">string</code></li>
+<li>详细：<code style="color:red">更新元素的 textCont。如果要更新部分的 textContent，需要使用{{meg}}来差值</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;span v-text=&quot;msg&quot;&gt;&lt;/span&gt;
+        &lt;!-- 和下面一样 --&gt;
+        &lt;span&gt;{{msg}}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return{
+                    msg: '你好呀！'
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-html</li>
+<li>预期：<code style="color:red">string</code></li>
+<li>详细：<code style="color:red">更新元素 innerHTML。可以识别 html 标签，并且渲染在页面上</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;#app&quot;&gt;
+        &lt;p v-html=&quot;msg&quot;&gt;&lt;/p&gt;
+    &lt;div&gt;
+
+    &lt;script&gt;
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return {
+                    msg: &quot;&lt;strong&gt;你好呀！&lt;/strong&gt;&quot;
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-pre</li>
+<li><code style="color:red">不需要表达式</code></li>
+<li>详细：<code style="color:red">不需要将 {{}} 进行编译，会把{{}}也显示出来</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;div id = &quot;app&quot;&gt;
+        &lt;span v-pre&gt;{{n}}&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        new Vue({
+            el: &quot;#app&quot;,
+            data(){
+                return{
+                    n: 0
+                }
+            }
+        })
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-bind</li>
+<li>缩写：<code style="color:red">:</code></li>
+<li>预期：<code style="color:red">任何(变量、字符串&hellip;)</code></li>
+<li>详细：<code style="color:red">在绑定 class 或 style 属性时，支持其它类型的值，如数组或对象</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;!-- 绑定一个属性 --&gt;
+    &lt;img v-bind:src=&quot;imageSrc&quot;&gt;
+
+    &lt;!-- 缩写 --&gt;
+    &lt;img :src=&quot;imageSrc&quot;&gt;
+
+    &lt;!-- class绑定 --&gt;
+    &lt;div :class=&quot;{red:isRed}&quot;&gt;&lt;/div&gt;
+    &lt;div :class=&quot;[classA, classB]&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- style 绑定 --&gt;
+    &lt;div :style=&quot;{color:'red'}&quot;&gt;111&lt;/div&gt;
+    &lt;div :style=&quot;[styleObjectA, styleObjectB]&quot;&gt;&lt;/div&gt;
+</code></pre><ul>
+<li>v-on:事件名</li>
+<li>缩写：<code style="color:red">@事件名</code></li>
+<li>详细：<code style="color:red">绑定事件</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;button v-on:click=&quot;add1&quot;&gt; +1 &lt;/button&gt;
+
+    &lt;!-- vue做了处理，不会马上执行xxx，还是会等你点击执行 --&gt;
+    &lt;button @click=&quot;xxx(1)&quot;&gt;xxx&lt;/button&gt;
+
+    &lt;!-- 还能放其它可执行代码 --&gt;
+    &lt;button @click=&quot;n+=1&quot;&gt;{{n}}&lt;/button&gt;
+</code></pre><ul>
+<li>v-if &amp;&amp; v-else</li>
+<li>详细：<br>
+<code style="color:red">1.根据表达式真假切换元素的显示状态，本质是通过 dom 来切换显示状态。true 为显示状态，false 为隐藏状态。</code><br>
+<code style="color:red">2.v-else 必须要和 v-if 匹配使用，v-else 不能单独使用，只有 v-if 的值为 false 时，v-else 模块才会显示出来</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+      &lt;div&gt;
+        &lt;button @click=&quot;show&quot;&gt;{{message}}&lt;/button&gt;
+        &lt;div class=&quot;red&quot; v-if=&quot;isShow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;blue&quot; v-else&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    export default {
+      data() {
+        return {
+          message: &quot;隐藏&quot;,
+          isShow: true
+        };
+      },
+      methods: {
+        show() {
+          this.isShow = !this.isShow;
+          this.message = this.isShow ? &quot;隐藏&quot; : &quot;显示&quot;;
+        }
+      }
+    };
+    &lt;/script&gt;
+
+    &lt;style Lang=&quot;css&quot; spoced&gt;
+    .red,.blue{
+        width: 200px;
+        height:200px;
+    }
+    .red{
+        border: 1px solid red;
+    }
+    .blue{
+        border: 1px solid blue;
+    }
+    &lt;/style&gt;
+</code></pre><ul>
+<li>v-show</li>
+<li>用法：<code style="color:red">根据表达式真假值，切换元素的 display CSS 属性</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            &lt;button @click=&quot;isShow=false&quot;&gt;点击&lt;/button&gt;
+            &lt;p v-show=&quot;isShow&quot;&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default{
+            data(){
+                return {
+                    isShow:true
+                }
+            }
+        }
+    &lt;/script&gt;
+</code></pre><ul>
+<li>v-for</li>
+<li>详细：<code style="color:red">for(value,key) in 对象或数组</code></li>
+<li>注意：<code style="color:red">使用 v-for 就必须要在后面加上:key，否则会一直出现警告</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li v-for=&quot;(value,key) in users&quot; :key=&quot;key.id&quot;&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default {
+            data(){
+                return{
+                    users: [&quot;frank&quot;,&quot;tom&quot;,&quot;lucy&quot;,&quot;juck&quot;]
+                }
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;style&gt;&lt;/style&gt;
+</code></pre>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>364 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-16 08:00 &#43;0800</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="http://yaochengjian.com/posts/41/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">41 - computed和watch</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="http://yaochengjian.com/posts/50/">
+                                <span class="button__text">50 - </span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="http://yaochengjian.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>

@@ -194,7 +194,7 @@ require(&amp;ldquo;http&amp;rdquo;);
     </item>
     
     <item>
-      <title>37 - [前后分离]Ajax实战:Cookie、Session</title>
+      <title>36 - [前后分离]Ajax实战:Cookie、Session</title>
       <link>http://yaochengjian.com/posts/36/</link>
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -214,7 +214,7 @@ e. 后盾存储数据</description>
     </item>
     
     <item>
-      <title>38 - MVC</title>
+      <title>37 - MVC</title>
       <link>http://yaochengjian.com/posts/37/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -234,7 +234,7 @@ eventBus.trigger(&#39;click&#39;);eventBus.on(&#39;click&#39;,(){console.log(&
     </item>
     
     <item>
-      <title>39 - webpack</title>
+      <title>38 - webpack</title>
       <link>http://yaochengjian.com/posts/38/</link>
       <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -262,18 +262,18 @@ module.exports = {mode : &#39;development&#39; development开发模式,producti
       <pubDate>Wed, 19 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://yaochengjian.com/posts/39/</guid>
-      <description>1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
-b: 安装@vue/cli 与卸载@vue/cli
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
-c: @vue/cli 和 webpack 是什么关系?
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
-d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览
-2.vue.js 完整版和运行时版本区别 完整版 vue.js
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
- &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue.</description>
+      <description>1.使用@vue/cli 搭建项目   @vue/cli 是什么？
+答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架
+  安装@vue/cli 与卸载@vue/cli
+安装：npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli
+  @vue/cli 和 webpack 是什么关系？
+答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则
+  如何创建一个 vue 项目？
+答：通过 vue create vue-demo 命令创建一个新的项目
+  vue 的基本配置信息
+  进入该目录，yarn serve 开启预览
+  vue 2.x 与 3.x 的差异   2.</description>
     </item>
     
     <item>
@@ -282,14 +282,28 @@ a.同时包含编译器和非完整版的版本如果你需要在客户端编译
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>http://yaochengjian.com/posts/40/</guid>
-      <description>1.Vue 简介 a: JavaScript 框架
-b: 简化 Dom 操作
-c: 响应式数据驱动
-d: 开发环境版本(类似完整版的 jQuery),生成环境版本(类似 mini 版本的 jQuery)
-e: 可以根据官方步骤来创建一个 vue 项目,也可以使用@vue/cli 来搭建
- 1.导入开发版本的Vue.js2.创建Vue实例对象,设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el : &amp;quot;#app&amp;quot;,data : {message : &amp;quot;hello vue!&amp;quot;}});&amp;lt;/script&amp;gt;2.el:挂载点 a: Vue 实例的作用范围是什么呢?
-答: Vue 会管理 el 选项命中的元素及内部的后代元素
- &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.</description>
+      <description>1.vue 简介  JavaScript 框架 简化 Dom 操作 响应式数据驱动 开发环境版本(类似完整版的 jQuery)，生产环境版本(类似 mini 版本的 jQuery) 可以根据官方步骤来创建一个 vue 项目，也可以使用@vue/cli 来搭建   1.导入开发版本的vue.js2.创建vue实例对象，设置el属性和data属性3.使用简洁的模板语法把数据渲染到页面上&amp;lt;div&amp;gt;{{message}}&amp;lt;/div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vue = new Vue({el: &amp;quot;#app&amp;quot;,data: {message: &amp;quot;hello vue!!&amp;quot;}});&amp;lt;/script&amp;gt;2.el 挂载点  vue 实例的作用范围是什么呢？
+答：Vue 会管理 el 选项命中的元素以及内部的后代元素 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{message}}&amp;lt;span&amp;gt;{{message}}&amp;lt;/span&amp;gt;&amp;lt;div&amp;gt;&amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script&amp;gt;let vm = new Vue({el: &amp;quot;#app&amp;quot;,data: {message: &amp;quot;欢迎使用vue&amp;quot;}});&amp;lt;/script&amp;gt;  使用可以使用其它的选择器?</description>
+    </item>
+    
+    <item>
+      <title>41 - computed和watch</title>
+      <link>http://yaochengjian.com/posts/41/</link>
+      <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/41/</guid>
+      <description>1.es6 中的 getter 和 setter getter:取值函数,不用再函数后面加括号就能拿到函数里面的值
+ let obj = {surname : &amp;quot;yao&amp;quot;,name : &amp;quot;chengjian&amp;quot;,get surnameName(){return &amp;quot;姓名&amp;quot; + &amp;quot;---&amp;quot; + this.surname + this.name;}}console.log(obj.surnameName); // obj.surnameName方式调用即可setter:设置函数,通过设置对象方式来设置属性里面的值
+ let obj = {surname : &amp;quot;yao&amp;quot;,name : &amp;quot;chengjian&amp;quot;,set surnameName(xxx){console.log(xxx);}}obj.surnameName = &amp;quot;你好&amp;quot; //通过set方式来设置值2.computed 计算属性  类型 : { [key: string]: Function | {get: Function, set: Function} } 详细 计算属性将被混入到 Vue 实例中。所有 getter 和 setter 的this上下文自动地绑定为 Vue 实例。注意如果你为一个计算属性性使用箭头函数，则this不会指向这个组件的实例，不过你仍然可以将其实例作为函数的第一个参数来访问。 示例：   let vm = new Vue({el: &amp;quot;app&amp;quot;,data(){return {a: 2}},computed: {aDouble: vm =&amp;gt; vm.</description>
+    </item>
+    
+    <item>
+      <title>42 - vue全解(模板、指令与修饰符)</title>
+      <link>http://yaochengjian.com/posts/42/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://yaochengjian.com/posts/42/</guid>
+      <description>1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML{{n}}&amp;lt;div&amp;gt; Vue 完整版，写在选项里 示例   &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt; // =&amp;gt; HTML&amp;lt;div&amp;gt;new Vue({el: &amp;quot;#app&amp;quot;,data(){return { n:0 }},template: `&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&amp;lt;template&amp;gt;&amp;lt;div&amp;gt;{{n}}&amp;lt;/div&amp;gt;&amp;lt;template&amp;gt;&amp;lt;script&amp;gt;export default{data(){return { n:0 }}}&amp;lt;/script&amp;gt;// 另外一个地方引入该vue文件import Demo import &amp;quot;Demo.</description>
     </item>
     
     <item>

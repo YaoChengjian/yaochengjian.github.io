@@ -5,18 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
-b: 安装@vue/cli 与卸载@vue/cli
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
-c: @vue/cli 和 webpack 是什么关系?
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
-d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览
-2.vue.js 完整版和运行时版本区别 完整版 vue.js
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
- &amp;lt;div id = &amp;quot;app&amp;quot;&amp;gt;{{n}}&amp;lt;/div&amp;gt;vue." />
+<meta name="description" content="1.使用@vue/cli 搭建项目   @vue/cli 是什么？
+答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架
+  安装@vue/cli 与卸载@vue/cli
+安装：npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli
+  @vue/cli 和 webpack 是什么关系？
+答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则
+  如何创建一个 vue 项目？
+答：通过 vue create vue-demo 命令创建一个新的项目
+  vue 的基本配置信息
+  进入该目录，yarn serve 开启预览
+  vue 2.x 与 3.x 的差异   2." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -42,21 +42,21 @@ a.同时包含编译器和非完整版的版本如果你需要在客户端编译
 
 
 <meta itemprop="name" content="39 - vue全解(起手式0)">
-<meta itemprop="description" content="1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
-b: 安装@vue/cli 与卸载@vue/cli
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
-c: @vue/cli 和 webpack 是什么关系?
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
-d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览
-2.vue.js 完整版和运行时版本区别 完整版 vue.js
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
- &lt;div id = &quot;app&quot;&gt;{{n}}&lt;/div&gt;vue.">
+<meta itemprop="description" content="1.使用@vue/cli 搭建项目   @vue/cli 是什么？
+答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架
+  安装@vue/cli 与卸载@vue/cli
+安装：npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli
+  @vue/cli 和 webpack 是什么关系？
+答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则
+  如何创建一个 vue 项目？
+答：通过 vue create vue-demo 命令创建一个新的项目
+  vue 的基本配置信息
+  进入该目录，yarn serve 开启预览
+  vue 2.x 与 3.x 的差异   2.">
 <meta itemprop="datePublished" content="2020-02-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="230">
+<meta itemprop="wordCount" content="180">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -65,18 +65,18 @@ a.同时包含编译器和非完整版的版本如果你需要在客户端编译
 <meta name="twitter:image" content="http://yaochengjian.com/"/>
 
 <meta name="twitter:title" content="39 - vue全解(起手式0)"/>
-<meta name="twitter:description" content="1.使用 @vue/cli 搭建项目 a: @vue/cli 是什么?
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架
-b: 安装@vue/cli 与卸载@vue/cli
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli
-c: @vue/cli 和 webpack 是什么关系?
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则
-d: 通过 vue create vue-demo 命令创建一个新项目
-e: 进入该目录,yarn serve 开启预览
-2.vue.js 完整版和运行时版本区别 完整版 vue.js
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给template选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:
- &lt;div id = &quot;app&quot;&gt;{{n}}&lt;/div&gt;vue."/>
+<meta name="twitter:description" content="1.使用@vue/cli 搭建项目   @vue/cli 是什么？
+答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架
+  安装@vue/cli 与卸载@vue/cli
+安装：npm install -g @vue/cli 或 yarn global add @vue/cli
+卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli
+  @vue/cli 和 webpack 是什么关系？
+答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则
+  如何创建一个 vue 项目？
+答：通过 vue create vue-demo 命令创建一个新的项目
+  vue 的基本配置信息
+  进入该目录，yarn serve 开启预览
+  vue 2.x 与 3.x 的差异   2."/>
 
 
 
@@ -143,7 +143,7 @@ a.同时包含编译器和非完整版的版本如果你需要在客户端编译
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
 
             
 
@@ -158,105 +158,102 @@ a.同时包含编译器和非完整版的版本如果你需要在客户端编译
             
 
             <div class="post-content">
-                <h3 id="1使用-vuecli-搭建项目">1.使用 @vue/cli 搭建项目</h3>
-<p><font color=red>a: @vue/cli 是什么?</font><br>
-答: @vue/cli 是 vue 的命令行工具,只要按照官网敲几行命令就可以新建一个基本的 vue 项目框架</p>
-<p><font color=red>b: 安装@vue/cli 与卸载@vue/cli</font><br>
-安装: npm install -g @vue/cli 或 yarn global add @vue/cli<br>
-卸载: npm uninstall @vue-cli -g 或 yarn global remove @vue/cli</p>
-<p><font color=red>c: @vue/cli 和 webpack 是什么关系?</font><br>
-答: @vue/cli 里面包含了 webpack,并且配置好了基本的 webpack 打包规则</p>
-<p><font color=red>d: 通过 vue create vue-demo 命令创建一个新项目</font></p>
-<p><font color=red>e: 进入该目录,yarn serve 开启预览</font></p>
+                <h3 id="1使用vuecli-搭建项目">1.使用@vue/cli 搭建项目</h3>
+<ul>
+<li>
+<p>@vue/cli 是什么？<br>
+<code style="color:red">答：@vue/cli 是 vue 的命令行工具，只要按照官网敲几行命令行就可以新建一个基本的 vue 项目框架</code></p>
+</li>
+<li>
+<p>安装@vue/cli 与卸载@vue/cli<br>
+<code style="color:red">安装：npm install -g @vue/cli 或 yarn global add @vue/cli</code><br>
+<code style="color:red">卸载：npm uninstall @vue/cli -g 或 yarn global remove @vue/cli</code></p>
+</li>
+<li>
+<p>@vue/cli 和 webpack 是什么关系？<br>
+<code style="color:red">答：@vue/cli 里面包含了 webpack，并且配置好了基本 webpack 打包规则</code></p>
+</li>
+<li>
+<p>如何创建一个 vue 项目？<br>
+<code style="color:red">答：通过 vue create vue-demo 命令创建一个新的项目</code></p>
+</li>
+<li>
+<p>vue 的基本配置信息<br>
+<img src="../../images/vue1.png" alt=""></p>
+</li>
+<li>
+<p>进入该目录，<code style="color:red">yarn serve</code> 开启预览</p>
+</li>
+<li>
+<p>vue <code style="color:red">2.x 与 3.x </code>的差异
+<img src="../../images/vue2.png" alt=""></p>
+</li>
+</ul>
 <h3 id="2vuejs-完整版和运行时版本区别">2.vue.js 完整版和运行时版本区别</h3>
-<p><font color=red>完整版 vue.js</font><br>
-a.同时包含编译器和非完整版的版本如果你需要在客户端编译模板(比如传入一个字符串给<font color=red>template</font>选项,或挂载一个元素并以其 DOM 内部的 HTML 作为模板),就将需要加上编译器,即完整版:</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-        {{n}}
-    &lt;/div&gt;
-
-    vue.min.js是压缩版本,里面没有注释
-    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.min.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            data : {
-                n : 1
+<ul>
+<li>完整版 vue.js<br>
+<code style="color:red">同时包含编译器和非完整版本，如果你需要在客户端编译模板，或者使用 template 属性，那么你就需要加上编译器，即完整版</code></li>
+</ul>
+<pre><code>    new Vue({
+        el: &quot;#app&quot;,
+        data(){
+            return {
+                n: 1
             }
-        });
-    &lt;/script&gt;
-
-    或
+        },
+        template: `
+            &lt;div&gt;{{n}}&lt;/div&gt; //如果是vue.runtime.js就无法编译出来，没有编译器
+        `
+    })
+</code></pre><ul>
+<li>运行时版本 vue.runtime.js<br>
+<code style="color:red">运行时版本在 HTML 中差值表达式和 template 就无法编译出来(没有编译器)，只能通过 render 函数来渲染</code></li>
+</ul>
+<pre><code>    import Demo1 from &quot;./Demo1.vue&quot;;
+    new Vue({
+        el: &quot;#app&quot;,
+        render(h){
+            return h(Demo1) // h是createElement缩写
+        }
+    })
+</code></pre><ul>
+<li>render 函数的初步了解<br>
+<code style="color:red">1.在 render 函数方法中，有个默认 h 参数(是 createElement 的缩写，类型是一个函数)</code><br>
+<code style="color:red">2.函数中第一个参数可以是(String | Object | Function)</code></li>
+</ul>
+<h3 id="3总结完整版-和-运行时版本">3.总结完整版 和 运行时版本</h3>
+<p><code>1.虽然有两个版本，但现在前端基本不会去用完整版，平时使用都是代码体积小的运行时版本，因为编译器的脏活交给 vue-loader 去做就好</code><br>
+<code>2.保证用户体验，用户下载的文件体积更小，但只支持 h 函数</code><br>
+<code>3.保证开发体验，开发者可直接在 vue 文件里面学 HTML 标签、差值表达式，而不用写 h 函数</code><br>
+<code>4.活让 loader 做，vue-loader 会把 vue 文件里的 HTML 转换为 h 函数，这样我不用写太多麻烦的，运行时版本就可以做到和完整版一样的事情，还更节约文件大小，提升用户体验</code></p>
+<h3 id="4vue-单文件组件">4.Vue 单文件组件</h3>
+<p><img src="../../images/vue3.png" alt=""></p>
+<pre><code>    &lt;template&gt;
+        &lt;div&gt;
+            {{n}}
+            &lt;button @click=&quot;add1&quot;&gt;+1&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/tempate&gt;
 
     &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            template : `&lt;div&gt;{{n}}&lt;/div&gt;`,
-            data : {
-                n : 3
-            }
-        });
-    &lt;/script&gt;
-</code></pre><p><font color=red>运行时版本 vue.runtime.js</font><br>
-a.运行时版本在 html 中差值表达式和 template 就无法编译出来(没有包含编译器),只能通过 render 函数来渲染</p>
-<pre><code>    &lt;div id = &quot;app&quot;&gt;
-
-    &lt;/div&gt;
-
-    &lt;script src = &quot;https://cdn.bootcss.com/vue/2.6.11/vue.runtime.min.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        let vm = new Vue({
-            el : &quot;#app&quot;,
-            render(h){
-                h是createElement缩写
-                return h(&quot;div&quot;,this.n);
+        export default{
+            // 1.如果是vue单文件这里data必须是一个函数，并且要return
+            // 2. 这样能够避免引用了同一个内存地址，造成对象共用
+            data(){
+                return{
+                    n: 1
+                }
             },
-            data : {
-                n : 3
+            methods: {
+                add1(){
+                    this.n += 1;
+                }
             }
-        });
+        }
     &lt;/script&gt;
-</code></pre><h3 id="3vue-单文件组件">3.Vue 单文件组件</h3>
-<p>三个标签 : (template、script、style)</p>
-<pre><code>&lt;template&gt;
-  &lt;div id=&quot;app&quot; v-bind:class=&quot;red&quot;&gt;
-    {{ n }}
-    &lt;button @click=&quot;add&quot;&gt;+1&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
 
-&lt;script&gt;
-export default{
-    如果是vue单文件这里data必须是一个函数,并且要return
-    data(){
-        return {
-            n : 1
-        }
-    },
-    methods : {
-        add(){
-            this.n += 1;
-        }
-    }
-}
-&lt;/script&gt;
-
-&lt;style&gt;
-.red {
-  color: red;
-}
-&lt;/style&gt;
-</code></pre><h2 id="总结">总结</h2>
-<p>1.虽然有两个版本,但现在前端基本不会去用完整版,平时使用都是代码体积小的运行时版本,因为编译器的脏活交给
-vue-loader 去做就好<br>
-<font color=red>选择运行时版本的理由</font><br>
-1.保证用户体验,用户下载的文件体积更小,但只支持 h 函数<br>
-2.保证开发体验,开发者可直接在 vue 文件里写 HTML 标签、差值表达式,而不用写 h 函数<br>
-3.活让 loader 做,vue-loader 会把 vue 文件里的 HTML 转换为 h 函数,这样我不用写太多麻烦的,运行时版本就可以做到和
-完整版一样的事情,还更节约文件大小,提升用户体验</p>
-
+    &lt;style scoped&gt;&lt;/style&gt;
+</code></pre>
             </div>
         </article>
 
@@ -264,7 +261,7 @@ vue-loader 去做就好<br>
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>230 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>180 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-19 08:00 &#43;0800</p>
         </div>
@@ -281,7 +278,7 @@ vue-loader 去做就好<br>
                         <span class="button previous">
                             <a href="http://yaochengjian.com/posts/38/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">39 - webpack</span>
+                                <span class="button__text">38 - webpack</span>
                             </a>
                         </span>
                     
