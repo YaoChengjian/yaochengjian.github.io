@@ -34,7 +34,7 @@
 <meta itemprop="description" content="1.模板 template 三种写法  Vue 完整版，写在 HTML 里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML{{n}}&lt;div&gt; Vue 完整版，写在选项里 示例   &lt;div id = &quot;app&quot;&gt; // =&gt; HTML&lt;div&gt;new Vue({el: &quot;#app&quot;,data(){return { n:0 }},template: `&lt;div&gt;{{n}}&lt;/div&gt;`})// 注意一个细节：div#app会被template替代 Vue 运行时版，配合 vue 单组件文件 示例   // vue单组件文件&lt;template&gt;&lt;div&gt;{{n}}&lt;/div&gt;&lt;template&gt;&lt;script&gt;export default{data(){return { n:0 }}}&lt;/script&gt;// 另外一个地方引入该vue文件import Demo import &quot;Demo.">
 <meta itemprop="datePublished" content="2020-02-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-02-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="364">
+<meta itemprop="wordCount" content="522">
 <meta itemprop="image" content="http://yaochengjian.com/"/>
 
 
@@ -110,7 +110,7 @@
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
 
             
 
@@ -363,6 +363,109 @@
     &lt;/script&gt;
 
     &lt;style&gt;&lt;/style&gt;
+</code></pre><h3 id="3修饰符">3.修饰符</h3>
+<p>1.v-on 支持的修饰符如下 ↓ ：</p>
+<ul>
+<li>事件修饰符</li>
+<li>详细：<code style="color:red">vue.js 提供了事件修饰符。修饰符是由.开头的指令来表示的</code></li>
+<li>示例</li>
+</ul>
+<pre><code>    @click.stop=&quot;add&quot;  // 表示阻止事件传播/冒泡
+    @click.prevent=&quot;add&quot;  // 表示阻止默认动作
+    @click.stop.prevent=&quot;add&quot;  // 修饰符可以串联
+    @click.once=&quot;doThis&quot;  // 点击事件将只会触发一次
+</code></pre><ul>
+<li>按键修饰符</li>
+<li>详细：<code style="color:red">在监听键盘事件时候，我们经常需要检查详细的按键。Vue</code></li>
+<li>按键码：<code style="color:red">为了在必要的情况下支持旧浏览器，Vue 提供了绝大常用的按键码的别名：</code></li>
+</ul>
+<pre><code>    &lt;input @keyup.13 = &quot;submit&quot;&gt; // 按下enter键执行该函数
+
+    为了在必要的情况下支持旧浏览器，Vue提供了绝大多数常用的按键码的别名
+    .enter (回车)
+    .tab (Tab)
+    .delete (delete(删除)/BackSpace(退格))
+    .space  (空格键)
+    .up (上箭头)
+    .down (下箭头)
+    .left (左箭头)
+    .right (右箭头)
+</code></pre><ol start="2">
+<li>理解 vue 中的.sync 修饰符</li>
+</ol>
+<ul>
+<li>详细：<code style="color:red">在使用 vue 的过程中，我们有时会遇到如下场景：子组件需要引用父组件的一个属性，并且修改。由于 vue 是不允许对外部的数据直接修改的，所以便需要在两个组件之间建立一个通信，让父组件去监听子组件发出的请求，然后再对相应的值做出改变。</code></li>
+<li>用法：</li>
+</ul>
+<pre><code>    1.我们首先需要在子组件上面，建立一个事件，然后写上事件名和变化的值
+    2.vue内置了EventBus为$emit，可以用来触发事件
+    this.$emit(&quot;update:money&quot;,money-100)
+
+    1.然后在父组件上面监听这个事件的触发，将变化的值传回来
+    2.同时vue将子组件改变的那个值，存进了$event这个内置变量中，这样父组件中就能获取到这个值
+    v-on:update:money=&quot;total=$event&quot;
+
+    1.vue又将监听的部分写集成.sync修饰符，这样看起来更加的简洁，于是上面这一行代码也可以简写为如下形式：
+    :money.sync=&quot;total&quot;
+</code></pre><ul>
+<li>示例</li>
+</ul>
+<pre><code>Child.vue
+    &lt;template&gt;
+      &lt;div class=&quot;green&quot;&gt;
+        &lt;button @click=&quot;$emit('updata:money',money-100)&quot;&gt;花钱&lt;/button&gt;
+        &lt;span&gt;{{money}}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    export default {
+      props: [&quot;money&quot;]
+    };
+    &lt;/script&gt;
+
+    &lt;style scoped&gt;
+    .green {
+      border: 3px solid green;
+    }
+    &lt;/style&gt;
+
+Father.vue
+    &lt;template&gt;
+      &lt;div class=&quot;red&quot;&gt;
+        App.vue 还有{{total}}
+        &lt;Child :money=&quot;total&quot; v-on:update:money=&quot;fn&quot;&gt;&lt;/Child&gt;
+
+        // 上面 v-on:update:money=&quot;fn&quot; 等价于 :money.sync=&quot;fn&quot;
+
+        &lt;Child :money.sync=&quot;fn&quot;&gt;&lt;/Child&gt;
+      &lt;/div&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+    import Child from &quot;./Child.vue&quot;;
+    export default {
+      data() {
+        return {
+          total: 10000
+        };
+      },
+      components: { Child },
+      methods: {
+        fn(event) {
+          // event 是子组件传递过来的值，天生就存在
+          this.total = event;
+        }
+      }
+    };
+    &lt;/script&gt;
+
+    &lt;style scoped&gt;
+    .red {
+      border: 3px solid red;
+      padding: 30px;
+    }
+    &lt;/style&gt;
 </code></pre>
             </div>
         </article>
@@ -371,7 +474,7 @@
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>364 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>522 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-16 08:00 &#43;0800</p>
         </div>
